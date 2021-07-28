@@ -1,4 +1,4 @@
-(function() {
+/*(function() {
   window.cookieconsent.initialise({
     "palette": {
       "popup": {
@@ -18,3 +18,4 @@
     }
   });
 })();
+*/

@@ -1,11 +1,31 @@
 <!--DEV
-
-Нужно убрать пробел между @-ами:
-
 @ @include('blocks/page-header/page-header.html')
-
 -->
 
-<header class="page-header" role="banner">
-  page-header
+<header class="page-header">
+
+  <div class="container  page-header__main">
+
+    <div class="page-header__left">
+      @@include('../../blocks/logo/logo.html', {
+        "location": "logo--header"
+      })
+      <ul class="list-nostyled  page-header__phones">
+        <li class="page-header__phone-item">
+          <a href="tel:+380445999952">+38 044 599 99 52</a>
+        </li>
+        <li class="page-header__phone-item">
+          <a href="tel:+380445999952">+38 044 599 99 52</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="page-header__right"></div>
+
+  </div>
+
+  <div class="container  page-header__menu">
+
+  </div>
+
 </header>
