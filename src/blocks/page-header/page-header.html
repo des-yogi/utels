@@ -1,11 +1,77 @@
 <!--DEV
-
-Нужно убрать пробел между @-ами:
-
 @ @include('blocks/page-header/page-header.html')
-
 -->
 
-<header class="page-header" role="banner">
-  page-header
+<header class="page-header">
+
+  <div class="container  page-header__main">
+
+    <div class="page-header__left">
+      @@include('../../blocks/logo/logo.html', {
+        "location": "logo--header"
+      })
+      <ul class="list-nostyled  page-header__phones">
+        <li class="page-header__phone-item">
+          <a href="tel:+380445999952" class="page-header__phone-link">+38 044 599 99 52</a>
+        </li>
+        <li class="page-header__phone-item">
+          <a href="tel:+380445999952" class="page-header__phone-link">+38 044 599 99 52</a>
+        </li>
+        <li class="page-header__phone-item  page-header__phone-item--queue">
+          <div class="page-header__queue">
+            <span class="page-header__queue-num">5</span>
+            <span class="page-header__queue-text">У черзі</span>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="page-header__right">
+
+      <a href="#" class="page-header__btn" title="Способи оплати">
+        <svg width="28" height="20" role="img" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#payment-card"></use></svg>
+        <span class="page-header__btn-text">Способи оплати</span>
+      </a>
+
+      <a href="#" class="page-header__btn" title="Профіль">
+        <svg width="26" height="26" role="img" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#user-profile"></use></svg>
+        <span class="page-header__btn-text">Профіль</span>
+      </a>
+
+      <div class="page-header__mini-cart" title="Кошик">
+        <button id="miniCart" class="page-header__btn" type="button">
+          <svg width="29" height="26" role="img" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#cart"></use></svg>
+          <span class="page-header__btn-text">Кошик</span>
+        </button>
+        <!-- <div class="" aria-labelledby="miniCart">
+          <div><a class="qwert" href="#">Action</a></div>
+          <div><a class="qwert" href="#">Another action</a></div>
+          <div><a class="qwert" href="#">Something else here</a></div>
+          <div>
+            <button class="btn" type="button">Замовити</button>
+          </div>
+        </div> -->
+      </div>
+
+      <div class="dropdown lang-switcher">
+        <button class="page-header__btn dropdown-toggle" type="button" id="lang-switcher" data-bs-toggle="dropdown" aria-expanded="false" data-bs-offset="0,0">
+          <span class="lang-switcher__text">Укр</span>
+        </button>
+        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="lang-switcher">
+          <li class="lang-switcher__item  active"><a href="#" class="lang-switcher__link">Укр</a></li>
+          <li class="lang-switcher__item"><a href="#" class="lang-switcher__link">Рус</a></li>
+          <li class="lang-switcher__item"><a href="#" class="lang-switcher__link">Анг</a></li>
+        </ul>
+      </div>
+
+      <button id="burger" class="burger" type="button" aria-label="Переключатель мобильного меню" data-bs-toggle="offcanvas" data-bs-target="#mobMenu" aria-controls="mobMenu"><span></span></button>
+
+    </div>
+
+  </div>
+
+  <div class="container  page-header__menu">
+
+  </div>
+
 </header>

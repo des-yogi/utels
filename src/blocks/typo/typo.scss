@@ -1,19 +1,35 @@
-// Этот блок ответственен ТОЛЬКО за типографику проекта.
-// Не пишите тут какую-либо стороннюю стилизацию.
+/* roboto-regular - latin_cyrillic */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local(''),
+       url('../fonts/roboto-v27-latin_cyrillic-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/roboto-v27-latin_cyrillic-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
 
-// @font-face {
-//   font-family: 'FONTNAME';
-//   src: url('../fonts/FONTNAME.woff2') format('woff2'),
-//        url('../fonts/FONTNAME.woff') format('woff'),
-//        url('../fonts/FONTNAME.ttf')  format('truetype');
-//   font-weight: 400;
-//   font-style: normal;
-// }
+/* roboto-500 - latin_cyrillic */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: local(''),
+       url('../fonts/roboto-v27-latin_cyrillic-500.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/roboto-v27-latin_cyrillic-500.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
 
-
-
-
-// Не забыть !!!   font-display: swap;
+/* roboto-700 - latin_cyrillic */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local(''),
+       url('../fonts/roboto-v27-latin_cyrillic-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/roboto-v27-latin_cyrillic-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
 
 body {
   // ТОЛЬКО типографика!
@@ -28,6 +44,10 @@ body {
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  @media (min-width: $screen-xxl) {
+    font-size: $font-size-xl;
+  }
 
   // text-rendering: optimizeLegibility;
   // Partial support in Android browser versions is due to a serious bug where text-rendering: optimizeLegibility causes custom web fonts to not render!!!
@@ -45,10 +65,8 @@ h3,
 h4,
 h5,
 h6 {
-  margin-top: 1em;
-  margin-bottom: 0.5em;
+  margin-bottom: 12px;
   font-family: $font-family;
-  font-weight: 700;
   line-height: 1.2;
   color: currentColor;
 }
@@ -59,8 +77,19 @@ h6 {
 h1,
 h2,
 h3 {
-  margin-top: 1em;
-  margin-bottom: 0.5em;
+  font-weight: 700;
+}
+
+.h1,
+h1 {
+  margin-top: 0;
+}
+
+.h2,
+.h3,
+h2,
+h3 {
+  margin-top: 48px;
 }
 
 .h4,
@@ -69,38 +98,42 @@ h3 {
 h4,
 h5,
 h6 {
-  margin-top: 1em;
-  margin-bottom: 0.5em;
+  margin-top: 48px;
+  font-weight: 500;
 }
 
 .h1,
 h1 {
-  //font-size: $font-size--h1;
+  font-size: $font-size--h1;
+
+  @media (min-width: $screen-xl) {
+    font-size: $font-size--h1 * 1.1176;
+  }
 }
 
 .h2,
 h2 {
-  //font-size: $font-size--h2;
+  font-size: $font-size--h2;
 }
 
 .h3,
 h3 {
-  //font-size: $font-size--h3;
+  font-size: $font-size--h3;
 }
 
 .h4,
 h4 {
-  //font-size: $font-size--h4;
+  font-size: $font-size--h4;
 }
 
 .h5,
 h5 {
-  //font-size: $font-size--h5;
+  font-size: $font-size--h5;
 }
 
 .h6,
 h6 {
-  //font-size: $font-size--h6;
+  font-size: $font-size--h6;
 }
 
 .p,
@@ -112,17 +145,21 @@ blockquote,
 pre,
 address,
 figure {
-  //margin-top: 0.5em;
-  // margin-bottom: 0.5em;
+  margin-top: 12px;
+  margin-bottom: 12px;
   color: currentColor;
 
-  & + & {
-    margin-top: 0.5em;
+  &:last-child {
+    margin-bottom: 0;
   }
 }
 
 address {
   font-style: normal;
+}
+
+button {
+  font-family: $font-family;
 }
 
 ul,
@@ -154,12 +191,12 @@ hr {
 
 .small,
 small {
-  font-size: $font-size * 0.75;
+  font-size: $font-size-xs;
 }
 
 sub,
 sup {
-  font-size: 70%;
+  font-size: 65%;
 }
 
 b,
@@ -197,7 +234,7 @@ dd {
 code,
 kbd,
 pre {
-  // font-family: $font-family--monospace;
+  font-family: $font-family--monospace;
 }
 
 code {
