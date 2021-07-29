@@ -45,7 +45,6 @@ body {
   // Типографика проекта — в блоке typo
   display: flex;           // Исправляем баг в IE для min-height and flexbox (flex-direction:column)
   flex-direction: column;  // и прижимаем footer в IE 10-11
-  //background-color: $body-bg;
   margin: 0;
   min-height: 100%;
 }
@@ -283,38 +282,41 @@ a {
 // background-image: svg-load('../blocks/sprite-svg/svg/baby.svg', fill=$main-color);
 
 * {
-  //Firefox only
-  /* «цвет ползунка» «цвет полосы скроллбара» */
-  scrollbar-color: $divider-color;
-  scrollbar-width: thin;  /* толщина */
 
-  //for webkit browsers (Chrome, Opera, Safary, Edge ets.)
-  //Here is a complete list of all the new pseudo-elements. All of these pseudo-elements must be prefixed with -webkit-:
-  // scrollbar
-  // scrollbar-button
-  // scrollbar-track
-  // scrollbar-track-piece
-  // scrollbar-thumb
-  // scrollbar-corner
-  // resize
+  @media (min-width: $screen-xl) {
+    //Firefox only
+    /* «цвет ползунка» «цвет полосы скроллбара» */
+    scrollbar-color: $divider-color;
+    scrollbar-width: thin;  /* толщина */
 
-  /* полоса прокрутки (скроллбар) */
-  ::-webkit-scrollbar {
-      width: 6px; /* ширина для вертикального скролла */
-      height: 6px; /* высота для горизонтального скролла */
-      background-color: $divider-color;
-  }
+    //for webkit browsers (Chrome, Opera, Safary, Edge ets.)
+    //Here is a complete list of all the new pseudo-elements. All of these pseudo-elements must be prefixed with -webkit-:
+    // scrollbar
+    // scrollbar-button
+    // scrollbar-track
+    // scrollbar-track-piece
+    // scrollbar-thumb
+    // scrollbar-corner
+    // resize
 
-  /* ползунок скроллбара */
-  ::-webkit-scrollbar-thumb {
-    background-color: $main-color;
-    border-radius: 8px;
-    box-shadow: none;
-    //box-shadow: inset 1px 1px 10px #f3faf7;
-  }
+    /* полоса прокрутки (скроллбар) */
+    ::-webkit-scrollbar {
+        width: 6px; /* ширина для вертикального скролла */
+        height: 6px; /* высота для горизонтального скролла */
+        background-color: $divider-color;
+    }
 
-  ::-webkit-scrollbar-thumb:hover {
-    background-color: darken($main-color, 5%);
+    /* ползунок скроллбара */
+    ::-webkit-scrollbar-thumb {
+      background-color: $main-color;
+      border-radius: 8px;
+      box-shadow: none;
+      //box-shadow: inset 1px 1px 10px #f3faf7;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background-color: darken($main-color, 5%);
+    }
   }
 }
 
