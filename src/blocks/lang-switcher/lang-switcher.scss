@@ -40,27 +40,27 @@
       margin-left: 10px;
     }
 
-    &.show {
+    // &.show {
 
-      &::before {
-        display: block;
-        content: "";
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-50%) translateY(10px) rotate(45deg);
-        width: 20px;
-        height: 20px;
-        background: linear-gradient(135deg, transparent, transparent 50%, $color-success 50%, $color-success);
-      }
-    }
+    //   &::before {
+    //     display: block;
+    //     content: "";
+    //     position: absolute;
+    //     bottom: 0;
+    //     left: 50%;
+    //     transform: translateX(-50%) translateY(10px) rotate(45deg);
+    //     width: 20px;
+    //     height: 20px;
+    //     background: linear-gradient(135deg, transparent, transparent 50%, $color-success 50%, $color-success);
+    //   }
+    // }
   }
 
   .dropdown-menu {
     z-index: 0;
     min-width: 65px;
     width: 100%;
-    padding: 20px 0 0;
+    padding: 0;
     background-color: $main-color;
     border: none;
     border-radius: 0;

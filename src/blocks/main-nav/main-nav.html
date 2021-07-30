@@ -1,61 +1,56 @@
 <!--DEV
-
-Для использования этого файла как шаблона:
-
 @ @include('blocks/main-nav/main-nav.html')
+-->
 
-(Нужно убрать пробел между символами @)
-Подробнее: https://www.npmjs.com/package/gulp-file-include
-
-
-
-<nav id="main-nav" class="main-nav" role="navigation">
-  <button id="main-nav-toggler" class="main-nav__toggler  burger"><span></span></button>
-  <ul class="main-nav__list">
-    <li class="main-nav__item  main-nav__item--active">
-      <a href="" class="main-nav__link">
-        Страницы
-      </a>
-      <div class="main-nav__sublist-wrapper  main-nav__sublist-wrapper--lvl-2">
-        <ul class="main-nav__list  main-nav__list--lvl-2">
-          <li class="main-nav__item  main-nav__item--lvl-2">
-            <a href="" class="main-nav__link  main-nav__link--lvl-2">
-              Контакты
-            </a>
+<nav id="main-nav" class="container  main-nav">
+  <ul class="list-nostyled  main-nav__list">
+    <li class="main-nav__item">
+      <a href="#" class="main-nav__link">Для дому</a>
+    </li>
+    <li class="main-nav__item active">
+      <a class="main-nav__link  main-nav__link--arrow">Для бізнесу</a>
+      <div class="container  main-nav__sublist-wrapper">
+        <ul class="list-nostyled  main-nav__sublist">
+          <li class="main-nav__item">
+            <a href="#" class="main-nav__link">Інтернет</a>
           </li>
-          <li class="main-nav__item  main-nav__item--lvl-2">
-            <a href="" class="main-nav__link  main-nav__link--lvl-2">
-              Услуги
-            </a>
-            <div class="main-nav__sublist-wrapper  main-nav__sublist-wrapper--lvl-3">
-              <ul class="main-nav__list  main-nav__list--lvl-3">
-                <li class="main-nav__item  main-nav__item--lvl-3">
-                  <a href="" class="main-nav__link  main-nav__link--lvl-3">
-                    Вёрстка HTML-CSS
-                  </a>
-                </li>
-                <li class="main-nav__item  main-nav__item--lvl-3">
-                  <a href="" class="main-nav__link  main-nav__link--lvl-3">
-                    Стриптиз
-                  </a>
-                </li>
-              </ul>
-            </div>
+          <li class="main-nav__item  active">
+            <a class="main-nav__link">IP транзит</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="#" class="main-nav__link">Розміщення обладнання</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="#" class="main-nav__link">Системи відеоспостереження</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="#" class="main-nav__link">Комплексні рішення для бізнесу</a>
           </li>
         </ul>
       </div>
     </li>
     <li class="main-nav__item">
-      <a href="https://github.com/nicothin/NTH-start-project" class="main-nav__link">
-        Репозиторий
-      </a>
+      <a href="#" class="main-nav__link">Послуги</a>
     </li>
     <li class="main-nav__item">
-      <a href="http://nicothin.pro/" class="main-nav__link">
-        Сайт автора
-      </a>
+      <a href="#" class="main-nav__link">Сервіси</a>
+    </li>
+    <li class="main-nav__item">
+      <a href="#" class="main-nav__link">Для забудовників та УЖК</a>
+    </li>
+    <li class="main-nav__item">
+      <a href="#" class="main-nav__link">Акції</a>
+    </li>
+    <li class="main-nav__item">
+      <a href="#" class="main-nav__link">Підтримка</a>
+    </li>
+    <li class="main-nav__item">
+      <a href="#" class="main-nav__link">Обладнання</a>
+    </li>
+    <li class="main-nav__item">
+      <a href="#" class="main-nav__link">Про нас</a>
     </li>
   </ul>
-</nav>
 
--->
+  @@include('../../blocks/contact-widget/contact-widget.html')
+</nav>
