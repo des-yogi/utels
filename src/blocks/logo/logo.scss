@@ -15,12 +15,17 @@
   &--header {
     display: inline-flex;
     align-items: center;
-    padding: 0 9px;
+
+    @media (min-width: $screen-xl) {
+      padding: 0 9px;
+    }
 
     &:hover,
     &:focus {
       //color: $text-color;
-      background-color: $color-success;
+      @media (min-width: $screen-xl) {
+        background-color: $color-success;
+      }
 
       // svg .text,
       // svg .logo {

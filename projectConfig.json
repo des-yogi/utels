@@ -25,7 +25,8 @@
     "hero": [],
     "contact-widget": [],
     "offcanvas": [],
-    "mob-menu": []
+    "mob-menu": [],
+    "mini-cart": []
   },
   "addCssBefore": [
     "../../node_modules/bootstrap/scss/_functions",

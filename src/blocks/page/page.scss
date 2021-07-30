@@ -145,7 +145,7 @@ a {
   text-decoration: none;
   color: $link-color;
   background-color: transparent;
-  transition: color $transition-time ease;
+  transition: all $transition-time ease;
 
   &:hover,
   &:focus {
@@ -238,7 +238,7 @@ a {
   width: 100%;
   padding-left: 16px;
   padding-right: 16px;
-  background: none;
+  //background: none;
 
   @media (min-width: $screen-md) {
     padding-left: 50px;

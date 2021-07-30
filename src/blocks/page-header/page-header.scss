@@ -5,6 +5,8 @@
   $block-name:                &; // #{$block-name}__element
 
   &__main {
+    position: relative;
+    z-index: 1;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -181,6 +183,10 @@
       background-color: $color-success;
     }
 
+    &[aria-expanded=true] {
+      background-color: $color-success;
+    }
+
     @media (min-width: $screen-lg) {
       padding-left: 12px;
       padding-right: 12px;
@@ -201,10 +207,7 @@
   }
 
   &__mini-cart {
+    position: relative;
     height: 100%;
-
-    .dropdown-toggle::after {
-      display: none;
-    }
   }
 }

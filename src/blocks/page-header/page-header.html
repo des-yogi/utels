@@ -39,18 +39,92 @@
       </a>
 
       <div class="page-header__mini-cart" title="Кошик">
-        <button id="miniCart" class="page-header__btn" type="button">
+        <button id="showCartBtn" class="page-header__btn" type="button" data-bs-toggle="collapse" data-bs-target="#mini-cart" aria-expanded="false" aria-controls="mini-cart">
           <svg width="29" height="26" role="img" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#cart"></use></svg>
           <span class="page-header__btn-text">Кошик</span>
         </button>
-        <!-- <div class="" aria-labelledby="miniCart">
-          <div><a class="qwert" href="#">Action</a></div>
-          <div><a class="qwert" href="#">Another action</a></div>
-          <div><a class="qwert" href="#">Something else here</a></div>
-          <div>
-            <button class="btn" type="button">Замовити</button>
+        <div id="mini-cart" class="mini-cart collapse">
+          <div class="mini-cart__body">
+            <ul class="list-nostyled  mini-cart__list">
+              <li class="mini-cart__item">
+                <a href="#" class="embed-responsive embed-responsive--1-1  mini-cart__item-img" tabindex="-1" aria-hidden="true">
+                  <img src="img/favicon-lg.png" alt="Описание товара" width="72" height="72">
+                </a>
+                <a href="#" class="mini-cart__item-text">
+                  <p class="mini-cart__item-descr">
+                    <span class="mini-cart__item-title">Mercusys AC12G</span>
+                    <span class="mini-cart__item-info">Wi-Fi роутер, 300 Мбіт/с</span>
+                    <span  class="mini-cart__item-price">140 грн.</span>
+                  </p>
+                </a>
+                <button class="mini-cart__item-del" type="button" title="Удалить из корзины">
+                  <span class="visually-hidden">Удалить из корзины</span>
+                  <svg width="20" height="22" role="img"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#trash"></use></svg>
+                </button>
+              </li>
+              <li class="mini-cart__item">
+                <a href="#" class="embed-responsive embed-responsive--1-1  mini-cart__item-img" tabindex="-1" aria-hidden="true">
+                  <img src="img/favicon-lg.png" alt="Описание товара" width="72" height="72">
+                </a>
+                <a href="#" class="mini-cart__item-text">
+                  <p class="mini-cart__item-descr">
+                    <span class="mini-cart__item-title">Mercusys AC12G</span>
+                    <span class="mini-cart__item-info">Wi-Fi роутер, 300 Мбіт/с</span>
+                    <span  class="mini-cart__item-price">140 грн.</span>
+                  </p>
+                </a>
+                <button class="mini-cart__item-del" type="button" title="Удалить из корзины">
+                  <span class="visually-hidden">Удалить из корзины</span>
+                  <svg width="20" height="22" role="img"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#trash"></use></svg>
+                </button>
+              </li>
+              <li class="mini-cart__item">
+                <a href="#" class="embed-responsive embed-responsive--1-1  mini-cart__item-img" tabindex="-1" aria-hidden="true">
+                  <img src="img/favicon-lg.png" alt="Описание товара" width="72" height="72">
+                </a>
+                <a href="#" class="mini-cart__item-text">
+                  <p class="mini-cart__item-descr">
+                    <span class="mini-cart__item-title">Mercusys AC12G</span>
+                    <span class="mini-cart__item-info">Wi-Fi роутер, 300 Мбіт/с</span>
+                    <span  class="mini-cart__item-price">140 грн.</span>
+                  </p>
+                </a>
+                <button class="mini-cart__item-del" type="button" title="Удалить из корзины">
+                  <span class="visually-hidden">Удалить из корзины</span>
+                  <svg width="20" height="22" role="img"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#trash"></use></svg>
+                </button>
+              </li>
+              <li class="mini-cart__item">
+                <a href="#" class="embed-responsive embed-responsive--1-1  mini-cart__item-img" tabindex="-1" aria-hidden="true">
+                  <img src="img/favicon-lg.png" alt="Описание товара" width="72" height="72">
+                </a>
+                <a href="#" class="mini-cart__item-text">
+                  <p class="mini-cart__item-descr">
+                    <span class="mini-cart__item-title">Mercusys AC12G</span>
+                    <span class="mini-cart__item-info">Wi-Fi роутер, 300 Мбіт/с</span>
+                    <span  class="mini-cart__item-price">140 грн.</span>
+                  </p>
+                </a>
+                <button class="mini-cart__item-del" type="button" title="Удалить из корзины">
+                  <span class="visually-hidden">Удалить из корзины</span>
+                  <svg width="20" height="22" role="img"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#trash"></use></svg>
+                </button>
+              </li>
+            </ul>
+
+            <p class="mini-cart__price">
+              <span class="mini-cart__price-lbl">Загальна сума:</span>
+              <span class="mini-cart__price-sum">140 грн</span>
+            </p>
+            <!-- <div><a class="qwert" href="#">Action</a></div>
+            <div><a class="qwert" href="#">Another action</a></div>
+            <div><a class="qwert" href="#">Something else here</a></div> -->
           </div>
-        </div> -->
+          <div class="mini-cart__footer">
+            <button class="btn" type="button" title="Замовити">Замовити</button>
+          </div>
+          <span id="miniCartOverlay" class="mini-cart__overlay"></span>
+        </div>
       </div>
 
       <div class="dropdown lang-switcher">
@@ -70,8 +144,8 @@
 
   </div>
 
-  <div class="container  page-header__menu">
-
+  <div class="page-header__menu">
+    @@include('../../blocks/main-nav/main-nav.html')
   </div>
 
 </header>
