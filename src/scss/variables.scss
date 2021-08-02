@@ -39,7 +39,7 @@ $link-color:                  $main-color;
 $link-color--hover:           $link-color;
 
 $border-color:                #e7e7e7;
-$divider-color:               $main-color;
+$divider-color:               $body-bg;
 // Базовая типографика
 
 $font-size:                   16px;
@@ -51,7 +51,7 @@ $font-size--h1:               34px;
 $font-size--h2:               32px;
 $font-size--h3:               28px;
 $font-size--h4:               24px;
-$font-size--h5:               28px;
+$font-size--h5:               20px;
 $font-size--h6:               $font-size;
 
 $line-height:                 1.5;

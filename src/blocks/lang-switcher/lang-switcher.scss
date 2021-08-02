@@ -39,21 +39,6 @@
     &::after {
       margin-left: 10px;
     }
-
-    // &.show {
-
-    //   &::before {
-    //     display: block;
-    //     content: "";
-    //     position: absolute;
-    //     bottom: 0;
-    //     left: 50%;
-    //     transform: translateX(-50%) translateY(10px) rotate(45deg);
-    //     width: 20px;
-    //     height: 20px;
-    //     background: linear-gradient(135deg, transparent, transparent 50%, $color-success 50%, $color-success);
-    //   }
-    // }
   }
 
   .dropdown-menu {
@@ -66,10 +51,6 @@
     border-radius: 0;
     box-shadow: $shadow;
   }
-
-  // &__text {
-  //   font-size: inherit;
-  // }
 
   &__item {
 
