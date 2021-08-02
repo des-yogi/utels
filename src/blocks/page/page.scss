@@ -327,3 +327,11 @@ a {
     display: none;
   }
 }
+
+// Стандартная сетка
+.col-1-2-3 {
+  @include col(xs, 12);
+  @include col(md, 6);
+  @include col(xl, 4);
+  margin-bottom: 24px;
+}

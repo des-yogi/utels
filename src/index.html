@@ -17,11 +17,134 @@
 
       <main role="main">
 
-        <div class="container">
+        <div class="container  hero__wrapper">@@include('blocks/hero/hero.html')</div>
 
-          <div>Далеко-далеко за словесными горами, в стране, гласных и согласных живут рыбные тексты. Инициал всеми мир которой большой выйти заманивший запятой за путь обеспечивает однажды по всей точках грамматики переписывается то ведущими рекламных, моей эта наш? Большого, себя точках домах там повстречался лучше это которое текста всемогущая языкового вопроса сбить дороге, грамматики рыбными оксмокс реторический назад сих злых осталось океана прямо? Что точках злых, имеет свою буквенных заглавных ее единственное? Которое, семь, знаках маленькая которой деревни его текст свое, парадигматическая переписали щеке она однажды вопроса повстречался взобравшись пунктуация. </div>
+        <section class="container  special-offer-card__wrapper">
+          <h2 class="special-offer-card__title">Акції та спецпропозиції</h2>
 
-        </div>
+          <ul class="list-nostyled  row">
+
+            <li class="col-1-2-3">
+              @@include('blocks/special-offer-card/special-offer-card.html', {
+                "img": "special-offer-3x4",
+                "title": "50% На інтернет та ТБ",
+                "descr": "Встигни підключити!",
+              })
+            </li>
+
+            <li class="col-1-2-3">
+              @@include('blocks/special-offer-card/special-offer-card.html', {
+                "img": "special-offer-3x4",
+                "title": "Легкий перехід",
+                "descr": "Переходь до нас від іншого провайдера та отримай інтернет у подарунок!",
+              })
+            </li>
+
+            <li class="col-1-2-3">
+              @@include('blocks/special-offer-card/special-offer-card.html', {
+                "img": "special-offer-3x4",
+                "title": "Приведи друга",
+                "descr": "Підключай сусідів та друзів!",
+              })
+            </li>
+
+          </ul>
+
+        </section>
+
+        <section class="features-card__wrapper">
+          <h2 class="container  features-card__title">Наші переваги!</h2>
+
+          <div class="container">
+            <ul class="list-nostyled  row">
+
+              <li class="col-1-2-3">
+                @@include('blocks/features-card/features-card.html', {
+                  "img": "service-category",
+                  "title": "Якісний сервіс",
+                  "descr": "Клієнт отримує високоякісний сервіс, отримує високоякісний сервіс"
+                })
+              </li>
+
+              <li class="col-1-2-3">
+                @@include('blocks/features-card/features-card.html', {
+                  "img": "service-category",
+                  "title": "Гарантована швидкість доступу до інтернету",
+                  "descr": "Клієнт отримує високоякісний сервіс, отримує високоякісний сервіс"
+                })
+              </li>
+
+              <li class="col-1-2-3">
+                @@include('blocks/features-card/features-card.html', {
+                  "img": "service-category",
+                  "title": "Цілодобова кваліфікована технічна підтримка",
+                  "descr": "Клієнт отримує високоякісний сервіс, отримує високоякісний сервіс"
+                })
+              </li>
+
+              <li class="col-1-2-3">
+                @@include('blocks/features-card/features-card.html', {
+                  "img": "service-category",
+                  "title": "Індивідуальний підхід та гнучкі тарифи",
+                  "descr": "Клієнт отримує високоякісний сервіс, отримує високоякісний сервіс"
+                })
+              </li>
+
+              <li class="col-1-2-3">
+                @@include('blocks/features-card/features-card.html', {
+                  "img": "service-category",
+                  "title": "Прямі включення до світових та укр. точок обміну трафіком",
+                  "descr": "Клієнт отримує високоякісний сервіс, отримує високоякісний сервіс"
+                })
+              </li>
+
+              <li class="col-1-2-3">
+                @@include('blocks/features-card/features-card.html', {
+                  "img": "service-category",
+                  "title": "Власна розвинена волоконно-оптична мережа",
+                  "descr": "Клієнт отримує високоякісний сервіс, отримує високоякісний сервіс"
+                })
+              </li>
+
+            </ul>
+          </div>
+
+        </section>
+
+        <section class="clients-slider">
+          <h2 class="container  clients-slider__title">Нам довіряють:</h2>
+
+          <ul class="list-nostyled  clients-slider__carousel">
+            <li class="carousel-cell  clients-slider__slide">
+              <img data-flickity-lazyload="img/uber.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Описание" width="87" height="48" loading="lazy" decoding="async">
+            </li>
+            <li class="carousel-cell  clients-slider__slide">
+              <img data-flickity-lazyload="img/evrasia.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Описание" width="142" height="86" loading="lazy" decoding="async">
+            </li>
+            <li class="carousel-cell  clients-slider__slide">
+              <img data-flickity-lazyload="img/dominos-pizza.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Описание" width="92" height="92" loading="lazy" decoding="async">
+            </li>
+            <li class="carousel-cell  clients-slider__slide">
+              <img data-flickity-lazyload="img/pivbar.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Описание" width="92" height="92" loading="lazy" decoding="async">
+            </li>
+            <li class="carousel-cell  clients-slider__slide">
+              <img data-flickity-lazyload="img/meest.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Описание" width="152" height="48" loading="lazy" decoding="async">
+            </li>
+            <li class="carousel-cell  clients-slider__slide">
+              <img data-flickity-lazyload="img/media5.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Описание" width="170" height="32" loading="lazy" decoding="async">
+            </li>
+            <li class="carousel-cell  clients-slider__slide">
+              <img data-flickity-lazyload="img/louis-vuitton.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Описание" width="76" height="92" loading="lazy" decoding="async">
+            </li>
+            <li class="carousel-cell  clients-slider__slide">
+              <img data-flickity-lazyload="img/dropbox.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Описание" width="160" height="32" loading="lazy" decoding="async">
+            </li>
+            <li class="carousel-cell  clients-slider__slide">
+              <img data-flickity-lazyload="img/amazon.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Описание" width="108" height="33" loading="lazy" decoding="async">
+            </li>
+          </ul>
+
+        </section>
 
       </main>
 

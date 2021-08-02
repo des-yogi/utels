@@ -26,52 +26,55 @@
 
   &:hover,
   &:focus {
+    color: $white;
     background-color: $color-success;
     // border-color: darken($gray-lighter, 12%);
   }
 
   &:active,
   &:focus {
-    // @include field-focus;
+    box-shadow: 0 0 0 4px rgba($main-color, 0.4);
   }
 
   &--disabled,
   &:disabled {
     // opacity: $opacity;
     cursor: not-allowed;
-    color: $text-color;
-    background-color: $gray-lightest;
-    border-color: $gray-lighter;
+    color: $text-muted !important;
+    background-color: $border-color !important;
+    //border-color: $gray-lighter;
 
     @at-root a.btn--disabled {
       pointer-events: none;
     }
   }
 
-  // &__icon {
-  //   display: inline-block;
-  //   vertical-align: middle;
-  // }
+  &--icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
 
+    span {
+      margin-right: 32px;
+    }
 
+    svg {
+      transform: rotate(-90deg);
+    }
+  }
 
-  // &--main {
-  //   color: #fff;
-  //   background-color: $color-main;
-  //   border: 1px solid $color-main;
+  &--black {
+    background-color: $text-color;
 
-  //   &:hover,
-  //   &:focus {
-  //     color: #fff;
-  //     background-color: darken($color-main, 10%);
-  //     border-color: darken($color-main, 12%);
-  //   }
+    &:hover,
+    &:focus {
+      color: $main-color;
+      background-color: $text-color;
+    }
 
-  //   &--disabled,
-  //   &:disabled {
-  //     color: #fff;
-  //     background-color: $color-main;
-  //     border-color: $color-main;
-  //   }
-  // }
+    &:active,
+    &:focus {
+      box-shadow: 0 0 0 4px rgba($black, 0.25);
+    }
+  }
 }

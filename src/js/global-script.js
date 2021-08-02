@@ -52,15 +52,11 @@ if(~navigator.appVersion.indexOf("Linux"))cth('linux');
   //<div style="background-image: url('/images/image.webp')" data-bg="/images/image.jpg" data-bg-webp="/images/image.webp"></div>
 }());
 
-// Если на проекте jQuery
-// $( document ).ready(function() {
-//   // code
-// });
-
-// Изоляция без jQuery
-// (function(){
-//   // code
-// }());
+(function(){
+  let bLazy = new Blazy({
+    selector: '.b-lazy'
+  });
+}());
 
 // На проекте нет jQuery, но хочется $( document ).ready...
 // function ready(fn) {

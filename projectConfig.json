@@ -26,7 +26,11 @@
     "contact-widget": [],
     "offcanvas": [],
     "mob-menu": [],
-    "mini-cart": []
+    "mini-cart": [],
+    "special-offer-card": [],
+    "features-card": [],
+    "clients-slider": [],
+    "utels-tv-banner": []
   },
   "addCssBefore": [
     "../../node_modules/bootstrap/scss/_functions",
