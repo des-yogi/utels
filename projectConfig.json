@@ -30,7 +30,10 @@
     "special-offer-card": [],
     "features-card": [],
     "clients-slider": [],
-    "utels-tv-banner": []
+    "utels-tv-banner": [],
+    "socials": [],
+    "contact-block": [],
+    "copyrights": []
   },
   "addCssBefore": [
     "../../node_modules/bootstrap/scss/_functions",

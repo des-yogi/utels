@@ -149,7 +149,8 @@ a {
 
   &:hover,
   &:focus {
-    color: $color-success;
+    //color: $color-success;
+    color: $link-color--hover;
     text-decoration: underline;
   }
 

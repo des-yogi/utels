@@ -1,11 +1,167 @@
 <!--DEV
-
-Нужно убрать пробел между @-ами:
-
 @ @include('blocks/page-footer/page-footer.html')
-
 -->
 
-<footer class="page-footer" role="contentinfo">
-  page-footer
+<footer class="container page-footer">
+
+  <div class="page-footer__main">
+
+    <div class="page-footer__contacts" itemscope itemtype="https://schema.org/LocalBusiness">
+      <meta itemprop="name" content="UTELS Интернет-оператор" />
+      <meta itemprop="description" content="Провайдер сети интернет, IPTV, видеонаблюдения…" />
+      <meta itemprop="image" content="https://utels.ua/impact_template_files/logo0000.png" />
+      <meta itemprop="logo" content="https://utels.ua/impact_template_files/logo0000.png" />
+      <meta itemprop="url" content="https://utels.ua" />
+      <meta itemprop="priceRange" content="$$" />
+      <meta itemprop="openingHours" content="Mo-Fr 09:00-19:00">
+      @@include('../../blocks/logo/logo.html', {
+        "location": "logo--footer"
+      })
+      @@include('../../blocks/socials/socials.html', {
+        "locationClass": "socials--footer"
+      })
+      @@include('../../blocks/contact-block/contact-block.html', {
+        "locationClass": "contact-block--footer"
+      })
+    </div>
+
+    <nav class="page-footer__nav">
+      <ul class="list-nostyled  page-footer__nav-list">
+        <li class="page-footer__nav-item">
+          <a href="#" class="h5  page-footer__nav-link">Для дому</a>
+        </li>
+        <li class="page-footer__nav-item">
+          <a href="#" class="h5  page-footer__nav-link">Для бізнесу</a>
+          <ul class="list-nostyled  page-footer__nav-sublist">
+            <li class="page-footer__nav-item">
+              <a href="#" class="page-footer__nav-link">Інтернет</a>
+            </li>
+            <li class="page-footer__nav-item">
+              <a href="#" class="page-footer__nav-link">IP транзит</a>
+            </li>
+            <li class="page-footer__nav-item">
+              <a href="#" class="page-footer__nav-link">Обладнання</a>
+            </li>
+            <li class="page-footer__nav-item">
+              <a href="#" class="page-footer__nav-link">Відеоспостереження</a>
+            </li>
+            <li class="page-footer__nav-item">
+              <a href="#" class="page-footer__nav-link">Комплексні рішення</a>
+            </li>
+          </ul>
+        </li>
+        <li class="page-footer__nav-item">
+          <a href="#" class="h5  page-footer__nav-link">Сервіси</a>
+          <ul class="list-nostyled  page-footer__nav-sublist">
+            <li class="page-footer__nav-item">
+              <a href="#" class="page-footer__nav-link">Інтерактивне телебачення UTELS.TV</a>
+            </li>
+            <li class="page-footer__nav-item">
+              <a href="#" class="page-footer__nav-link">Відеоспостереження</a>
+            </li>
+            <li class="page-footer__nav-item">
+              <a href="#" class="page-footer__nav-link">Розумний дім (IoT)</a>
+            </li>
+            <li class="page-footer__nav-item">
+              <a href="#" class="page-footer__nav-link">OLL.TV</a>
+            </li>
+          </ul>
+        </li>
+        <li class="page-footer__nav-item">
+          <a href="#" class="h5  page-footer__nav-link">Послуги</a>
+          <ul class="list-nostyled  page-footer__nav-sublist">
+            <li class="page-footer__nav-item">
+              <a href="#" class="page-footer__nav-link">Інтернет</a>
+            </li>
+            <li class="page-footer__nav-item">
+              <a href="#" class="page-footer__nav-link">Монтаж</a>
+            </li>
+            <li class="page-footer__nav-item">
+              <a href="#" class="page-footer__nav-link">Налаштування</a>
+            </li>
+          </ul>
+        </li>
+        <li class="page-footer__nav-item">
+          <a href="#" class="h5  page-footer__nav-link">Акції</a>
+        </li>
+        <li class="page-footer__nav-item">
+          <a href="#" class="h5  page-footer__nav-link">Підтримка</a>
+          <ul class="list-nostyled  page-footer__nav-sublist">
+            <li class="page-footer__nav-item">
+              <a href="#" class="page-footer__nav-link">Оплата послуг</a>
+            </li>
+            <li class="page-footer__nav-item">
+              <a href="#" class="page-footer__nav-link">Налаштування UTELS.TV</a>
+            </li>
+            <li class="page-footer__nav-item">
+              <a href="#" class="page-footer__nav-link">Тестування швидкості</a>
+            </li>
+            <li class="page-footer__nav-item">
+              <a href="#" class="page-footer__nav-link">Рекомендації</a>
+            </li>
+            <li class="page-footer__nav-item">
+              <a href="#" class="page-footer__nav-link">Технічна підтримка</a>
+            </li>
+          </ul>
+        </li>
+        <li class="page-footer__nav-item">
+          <a href="#" class="h5  page-footer__nav-link">Обладнання</a>
+          <ul class="list-nostyled  page-footer__nav-sublist">
+            <li class="page-footer__nav-item">
+              <a href="#" class="page-footer__nav-link">Wi-Fi Роутери</a>
+            </li>
+            <li class="page-footer__nav-item">
+              <a href="#" class="page-footer__nav-link">Smart Приставки</a>
+            </li>
+            <li class="page-footer__nav-item">
+              <a href="#" class="page-footer__nav-link">Комутатори</a>
+            </li>
+            <li class="page-footer__nav-item">
+              <a href="#" class="page-footer__nav-link">Інше</a>
+            </li>
+          </ul>
+        </li>
+        <li class="page-footer__nav-item">
+          <a href="#" class="h5  page-footer__nav-link">Про нас</a>
+          <ul class="list-nostyled  page-footer__nav-sublist">
+            <li class="page-footer__nav-item">
+              <a href="#" class="page-footer__nav-link">Про компанію</a>
+            </li>
+            <li class="page-footer__nav-item">
+              <a href="#" class="page-footer__nav-link">Документи</a>
+            </li>
+            <li class="page-footer__nav-item">
+              <a href="#" class="page-footer__nav-link">Забудовники</a>
+            </li>
+            <li class="page-footer__nav-item">
+              <a href="#" class="page-footer__nav-link">Звернення до директора</a>
+            </li>
+            <li class="page-footer__nav-item">
+              <a href="#" class="page-footer__nav-link">Контакти</a>
+            </li>
+          </ul>
+        </li>
+        <li class="page-footer__nav-item">
+          <a href="#" class="h5  page-footer__nav-link">Покриття</a>
+        </li>
+        <li class="page-footer__nav-item">
+          <a href="#" class="h5  page-footer__nav-link">Корзина</a>
+        </li>
+      </ul>
+    </nav>
+
+  </div>
+
+  <div class="copyrights">
+    <div class="copyrights__owner">
+      <span>©&thinsp;2015—2021 UTELS. Всі права захищені.</span>
+      <a href="#" class="copyrights__link">Правила надання послуг.</a>
+      <a href="#" class="copyrights__link">Публічний договір</a>
+    </div>
+    <div class="copyrights__dev">
+      <a href="#" class="copyrights__dev-link" title="IT-Doors" target="_blank" rel="nofollow noopener">
+        <img src="img/itdoors-logo.svg" alt="IT-Doors logo" width="85" height="32" loading="lazy">
+      </a>
+    </div>
+  </div>
 </footer>

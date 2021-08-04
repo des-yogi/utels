@@ -26,11 +26,6 @@
       @media (min-width: $screen-xl) {
         background-color: $color-success;
       }
-
-      // svg .text,
-      // svg .logo {
-      //   fill: currentColor;
-      // }
     }
 
     svg {
@@ -62,10 +57,17 @@
   }
 
   &--footer {
+    margin-bottom: 32px;
+    color: $white;
+
+    @media (min-width: $screen-xl) {
+      margin-bottom: 42px;
+    }
 
     svg {
       width: 130px;
       height: 48px;
+      fill: currentColor;
 
       @media (min-width: $screen-xl) {
         width: 206px;
