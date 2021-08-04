@@ -1,15 +1,15 @@
 <!--DEV
 @ @include('blocks/breadcrumbs/breadcrumbs.html')
-
 aria-current="page" - для ссылки на текущую страницу
+-->
+<nav class="container breadcrumbs">
 
-<nav class="breadcrumbs">
-
-  <ol class="breadcrumbs__list" itemscope itemtype="https://schema.org/BreadcrumbList">
+  <ol class="list-nostyled breadcrumbs__list" itemscope itemtype="https://schema.org/BreadcrumbList">
+    <meta itemprop="name" content="Навигация — Хлебные крошки" />
 
     <li class="breadcrumbs__item" itemprop="itemListElement" itemscope
       itemtype="https://schema.org/ListItem">
-      <a itemprop="item" href="#" class="breadcrumbs__link">
+      <a href="#" itemprop="item" class="breadcrumbs__link">
        <span itemprop="name">Главная</span>
        <meta itemprop="position" content="1" />
       </a>
@@ -17,21 +17,20 @@ aria-current="page" - для ссылки на текущую страницу
 
     <li class="breadcrumbs__item" itemprop="itemListElement" itemscope
       itemtype="https://schema.org/ListItem">
-      <a itemprop="item" href="#" class="breadcrumbs__link">
+      <a href="#" itemprop="item" class="breadcrumbs__link">
         <span itemprop="name">Страница 1</span>
         <meta itemprop="position" content="2" />
       </a>
     </li>
-
+    <!-- Для текущей страницы (как вариант — не выводить совсем) -->
     <li class="breadcrumbs__item" itemprop="itemListElement" itemscope
       itemtype="https://schema.org/ListItem">
-      <a itemprop="item" href="#" class="breadcrumbs__link" aria-current="page">
+      <span class="breadcrumbs__link  breadcrumbs__link--current" aria-current="page">
         <span itemprop="name">Страница 2</span>
         <meta itemprop="position" content="3" />
-      </a>
+      </span>
     </li>
 
   </ol>
 </nav>
--->
 
