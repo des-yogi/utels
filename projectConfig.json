@@ -33,7 +33,10 @@
     "utels-tv-banner": [],
     "socials": [],
     "contact-block": [],
-    "copyrights": []
+    "copyrights": [],
+    "category-card": [],
+    "page-top-decor": [],
+    "article": []
   },
   "addCssBefore": [
     "../../node_modules/bootstrap/scss/_functions",

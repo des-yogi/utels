@@ -335,4 +335,8 @@ a {
   @include col(md, 6);
   @include col(xl, 4);
   margin-bottom: 24px;
+
+  @media (min-width: $screen-md) {
+    margin-bottom: 32px;
+  }
 }

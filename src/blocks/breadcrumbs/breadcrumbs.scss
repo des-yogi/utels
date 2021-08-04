@@ -2,13 +2,25 @@ $line-height:                 1.375em !default;
 $text-color:                  hsl(0, 0%, 10%) !default;
 
 .breadcrumbs {
-  margin-top: 25px;
-  margin-bottom: 25px;
+  padding-top: 16px;
+  padding-bottom: 8px;
+  background-color: $white;
+  border-bottom: 1px solid $border-color;
 
-  $block-name:                &;
-  // #{$block-name}__element
+  @media (min-width: $screen-md) {
+    padding-bottom: 16px;
+  }
+
+  @media (min-width: $screen-xl) {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+
+  $block-name:                &;  // #{$block-name}__element
 
   &__list {
+    display: flex;
+    align-items: center;
     padding: 0;
     list-style: none;
     margin: 0;
@@ -19,7 +31,7 @@ $text-color:                  hsl(0, 0%, 10%) !default;
     display: inline-block;
     vertical-align: baseline;
     max-width: 100%;
-    margin-right: 0.6em;
+    margin-right: 8px;
     margin-bottom: 0.5em;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -29,34 +41,38 @@ $text-color:                  hsl(0, 0%, 10%) !default;
     }
 
     &:not(:last-child)::after {
-      content: '|';
+      content: "";
       display: inline-block;
-      margin-left: 0.8em;
-      font-weight: 700;
-      color: $text-muted;
-    }
-
-    &:last-child {
-
-      #{$block-name}__link {
-        text-decoration: none;
-        color: $main-color;
-      }
+      width: 5px;
+      height: 8px;
+      margin-left: 10px;
+      background-size: 5px 8px;
+      background-position: center;
+      background-image: svg-load('../blocks/sprite-svg/svg/carret-right.svg', fill=$text-color);
+      transform: translateY(-1px);
     }
   }
 
   &__link {
     max-width: 100%;
     font-size: 14px;
-    font-weight: 500;
-    color: $text-muted;
-    text-decoration: none;
+    font-weight: 400;
+    color: inherit;
+    text-decoration: none !important;
     white-space: nowrap;
+
+    @media (min-width: $screen-xl) {
+      font-size: 16px;
+    }
 
     &:hover,
     &:focus {
       color: $main-color;
       //text-decoration: none;
+    }
+
+    &--current {
+      color: $text-muted !important;
     }
   }
 }
