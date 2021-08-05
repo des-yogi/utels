@@ -84,4 +84,49 @@
       box-shadow: 0 0 0 4px rgba($black, 0.25);
     }
   }
+
+  &--white {
+    color: $text-color;
+    background-color: $white;
+
+    &:hover,
+    &:focus {
+      color: $main-color;
+      background-color: inherit;
+    }
+  }
+
+  &--filter {
+    padding: 4px 8px;
+    font-weight: 400;
+    color: $text-color;
+    background-color: transparent;
+
+    &:hover,
+    &:focus {
+      color: $color-success;
+      background-color: transparent;
+
+      span {
+        color: inherit;
+      }
+    }
+
+    &.is-checked {
+      color: $white;
+      background-color: $main-color;
+      box-shadow: none;
+      pointer-events: none;
+
+      span {
+        color: inherit;
+      }
+    }
+
+    span {
+      font-weight: 500;
+      color: $text-muted;
+      transition: all $transition-time ease-out;
+    }
+  }
 }

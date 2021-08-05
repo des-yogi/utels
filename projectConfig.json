@@ -36,7 +36,9 @@
     "copyrights": [],
     "category-card": [],
     "page-top-decor": [],
-    "article": []
+    "article": [],
+    "equipment-card": [],
+    "btn-filter-group": []
   },
   "addCssBefore": [
     "../../node_modules/bootstrap/scss/_functions",
