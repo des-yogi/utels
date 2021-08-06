@@ -1470,62 +1470,6 @@ a:hover, a:focus{
   padding-left:16px;
   padding-right:16px;
   margin-bottom:24px; }
-@-webkit-keyframes zoomIn{
-  0%{
-    opacity:0;
-    -webkit-transform:scale3d(0, 0, 0);
-            transform:scale3d(0, 0, 0); }
-  50%{
-    opacity:1; }
-  100%{
-    -webkit-transform:scale3d(1, 1, 1);
-            transform:scale3d(1, 1, 1); } }
-@keyframes zoomIn{
-  0%{
-    opacity:0;
-    -webkit-transform:scale3d(0, 0, 0);
-            transform:scale3d(0, 0, 0); }
-  50%{
-    opacity:1; }
-  100%{
-    -webkit-transform:scale3d(1, 1, 1);
-            transform:scale3d(1, 1, 1); } }
-@-webkit-keyframes zoomOut{
-  0%{
-    opacity:1;
-    -webkit-transform:scale3d(1, 1, 1);
-            transform:scale3d(1, 1, 1); }
-  100%{
-    -webkit-transform:scale3d(0, 0, 0);
-            transform:scale3d(0, 0, 0);
-    visibility:hidden; } }
-@keyframes zoomOut{
-  0%{
-    opacity:1;
-    -webkit-transform:scale3d(1, 1, 1);
-            transform:scale3d(1, 1, 1); }
-  100%{
-    -webkit-transform:scale3d(0, 0, 0);
-            transform:scale3d(0, 0, 0);
-    visibility:hidden; } }
-.zoomIn{
-  -webkit-animation-name:zoomIn;
-          animation-name:zoomIn;
-  -webkit-animation-duration:0.5s;
-          animation-duration:0.5s;
-  -webkit-animation-fill-mode:both;
-          animation-fill-mode:both;
-  -webkit-animation-iteration-count:1;
-          animation-iteration-count:1; }
-.zoomOut{
-  -webkit-animation-name:zoomOut;
-          animation-name:zoomOut;
-  -webkit-animation-duration:0.5s;
-          animation-duration:0.5s;
-  -webkit-animation-fill-mode:both;
-          animation-fill-mode:both;
-  -webkit-animation-iteration-count:1;
-          animation-iteration-count:1; }
 .page-footer{
   padding-top:32px;
   color:white;
@@ -2902,6 +2846,8 @@ a{
   border:1px solid #e7e7e7;
   background-color:white;
   overflow:hidden; }
+.equipment-card__wrapper{
+    margin-bottom:40px; }
 .equipment-card__title{
     margin-bottom:24px; }
 .equipment-card__inner{
@@ -2909,10 +2855,10 @@ a{
     width:100%;
     height:100%;
     will-change:transform;
-    -webkit-transition:-webkit-transform 0.5s;
-    transition:-webkit-transform 0.5s;
-    transition:transform 0.5s;
-    transition:transform 0.5s, -webkit-transform 0.5s;
+    -webkit-transition:-webkit-transform 0.5s ease-in-out;
+    transition:-webkit-transform 0.5s ease-in-out;
+    transition:transform 0.5s ease-in-out;
+    transition:transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
     -webkit-transform-style:preserve-3d;
             transform-style:preserve-3d; }
 .equipment-card__inner--backface{
@@ -3208,6 +3154,8 @@ a{
       .article__content{
         padding-left:58px;
         padding-right:58px; }
+      .equipment-card__wrapper{
+        margin-bottom:32px; }
         .equipment-card__face--back{
           padding:24px; }
       .equipment-card__text, .equipment-card__prod-cart{
@@ -3453,6 +3401,8 @@ a{
       padding-right:16px; }
       .article__content{
         padding:48px 95px; }
+      .equipment-card__wrapper{
+        margin-bottom:60px; }
       .equipment-card__title{
         margin-bottom:32px; }
     .btn-filter-group{
