@@ -38,7 +38,14 @@
     "page-top-decor": [],
     "article": [],
     "equipment-card": [],
-    "btn-filter-group": []
+    "btn-filter-group": [],
+    "service-card": [],
+    "contacts": [],
+    "field-actions": [],
+    "field-checkbox": [],
+    "field-radio": [],
+    "field-select": [],
+    "field-text": []
   },
   "addCssBefore": [
     "../../node_modules/bootstrap/scss/_functions",
@@ -72,7 +79,7 @@
     "./node_modules/bootstrap/js/dist/popover.js",
     "./node_modules/focus-visible/dist/focus-visible.min.js",
     "./node_modules/blazy/blazy.min.js",
-    "./node_modules/isotope-layout/dist/isotope.pkgd.min.js",
+    "./node_modules/imask/dist/imask.min.js",
     "./node_modules/flickity/dist/flickity.pkgd.min.js",
     "./node_modules/svg4everybody/dist/svg4everybody.js"
   ],

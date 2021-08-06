@@ -58,6 +58,16 @@ if(~navigator.appVersion.indexOf("Linux"))cth('linux');
   });
 }());
 
+(function(){
+  var phoneElems = document.getElementsByClassName('phone-mask');
+  Array.prototype.forEach.call(phoneElems, function (item) {
+    var phoneMask = IMask(
+      item, {
+        mask: '+{38} (\\000) 000 00 00',
+        lazy: false // make placeholder always visible
+    });
+  });
+}());
 // На проекте нет jQuery, но хочется $( document ).ready...
 // function ready(fn) {
 //   if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading"){
