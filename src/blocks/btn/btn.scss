@@ -129,4 +129,8 @@
       transition: all $transition-time ease-out;
     }
   }
+
+  &--textless {
+    padding: 11px 10px;
+  }
 }
