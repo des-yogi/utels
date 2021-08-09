@@ -69,8 +69,8 @@
 @mixin field-name {
   display: inline-block;
   vertical-align: top;
-  margin-bottom: 1.2em;
+  margin-bottom: 8px;
   line-height: $line-height;
-  font-size: 18px;
-  font-weight: 700;
+  font-size: 14px;
+  font-weight: 500;
 }
