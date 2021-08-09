@@ -45,7 +45,12 @@
     "field-checkbox": [],
     "field-radio": [],
     "field-select": [],
-    "field-text": []
+    "field-text": [],
+    "loader": [],
+    "coverage-form": [],
+    "coverage-result": [],
+    "order-modal": [],
+    "special-offers": []
   },
   "addCssBefore": [
     "../../node_modules/bootstrap/scss/_functions",
