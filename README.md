@@ -7,3 +7,5 @@ ISP Utels
 * https://des-yogi.github.io/utels/add-service.html
 * https://des-yogi.github.io/utels/contacts.html
 * https://des-yogi.github.io/utels/coverage.html
+* https://des-yogi.github.io/utels/special-offers.html
+* https://des-yogi.github.io/utels/special-offer-page.html
