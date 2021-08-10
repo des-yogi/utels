@@ -1,0 +1,133 @@
+.service-card {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  height: 100%;
+  padding: 16px;
+  background-color: $white;
+  border: 1px solid $border-color;
+  border-radius: $border-radius;
+
+  @media (min-width: $screen-sm) {
+    flex-wrap: nowrap;
+  }
+
+  @media (min-width: $screen-lg) {
+    align-items: stretch;
+  }
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__wrapper {
+    margin-bottom: 64px;
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 40px;
+    }
+
+    @media (min-width: $screen-lg) {
+      margin-bottom: 32px;
+    }
+
+    @media (min-width: $screen-xl) {
+      margin-bottom: 60px;
+    }
+
+    .col-1-1-2-3  {
+
+      @media (max-width: $screen-md - 1) {
+        padding-left: 0;
+        padding-right: 0;
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__title {
+    margin-bottom: 24px;
+
+    @media (min-width: $screen-xl) {
+      margin-bottom: 32px;
+    }
+  }
+
+  &__img {
+    flex: 0 0;
+    flex-basis: 64px;
+    max-width: 64px;
+    max-height: 64px;
+    margin-right: 16px;
+
+    @media (max-width: $screen-md - 1) {
+      margin-bottom: 16px;
+    }
+
+    @media (min-width: $screen-md) {
+      flex-basis: 92px;
+      max-width: 92px;
+      max-height: 92px;
+    }
+
+    @media (min-width: $screen-lg) {
+      flex-basis: 128px;
+      max-width: 128px;
+      max-height: 128px;
+    }
+
+    img {
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  &__text-wrapper {
+    flex: 1 1;
+    flex-basis: 100%;
+
+    @media (min-width: $screen-sm) {
+      flex-basis: unset;
+    }
+
+    @media (min-width: $screen-lg) {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  }
+
+  &__text {
+    margin-bottom: 12px;
+  }
+
+  &__card-title {
+    margin-top: 0;
+    margin-bottom: 8px;
+  }
+
+  &__descr {
+    margin-top: 8px;
+    font-size: $font-size-sm;
+  }
+
+  &__ctrls {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__price {
+    font-size: $font-size-sm;
+    font-weight: 500;
+  }
+
+  &__btn-group {
+    display: flex;
+    align-items: center;
+
+    & > *:last-child {
+      margin-left: 12px;
+    }
+  }
+}

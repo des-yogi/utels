@@ -1,0 +1,62 @@
+.features-card {
+  height: 100%;
+  padding: 16px;
+  text-align: center;
+  border: 1px solid $border-color;
+  border-radius: $border-radius;
+  background-color: $white;
+
+  @media (min-width: $screen-md) {
+    padding: 24px;
+  }
+
+  @media (min-width: $screen-xl) {
+    padding: 32px;
+  }
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__wrapper {
+    margin-bottom: 24px;
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__img {
+    width: 92px;
+    height: 92px;
+    margin: 0 auto 24px auto;
+
+    img {
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  &__title,
+  &__subtitle {
+    margin-top: 0;
+  }
+
+  &__title {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    margin-bottom: 24px;
+    color: $white;
+    background-color: $secondary-color;
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 32px;
+    }
+
+    @media (min-width: $screen-xl) {
+      margin-bottom: 48px;
+    }
+  }
+
+  &__descr {
+    font-size: 16px;
+  }
+}

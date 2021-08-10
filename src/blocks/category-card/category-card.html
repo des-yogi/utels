@@ -1,0 +1,21 @@
+<!--DEV
+@ @include('blocks/category-card/category-card.html', {
+  "img": "",
+  "title": "",
+  "descr": ""
+})
+-->
+
+<div class="category-card">
+  <div class="category-card__inner">
+    <div class="embed-responsive embed-responsive--1-1  category-card__img">
+      <img src="img/@@img.svg" alt="Описание" width="92" height="92">
+    </div>
+    <h3 class="category-card__subtitle">@@title</h3>
+    <p class="category-card__descr">@@descr</p>
+  </div>
+  <a href="#" class="btn btn--icon  category-card__link">
+    <span>Детальніше</span>
+    <svg width="20" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#carret-down-round"></use></svg>
+  </a>
+</div>

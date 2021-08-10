@@ -1,0 +1,214 @@
+.hero {
+  position: relative;
+  padding-top: 32px;
+  padding-bottom: 52px;
+
+  @media (min-width: $screen-md) {
+    padding-top: 48px;
+    padding-bottom: 84px;
+  }
+
+  @media (min-width: $screen-xl) {
+    padding-top: 64px;
+    padding-bottom: 32px;
+  }
+
+  $block-name:                &; // #{$block-name}__element
+
+  color: $white;
+  //background-color: $main-color;
+
+  &__wrapper {
+    background-color: $main-color;
+  }
+
+  .carousel-cell {
+    width: 100%;
+    margin-right: 32px;
+  }
+
+  // .flickity-page-dots {
+  //   bottom: -30px;
+  //   pointer-events: none;
+
+  //   @media (min-width: $screen-md) {
+  //     bottom: -47px;
+  //   }
+
+  //   .dot {
+  //     width: 32px;
+  //     height: 3px;
+  //     border-radius: 2px;
+  //     background-color: $white;
+  //     opacity: 0.45;
+  //     cursor: pointer;
+  //     pointer-events: auto;
+
+  //     &::before {
+  //       display: none;
+  //     }
+
+  //     &:hover,
+  //     &:focus {
+  //       opacity: 1;
+  //     }
+
+  //     &.is-selected {
+  //       width: 48px;
+  //       opacity: 1;
+  //     }
+  //   }
+  // }
+
+  // .flickity-button {
+  //   top: initial;
+  //   bottom: -46px;
+  //   width: 20px;
+  //   height: 20px;
+  //   padding: 0;
+  //   color: $main-color;
+  //   background-color: $white;
+
+  //   @media (min-width: $screen-md) {
+  //     bottom: -62px;
+  //   }
+  // }
+
+  &__text-col {
+    @include col(xs, 12);
+    @include col-offset(md, 3);
+    @include col(md, 6);
+    @include col-offset(xl, 0);
+    @include col(xl, 4);
+    @include col(xxl, 3);
+
+    @media (max-width: $screen-xl - 1) {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__img-col {
+    @include col(xs, 12);
+    @include col-offset(md, 1);
+    @include col(md, 10);
+    @include col(xl, 7);
+    @include col-offset(xxl, 2);
+  }
+
+  &__text {
+    text-align: center;
+
+    @media (min-width: $screen-xl) {
+      text-align: initial;
+    }
+
+    .btn {
+      width: 100%;
+      max-width: 320px;
+    }
+  }
+
+  &__descr {
+    margin-top: 0;
+    margin-bottom: 24px;
+
+    @media (min-width: $screen-xl) {
+      margin-bottom: 32px;
+    }
+  }
+
+  &__img {
+
+    img {
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  &__controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 50%;
+    bottom: 16px;
+    transform: translateX(-50%);
+
+    @media (min-width: $screen-md) {
+      bottom: 32px;
+    }
+
+    @media (min-width: $screen-xl) {
+      left: 0;
+      transform: none;
+    }
+  }
+
+  &__btn,
+  &__dot {
+    padding: 0;
+    background-color: $white;
+    border: none;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  &__btn {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    color: $white;
+    background-color: $main-color;
+
+    &:hover,
+    &:focus {
+      background-color: $color-success;
+    }
+
+    &--prev {
+
+      svg {
+        transform: rotate(90deg);
+      }
+    }
+
+    &--next {
+
+      svg {
+        transform: rotate(-90deg);
+      }
+    }
+  }
+
+  &__dot-group {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 8px;
+  }
+
+  &__dot {
+    width: 32px;
+    height: 3px;
+    margin: 0 8px;
+    border-radius: 2px;
+    background-color: $white;
+    opacity: 0.45;
+    cursor: pointer;
+    pointer-events: auto;
+
+    &::before {
+      display: none;
+    }
+
+    &:hover,
+    &:focus {
+      opacity: 1;
+    }
+
+    &.is-selected {
+      width: 48px;
+      opacity: 1;
+    }
+  }
+}

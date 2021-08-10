@@ -1,0 +1,22 @@
+.page-top-decor {
+
+  $block-name:                &; // #{$block-name}__element
+
+  height: 100px;
+  margin-bottom: 32px;
+  background-repeat: repeat;
+  background-position: center;
+  //background-size: cover;
+  background-size: 75px 23px;
+  background-color: $main-color;
+  background-image: svg-load('../blocks/page-top-decor/bg-img/page-top-grid-cell.svg', fill=rgba($black, 0.025));
+
+  @media (min-width: $screen-md) {
+    height: 200px;
+    margin-bottom: 48px;
+  }
+
+  @media (min-width: $screen-xl) {
+    height: 250px;
+  }
+}

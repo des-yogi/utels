@@ -1,0 +1,138 @@
+.equipment-card {
+  width: 100%;
+  height: 100%;
+  //perspective: 800px;
+  border-radius: $border-radius;
+  border: 1px solid $border-color;
+  background-color: $white;
+  overflow: hidden;
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__wrapper {
+    margin-bottom: 40px;
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 32px;
+    }
+
+    @media (min-width: $screen-xl) {
+      margin-bottom: 60px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 24px;
+
+    @media (min-width: $screen-xl) {
+      margin-bottom: 32px;
+    }
+  }
+
+  &__inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    will-change: transform; // возможно надо перенести в скрипт
+    transition: transform 0.5s ease-in-out;
+    transform-style: preserve-3d; /* Вращение в 3D */
+
+    &--backface {
+      transform: rotateY(180deg); /* При наведении вращаем */
+    }
+  }
+
+  &__face {
+    height: 100%;
+    background-color: $white;
+    backface-visibility: hidden; /* Скрываем обратную поверхность */
+
+    &--front {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    &--back {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: absolute; /* Абсолютное позиционирование */
+      top: 0;
+      bottom: 0; /* Задаём так высоту */
+      left: 0;
+      right: 0;
+      padding: 16px;
+      font-size: 14px;
+      transform: rotateY(180deg); /* Поворачиваем текст */
+
+      @media (min-width: $screen-md) {
+        padding: 24px;
+      }
+
+      .btn {
+        flex: 0 0;
+        flex-basis: 40px;
+        margin-top: 16px;
+      }
+    }
+  }
+
+  &__backface-content {
+    flex: 1 1;
+    flex-basis: auto;
+    overflow: hidden;
+  }
+
+  &__img {
+    margin-bottom: 16px;
+
+    img {
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  &__text,
+  &__prod-cart {
+    padding: 0 16px 16px;
+
+    @media (min-width: $screen-md) {
+      padding: 0 24px 24px;
+    }
+  }
+
+  &__card-title {
+    margin-top: 0;
+  }
+
+  &__prod-price {
+    margin-bottom: 16px;
+    line-height: 1;
+
+    &:not(span) {
+      font-size: 18px;
+      font-weight: 500;
+    }
+
+    span {
+      font-size: 36px;
+      font-weight: 700;
+
+      @media (min-width: $screen-md) {
+        font-size: 42px;
+      }
+    }
+  }
+
+  &__prod-ctrls {
+
+    .btn {
+      width: 100%;
+    }
+
+    .btn + .btn {
+      margin-top: 8px;
+    }
+  }
+}

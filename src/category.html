@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="ru" prefix="og: https://ogp.me/ns#">
+
+<head>
+  <meta charset="utf-8">
+  <title>Категория</title>
+  @@include('_include/page_head.html')
+</head>
+
+<body>
+<noscript>У вас отключен JavaScript. Приносим наши извинения, но это делает затруднительным использование данного сайта.</noscript>
+
+  <div class="page__inner">
+
+    <div class="page__content">
+      @@include('blocks/page-header/page-header.html')
+
+      @@include('blocks/breadcrumbs/breadcrumbs.html')
+
+      <main>
+
+        <section class="container  category-card__wrapper">
+
+          <h1 class="category-card__title">Для бізнесу</h1>
+
+          <div class="row">
+
+            <div class="col-1-2-3">
+              @@include('blocks/category-card/category-card.html', {
+                "img": "service-category",
+                "title": "Інтернет",
+                "descr": "Висококваліфікаовані фахівці компанії UTELS дадуть собі раду навіть з найскалдніших ситуацій"
+              })
+            </div>
+
+            <div class="col-1-2-3">
+              @@include('blocks/category-card/category-card.html', {
+                "img": "service-category",
+                "title": "IP транзит",
+                "descr": "Висококваліфікаовані фахівці"
+              })
+            </div>
+
+            <div class="col-1-2-3">
+              @@include('blocks/category-card/category-card.html', {
+                "img": "service-category",
+                "title": "Розміщення обладнання",
+                "descr": "Висококваліфікаовані фахівці компанії UTELS дадуть собі раду навіть з найскалдніших ситуацій"
+              })
+            </div>
+
+            <div class="col-1-2-3">
+              @@include('blocks/category-card/category-card.html', {
+                "img": "service-category",
+                "title": "Системи відеоспостереження",
+                "descr": "Висококваліфікаовані фахівці компанії UTELS дадуть собі раду навіть з найскалдніших ситуацій"
+              })
+            </div>
+
+            <div class="col-1-2-3">
+              @@include('blocks/category-card/category-card.html', {
+                "img": "service-category",
+                "title": "Комплексні рішення для бізнесу",
+                "descr": "Висококваліфікаовані фахівці компанії UTELS дадуть собі раду навіть з найскалдніших ситуацій"
+              })
+            </div>
+
+          </div>
+        </section>
+
+      </main>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+      @@include('blocks/page-footer/page-footer.html')
+    </div>
+
+  </div>
+
+  @@include('blocks/offcanvas/offcanvas.html')
+
+  @@include('_include/page_bottom.html')
+
+</body>
+</html>

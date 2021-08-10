@@ -1,0 +1,125 @@
+.contact-block {
+  font-weight: 500;
+  color: inherit;
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__col {
+    @include col(xs, 12);
+    @include col(md, 6);
+    @include col(xl, 3);
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    padding-bottom: 16px;
+    margin-bottom: 16px;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid rgba($white, 0.2);
+    }
+
+    @media (min-width: $screen-xl) {
+      padding-bottom: 24px;
+      margin-bottom: 24px;
+    }
+
+    &--socials {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+
+      @media (min-width: $screen-xxl) {
+        justify-content: flex-end;
+      }
+
+      & > span {
+        font-size: inherit;
+        font-weight: 500;
+
+        @media (min-width: $screen-xxl) {
+          margin-right: 42px;
+        }
+      }
+    }
+  }
+
+  &__icon {
+    flex: 0 0;
+    flex-basis: 40px;
+    height: 40px;
+    margin-right: 16px;
+    background-color: $main-color;
+    border-radius: $border-radius;
+
+    @media (min-width: $screen-xl) {
+      flex-basis: 48px;
+      height: 48px;
+    }
+
+    &--tel,
+    &--pin,
+    &--email {
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    &--tel {
+      background-size: 20px;
+      background-image: svg-load('../blocks/sprite-svg/svg/phone.svg', fill=$text-color);
+
+      @media (min-width: $screen-xl) {
+        background-size: 25px;
+      }
+    }
+
+    &--pin {
+      background-size: 20px;
+      background-image: svg-load('../blocks/sprite-svg/svg/map-pin.svg', fill=$text-color);
+
+      @media (min-width: $screen-xl) {
+        background-size: 22px 28px;
+      }
+    }
+
+    &--email {
+      background-size: 20px 15px;
+      background-image: svg-load('../blocks/sprite-svg/svg/envelope.svg', fill=$text-color);
+
+      @media (min-width: $screen-xl) {
+        background-size: 26px 20px;
+      }
+    }
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__link {
+    color: inherit;
+
+    & + & {
+      margin-top: 0.1em;
+    }
+  }
+
+  &--footer {
+    color: $white;
+  }
+
+  &--contacts {
+    margin-bottom: 16px;
+
+    @media (min-width: $screen-xl) {
+      margin-bottom: 0;
+    }
+
+    @media (min-width: $screen-xxl) {
+      margin-bottom: 16px;
+    }
+  }
+}

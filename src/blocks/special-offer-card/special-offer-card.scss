@@ -1,0 +1,90 @@
+.special-offer-card {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  max-width: 375px;
+  height: 100%;
+  padding: 12px;
+  margin: 0 auto;
+  border: 1px solid $border-color;
+  border-radius: $border-radius;
+  background-color: $white;
+
+  @media (min-width: $screen-md) {
+    max-width: 566px;
+    padding: 24px;
+  }
+
+  @media (min-width: $screen-xxl) {
+    padding: 32px;
+  }
+
+  $block-name:                &; // #{$block-name}__element
+
+  .btn {
+    width: 100%;
+
+    &::after {
+      display: block;
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    }
+  }
+
+  &__wrapper {
+    padding-top: 48px;
+    padding-bottom: 24px;
+
+    @media (min-width: $screen-md) {
+      padding-top: 64px;
+      padding-bottom: 40px;
+    }
+  }
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 24px;
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 32px;
+    }
+  }
+
+  &__subtitle {
+    margin-top: 0;
+  }
+
+  &__img {
+    flex: 0 0;
+    flex-basis: auto;
+
+    img {
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  &__text-wrapper {
+    flex: 1 1;
+    flex-basis: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__text {
+    padding: 12px 0 24px;
+
+    @media (min-width: $screen-md) {
+      padding-top: 24px;
+    }
+  }
+
+  &__countdown {
+    font-weight: 500;
+  }
+}
