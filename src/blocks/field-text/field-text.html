@@ -1,0 +1,15 @@
+<!--DEV
+@ @include('blocks/field-text/field-text.html', {
+  "label": "",
+  "required": "field-text__name--required",
+  "type": "text",
+  "error": ""
+})
+-->
+<label class="field-text">
+  <span class="field-text__name @@required">@@label<span></span></span>
+  <span class="field-text__input-wrap">
+    <input class="field-text__input" type="@@type" name="" value="">
+    <span class="field-text__help-text">@@error</span>
+  </span>
+</label>

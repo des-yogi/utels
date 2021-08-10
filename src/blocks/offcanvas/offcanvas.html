@@ -1,0 +1,101 @@
+<!--DEV
+@ @include('blocks/offcanvas/offcanvas.html')
+-->
+
+<div class="offcanvas offcanvas-start" tabindex="-1" id="mobMenu" aria-labelledby="mobMenuLabel">
+  <div class="offcanvas-header offcanvas__header">
+    <h5 class="visually-hidden" id="mobMenuLabel">Мобильное меню</h5>
+    <button type="button" class="offcanvas__close" data-bs-dismiss="offcanvas" aria-label="Закрыть меню">
+      <svg width="18" height="18" role="img"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#close"></use></svg>
+    </button>
+  </div>
+  <div class="offcanvas-body  offcanvas__body">
+    <ul class="list-nostyled offcanvas__contacts">
+      <li class="offcanvas__contact-item">
+        <a href="tel:+380445999952" class="offcanvas__link">+38 044 599 99 52</a>
+      </li>
+      <li class="offcanvas__contact-item">
+        <a href="tel:+380445999952" class="offcanvas__link">+38 044 599 99 52</a>
+      </li>
+      <li class="offcanvas__contact-item">
+        <a href="https://t.me/utels.tv" class="offcanvas__link  offcanvas__link--tg" target="_blank" rel="nofollow noopener">
+          <svg width="24" height="24"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#telegram"></use></svg>
+          <span>@utels.tv</span>
+        </a>
+      </li>
+    </ul>
+    <div class="offcanvas__payment">
+      <a href="#" class="offcanvas__link  offcanvas__link--tg" target="_blank" rel="nofollow">
+          <svg width="24" height="17"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#payment-card"></use></svg>
+          <span>Способи оплати</span>
+        </a>
+    </div>
+    <div class="offcanvas__langs" style="margin-bottom:0;">
+      <ul class="list-nostyled  offcanvas__lang-list">
+        <li class="offcanvas__lang-item  active">
+          <a class="offcanvas__lang-link">Укр</a>
+        </li>
+        <li class="offcanvas__lang-item">
+          <a href="#" class="offcanvas__lang-link">Рус</a>
+        </li>
+        <li class="offcanvas__lang-item">
+          <a href="#" class="offcanvas__lang-link">Анг</a>
+        </li>
+      </ul>
+    </div>
+    <nav class="mob-menu">
+      <ul id="mob-menu-list" class="list-nostyled  mob-menu__list">
+        <li class="mob-menu__item">
+          <a href="#" class="mob-menu__link">Для дому</a>
+        </li>
+        <li class="mob-menu__item  active">
+          <div class="mob-menu__link-wrapper">
+            <a class="mob-menu__link">Для бізнесу</a>
+            <button class="mob-menu__btn" type="button" aria-label="Открыть подменю" data-bs-toggle="collapse" data-bs-target="#subMenuItem-01" aria-expanded="false" aria-controls="subMenuItem-01">
+              <svg width="10" height="7"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#carret-down"></use></svg>
+            </button>
+          </div>
+          <ul id="subMenuItem-01" class="list-nostyled  mob-menu__submenu  collapse" data-bs-parent="#mob-menu-list">
+            <li class="mob-menu__item">
+              <a href="#" class="mob-menu__link">Пункт меню 1</a>
+            </li>
+            <li class="mob-menu__item  active">
+              <a href="#" class="mob-menu__link">Пункт меню 2</a>
+            </li>
+            <li class="mob-menu__item">
+              <a href="#" class="mob-menu__link">Пункт меню 3</a>
+            </li>
+            <li class="mob-menu__item">
+              <a href="#" class="mob-menu__link">Пункт меню 4</a>
+            </li>
+          </ul>
+        </li>
+        <li class="mob-menu__item">
+          <div class="mob-menu__link-wrapper">
+            <a href="#" class="mob-menu__link">Сервіси</a>
+            <button class="mob-menu__btn" type="button" aria-label="Открыть подменю" data-bs-toggle="collapse" data-bs-target="#subMenuItem-02" aria-expanded="false" aria-controls="subMenuItem-02">
+              <svg width="10" height="7"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#carret-down"></use></svg>
+            </button>
+          </div>
+          <ul id="subMenuItem-02" class="list-nostyled  mob-menu__submenu  collapse" data-bs-parent="#mob-menu-list">
+            <li class="mob-menu__item">
+              <a href="#" class="mob-menu__link">Пункт меню 1</a>
+            </li>
+            <li class="mob-menu__item">
+              <a href="#" class="mob-menu__link">Пункт меню 2</a>
+            </li>
+            <li class="mob-menu__item">
+              <a href="#" class="mob-menu__link">Пункт меню 3</a>
+            </li>
+            <li class="mob-menu__item">
+              <a href="#" class="mob-menu__link">Пункт меню 4</a>
+            </li>
+          </ul>
+        </li>
+        <li class="mob-menu__item">
+          <a href="#" class="mob-menu__link">Акції</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>

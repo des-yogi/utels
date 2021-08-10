@@ -1,0 +1,107 @@
+$gray-lighter:                hsl(0, 0%, 80%) !default;
+$border-color:                hsl(0, 0%, 60%) !default;
+
+$text-color--muted:           hsl(0, 0%, 50%) !default;
+
+$line-height:                 1.375em !default;
+
+$field-padding-vertical:      0.3em !default;
+$field-padding-horizontal:    0.7em !default;
+
+$border-radius:               3px !default;
+
+.field-text {
+
+  $block-name:                &; // #{$block-name}__element
+
+  display: block;
+  margin-bottom: 16px;
+
+  &__name {
+    @include field-name;
+
+    span {
+      color: $text-muted;
+    }
+  }
+
+  &__input-wrap {
+    position: relative;
+    display: block;
+  }
+
+  &__input {
+    display: inline-block;
+    vertical-align: middle;
+    width: 100%;
+    // height: 2.125em;
+    padding: 9px 30px 7px $field-padding-horizontal;
+    margin: 0;
+    line-height: $line-height;
+    font-size: 16px;
+    font-family: inherit;
+    color: inherit;
+    background-color: $white;
+    border: 1px solid $border-color;
+    border-radius: $border-radius;
+    appearance: textfield;
+
+    &:hover {
+      border-color: $main-color;
+    }
+
+    &:focus {
+      @include field-focus;
+    }
+
+    //&:invalid {
+      //border-color: $color-danger;
+    //}
+
+    &[disabled],
+    &[readonly] {
+      cursor: default;
+      color: $text-muted;
+      background-color: $body-bg;
+      border-color: $border-color !important;
+    }
+
+    &[required] {
+      background-size: 8px;
+      background-repeat: no-repeat;
+      background-position: right 12px top 16px;
+      background-image: svg-load('../blocks/field-text/bg-img/asterisk.svg', fill=$main-color);
+    }
+
+    &[type='search']::-webkit-search-cancel-button,
+    &[type='search']::-webkit-search-decoration {
+      -webkit-appearance: none; // stylelint-disable-line  property-no-vendor-prefix
+    }
+
+    &[type='number']::-webkit-inner-spin-button,
+    &[type='number']::-webkit-outer-spin-button {
+      // height: auto;
+    }
+
+    &[type='color'] {
+      // max-width: 100px;
+      padding: 0;
+    }
+
+    &::placeholder {
+      color: inherit;
+      opacity: 1;
+    }
+
+    @at-root textarea#{&} {
+      $textarea-height: ($line-height * 2) + ($field-padding-vertical * 2);
+      height: auto;
+      min-height: calc(#{$textarea-height} + 2px);
+      resize: vertical;
+    }
+  }
+
+  &__help-text {
+    @include field-help-text;
+  }
+}

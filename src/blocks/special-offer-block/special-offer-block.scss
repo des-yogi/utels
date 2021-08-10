@@ -1,0 +1,94 @@
+.special-offer-block {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  background-color: $white;
+  border: 1px solid $border-color;
+  border-radius: $border-radius;
+
+  @media (min-width: $screen-md) {
+    padding-top: 0;
+    padding-bottom: 0;
+    background-color: transparent;
+    border: none;
+  }
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__inner {
+
+    @media (min-width: $screen-md) {
+      padding-top: 32px;
+      padding-bottom: 32px;
+      background-color: $white;
+      border: 1px solid $border-color;
+      border-radius: $border-radius;
+    }
+
+    @media (min-width: $screen-xl) {
+      padding: 32px;
+    }
+
+    @media (min-width: $screen-xxl) {
+      padding-top: 48px;
+      padding-bottom: 48px;
+      padding-left: 64px;
+    }
+  }
+
+  &__img-col {
+    @include col(xs, 12);
+    @include col-offset(md, 1);
+    @include col(md, 10);
+    @include col-offset(xl, 0);
+    @include col(xl, 6);
+    @include col(xxl, 7);
+    margin-bottom: 24px;
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 48px;
+    }
+
+    @media (min-width: $screen-xxl) {
+      padding-right: 104px;
+      margin-bottom: 0;
+    }
+  }
+
+  &__text-col {
+    @include col(xs, 12);
+    @include col-offset(md, 1);
+    @include col(md, 10);
+    @include col-offset(xl, 0);
+    @include col(xl, 6);
+    @include col(xxl, 5);
+  }
+
+  &__img {
+    border-radius: $border-radius;
+
+    img {
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  &__countdown {
+    margin-top: 0;
+  }
+
+  &__content {
+    margin-bottom: 24px;
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 32px;
+    }
+  }
+
+  &__btn-wrapper {
+
+    .btn {
+      width: 100%;
+      max-width: 320px;
+    }
+  }
+}

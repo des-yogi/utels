@@ -1,0 +1,36 @@
+<!--DEV
+@ @include('blocks/contact-block/contact-block.html', {
+  "locationClass": "contact-block--footer"
+})
+-->
+
+<div class="contact-block  @@locationClass">
+  <ul class="list-nostyled contact-block__list">
+    <li class="contact-block__item">
+      <span class="contact-block__icon  contact-block__icon--tel" role="presentation"></span>
+      <span class="contact-block__links">
+        <a href="tel:+380445999952" class="contact-block__link">
+          <span itemprop="telephone">+38 044 599 99 52</span>
+        </a>
+        <a href="tel:+380445999952" class="contact-block__link">
+          <span itemprop="telephone">+38 044 599 99 52</span>
+        </a>
+      </span>
+    </li>
+    <li class="contact-block__item" itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+      <span class="contact-block__icon  contact-block__icon--pin" role="presentation"></span>
+      <div>
+        <span itemprop="addressLocality">
+          <span class="visually-hidden">Україна, </span>м. Київ,
+        </span>
+        <span itemprop="streetAddress">вул. Лютераньска 9/9, офіс 101</span>
+      </div>
+    </li>
+    <li class="contact-block__item">
+      <span class="contact-block__icon  contact-block__icon--email" role="presentation"></span>
+      <a href="mailto:info@utels.ua" class="contact-block__link">
+        <span itemprop="email">info@utels.ua</span>
+      </a>
+    </li>
+  </ul>
+</div>

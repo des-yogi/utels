@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="ru" prefix="og: https://ogp.me/ns#">
+
+<head>
+  <meta charset="utf-8">
+  <title>Оборудование</title>
+  @@include('_include/page_head.html')
+</head>
+
+<body>
+<noscript>У вас отключен JavaScript. Приносим наши извинения, но это делает затруднительным использование данного сайта.</noscript>
+
+  <div class="page__inner">
+
+    <div class="page__content">
+      @@include('blocks/page-header/page-header.html')
+
+      @@include('blocks/breadcrumbs/breadcrumbs.html')
+
+      <div class="page-top-decor" role="presentation"
+        style="background-image: url('/img/page-top-bg.webp');background-size:cover;"
+        data-bg="/img/page-top-bg.jpg"
+        data-bg-webp="/img/page-top-bg.webp"
+      >
+      </div>
+
+      <main>
+
+        <div class="container  equipment-card__wrapper">
+
+          <h1 class="equipment-card__title">Все обладнання</h1>
+
+          <section class="btn-filter-group">
+            <h2 class="visually-hidden">Группа переключателей для фильтрации оборудования по типам</h2>
+            <button class="btn btn--filter is-checked" type="button" data-filter="all">
+              Усе обладннаня
+              <span>68</span>
+            </button>
+            <button class="btn btn--filter" type="button" data-filter="wifi-routers">
+              Wi-Fi Роутери
+              <span>42</span>
+            </button>
+            <button class="btn btn--filter" type="button" data-filter="smart-box">
+              SMART Приставки
+              <span>17</span>
+            </button>
+            <button class="btn btn--filter" type="button" data-filter="switches">
+              Комутатори
+              <span>7</span>
+            </button>
+            <button class="btn btn--filter" type="button" data-filter="other">
+              Інше
+              <span>18</span>
+            </button>
+          </section>
+
+
+          <div class="row  grid">
+
+            <div class="col-1-2-3-4  grid-item  wifi-routers">
+              @@include('blocks/equipment-card/equipment-card.html', {
+                "img": "prod-01",
+                "title": "Mercusys MW300UM",
+                "descr": "Бездротовий мережевий міні USB адаптер, 300 Мбіт/с",
+                "price": "250"
+              })
+            </div>
+
+            <div class="col-1-2-3-4  grid-item  wifi-routers  other">
+              @@include('blocks/equipment-card/equipment-card.html', {
+                "img": "prod-02",
+                "title": "Mercusys AC12G",
+                "descr": "Wi-Fi роутер, 300 Мбіт/с",
+                "price": "1000"
+              })
+            </div>
+
+            <div class="col-1-2-3-4  grid-item  smart-box other">
+              @@include('blocks/equipment-card/equipment-card.html', {
+                "img": "prod-01",
+                "title": "Mercusys MW300UM",
+                "descr": "Бездротовий мережевий міні USB адаптер, 300 Мбіт/с",
+                "price": "250"
+              })
+            </div>
+
+            <div class="col-1-2-3-4  grid-item  wifi-routers switches">
+              @@include('blocks/equipment-card/equipment-card.html', {
+                "img": "prod-02",
+                "title": "Mercusys AC12G",
+                "descr": "Wi-Fi роутер, 300 Мбіт/с",
+                "price": "1000"
+              })
+            </div>
+
+            <div class="col-1-2-3-4  grid-item  smart-box">
+              @@include('blocks/equipment-card/equipment-card.html', {
+                "img": "prod-01",
+                "title": "Mercusys MW300UM",
+                "descr": "Бездротовий мережевий міні USB адаптер, 300 Мбіт/с",
+                "price": "250"
+              })
+            </div>
+
+          </div>
+        </div>
+
+      </main>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+      @@include('blocks/page-footer/page-footer.html')
+    </div>
+
+  </div>
+
+  @@include('blocks/offcanvas/offcanvas.html')
+
+  @@include('_include/page_bottom.html')
+
+</body>
+</html>

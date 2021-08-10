@@ -50,7 +50,9 @@
     "coverage-form": [],
     "coverage-result": [],
     "order-modal": [],
-    "special-offers": []
+    "special-offers": [],
+    "special-offer-block": [],
+    "countdown": []
   },
   "addCssBefore": [
     "../../node_modules/bootstrap/scss/_functions",

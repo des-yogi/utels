@@ -1,0 +1,132 @@
+$line-height:                 1.375em !default;
+
+.field-radio {
+
+  $block-name:                &; // #{$block-name}__element
+
+  display: block;
+  // margin-bottom: ($line-height / 2);
+
+  &__title {
+    display: block;
+    font-weight: 700;
+    line-height: $line-height;
+    margin-bottom: 0.4em;
+  }
+
+  &__input-wrap {
+
+    & + & {
+      margin-top: 16px;
+    }
+  }
+
+  &__name {
+    position: relative;
+    display: inline-block;
+    padding-left: 34px;
+    //-right: 0.6em;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: $line-height;
+    cursor: pointer;
+
+    &:hover {
+
+      #{$block-name}__name-text {
+
+        &::before {
+          background-color: rgba(80, 184, 45, 0.16);
+        }
+      }
+    }
+  }
+
+  &__name-text {
+
+    // своя радиокнопка с картинкой
+
+    // &:before {
+    //   content: '';
+    //   position: absolute;
+    //   top: 0.1em;
+    //   left: 0;
+    //   width: 14px;
+    //   height: 14px;
+    //   background-image: svg-load('../blocks/field-radio/img_to_bg/radiobutton.svg');
+    //   background-size: 100%;
+    // }
+    // @at-root input:checked ~ &:before {
+    //   background-image: svg-load('../blocks/field-radio/img_to_bg/radiobutton--checked.svg');
+    // }
+
+    // / своя радиокнопка с картинкой
+
+    // своя радиокнопка без картинки
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 22px;
+      height: 22px;
+      border: 2px solid $main-color;
+      border-radius: 50%;
+
+      @at-root input:checked ~ & {
+        //background-color: $main-color;
+        //-color: $main-color;
+      }
+    }
+
+    @at-root input:focus ~ &::before {
+      @include field-focus;
+      //background-color: $main-color;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 4px;
+      left: 4px;
+      width: 14px;
+      height: 14px;
+      opacity: 0;
+      border-radius: 50%;
+      background-color: $main-color;
+      transition: opacity $transition-time;
+
+      @at-root input:checked ~ & {
+        opacity: 1;
+      }
+    }
+
+    // / своя радиокнопка без картинки
+  }
+
+  &__input {
+    position: absolute;
+    top: 0.8em;
+    left: 0;
+    padding: 0;
+    margin: 0;
+    transform: translateY(-50%);
+
+    &:focus,
+    &:active {
+      @include field-focus;
+    }
+
+    // сокрытие инпута в случае использования своей радиокнопки
+    opacity: 0;
+  }
+
+  &__help-text-wrap {
+    padding-left: 34px;
+  }
+
+  &__help-text {
+    @include field-help-text;
+  }
+}

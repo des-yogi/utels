@@ -1,0 +1,159 @@
+.mini-cart {
+
+  $block-name:                &; // #{$block-name}__element
+
+  position: fixed;
+  top: 60px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: auto;
+
+  @media (min-width: $screen-md) {
+    top: 64px;
+  }
+
+  @media (min-width: $screen-xl) {
+    position: absolute;
+    top: auto;
+    bottom: auto;
+    right: 0;
+    left: auto;
+    width: 360px;
+  }
+
+  &__footer {
+
+    .btn {
+      width: 100%;
+      padding: 9px 0;
+      font-size: 20px;
+      text-align: center;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+    }
+  }
+
+  &__body {
+    padding: 24px 16px 0;
+    color: initial;
+    background-color: $white;
+
+    @media (min-width: $screen-md) {
+      padding-left: 50px;
+      padding-right: 50px;
+    }
+
+    @media (min-width: $screen-xl) {
+      padding: 24px 16px 0;
+    }
+  }
+
+  &__overlay {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 100vh;
+    z-index: -1;
+    background-color: $black;
+    opacity: 0.5;
+
+    @media (min-width: $screen-xl) {
+      position: fixed;
+      top: 84px;
+      //width: 100vw;
+    }
+
+    @media (min-width: $screen-xxl) {
+      top: 98px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    & + & {
+      padding-top: 16px;
+      margin-top: 16px;
+      border-top: 1px solid $border-color;
+    }
+  }
+
+  &__item-img {
+    flex: 0 0;
+    flex-basis: 72px;
+    background-color: $main-color;
+    border-radius: $border-radius;
+
+    img {
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  &__item-text {
+    flex: 1 1;
+    flex-basis: auto;
+    margin: 0 16px;
+    color: $text-color;
+    text-decoration: none !important;
+  }
+
+  &__item-descr {
+
+    span {
+      display: block;
+
+      &:not(.mini-cart__item-info) {
+        font-size: 16px;
+      }
+    }
+  }
+
+  &__item-title {
+    font-weight: 500;
+  }
+
+  &__item-info {
+    font-size: 14px;
+    color: $text-muted;
+  }
+
+  &__item-price {
+    margin-top: 3px;
+    color: initial;
+  }
+
+  &__item-del {
+    flex: 0 0;
+    flex-basis: 30px;
+    height: 30px;
+    padding: 0;
+    background-color: $white;
+    border: none;
+    user-select: none;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      color: $color-danger;
+    }
+  }
+
+  &__price {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 0;
+    margin-top: 16px;
+    font-size: 16px;
+    font-weight: 500;
+    border-top: 1px solid $border-color
+  }
+}

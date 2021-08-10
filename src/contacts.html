@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="ru" prefix="og: https://ogp.me/ns#">
+
+<head>
+  <meta charset="utf-8">
+  <title>Контакти</title>
+  @@include('_include/page_head.html')
+</head>
+
+<body>
+<noscript>У вас отключен JavaScript. Приносим наши извинения, но это делает затруднительным использование данного сайта.</noscript>
+
+  <div class="page__inner">
+
+    <div class="page__content">
+      @@include('blocks/page-header/page-header.html')
+
+      @@include('blocks/breadcrumbs/breadcrumbs.html')
+
+      <main>
+
+        <div class="container  contacts">
+
+          <h1 class="contacts__title">Контакти</h1>
+
+          <div class="contact-block  contact-block--contacts">
+            <ul class="list-nostyled  row  contact-block__list  contact-block__list--extended">
+              <li class="contact-block__col  contact-block__item">
+                <span class="contact-block__icon  contact-block__icon--tel" role="presentation"></span>
+                <span class="contact-block__links">
+                  <a href="tel:+380445999952" class="contact-block__link">
+                    <span>+38 044 599 99 52</span>
+                  </a>
+                  <a href="tel:+380445999952" class="contact-block__link">
+                    <span>+38 044 599 99 52</span>
+                  </a>
+                </span>
+              </li>
+              <li class="contact-block__col  contact-block__item">
+                <span class="contact-block__icon  contact-block__icon--pin" role="presentation"></span>
+                <div>
+                  <span>
+                    <span class="visually-hidden">Україна, </span>м. Київ,
+                  </span>
+                  <span>вул. Лютераньска 9/9, офіс 101</span>
+                </div>
+              </li>
+              <li class="contact-block__col  contact-block__item">
+                <span class="contact-block__icon  contact-block__icon--email" role="presentation"></span>
+                <a href="mailto:info@utels.ua" class="contact-block__link">
+                  <span>info@utels.ua</span>
+                </a>
+              </li>
+              <li class="contact-block__col  contact-block__item  contact-block__item--socials">
+                <span>Соцмережі</span>
+                @@include('blocks/socials/socials.html', {
+                  "locationClass": "socials--contacts"
+                })
+              </li>
+            </ul>
+          </div>
+
+          <div class="row">
+
+            <div class="contacts__form-col">
+              <section class="contacts__main">
+                <h2 class="visually-hidden">Форма для связи</h2>
+                <p class="h4  contacts__paratitle">Зв'язатися з нами</p>
+                <p class="contacts__lead">Встановлення системи відеоспостереження</p>
+
+                <form class="contacts__form" action="" method="post">
+
+                  <div class="field-radio">
+                    <div class="field-radio__input-wrap">
+                      <label class="field-radio__name">
+                        <input class="field-radio__input" type="radio" name="recipient" value="" checked>
+                        <span class="field-radio__name-text">Проблеми з інтернетом</span>
+                      </label>
+                      <div class="field-radio__help-text-wrap">
+                        <div class="field-radio__help-text error"></div>
+                      </div>
+                    </div>
+                    <div class="field-radio__input-wrap">
+                      <label class="field-radio__name">
+                        <input class="field-radio__input" type="radio" name="recipient" value="">
+                        <span class="field-radio__name-text">Задати питання</span>
+                      </label>
+                    </div>
+                    <div class="field-radio__input-wrap">
+                      <label class="field-radio__name">
+                        <input class="field-radio__input" type="radio" name="recipient" value="">
+                        <span class="field-radio__name-text">Лист директору</span>
+                      </label>
+                    </div>
+                  </div>
+
+                  <label class="field-text">
+                    <span class="field-text__input-wrap">
+                      <input class="field-text__input" type="text" name="name" value="" placeholder="Ім’я" required>
+                      <span class="field-text__help-text error"></span>
+                    </span>
+                  </label>
+
+                  <label class="field-text">
+                    <span class="field-text__input-wrap">
+                      <input class="field-text__input" type="email" name="email" value="" placeholder="Email" required>
+                      <span class="field-text__help-text error"></span>
+                    </span>
+                  </label>
+
+                  <label class="field-text">
+                    <span class="field-text__input-wrap">
+                      <input class="field-text__input  phone-mask" type="tel" name="tel" value="" placeholder="Тел">
+                      <span class="field-text__help-text error"></span>
+                    </span>
+                  </label>
+
+                  <label class="field-text">
+                    <span class="field-text__input-wrap">
+                      <textarea class="field-text__input" name="message" placeholder="Ваш коментар" required></textarea>
+                      <span class="field-text__help-text error"></span>
+                    </span>
+                  </label>
+
+                  <div class="contacts__agreement">
+                    <button class="btn btn--icon  contacts__submit" type="submit">
+                      <span>Відправити</span>
+                      <svg width="20" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#carret-down-round"></use></svg>
+                    </button>
+                    <div class="field-checkbox">
+                      <label class="field-checkbox__name">
+                        <input class="field-checkbox__input field-checkbox__agreement" type="checkbox" name="agreement" value="" checked>
+                        <span class="field-checkbox__name-text">Я згоден на обробку персональних даних відповідно до <a href="#">Політиці конфіденційності</a></span>
+                      </label>
+                    </div>
+                  </div>
+
+                </form>
+              </section>
+            </div>
+
+            <div class="contacts__map-col">
+              <section class="contacts__map">
+                <h2 class="visually-hidden">Место расположения нашего офиса на карте</h2>
+                <iframe title="Карта" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2540.7517372531424!2d30.522487551479017!3d50.44572477937402!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4ce543c69118d%3A0xdac56b478be9e278!2z0JvRjtGC0LXRgNCw0L3RgdC60LDRjyDRg9C7LiwgOSwg0JrQuNC10LIsIDAyMDAw!5e0!3m2!1sru!2sua!4v1628255122104!5m2!1sru!2sua" style="width:100%;height:100%;border:0;" allowfullscreen="" loading="lazy"></iframe>
+              </section>
+            </div>
+
+          </div>
+
+
+        </div>
+
+      </main>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+      @@include('blocks/page-footer/page-footer.html')
+    </div>
+
+  </div>
+
+  @@include('blocks/offcanvas/offcanvas.html')
+
+  @@include('_include/page_bottom.html')
+
+</body>
+</html>

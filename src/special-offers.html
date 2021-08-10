@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="ru" prefix="og: https://ogp.me/ns#">
+
+<head>
+  <meta charset="utf-8">
+  <title>Акции</title>
+  @@include('_include/page_head.html')
+</head>
+
+<body>
+<noscript>У вас отключен JavaScript. Приносим наши извинения, но это делает затруднительным использование данного сайта.</noscript>
+
+  <div class="page__inner">
+
+    <div class="page__content">
+      @@include('blocks/page-header/page-header.html')
+
+      @@include('blocks/breadcrumbs/breadcrumbs.html')
+
+      <main>
+
+        <div class="container  special-offers__wrapper">
+
+          <h1 class="special-offers__title">Акції</h1>
+
+          <section class="btn-filter-group">
+            <h2 class="visually-hidden">Группа переключателей для фильтрации текущих акционных предложений</h2>
+            <button class="btn btn--filter is-checked" type="button" data-filter="all">
+              Усі акції
+              <span>6</span>
+            </button>
+            <button class="btn btn--filter" type="button" data-filter="old-clients">
+              Для діючих абонентів
+              <span>5</span>
+            </button>
+            <button class="btn btn--filter" type="button" data-filter="new-clients">
+              Для нових абонентів
+              <span>4</span>
+            </button>
+          </section>
+
+          <div class="row  grid">
+
+            <div class="col-1-2-3  grid-item  new-clients">
+              @@include('blocks/special-offer-card/special-offer-card.html', {
+                "img": "special-offer-3x4",
+                "title": "50% На інтернет та ТБ",
+                "descr": "Встигни підключити!",
+              })
+            </div>
+
+            <div class="col-1-2-3  grid-item  old-clients">
+              @@include('blocks/special-offer-card/special-offer-card.html', {
+                "img": "special-offer-3x4",
+                "title": "Легкий перехід",
+                "descr": "Переходь до нас від іншого провайдера та отримай інтернет у подарунок!",
+              })
+            </div>
+
+            <div class="col-1-2-3  grid-item  new-clients">
+              @@include('blocks/special-offer-card/special-offer-card.html', {
+                "img": "special-offer-3x4",
+                "title": "Приведи друга",
+                "descr": "Підключай сусідів та друзів!",
+              })
+            </div>
+
+            <div class="col-1-2-3  grid-item  old-clients  new-clients">
+              @@include('blocks/special-offer-card/special-offer-card.html', {
+                "img": "special-offer-3x4",
+                "title": "50% На інтернет та ТБ",
+                "descr": "Встигни підключити!",
+              })
+            </div>
+
+            <div class="col-1-2-3  grid-item  new-clients">
+              @@include('blocks/special-offer-card/special-offer-card.html', {
+                "img": "special-offer-3x4",
+                "title": "Легкий перехід",
+                "descr": "Переходь до нас від іншого провайдера та отримай інтернет у подарунок!",
+              })
+            </div>
+
+            <div class="col-1-2-3  grid-item  old-clients">
+              @@include('blocks/special-offer-card/special-offer-card.html', {
+                "img": "special-offer-3x4",
+                "title": "Приведи друга",
+                "descr": "Підключай сусідів та друзів!",
+              })
+            </div>
+
+          </div>
+
+          @@include('blocks/pagination/pagination.html')
+
+        </div>
+
+      </main>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+      @@include('blocks/page-footer/page-footer.html')
+    </div>
+
+  </div>
+
+  @@include('blocks/offcanvas/offcanvas.html')
+  @@include('blocks/order-modal/order-modal.html')
+
+  @@include('_include/page_bottom.html')
+
+</body>
+</html>

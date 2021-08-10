@@ -1,0 +1,94 @@
+.contacts {
+  padding-top: 32px;
+  padding-bottom: 64px;
+
+  @media (min-width: $screen-md) {
+    padding-top: 48px;
+  }
+
+  @media (min-width: $screen-xl) {
+    padding-bottom: 92px;
+  }
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__title {
+    margin-bottom: 24px;
+
+    @media (min-width: $screen-xl) {
+      margin-bottom: 32px;
+    }
+  }
+
+  &__paratitle {
+    margin-top: 0;
+  }
+
+  &__form-col,
+  &__map-col {
+    @include col(xs, 12);
+    @include col(xl, 6);
+  }
+
+  &__form-col {
+    margin-bottom: 24px;
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 32px;
+    }
+
+    @media (min-width: $screen-xl) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__main {
+    padding: 24px 16px;
+    background-color: $white;
+    border-radius: $border-radius;
+
+    @media (min-width: $screen-md) {
+      padding: 32px 64px;
+    }
+
+    @media (min-width: $screen-xl) {
+      padding: 32px;
+    }
+
+    @media (min-width: $screen-xxl) {
+      padding: 32px 64px;
+    }
+  }
+
+  &__lead {
+    margin-bottom: 24px;
+    font-weight: 500;
+  }
+
+  &__form {
+    margin-top: 24px;
+
+    .field-radio {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__agreement {
+
+    .btn {
+      width: 100%;
+      margin-bottom: 16px;
+    }
+
+    .field-checkbox__name {
+       font-weight: unset;
+    }
+  }
+
+  &__map {
+    height: 100%;
+    min-height: 400px;
+    border-radius: $border-radius;
+    overflow: hidden;
+  }
+}

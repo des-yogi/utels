@@ -1,0 +1,36 @@
+.special-offers {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__wrapper {
+    padding-top: 32px;
+    padding-bottom: 40px;
+
+    @media (min-width: $screen-md) {
+      padding-top: 48px;
+    }
+
+    @media (min-width: $screen-xl) {
+      padding-bottom: 60px;
+    }
+  }
+
+  &__other {
+    padding-top: 48px;
+    margin-top: 48px;
+    border-top: 1px solid $border-color;
+
+    @media (min-width: $screen-md) {
+      margin-top: 64px;
+    }
+  }
+
+  &__other-title {
+    margin-top: 0;
+    margin-bottom: 24px;
+
+    @media (min-width: $screen-xl) {
+      margin-bottom: 32px;
+    }
+  }
+}

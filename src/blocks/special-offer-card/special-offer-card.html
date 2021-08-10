@@ -1,0 +1,33 @@
+<!--DEV
+@ @include('blocks/special-offer-card/special-offer-card.html', {
+  "img": "",
+  "title": "",
+  "descr": "",
+})
+-->
+
+<article class="special-offer-card">
+  <div class="embed-responsive embed-responsive--4-3  special-offer-card__img" tabindex="-1" aria-hidden="true">
+    <picture>
+      <!-- 380х285 от 1800 -->
+      <source data-srcset="img/@@img.webp" media="(min-width: 1200px)" type="image/webp">
+      <source data-srcset="img/@@img.jpg" media="(min-width: 1200px)">
+      <!-- 430х323 от 1200 до 1600 -->
+      <source data-srcset="img/@@img.webp" media="(min-width: 768px)" type="image/webp">
+      <source data-srcset="img/@@img.jpg" media="(min-width: 768px)">
+      <!-- 485x364 от 768 до 1200 -->
+      <source data-srcset="img/@@img.webp" type="image/webp">
+      <img class="b-lazy" data-src="img/@@img.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Описание" width="350" height="263">
+    </picture>
+  </div>
+  <div class="special-offer-card__text-wrapper">
+    <div class="special-offer-card__text">
+      <h3 class="special-offer-card__subtitle">@@title</h3>
+      <p>@@descr</p>
+    </div>
+    <a href="#" class="btn  btn--icon">
+      <span>Детальніше</span>
+      <svg width="20" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#carret-down-round"></use></svg>
+    </a>
+  </div>
+</article>

@@ -1,0 +1,60 @@
+.coverage-form {
+  padding: 24px 16px;
+  background-color: $white;
+  border: 1px solid $border-color;
+  border-radius: $border-radius;
+
+  @media (min-width: $screen-md) {
+    padding: 32px 64px;
+  }
+
+  @media (min-width: $screen-lg) {
+    padding: 32px;
+  }
+
+  @media (min-width: $screen-xxl) {
+    padding: 32px 64px;
+  }
+
+  $block-name:                &; // #{$block-name}__element
+
+  .btn {
+    width: 100%;
+    max-width: 260px;
+  }
+
+  .field-actions {
+    margin-top: 24px;
+  }
+
+  &__wrapper {
+    padding-top: 32px;
+    padding-bottom: 40px;
+
+    @media (min-width: $screen-md) {
+      padding-top: 48px;
+    }
+
+    @media (min-width: $screen-lg) {
+      padding-bottom: 64px;
+    }
+
+    @media (min-width: $screen-xl) {
+      padding-bottom: 92px;
+    }
+  }
+
+  &__col {
+    @include col(xs, 12);
+    @include col(lg, 6);
+
+    @media (max-width: $screen-lg - 1) {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__info {
+    margin-bottom: 32px;
+    font-size: $font-size-xl;
+  }
+}

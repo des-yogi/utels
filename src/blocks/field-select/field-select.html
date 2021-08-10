@@ -1,0 +1,18 @@
+<!--DEV
+@ @include('blocks/field-select/field-select.html', {
+  "label": "",
+  "required": "field-select__name--required",
+  "multiple": "multiple"
+})
+-->
+<label class="field-select">
+  <span class="field-select__name">@@label</span>
+  <span class="field-select__select-wrap">
+    <select class="field-select__select" name="select_name" @@multiple size="1">
+      <option value="value1">Значение 1</option>
+      <option value="value2">Значение 2</option>
+      <option value="value3">Значение 3</option>
+    </select>
+    <span class="field-select__help-text"></span>
+  </span>
+</label>

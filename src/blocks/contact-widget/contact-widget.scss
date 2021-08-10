@@ -1,0 +1,72 @@
+.contact-widget {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  pointer-events: auto;
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__wrapper {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    pointer-events: none;
+  }
+
+  &__btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    color: $white;
+    background-color: $secondary-color;
+    border: none;
+    border-radius: $border-radius;
+    cursor: pointer;
+
+    @media (min-width: $screen-xxl) {
+      width: 64px;
+      height: 64px;
+    }
+
+    &:hover,
+    &:focus {
+      color: $main-color;
+    }
+  }
+
+  &__content {
+    //display: none;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+
+    @media (min-width: $screen-xxl) {
+      top: 76px;
+    }
+
+    div {
+      flex: 0 0;
+      flex-basis: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 32px;
+      height: 32px;
+      background-color: yellow;
+      border-radius: 50%;
+    }
+
+    div + div {
+      margin-top: 12px;
+    }
+  }
+}

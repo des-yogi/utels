@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="ru" prefix="og: https://ogp.me/ns#">
+
+<head>
+  <meta charset="utf-8">
+  <title>Додаткові послуги</title>
+  @@include('_include/page_head.html')
+</head>
+
+<body>
+<noscript>У вас отключен JavaScript. Приносим наши извинения, но это делает затруднительным использование данного сайта.</noscript>
+
+  <div class="page__inner">
+
+    <div class="page__content">
+      @@include('blocks/page-header/page-header.html')
+
+      @@include('blocks/breadcrumbs/breadcrumbs.html')
+
+      <div class="page-top-decor" role="presentation"></div>
+
+      <main>
+
+        <div class="container  service-card__wrapper">
+
+          <h1 class="service-card__title">Все обладнання</h1>
+
+          <section class="btn-filter-group">
+            <h2 class="visually-hidden">Группа переключателей для фильтрации дополнительных услуг</h2>
+            <button class="btn btn--filter is-checked" type="button" data-filter="all">
+              Усе обладннаня
+              <span>21</span>
+            </button>
+            <button class="btn btn--filter" type="button" data-filter="internet">
+              Інтерет
+              <span>5</span>
+            </button>
+            <button class="btn btn--filter" type="button" data-filter="tv">
+              Телебачення
+              <span>5</span>
+            </button>
+            <button class="btn btn--filter" type="button" data-filter="mounting">
+              Монтаж
+              <span>12</span>
+            </button>
+            <button class="btn btn--filter" type="button" data-filter="cable">
+              Кабель
+              <span>11</span>
+            </button>
+          </section>
+
+
+          <div class="row  grid">
+
+            <div class="col-1-1-2-3  grid-item  internet">
+              @@include('blocks/service-card/service-card.html', {
+                "img": "router-tuning",
+                "title": "IP‐адреса",
+                "descr": "Додаткова статична IP-адреса"
+              })
+            </div>
+
+            <div class="col-1-1-2-3  grid-item  tv">
+              @@include('blocks/service-card/service-card.html', {
+                "img": "router-tuning",
+                "title": "Налаштування IPTV Android",
+                "descr": "Налаштування IPTV Android"
+              })
+            </div>
+
+            <div class="col-1-1-2-3  grid-item  cable">
+              @@include('blocks/service-card/service-card.html', {
+                "img": "router-tuning",
+                "title": "Доставка обладнання",
+                "descr": "Можливість замовити будь-яке обладнання з переліку з доставкою додому  Можливість замовити будь-яке обладнання з переліку з доставкою додому"
+              })
+            </div>
+
+            <div class="col-1-1-2-3  grid-item  mounting cable">
+              @@include('blocks/service-card/service-card.html', {
+                "img": "router-tuning",
+                "title": "Монтаж інтернет-розетки",
+                "descr": "Встановлення комп'ютерної розетки з гніздом під роз'єм RJ-45"
+              })
+            </div>
+
+            <div class="col-1-1-2-3  grid-item  cable">
+              @@include('blocks/service-card/service-card.html', {
+                "img": "router-tuning",
+                "title": "Страхування кабелю",
+                "descr": "Три безкоштовних виклики майстра для ремонту кабелю в квартирі"
+              })
+            </div>
+
+            <div class="col-1-1-2-3  grid-item  tv">
+              @@include('blocks/service-card/service-card.html', {
+                "img": "router-tuning",
+                "title": "Додатковий ТВ",
+                "descr": "Авторизація додаткових цифрових ТВ-приймачів"
+              })
+            </div>
+
+            <div class="col-1-1-2-3  grid-item  internet">
+              @@include('blocks/service-card/service-card.html', {
+                "img": "router-tuning",
+                "title": "SMS-інформ",
+                "descr": "SMS-повідомлення про платежі та статус послуги"
+              })
+            </div>
+
+            <div class="col-1-1-2-3  grid-item  internet">
+              @@include('blocks/service-card/service-card.html', {
+                "img": "router-tuning",
+                "title": "Гарячий резерв",
+                "descr": "Резервування підключення до Мережі Ланет та порт комутатора"
+              })
+            </div>
+
+            <div class="col-1-1-2-3  grid-item  mounting">
+              @@include('blocks/service-card/service-card.html', {
+                "img": "router-tuning",
+                "title": "Налаштування роутера",
+                "descr": "Встановлення та налаштування роутера"
+              })
+            </div>
+
+            <div class="col-1-1-2-3  grid-item  mounting">
+              @@include('blocks/service-card/service-card.html', {
+                "img": "router-tuning",
+                "title": "Встановлення комутатора",
+                "descr": "Монтаж кабелю від комутатора і його налаштування"
+              })
+            </div>
+
+          </div>
+        </div>
+
+      </main>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+      @@include('blocks/page-footer/page-footer.html')
+    </div>
+
+  </div>
+
+  @@include('blocks/offcanvas/offcanvas.html')
+
+  @@include('_include/page_bottom.html')
+
+</body>
+</html>

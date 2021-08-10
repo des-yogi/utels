@@ -1,0 +1,44 @@
+.socials {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  color: $text-color;
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__item {
+    display: inline-flex;
+
+    & + & {
+      margin-left: 32px;
+    }
+  }
+
+  &__link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    color: inherit;
+  }
+
+  &--footer {
+    margin-bottom: 32px;
+    color: $white;
+
+    @media (min-width: $screen-xl) {
+      margin-bottom: 42px;
+    }
+  }
+
+  &--contacts {
+
+    #{$block-name}__item + #{$block-name}__item {
+
+      @media (max-width: $screen-xxl - 1) {
+        margin-left: 24px;
+      }
+    }
+  }
+}

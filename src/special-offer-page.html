@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="ru" prefix="og: https://ogp.me/ns#">
+
+<head>
+  <meta charset="utf-8">
+  <title>Страница акционного предложения! </title>
+  @@include('_include/page_head.html')
+</head>
+
+<body>
+<noscript>У вас отключен JavaScript. Приносим наши извинения, но это делает затруднительным использование данного сайта.</noscript>
+
+  <div class="page__inner">
+
+    <div class="page__content">
+      @@include('blocks/page-header/page-header.html')
+
+      @@include('blocks/breadcrumbs/breadcrumbs.html')
+
+      <main>
+
+        <div class="special-offers__wrapper">
+
+          <article class="container   special-offer-block">
+            <div class="special-offer-block__inner">
+
+              <div class="row">
+
+                <div class="special-offer-block__img-col">
+                  <div class="embed-responsive embed-responsive--4-3  special-offer-block__img">
+                    <picture>
+                      <!-- 700x525 / 1200 -> Up -->
+                      <!-- 900x675 / 768 -> 1200  -->
+                      <!-- 760x570 / 480 -> 768  -->
+                      <source srcset="img/sp-offer-img.webp" type="image/webp">
+                      <img src="img/sp-offer-img.jpg" alt="Описание" width="450" height="338">
+                    </picture>
+                  </div>
+                </div>
+
+                <div class="special-offer-block__text-col">
+                  <div class="special-offer-block__text">
+                    <h1 class="special-offer-block__title">Зафіксуй ціну на рік</h1>
+                    <div class="h5  special-offer-block__countdown">
+                      <span>Закінчиться через:&ensp;</span>
+                      @@include('blocks/countdown/countdown.html', {
+                        "deadline": "August 31 2021 18:21:30 GMT+0300"
+                      })
+                    </div>
+                    <div class="special-offer-block__content">
+                      <p>(Система ведення спостереження є дуже складною конструкцією, тому ї проекті побудова вимагає уважного підходу за участю грамотних, досвідчених фахівців, оскільки навіть незначна деталь, на яку не зверне увагу недосвідчена У цій справі людина, може стати причиною локальної катастрофи. На сучасному ринку охоронного обладнання представлений величезний асортимент найрізноманітніших готових комплектів систем відгоспостере ження, ціна на які коливається залежно від того, які саме завдання | вимоги пред'являються клієнтом.</p>
+                      <p><strong>Співробітництво з ЦТЕІ5 — надійне, оптимальне та обгрунтоване рішення для Вашого бізнесу!</strong></p>
+                    </div>
+                    <div class="special-offer-block__btn-wrapper">
+                      <button class="btn btn--icon" data-bs-toggle="modal" data-bs-target="#orderModal" data-bs-whatever="Підключитися до акції">
+                        <span>Підключити</span>
+                        <svg width="20" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#carret-down-round"></use></svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+          </article>
+
+          <aside class="container  special-offers__other">
+            <h2 class="h3  special-offers__other-title">Інші акції для нових абонентів</h2>
+
+            <div class="row">
+
+              <div class="col-1-2-3">
+                <article class="special-offer-card">
+                  <div class="embed-responsive embed-responsive--4-3  special-offer-card__img" tabindex="-1" aria-hidden="true">
+                    <picture>
+                      <!-- 380х285 от 1800 -->
+                      <source data-srcset="img/special-offer-3x4.webp" media="(min-width: 1200px)" type="image/webp">
+                      <source data-srcset="img/special-offer-3x4.jpg" media="(min-width: 1200px)">
+                      <!-- 430х323 от 1200 до 1600 -->
+                      <source data-srcset="img/special-offer-3x4.webp" media="(min-width: 768px)" type="image/webp">
+                      <source data-srcset="img/special-offer-3x4.jpg" media="(min-width: 768px)">
+                      <!-- 485x364 от 768 до 1200 -->
+                      <source data-srcset="img/special-offer-3x4.webp" type="image/webp">
+                      <img class="b-lazy" data-src="img/special-offer-3x4.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Описание" width="350" height="263">
+                    </picture>
+                  </div>
+                  <div class="special-offer-card__text-wrapper">
+                    <div class="special-offer-card__text">
+                      <h3 class="special-offer-card__subtitle">50% На інтернет та ТБ</h3>
+                      <p>Встигни підключити!</p>
+                      <div class="special-offer-card__countdown">
+                        <span>Закінчиться через:&ensp;</span>
+                        @@include('blocks/countdown/countdown.html', {
+                          "deadline": "September 19 2021 18:23:00 GMT+0300"
+                        })
+                      </div>
+                    </div>
+                    <a href="#" class="btn  btn--icon">
+                      <span>Детальніше</span>
+                      <svg width="20" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#carret-down-round"></use></svg>
+                    </a>
+                  </div>
+                </article>
+              </div>
+
+              <div class="col-1-2-3">
+                @@include('blocks/special-offer-card/special-offer-card.html', {
+                  "img": "special-offer-3x4",
+                  "title": "Легкий перехід",
+                  "descr": "Переходь до нас від іншого провайдера та отримай інтернет у подарунок!",
+                })
+              </div>
+
+              <div class="col-1-2-3">
+                @@include('blocks/special-offer-card/special-offer-card.html', {
+                  "img": "special-offer-3x4",
+                  "title": "Приведи друга",
+                  "descr": "Підключай сусідів та друзів!",
+                })
+              </div>
+
+            </div>
+          </aside>
+
+        </div>
+
+      </main>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+      @@include('blocks/page-footer/page-footer.html')
+    </div>
+
+  </div>
+
+  @@include('blocks/offcanvas/offcanvas.html')
+  @@include('blocks/order-modal/order-modal.html')
+
+  @@include('_include/page_bottom.html')
+
+</body>
+</html>
