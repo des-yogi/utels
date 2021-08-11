@@ -1,0 +1,60 @@
+<!--DEV
+@ @include('blocks/service-block/service-block.html', {
+  "img": "sp-offer-img",
+  "title": "Мобільний ключ",
+  "text": "Мобільне рішення може застосовуватися в будь-якому приміщенні де необхідний контроль доступу до дверей, її можна застосовувати на головних вхідних | дверях, ліфтах, 0 автостоянках,  турнікетах, конференц-залах. Така технологія дуже проста і зручна у використанні як для керівників, так і для гостей.",
+  "optionsHideClass": "hidden",
+  "ctrlsHideClass": "hidden",
+  "isTvServiceClass": "service-block--tv"
+})
+-->
+<article class="service-block @@isTvServiceClass">
+  <div class="row  service-block__inner">
+
+    <div class="service-block__img-col">
+      <div class="embed-responsive embed-responsive--4-3  service-block__img">
+        <picture>
+          <source data-srcset="img/@@img.webp" type="image/webp">
+          <img class="b-lazy" data-src="img/@@img.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAA ABAAEAAAICTAEAOw==" alt="Описание" width="450" height="338">
+        </picture>
+      </div>
+    </div>
+
+    <div class="service-block__text-col">
+      <div class="service-block__text">
+        <h2 class="service-block__title">@@title</h2>
+        <div class="service-block__content">
+          <p>@@text</p>
+        </div>
+        <div class="service-block__options @@optionsHideClass">
+          <section class="service-block__option">
+            <h5 class="service-block__option-title">Пристрої</h5>
+            <ul class="list-nostyled  service-block__option-list">
+              <li class="service-block__option-item">Датчик A</li>
+              <li class="service-block__option-item">Датчик B</li>
+              <li class="service-block__option-item">Вентиль</li>
+            </ul>
+          </section>
+          <section class="service-block__option">
+            <h5 class="service-block__option-title">Пристрої</h5>
+            <ul class="list-nostyled  service-block__option-list">
+              <li class="service-block__option-item">PUSH повідомлення</li>
+              <li class="service-block__option-item">SMS повідомлення</li>
+            </ul>
+          </section>
+        </div>
+        <div class="service-block__controls @@ctrlsHideClass">
+          <button class="btn service-block__order-btn"><span>Замовити</span></button>
+          <form action="" method="post">
+            <button class="btn btn--icon btn--black btn--norotate btn--textless service-block__cart-btn" type="button">
+              <svg width="22" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#cart"></use></svg>
+              <span class="visually-hidden">Положить в корзину</span>
+            </button>
+          </form>
+          <span class="service-block__price">Розраховується індивідуально</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</article>

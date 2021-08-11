@@ -1,0 +1,214 @@
+.service-block {
+  padding: 16px 16px 24px;
+  margin-bottom: 32px;
+  background-color: $white;
+  border: 1px solid $border-color;
+  border-radius: $border-radius;
+
+  @media (max-width: $screen-md - 1) {
+    margin-left: -16px;
+    margin-right: -16px;
+  }
+
+  @media (min-width: $screen-md) {
+    padding: 24px 58px 32px;
+  }
+
+  @media (min-width: $screen-xl) {
+    padding: 32px;
+  }
+
+  $block-name:                &; // #{$block-name}__element
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+
+  &:nth-child(even) {
+
+    #{$block-name}__inner {
+
+      @media (min-width: $screen-xl) {
+        flex-direction: row-reverse;
+      }
+    }
+  }
+
+  &__wrapper {
+    margin-bottom: 64px;
+
+    @media (min-width: $screen-xl) {
+      margin-bottom: 92px;
+    }
+
+    &--plus {
+      margin-bottom: 48px;
+
+      @media (min-width: $screen-md) {
+        margin-bottom: 64px !important;
+      }
+    }
+  }
+
+  &__pagetitle {
+    margin-bottom: 24px;
+
+    @media (min-width: $screen-xl) {
+      margin-bottom: 32px;
+    }
+  }
+
+  &__img-col {
+    @include col(xs, 12);
+    @include col(xl, 6);
+    margin-bottom: 16px;
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 32px;
+    }
+
+    @media (min-width: $screen-xl) {
+      display: flex;
+      align-items: center;
+      margin-bottom: 0;
+    }
+  }
+
+  &__text-col {
+    @include col(xs, 12);
+    @include col(xl, 6);
+
+    @media (min-width: $screen-xl) {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__img {
+    border-radius: $border-radius;
+
+    img {
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  &__text {
+
+    @media (min-width: $screen-xl) {
+      padding: 0 48px;
+    }
+  }
+
+  &__title {
+    margin-top: 0;
+  }
+
+  &__content {
+    margin-bottom: 16px;
+
+    @media (min-width: $screen-md) {
+      padding-bottom: 16px;
+      border-bottom: 1px solid $border-color;
+    }
+  }
+
+  &__options {
+    margin-bottom: 16px;
+
+    @media (max-width: $screen-md - 1) {
+      padding-bottom: 16px;
+      border-bottom: 1px solid $border-color;
+    }
+
+    @media (min-width: $screen-md) {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: none;
+    }
+
+    &.hidden {
+      display: none !important;
+    }
+  }
+
+  &__option {
+    padding: 12px;
+    background-color: $body-bg;
+    border-radius: $border-radius;
+
+    @media (max-width: $screen-md - 1) {
+      margin-top: 16px;
+    }
+
+    @media (min-width: $screen-md) {
+      flex: 0 1;
+      flex-basis: calc(50% - 8px);
+    }
+  }
+
+  &__option-title {
+    margin-top: 0;
+  }
+
+  &__option-item {
+    padding-left: 30px;
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    background-position: left center 1px;
+    background-image: svg-load('../blocks/service-block/bg-img/check-round.svg', fill=$main-color);
+
+    & + & {
+      margin-top: 12px;
+    }
+  }
+
+  &__controls {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    &.hidden {
+      display: none !important;
+    }
+  }
+
+  &__order-btn {
+    flex: 1 0;
+    flex-basis: auto;
+
+    @media (min-width: $screen-md) {
+      max-width: 220px;
+    }
+  }
+
+  &__cart-btn {
+    flex: 0 0;
+    flex-basis: 42px;
+    margin-left: 12px;
+  }
+
+  &__price {
+    flex: 1 1;
+    flex-basis: 100%;
+    margin-top: 16px;
+    font-size: 16px;
+    font-weight: 500;
+
+    @media (min-width: $screen-md) {
+      flex: 0 1;
+      flex-basis: auto;
+      margin-left: 12px;
+      margin-top: 0;
+    }
+  }
+
+  &--tv {
+
+    #{$block-name}__content {
+      padding-bottom: 0;
+      margin-bottom: 0;
+      border-bottom: none;
+    }
+  }
+}
