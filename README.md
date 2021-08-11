@@ -9,3 +9,4 @@ ISP Utels
 * https://des-yogi.github.io/utels/coverage.html
 * https://des-yogi.github.io/utels/special-offers.html
 * https://des-yogi.github.io/utels/special-offer-page.html
+* https://des-yogi.github.io/utels/services.html
