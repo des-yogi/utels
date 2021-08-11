@@ -1,0 +1,21 @@
+.tv-info-text {
+  padding-top: 48px;
+  padding-bottom: 64px;
+
+  @media (min-width: $screen-xl) {
+    padding-bottom: 92px;
+  }
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__col {
+    @include col(xs, 12);
+    @include col(md, 10);
+    @include col(xl, 8);
+    @include col(xxl, 7);
+  }
+
+  &__title {
+    margin-top: 0;
+  }
+}

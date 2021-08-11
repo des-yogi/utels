@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="ru" prefix="og: https://ogp.me/ns#">
+
+<head>
+  <meta charset="utf-8">
+  <title>Услуги</title>
+  @@include('_include/page_head.html')
+</head>
+
+<body>
+<noscript>У вас отключен JavaScript. Приносим наши извинения, но это делает затруднительным использование данного сайта.</noscript>
+
+  <div class="page__inner">
+
+    <div class="page__content">
+      @@include('blocks/page-header/page-header.html')
+
+      @@include('blocks/breadcrumbs/breadcrumbs.html')
+
+      <div class="page-top-decor" role="presentation"></div>
+
+      <main>
+
+        <div class="container  service-block__wrapper">
+          <!-- service-block__wrapper--plus для страниц с другими блоками -->
+
+          <h1 class="service-block__pagetitle">Розумний дім (IoT)</h1>
+
+          <div class="service-block__container">
+
+            @@include('blocks/service-block/service-block.html', {
+              "img": "sp-offer-img",
+              "title": "Мобільний ключ",
+              "text": "Мобільне рішення може застосовуватися в будь-якому приміщенні де необхідний контроль доступу до дверей, її можна застосовувати на головних вхідних | дверях, ліфтах, 0 автостоянках,  турнікетах, конференц-залах. Така технологія дуже проста і зручна у використанні як для керівників, так і для гостей.",
+              "isTvServiceClass": "",
+              "optionsHideClass": "hidden",
+              "ctrlsHideClass": ""
+            })
+
+            @@include('blocks/service-block/service-block.html', {
+              "img": "sp-offer-img",
+              "title": "Систему захисту від потопу",
+              "text": "Інноваційна система призначена для локалізації потопу у приміщенні при своєчасному виявленні протікання в системі водопостачання та опалення. Неймовірно висока потужність при відносно малих габаритах дозволяє повністю перекривати крани при виникненні протікань",
+              "isTvServiceClass": "",
+              "optionsHideClass": "",
+              "ctrlsHideClass": ""
+            })
+
+            @@include('blocks/service-block/service-block.html', {
+              "img": "sp-offer-img",
+              "title": "Систему захисту від пожежі",
+              "text": "Встановлення надійної системи протипожежного захисту, стійкої до дії небезпечних чинників пожежі, здатне забезпечити цілісність майна та збереження людського життя! Ми змонтуємо на об'єкті ефективну систему протипожежного захисту, розроблену згідно нормативних документів пожежної безпеки",
+              "isTvServiceClass": "",
+              "optionsHideClass": "",
+              "ctrlsHideClass": ""
+            })
+
+            @@include('blocks/service-block/service-block.html', {
+              "img": "sp-offer-img",
+              "title": "Комфортний будинок",
+              "text": "Майбутнє домашньої автоматизації - це інтелектуальне середовище, здатне за певний час до повернення власника додому встановити потрібну температуру, включивши кондиціонер; забеспечинти ефективне енергозбереження; створення дружнього середовища",
+              "isTvServiceClass": "",
+              "optionsHideClass": "",
+              "ctrlsHideClass": ""
+            })
+
+          </div>
+
+        </div>
+
+      </main>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+      @@include('blocks/page-footer/page-footer.html')
+    </div>
+
+  </div>
+
+  @@include('blocks/offcanvas/offcanvas.html')
+  @@include('blocks/order-modal/order-modal.html')
+
+  @@include('_include/page_bottom.html')
+
+</body>
+</html>

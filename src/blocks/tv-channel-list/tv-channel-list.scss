@@ -1,0 +1,11 @@
+.tv-channel-list {
+  margin-top: 48px;
+  background-color: $white;
+
+  @media (min-width: $screen-md) {
+    margin-top: 64px;
+  }
+
+  $block-name:                &; // #{$block-name}__element
+
+}

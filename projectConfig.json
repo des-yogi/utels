@@ -52,7 +52,10 @@
     "order-modal": [],
     "special-offers": [],
     "special-offer-block": [],
-    "countdown": []
+    "countdown": [],
+    "service-block": [],
+    "tv-channel-list": [],
+    "tv-info-text": []
   },
   "addCssBefore": [
     "../../node_modules/bootstrap/scss/_functions",
