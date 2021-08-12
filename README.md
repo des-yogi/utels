@@ -2,6 +2,7 @@
 ISP Utels
 * https://des-yogi.github.io/utels/
 * https://des-yogi.github.io/utels/category.html
+* https://des-yogi.github.io/utels/
 * https://des-yogi.github.io/utels/text-page.html
 * https://des-yogi.github.io/utels/equipment.html
 * https://des-yogi.github.io/utels/add-service.html
@@ -12,5 +13,4 @@ ISP Utels
 * https://des-yogi.github.io/utels/services.html
 * https://des-yogi.github.io/utels/business-services.html
 * https://des-yogi.github.io/utels/tv-services.html
-* https://des-yogi.github.io/utels/p-404.html
-* 
+* https://des-yogi.github.io/utels/p-404.html 
