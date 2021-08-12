@@ -1,0 +1,94 @@
+.biz-service-card {
+  padding: 16px;
+  background-color: $white;
+  border-bottom: 1px solid $border-color;
+
+  @media (min-width: $screen-md) {
+    display: flex;
+    align-items: center;
+    border: 1px solid $border-color;
+    border-radius: $border-radius;
+  }
+
+  @media (min-width: $screen-xl) {
+    padding: 24px;
+  }
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__wrapper {
+    margin-bottom: 48px;
+
+    @media (min-width: $screen-xl) {
+      margin-bottom: 32px;
+    }
+  }
+
+  &__section-title {
+    margin-bottom: 24px;
+
+    @media (min-width: $screen-xl) {
+      margin-bottom: 32px;
+    }
+  }
+
+  &__item {
+    @include col(md, 12);
+    @include col(xl, 6);
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 16px;
+    }
+
+    @media (min-width: $screen-xl) {
+      margin-bottom: 32px;
+    }
+  }
+
+  &__img {
+    width: 92px;
+    margin: 0 auto 12px;
+
+    @media (min-width: $screen-md) {
+      flex: 0 0;
+      flex-basis: 92px;
+      margin: 0 16px 0 0;
+    }
+
+    @media (min-width: $screen-xl) {
+      flex-basis: 128px;
+      max-width: 128px;
+      margin-right: 24px;
+    }
+
+    img {
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  &__text {
+    text-align: center;
+
+    @media (min-width: $screen-md) {
+      flex: 1 1;
+      flex-basis: auto;
+      text-align: initial;
+    }
+  }
+
+  &__title {
+    margin-top: 0;
+  }
+
+  &__descr {
+    font-size: 16px;
+  }
+
+  &__more {
+
+    &.hidden {
+      display: none;
+    }
+  }
+}

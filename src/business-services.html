@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="ru" prefix="og: https://ogp.me/ns#">
+
+<head>
+  <meta charset="utf-8">
+  <title>Услуги для бизнеса</title>
+  @@include('_include/page_head.html')
+</head>
+
+<body>
+<noscript>У вас отключен JavaScript. Приносим наши извинения, но это делает затруднительным использование данного сайта.</noscript>
+
+  <div class="page__inner">
+
+    <div class="page__content">
+      @@include('blocks/page-header/page-header.html')
+
+      @@include('blocks/breadcrumbs/breadcrumbs.html')
+
+      <div class="page-top-decor" role="presentation"
+        style="background-image: url('/img/page-top-bg.webp');background-size:cover;"
+        data-bg="/img/page-top-bg.jpg"
+        data-bg-webp="/img/page-top-bg.webp"
+      ></div>
+
+      <main>
+
+        <section class="container  biz-service-text">
+          <h1 class="biz-service-text__title">Інтернет для бізнес клієнтів</h1>
+          <div class="row">
+            <div class="biz-service-text__inner">
+              <p>Бізнес клієнтам ми завжди готові запропонувати  повний набір комплексних рішень в області Інтернет, які перетворюють новітні телекомунікаційні технологіїв повноцінний бізнес-інструмент, який, в поєднанні з Вашими здібностями, дозволить освоїти нові рубежі і завоювати нові ринки. Вибравши нас, Ви завжди зможете розрахуватися на весь спектр телекомункаційних сервісів, в тому числі консультування і створення корпоративних мереж “під ключ”.</p>
+              <p>Висококваліфікаовані фахівці компанії UTELS дадуть собі раду навіть з найскалдніших ситуацій і запропонують таке рішення задачі замовника, яке забезпечило б високу якість зв’язку та було максимально економним. Ми прекрасно розуміємо специфіку будь-якого виду діяльності і зможемо підібрати відповідне рішення саме для Вашого бізнесу.</p>
+            </div>
+            <div class="biz-service-text__btn-wrapper">
+              <button class="btn btn--icon btn--norotate" data-bs-toggle="modal" data-bs-target="#orderModal" data-bs-whatever="Інтернет для бізнес клієнтів">
+                <span>Замовити послугу</span>
+                <svg width="22" height="21"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#chats"></use></svg>
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <section class="container  biz-service-card__wrapper">
+          <h2 class="biz-service-card__section-title">Наші переваги!</h2>
+
+          <ul class="list-nostyled  row  biz-service-card__list">
+            <li class="biz-service-card__item">
+              @@include('blocks/biz-service-card/biz-service-card.html', {
+                "img": "router-tuning",
+                "title": "Сервіс і підтримка 24/7/365",
+                "descr": "Гарантія комфортної роботи з нами в якості партнера",
+                "moreClass": "hidden"
+              })
+            </li>
+            <li class="biz-service-card__item">
+              @@include('blocks/biz-service-card/biz-service-card.html', {
+                "img": "router-tuning",
+                "title": "SLA 99,5%",
+                "descr": "Гарантія комфортної роботи з нами в якості партнера",
+                "moreClass": "hidden"
+              })
+            </li>
+            <li class="biz-service-card__item">
+              @@include('blocks/biz-service-card/biz-service-card.html', {
+                "img": "router-tuning",
+                "title": "Гарантована швидкість до 40 Гбіт/сек",
+                "descr": "Гарантія комфортної роботи з нами в якості партнера",
+                "moreClass": "hidden"
+              })
+            </li>
+            <li class="biz-service-card__item">
+              @@include('blocks/biz-service-card/biz-service-card.html', {
+                "img": "router-tuning",
+                "title": "Індивідуальний менеджер",
+                "descr": "Гарантія комфортної роботи з нами в якості партнера",
+                "moreClass": "hidden"
+              })
+            </li>
+            <li class="biz-service-card__item">
+              @@include('blocks/biz-service-card/biz-service-card.html', {
+                "img": "router-tuning",
+                "title": "Власна опорна мережа",
+                "descr": "Гарантія комфортної роботи з нами в якості партнера",
+                "moreClass": "hidden"
+              })
+            </li>
+            <li class="biz-service-card__item">
+              @@include('blocks/biz-service-card/biz-service-card.html', {
+                "img": "router-tuning",
+                "title": "UA-IX GIGANET",
+                "descr": "Гарантія комфортної роботи з нами в якості партнера",
+                "moreClass": "hidden"
+              })
+            </li>
+          </ul>
+
+        </section>
+
+      </main>
+
+      <aside class="clients-slider  last-on-page">
+        <h2 class="container  clients-slider__title">Нам довіряють:</h2>
+
+        <ul class="list-nostyled  clients-slider__carousel">
+          <li class="carousel-cell  clients-slider__slide">
+            <img data-flickity-lazyload="img/uber.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Описание" width="87" height="48" loading="lazy" decoding="async">
+          </li>
+          <li class="carousel-cell  clients-slider__slide">
+            <img data-flickity-lazyload="img/evrasia.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Описание" width="142" height="86" loading="lazy" decoding="async">
+          </li>
+          <li class="carousel-cell  clients-slider__slide">
+            <img data-flickity-lazyload="img/dominos-pizza.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Описание" width="92" height="92" loading="lazy" decoding="async">
+          </li>
+          <li class="carousel-cell  clients-slider__slide">
+            <img data-flickity-lazyload="img/pivbar.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Описание" width="92" height="92" loading="lazy" decoding="async">
+          </li>
+          <li class="carousel-cell  clients-slider__slide">
+            <img data-flickity-lazyload="img/meest.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Описание" width="152" height="48" loading="lazy" decoding="async">
+          </li>
+          <li class="carousel-cell  clients-slider__slide">
+            <img data-flickity-lazyload="img/media5.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Описание" width="170" height="32" loading="lazy" decoding="async">
+          </li>
+          <li class="carousel-cell  clients-slider__slide">
+            <img data-flickity-lazyload="img/louis-vuitton.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Описание" width="76" height="92" loading="lazy" decoding="async">
+          </li>
+          <li class="carousel-cell  clients-slider__slide">
+            <img data-flickity-lazyload="img/dropbox.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Описание" width="160" height="32" loading="lazy" decoding="async">
+          </li>
+          <li class="carousel-cell  clients-slider__slide">
+            <img data-flickity-lazyload="img/amazon.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Описание" width="108" height="33" loading="lazy" decoding="async">
+          </li>
+        </ul>
+
+      </aside>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+      @@include('blocks/page-footer/page-footer.html')
+    </div>
+
+  </div>
+
+  @@include('blocks/offcanvas/offcanvas.html')
+  @@include('blocks/order-modal/order-modal.html')
+
+  @@include('_include/page_bottom.html')
+
+</body>
+</html>

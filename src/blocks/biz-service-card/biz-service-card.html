@@ -1,0 +1,21 @@
+<!--DEV
+@ @include('blocks/biz-service-card/biz-service-card.html', {
+  "img": "router-tuning",
+  "title": "Сервіс і підтримка 24/7/365",
+  "descr": "Гарантія комфортної роботи з нами в якості партнера",
+  "moreClass": "hidden"
+})
+-->
+
+<div class="biz-service-card">
+  <div class="embed-responsive embed-responsive--1-1  biz-service-card__img">
+    <img src="img/@@img.svg" alt="@@title" width="128" height="128" loading="lazy" decoding="async">
+  </div>
+  <div class="biz-service-card__text">
+    <p class="h4  biz-service-card__title">@@title</p>
+    <p class="biz-service-card__descr">@@descr</p>
+    <p class="biz-service-card__more  @@moreClass">
+      <span>Детальніше</span>
+    </p>
+  </div>
+</div>
