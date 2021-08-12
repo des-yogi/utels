@@ -364,12 +364,9 @@ a {
   }
 }
 
-.grid {
-  //position: static !important;
-  //flex: 1 1;
-  //flex-basis: auto;
-}
+.last-on-page {
 
-.grid-item {
-  //position: static !important;
+  @media (min-width: $screen-xl) {
+    margin-bottom: 92px;
+  }
 }

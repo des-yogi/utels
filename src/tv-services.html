@@ -60,25 +60,639 @@
         </div>
 
         <section class="container  tv-channel-list">
+          <h2 class="tv-channel-list__title">Інтерактивне телебачення</h2>
+
           <div class="tabs">
 
-            <ul class="nav  tabs__links" id="myTab" role="tablist">
-              <li class="tabs__link-wrap" role="presentation">
-                <button class="tabs__link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" role="tab" aria-controls="home" aria-selected="true">Home</button>
-              </li>
-              <li class="tabs__link-wrap" role="presentation">
-                <button class="tabs__link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" role="tab" aria-controls="profile" aria-selected="false">Profile</button>
-              </li>
-            </ul>
+            <div class="row">
+              <div class="tabs__links-col">
 
-            <div class="tabs__content-wrapper" id="myTabContent">
+                <ul class="nav  tabs__links" id="tvChannelsTab" role="tablist">
 
-              <div class="tabs__content-item fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.
+                  <li class="tabs__link-wrap" role="presentation">
+                    <button class="tabs__link active" id="standart-tab" data-bs-toggle="tab" data-bs-target="#standart" role="tab" aria-controls="standart" aria-selected="true">
+                      Пакет <br> «Standart»
+                      <span>133 каналів</span>
+                    </button>
+                  </li>
+
+                  <li class="tabs__link-wrap" role="presentation">
+                    <button class="tabs__link" id="premium-tab" data-bs-toggle="tab" data-bs-target="#premium" role="tab" aria-controls="premium" aria-selected="false">
+                      Пакет <br> «Premium + HD»
+                      <span>170 каналів</span>
+                    </button>
+                  </li>
+
+                </ul>
+
+              </div>
+            </div>
+
+
+            <div class="tabs__content-wrapper" id="tvChannelsContent">
+
+              <div class="tabs__content-item fade show active" id="standart" role="tabpanel" aria-labelledby="standart-tab">
+                <div class="row">
+                  <div class="tabs__links-col">
+                    <section class="btn-filter-group">
+                      <h2 class="visually-hidden">Группа переключателей для фильтрации телепрограм</h2>
+                      <button class="btn btn--filter is-checked" type="button" data-filter="all">
+                        Усі <span>21</span>
+                      </button>
+                      <button class="btn btn--filter" type="button" data-filter="info">
+                        Інформаційні <span>5</span>
+                      </button>
+                      <button class="btn btn--filter" type="button" data-filter="cinema">
+                        Фільми <span>5</span>
+                      </button>
+                      <button class="btn btn--filter" type="button" data-filter="sport">
+                        Спортивні <span>12</span>
+                      </button>
+                      <button class="btn btn--filter" type="button" data-filter="discovery">
+                        Пізнавальні <span>11</span>
+                      </button>
+                      <button class="btn btn--filter" type="button" data-filter="kids">
+                        Дитячі <span>6</span>
+                      </button>
+                      <button class="btn btn--filter" type="button" data-filter="fun">
+                        Розважальні <span>12</span>
+                      </button>
+                      <button class="btn btn--filter" type="button" data-filter="varied">
+                        Багатопрофільні <span>19</span>
+                      </button>
+                      <button class="btn btn--filter" type="button" data-filter="music">
+                        Музичні <span>11</span>
+                      </button>
+                      <button class="btn btn--filter" type="button" data-filter="ether">
+                        Ефір <span>11</span>
+                      </button>
+                    </section>
+                  </div>
+                </div>
+                <section class="tv-channel-list__content">
+                  <h3 class="visually-hidden">Список телеканалов, входящих в пакет «Standart»</h3>
+
+                  <div class="grid" role="list">
+                    @@include('blocks/tv-channel-card/tv-channel-card.html', {
+                      "filterClass": "varied",
+                      "hdClass": "hd",
+                      "img": "vezha",
+                      "title": "Вежа"
+                    })
+                    @@include('blocks/tv-channel-card/tv-channel-card.html', {
+                      "filterClass": "discovery",
+                      "hdClass": "hq",
+                      "img": "pai",
+                      "title": "PAI"
+                    })
+                    @@include('blocks/tv-channel-card/tv-channel-card.html', {
+                      "filterClass": "sport",
+                      "hdClass": "hq",
+                      "img": "tri-studia",
+                      "title": "3 Студія"
+                    })
+                    @@include('blocks/tv-channel-card/tv-channel-card.html', {
+                      "filterClass": "info",
+                      "hdClass": "hd",
+                      "img": "priamy",
+                      "title": "Прямий HD"
+                    })
+                    @@include('blocks/tv-channel-card/tv-channel-card.html', {
+                      "filterClass": "cinema",
+                      "hdClass": "hq",
+                      "img": "galychina",
+                      "title": "Галичина"
+                    })
+                    @@include('blocks/tv-channel-card/tv-channel-card.html', {
+                      "filterClass": "info",
+                      "hdClass": "hq",
+                      "img": "kyiv",
+                      "title": "Київ"
+                    })
+                    @@include('blocks/tv-channel-card/tv-channel-card.html', {
+                      "filterClass": "info",
+                      "hdClass": "hq",
+                      "img": "trk",
+                      "title": "ТРК"
+                    })
+                    @@include('blocks/tv-channel-card/tv-channel-card.html', {
+                      "filterClass": "info",
+                      "hdClass": "hq",
+                      "img": "ua-krym",
+                      "title": "UA: Крим"
+                    })
+                    @@include('blocks/tv-channel-card/tv-channel-card.html', {
+                      "filterClass": "cinema",
+                      "hdClass": "hq",
+                      "img": "ua-rivne",
+                      "title": "UA: Рівне"
+                    })
+                    @@include('blocks/tv-channel-card/tv-channel-card.html', {
+                      "filterClass": "ether",
+                      "hdClass": "hd",
+                      "img": "avers",
+                      "title": "Аверс"
+                    })
+                    @@include('blocks/tv-channel-card/tv-channel-card.html', {
+                      "filterClass": "varied",
+                      "hdClass": "hd",
+                      "img": "espreso",
+                      "title": "Еспресо HD"
+                    })
+                    @@include('blocks/tv-channel-card/tv-channel-card.html', {
+                      "filterClass": "fun",
+                      "hdClass": "hq",
+                      "img": "skrypin-ua",
+                      "title": "Skrypin UA"
+                    })
+                    @@include('blocks/tv-channel-card/tv-channel-card.html', {
+                      "filterClass": "discovery",
+                      "hdClass": "hq",
+                      "img": "glas",
+                      "title": "Глас"
+                    })
+                    @@include('blocks/tv-channel-card/tv-channel-card.html', {
+                      "filterClass": "sport",
+                      "hdClass": "hq",
+                      "img": "bihus",
+                      "title": "Бігус.Інфо"
+                    })
+                    @@include('blocks/tv-channel-card/tv-channel-card.html', {
+                      "filterClass": "music",
+                      "hdClass": "hd",
+                      "img": "fashion-tv",
+                      "title": "Fashion TV"
+                    })
+                    @@include('blocks/tv-channel-card/tv-channel-card.html', {
+                      "filterClass": "music",
+                      "hdClass": "hq",
+                      "img": "boutique-tv",
+                      "title": "Boutique TV"
+                    })
+                    @@include('blocks/tv-channel-card/tv-channel-card.html', {
+                      "filterClass": "kids",
+                      "hdClass": "hq",
+                      "img": "solntse",
+                      "title": "Сонце"
+                    })
+                    @@include('blocks/tv-channel-card/tv-channel-card.html', {
+                      "filterClass": "fun",
+                      "hdClass": "hq",
+                      "img": "zen-tv",
+                      "title": "Zee TV"
+                    })
+                    @@include('blocks/tv-channel-card/tv-channel-card.html', {
+                      "filterClass": "music",
+                      "hdClass": "hq",
+                      "img": "m1-study",
+                      "title": "M1 Студія"
+                    })
+                    @@include('blocks/tv-channel-card/tv-channel-card.html', {
+                      "filterClass": "discovery",
+                      "hdClass": "hd",
+                      "img": "nat-geo-wild-hd",
+                      "title": "Nat Geo Wild HD"
+                    })
+                    @@include('blocks/tv-channel-card/tv-channel-card.html', {
+                      "filterClass": "discovery",
+                      "hdClass": "hd",
+                      "img": "national-geographic-hd",
+                      "title": "National Geographic HD"
+                    })
+                  </div>
+                </section>
               </div>
 
-              <div class="tabs__content-item fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit. Keytar helvetica VHS salvia yr, vero magna velit sapiente labore stumptown. Vegan fanny pack odio cillum wes anderson 8-bit, sustainable jean shorts beard ut DIY ethical culpa terry richardson biodiesel. Art party scenester stumptown, tumblr butcher vero sint qui sapiente accusamus tattooed echo park.
+              <div class="tabs__content-item fade" id="premium" role="tabpanel" aria-labelledby="premium-tab">
+                <div class="row">
+                  <div class="tabs__links-col">
+                    <section class="btn-filter-group">
+                      <h2 class="visually-hidden">Группа переключателей для фильтрации телепрограм</h2>
+                      <button class="btn btn--filter is-checked" type="button" data-filter="all">
+                        Усі <span>21</span>
+                      </button>
+                      <button class="btn btn--filter" type="button" data-filter="info">
+                        Інформаційні <span>5</span>
+                      </button>
+                      <button class="btn btn--filter" type="button" data-filter="cinema">
+                        Фільми <span>5</span>
+                      </button>
+                      <button class="btn btn--filter" type="button" data-filter="sport">
+                        Спортивні <span>12</span>
+                      </button>
+                      <button class="btn btn--filter" type="button" data-filter="discovery">
+                        Пізнавальні <span>11</span>
+                      </button>
+                      <button class="btn btn--filter" type="button" data-filter="kids">
+                        Дитячі <span>6</span>
+                      </button>
+                      <button class="btn btn--filter" type="button" data-filter="fun">
+                        Розважальні <span>12</span>
+                      </button>
+                      <button class="btn btn--filter" type="button" data-filter="varied">
+                        Багатопрофільні <span>19</span>
+                      </button>
+                      <button class="btn btn--filter" type="button" data-filter="music">
+                        Музичні <span>11</span>
+                      </button>
+                      <button class="btn btn--filter" type="button" data-filter="ether">
+                        Ефір <span>11</span>
+                      </button>
+                    </section>
+                  </div>
+                </div>
+                <section class="tv-channel-list__content">
+                  <h3 class="visually-hidden">Список телеканалов, входящих в пакет «Premium + HD»</h3>
+
+                  <div class="grid" role="list">
+                    @@include('blocks/tv-channel-card/tv-channel-card.html', {
+                      "filterClass": "varied",
+                      "hdClass": "hd",
+                      "img": "espreso",
+                      "title": "Еспресо HD"
+                    })
+                    @@include('blocks/tv-channel-card/tv-channel-card.html', {
+                      "filterClass": "fun",
+                      "hdClass": "hq",
+                      "img": "skrypin-ua",
+                      "title": "Skrypin UA"
+                    })
+                    @@include('blocks/tv-channel-card/tv-channel-card.html', {
+                      "filterClass": "discovery",
+                      "hdClass": "hq",
+                      "img": "glas",
+                      "title": "Глас"
+                    })
+                    @@include('blocks/tv-channel-card/tv-channel-card.html', {
+                      "filterClass": "sport",
+                      "hdClass": "hq",
+                      "img": "bihus",
+                      "title": "Бігус.Інфо"
+                    })
+                    @@include('blocks/tv-channel-card/tv-channel-card.html', {
+                      "filterClass": "music",
+                      "hdClass": "hd",
+                      "img": "fashion-tv",
+                      "title": "Fashion TV"
+                    })
+                    @@include('blocks/tv-channel-card/tv-channel-card.html', {
+                      "filterClass": "music",
+                      "hdClass": "hq",
+                      "img": "boutique-tv",
+                      "title": "Boutique TV"
+                    })
+                    @@include('blocks/tv-channel-card/tv-channel-card.html', {
+                      "filterClass": "kids",
+                      "hdClass": "hq",
+                      "img": "solntse",
+                      "title": "Сонце"
+                    })
+                    @@include('blocks/tv-channel-card/tv-channel-card.html', {
+                      "filterClass": "fun",
+                      "hdClass": "hq",
+                      "img": "zen-tv",
+                      "title": "Zee TV"
+                    })
+                    @@include('blocks/tv-channel-card/tv-channel-card.html', {
+                      "filterClass": "music",
+                      "hdClass": "hq",
+                      "img": "m1-study",
+                      "title": "M1 Студія"
+                    })
+
+                    @@include('blocks/tv-channel-card/tv-channel-card.html', {
+                      "filterClass": "varied",
+                      "hdClass": "hd",
+                      "img": "vezha",
+                      "title": "Вежа"
+                    })
+                    @@include('blocks/tv-channel-card/tv-channel-card.html', {
+                      "filterClass": "discovery",
+                      "hdClass": "hq",
+                      "img": "pai",
+                      "title": "PAI"
+                    })
+                    @@include('blocks/tv-channel-card/tv-channel-card.html', {
+                      "filterClass": "sport",
+                      "hdClass": "hq",
+                      "img": "tri-studia",
+                      "title": "3 Студія"
+                    })
+                    @@include('blocks/tv-channel-card/tv-channel-card.html', {
+                      "filterClass": "info",
+                      "hdClass": "hd",
+                      "img": "priamy",
+                      "title": "Прямий HD"
+                    })
+                    @@include('blocks/tv-channel-card/tv-channel-card.html', {
+                      "filterClass": "cinema",
+                      "hdClass": "hq",
+                      "img": "galychina",
+                      "title": "Галичина"
+                    })
+                    @@include('blocks/tv-channel-card/tv-channel-card.html', {
+                      "filterClass": "info",
+                      "hdClass": "hq",
+                      "img": "kyiv",
+                      "title": "Київ"
+                    })
+                    @@include('blocks/tv-channel-card/tv-channel-card.html', {
+                      "filterClass": "ether",
+                      "hdClass": "hq",
+                      "img": "trk",
+                      "title": "ТРК"
+                    })
+                    @@include('blocks/tv-channel-card/tv-channel-card.html', {
+                      "filterClass": "ether",
+                      "hdClass": "hq",
+                      "img": "ua-krym",
+                      "title": "UA: Крим"
+                    })
+                    @@include('blocks/tv-channel-card/tv-channel-card.html', {
+                      "filterClass": "cinema",
+                      "hdClass": "hq",
+                      "img": "ua-rivne",
+                      "title": "UA: Рівне"
+                    })
+                    @@include('blocks/tv-channel-card/tv-channel-card.html', {
+                      "filterClass": "ether",
+                      "hdClass": "hd",
+                      "img": "avers",
+                      "title": "Аверс"
+                    })
+
+                    @@include('blocks/tv-channel-card/tv-channel-card.html', {
+                      "filterClass": "discovery",
+                      "hdClass": "hd",
+                      "img": "nat-geo-wild-hd",
+                      "title": "Nat Geo Wild HD"
+                    })
+                    @@include('blocks/tv-channel-card/tv-channel-card.html', {
+                      "filterClass": "discovery",
+                      "hdClass": "hd",
+                      "img": "national-geographic-hd",
+                      "title": "National Geographic HD"
+                    })
+
+                    @@include('blocks/tv-channel-card/tv-channel-card.html', {
+                      "filterClass": "varied",
+                      "hdClass": "hd",
+                      "img": "espreso",
+                      "title": "Еспресо HD"
+                    })
+                    @@include('blocks/tv-channel-card/tv-channel-card.html', {
+                      "filterClass": "fun",
+                      "hdClass": "hq",
+                      "img": "skrypin-ua",
+                      "title": "Skrypin UA"
+                    })
+                    @@include('blocks/tv-channel-card/tv-channel-card.html', {
+                      "filterClass": "discovery",
+                      "hdClass": "hq",
+                      "img": "glas",
+                      "title": "Глас"
+                    })
+                    @@include('blocks/tv-channel-card/tv-channel-card.html', {
+                      "filterClass": "sport",
+                      "hdClass": "hq",
+                      "img": "bihus",
+                      "title": "Бігус.Інфо"
+                    })
+                    @@include('blocks/tv-channel-card/tv-channel-card.html', {
+                      "filterClass": "music",
+                      "hdClass": "hd",
+                      "img": "fashion-tv",
+                      "title": "Fashion TV"
+                    })
+                    @@include('blocks/tv-channel-card/tv-channel-card.html', {
+                      "filterClass": "music",
+                      "hdClass": "hq",
+                      "img": "boutique-tv",
+                      "title": "Boutique TV"
+                    })
+                    @@include('blocks/tv-channel-card/tv-channel-card.html', {
+                      "filterClass": "kids",
+                      "hdClass": "hq",
+                      "img": "solntse",
+                      "title": "Сонце"
+                    })
+                    @@include('blocks/tv-channel-card/tv-channel-card.html', {
+                      "filterClass": "fun",
+                      "hdClass": "hq",
+                      "img": "zen-tv",
+                      "title": "Zee TV"
+                    })
+                    @@include('blocks/tv-channel-card/tv-channel-card.html', {
+                      "filterClass": "music",
+                      "hdClass": "hq",
+                      "img": "m1-study",
+                      "title": "M1 Студія"
+                    })
+
+                    @@include('blocks/tv-channel-card/tv-channel-card.html', {
+                      "filterClass": "varied",
+                      "hdClass": "hd",
+                      "img": "vezha",
+                      "title": "Вежа"
+                    })
+                    @@include('blocks/tv-channel-card/tv-channel-card.html', {
+                      "filterClass": "discovery",
+                      "hdClass": "hq",
+                      "img": "pai",
+                      "title": "PAI"
+                    })
+                    @@include('blocks/tv-channel-card/tv-channel-card.html', {
+                      "filterClass": "sport",
+                      "hdClass": "hq",
+                      "img": "tri-studia",
+                      "title": "3 Студія"
+                    })
+                    @@include('blocks/tv-channel-card/tv-channel-card.html', {
+                      "filterClass": "info",
+                      "hdClass": "hd",
+                      "img": "priamy",
+                      "title": "Прямий HD"
+                    })
+                    @@include('blocks/tv-channel-card/tv-channel-card.html', {
+                      "filterClass": "cinema",
+                      "hdClass": "hq",
+                      "img": "galychina",
+                      "title": "Галичина"
+                    })
+                    @@include('blocks/tv-channel-card/tv-channel-card.html', {
+                      "filterClass": "info",
+                      "hdClass": "hq",
+                      "img": "kyiv",
+                      "title": "Київ"
+                    })
+                    @@include('blocks/tv-channel-card/tv-channel-card.html', {
+                      "filterClass": "ether",
+                      "hdClass": "hq",
+                      "img": "trk",
+                      "title": "ТРК"
+                    })
+                    @@include('blocks/tv-channel-card/tv-channel-card.html', {
+                      "filterClass": "ether",
+                      "hdClass": "hq",
+                      "img": "ua-krym",
+                      "title": "UA: Крим"
+                    })
+                    @@include('blocks/tv-channel-card/tv-channel-card.html', {
+                      "filterClass": "cinema",
+                      "hdClass": "hq",
+                      "img": "ua-rivne",
+                      "title": "UA: Рівне"
+                    })
+                    @@include('blocks/tv-channel-card/tv-channel-card.html', {
+                      "filterClass": "ether",
+                      "hdClass": "hd",
+                      "img": "avers",
+                      "title": "Аверс"
+                    })
+
+                    @@include('blocks/tv-channel-card/tv-channel-card.html', {
+                      "filterClass": "discovery",
+                      "hdClass": "hd",
+                      "img": "nat-geo-wild-hd",
+                      "title": "Nat Geo Wild HD"
+                    })
+                    @@include('blocks/tv-channel-card/tv-channel-card.html', {
+                      "filterClass": "discovery",
+                      "hdClass": "hd",
+                      "img": "national-geographic-hd",
+                      "title": "National Geographic HD"
+                    })
+                    @@include('blocks/tv-channel-card/tv-channel-card.html', {
+                      "filterClass": "varied",
+                      "hdClass": "hd",
+                      "img": "espreso",
+                      "title": "Еспресо HD"
+                    })
+                    @@include('blocks/tv-channel-card/tv-channel-card.html', {
+                      "filterClass": "fun",
+                      "hdClass": "hq",
+                      "img": "skrypin-ua",
+                      "title": "Skrypin UA"
+                    })
+                    @@include('blocks/tv-channel-card/tv-channel-card.html', {
+                      "filterClass": "discovery",
+                      "hdClass": "hq",
+                      "img": "glas",
+                      "title": "Глас"
+                    })
+                    @@include('blocks/tv-channel-card/tv-channel-card.html', {
+                      "filterClass": "sport",
+                      "hdClass": "hq",
+                      "img": "bihus",
+                      "title": "Бігус.Інфо"
+                    })
+                    @@include('blocks/tv-channel-card/tv-channel-card.html', {
+                      "filterClass": "music",
+                      "hdClass": "hd",
+                      "img": "fashion-tv",
+                      "title": "Fashion TV"
+                    })
+                    @@include('blocks/tv-channel-card/tv-channel-card.html', {
+                      "filterClass": "music",
+                      "hdClass": "hq",
+                      "img": "boutique-tv",
+                      "title": "Boutique TV"
+                    })
+                    @@include('blocks/tv-channel-card/tv-channel-card.html', {
+                      "filterClass": "kids",
+                      "hdClass": "hq",
+                      "img": "solntse",
+                      "title": "Сонце"
+                    })
+                    @@include('blocks/tv-channel-card/tv-channel-card.html', {
+                      "filterClass": "fun",
+                      "hdClass": "hq",
+                      "img": "zen-tv",
+                      "title": "Zee TV"
+                    })
+                    @@include('blocks/tv-channel-card/tv-channel-card.html', {
+                      "filterClass": "music",
+                      "hdClass": "hq",
+                      "img": "m1-study",
+                      "title": "M1 Студія"
+                    })
+
+                    @@include('blocks/tv-channel-card/tv-channel-card.html', {
+                      "filterClass": "varied",
+                      "hdClass": "hd",
+                      "img": "vezha",
+                      "title": "Вежа"
+                    })
+                    @@include('blocks/tv-channel-card/tv-channel-card.html', {
+                      "filterClass": "discovery",
+                      "hdClass": "hq",
+                      "img": "pai",
+                      "title": "PAI"
+                    })
+                    @@include('blocks/tv-channel-card/tv-channel-card.html', {
+                      "filterClass": "sport",
+                      "hdClass": "hq",
+                      "img": "tri-studia",
+                      "title": "3 Студія"
+                    })
+                    @@include('blocks/tv-channel-card/tv-channel-card.html', {
+                      "filterClass": "info",
+                      "hdClass": "hd",
+                      "img": "priamy",
+                      "title": "Прямий HD"
+                    })
+                    @@include('blocks/tv-channel-card/tv-channel-card.html', {
+                      "filterClass": "cinema",
+                      "hdClass": "hq",
+                      "img": "galychina",
+                      "title": "Галичина"
+                    })
+                    @@include('blocks/tv-channel-card/tv-channel-card.html', {
+                      "filterClass": "info",
+                      "hdClass": "hq",
+                      "img": "kyiv",
+                      "title": "Київ"
+                    })
+                    @@include('blocks/tv-channel-card/tv-channel-card.html', {
+                      "filterClass": "ether",
+                      "hdClass": "hq",
+                      "img": "trk",
+                      "title": "ТРК"
+                    })
+                    @@include('blocks/tv-channel-card/tv-channel-card.html', {
+                      "filterClass": "ether",
+                      "hdClass": "hq",
+                      "img": "ua-krym",
+                      "title": "UA: Крим"
+                    })
+                    @@include('blocks/tv-channel-card/tv-channel-card.html', {
+                      "filterClass": "cinema",
+                      "hdClass": "hq",
+                      "img": "ua-rivne",
+                      "title": "UA: Рівне"
+                    })
+                    @@include('blocks/tv-channel-card/tv-channel-card.html', {
+                      "filterClass": "ether",
+                      "hdClass": "hd",
+                      "img": "avers",
+                      "title": "Аверс"
+                    })
+
+                    @@include('blocks/tv-channel-card/tv-channel-card.html', {
+                      "filterClass": "discovery",
+                      "hdClass": "hd",
+                      "img": "nat-geo-wild-hd",
+                      "title": "Nat Geo Wild HD"
+                    })
+                    @@include('blocks/tv-channel-card/tv-channel-card.html', {
+                      "filterClass": "discovery",
+                      "hdClass": "hd",
+                      "img": "national-geographic-hd",
+                      "title": "National Geographic HD"
+                    })
+                  </div>
+
+                </section>
               </div>
             </div>
 

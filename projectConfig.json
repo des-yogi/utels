@@ -55,7 +55,10 @@
     "countdown": [],
     "service-block": [],
     "tv-channel-list": [],
-    "tv-info-text": []
+    "tv-info-text": [],
+    "tv-channel-card": [],
+    "biz-service-card": [],
+    "biz-service-text": []
   },
   "addCssBefore": [
     "../../node_modules/bootstrap/scss/_functions",

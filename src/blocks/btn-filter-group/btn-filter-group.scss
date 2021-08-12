@@ -13,5 +13,11 @@
     &:not(:last-child) {
       margin-right: 12px;
     }
+
+    & > span {
+      display: inline-block;
+      vertical-align: baseline;
+      margin-left: 5px;
+    }
   }
 }

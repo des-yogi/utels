@@ -18,26 +18,47 @@ $field-padding-horizontal:    0.7em !default;
   margin-top: $line-height;
   margin-bottom: $line-height;
 
-  &__links {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-end;
-    cursor: pointer;
+  .btn-filter-group {
+    margin-bottom: 0;
+  }
 
-    &:after {
-      content: '';
-      flex-grow: 1;
-      height: 1px;
-      background-color: $border-color;
+  &__links-col {
+    @include col(xs, 12);
+    @include col-offset(md, 1);
+    @include col(md, 10);
+    @include col-offset(xl, 2);
+    @include col(xl, 8);
+    @include col-offset(xxl, 3);
+    @include col(xxl, 6);
+    margin-bottom: 24px;
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 32px;
     }
   }
 
+  &__links {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    cursor: pointer;
+
+    // &:after {
+    //   content: '';
+    //   flex-grow: 1;
+    //   height: 1px;
+    //   background-color: $border-color;
+    // }
+  }
+
   &__link-wrap {
+    flex: 1 1;
+    flex-basis: calc(50% - 8px);
     position: relative;
-    border: 1px solid $border-color;
+    //border: 1px solid $border-color;
 
     &:not(:last-child) {
       border-right: none;
@@ -46,27 +67,61 @@ $field-padding-horizontal:    0.7em !default;
 
   &__link {
     display: block;
-    padding: $field-padding-vertical $field-padding-horizontal;
-    color: $text-muted;
+    width: 100%;
+    padding: 0 0 12px 0;
+    font-size: 16px;
+    font-weight: 500;
+    color: $text-color;
     text-decoration: none;
-    background-color: $gray-lightest;
+    text-align: center;
+    background-color: $white;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: 2px solid $border-color;
+    cursor: pointer;
+    user-select: none;
+
+    @media (min-width: $screen-sm) {
+      font-size: 18px;
+    }
+
+    @media (min-width: $screen-md) {
+      font-size: 24px;
+    }
 
     &:hover,
     &:focus {
-      color: $text-muted;
+      color: $main-color;
     }
 
     &.active {
-      color: $text-color;
-      background-color: #fff;
+      color: $main-color;
+      border-bottom-color: $main-color;
+      //background-color: #fff;
+    }
+
+    br {
+      display: none;
+
+      @media (max-width: $screen-md - 1) {
+        display: inline-block;
+      }
+    }
+
+    & > span {
+      display: block;
+      font-size: 16px;
+      font-weight: 400;
+      color: $text-muted;
     }
   }
 
   &__content-wrapper {
     display: block;
-    padding: $field-padding-vertical $field-padding-horizontal;
-    border: 1px solid $border-color;
-    border-top: none;
+    padding: 0;
+    //border: 1px solid $border-color;
+    //border-top: none;
   }
 
   &__content-item {
