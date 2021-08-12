@@ -1,0 +1,22 @@
+<!--DEV
+@ @include('blocks/tv-channel-card/tv-channel-card.html', {
+  "filterClass": "",
+  "hdClass": "hd",
+  "img": "vezha",
+  "title": "Вежа"
+})
+-->
+
+<div class="grid-item  tv-channel-card  @@filterClass" role="listitem">
+  <div class="tv-channel-card__inner">
+    <div class="tv-channel-card__quality">
+      <span class="@@hdClass">@@hdClass</span>
+    </div>
+    <div class="tv-channel-card__img">
+      <img src="img/@@img.png" alt="@@title" loading="lazy" decoding="async">
+    </div>
+    <div class="tv-channel-card__title">
+      <span>@@title</span>
+    </div>
+  </div>
+</div>
