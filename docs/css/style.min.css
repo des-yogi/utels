@@ -3861,6 +3861,41 @@ textarea.field-text__input{
 .biz-service-text__btn-wrapper .btn{
       width:100%;
       margin-top:24px; }
+.page-404{
+  padding-top:32px;
+  padding-bottom:32px;
+  text-align:center;
+  color:white;
+  background-color:#50b82d; }
+.page-404__text-col{
+    -webkit-box-flex:0;
+        -ms-flex:0 0 100%;
+            flex:0 0 100%;
+    max-width:100%;
+    padding-left:16px;
+    padding-right:16px; }
+.page-404__text-col .btn{
+      min-width:180px; }
+.page-404__img-col{
+    -webkit-box-flex:0;
+        -ms-flex:0 0 100%;
+            flex:0 0 100%;
+    max-width:100%;
+    padding-left:16px;
+    padding-right:16px; }
+.page-404__img-col img{
+      font-family:"object-fit:cover;object-position:center";
+      -o-object-fit:cover;
+         object-fit:cover;
+      -o-object-position:center;
+         object-position:center;
+      width:100%;
+      max-width:318px; }
+.page-404__title{
+    font-size:64px; }
+.page-404__descr{
+    margin-top:12px;
+    margin-bottom:32px; }
 @media (min-width: 480px){
     .col-1-2-3-4{
       -webkit-box-flex:0;
@@ -4254,7 +4289,25 @@ textarea.field-text__input{
         padding-left:16px;
         padding-right:16px; }
         .biz-service-text__btn-wrapper .btn{
-          margin-top:32px; } }
+          margin-top:32px; }
+      .page-404__text-col{
+        margin-left:16.66667%; }
+      .page-404__text-col{
+        -webkit-box-flex:0;
+            -ms-flex:0 0 66.66667%;
+                flex:0 0 66.66667%;
+        max-width:66.66667%;
+        padding-left:16px;
+        padding-right:16px; }
+      .page-404__img-col{
+        margin-left:25%; }
+      .page-404__img-col{
+        -webkit-box-flex:0;
+            -ms-flex:0 0 50%;
+                flex:0 0 50%;
+        max-width:50%;
+        padding-left:16px;
+        padding-right:16px; } }
 @media (min-width: 768px){
       .utels-tv-banner__text{-ms-grid-row:1;-ms-grid-column:1;-ms-grid-column-span:3; }
       .utels-tv-banner__link-wrapper{-ms-grid-row:2;-ms-grid-column:1; }
@@ -4383,7 +4436,7 @@ textarea.field-text__input{
           width:206px;
           height:76px; }
   *{
-    scrollbar-color:#f8f8f8;
+    scrollbar-color:#50b82d;
     scrollbar-width:thin; }
     * ::-webkit-scrollbar{
       width:6px;
@@ -4696,6 +4749,40 @@ textarea.field-text__input{
       -webkit-column-gap:32px;
          -moz-column-gap:32px;
               column-gap:32px; }
+    .page-404{
+      padding-top:48px;
+      padding-bottom:48px; }
+      .page-404__text-col{
+        margin-left:8.33333%; }
+      .page-404__text-col{
+        -webkit-box-flex:0;
+            -ms-flex:0 0 41.66667%;
+                flex:0 0 41.66667%;
+        max-width:41.66667%;
+        padding-left:16px;
+        padding-right:16px; }
+      .page-404__text-col{
+        display:-webkit-box;
+        display:-ms-flexbox;
+        display:flex;
+        -ms-flex-wrap:wrap;
+            flex-wrap:wrap;
+        -webkit-box-pack:center;
+            -ms-flex-pack:center;
+                justify-content:center;
+        -ms-flex-line-pack:center;
+            align-content:center; }
+      .page-404__img-col{
+        margin-left:0%; }
+      .page-404__img-col{
+        -webkit-box-flex:0;
+            -ms-flex:0 0 41.66667%;
+                flex:0 0 41.66667%;
+        max-width:41.66667%;
+        padding-left:16px;
+        padding-right:16px; }
+        .page-404__img-col img{
+          max-width:440px; }
       .utels-tv-banner__text{-ms-grid-row:1;-ms-grid-column:1;-ms-grid-column-span:1; }
       .utels-tv-banner__link-wrapper{-ms-grid-row:2;-ms-grid-column:1; }
       .utels-tv-banner__img-wrapper{-ms-grid-row:1;-ms-grid-row-span:2;-ms-grid-column:3; } }
@@ -4827,7 +4914,9 @@ textarea.field-text__input{
                 flex:0 0 58.33333%;
         max-width:58.33333%;
         padding-left:16px;
-        padding-right:16px; } }
+        padding-right:16px; }
+        .page-404__img-col img{
+          max-width:565px; } }
 @media (prefers-reduced-motion: reduce){
     .fade{
       -webkit-transition:none;
@@ -5019,7 +5108,9 @@ textarea.field-text__input{
     .page-header__phone-item--queue{
       display:none; }
       .hero__text-col{
-        margin-bottom:24px; } }
+        margin-bottom:24px; }
+      .page-404__text-col{
+        margin-bottom:32px; } }
 @media screen and (prefers-reduced-motion: reduce){
   .modal.fade .modal-dialog{
     -webkit-transition:none;
