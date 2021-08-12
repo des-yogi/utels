@@ -12,4 +12,4 @@ ISP Utels
 * https://des-yogi.github.io/utels/services.html
 * https://des-yogi.github.io/utels/business-services
 * https://des-yogi.github.io/utels/tv-services
-* https://des-yogi.github.io/utels/
+* https://des-yogi.github.io/utels/page-404.html
