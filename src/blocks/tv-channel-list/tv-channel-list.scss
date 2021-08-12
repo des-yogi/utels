@@ -1,11 +1,56 @@
 .tv-channel-list {
+  padding-top: 48px;
+  padding-bottom: 48px;
   margin-top: 48px;
   background-color: $white;
 
   @media (min-width: $screen-md) {
+    padding-top: 64px;
+    padding-bottom: 64px;
     margin-top: 64px;
   }
 
   $block-name:                &; // #{$block-name}__element
 
+  &__title {
+    margin-top: 0;
+    margin-bottom: 24px;
+    text-align: center;
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 32px;
+    }
+  }
+
+  &__content {
+    position: relative;
+
+    &::after {
+      display: block;
+      content: "";
+      position: absolute;
+      z-index: 1;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      height: 100px;
+      background: linear-gradient(to top, $white 0%, transparent 80%);
+      pointer-events: auto;
+    }
+
+    .grid {
+      display: flex;
+      flex-wrap: wrap;
+      //height: 540px;
+      min-height: 190px;
+      max-height: 540px;
+      margin-left: -4px;
+      margin-right: -4px;
+      overflow-y: auto;
+
+      @media (min-width: $screen-md) {
+        max-height: 640px;
+      }
+    }
+  }
 }
