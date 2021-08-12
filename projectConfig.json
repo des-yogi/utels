@@ -58,7 +58,8 @@
     "tv-info-text": [],
     "tv-channel-card": [],
     "biz-service-card": [],
-    "biz-service-text": []
+    "biz-service-text": [],
+    "page-404": []
   },
   "addCssBefore": [
     "../../node_modules/bootstrap/scss/_functions",
