@@ -1,0 +1,9 @@
+// В этом файле должны быть стили для БЭМ-блока home-rates-options, его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.home-rates-options {
+
+  $block-name:                &; // #{$block-name}__element
+
+}
