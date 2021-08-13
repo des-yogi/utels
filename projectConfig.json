@@ -59,7 +59,9 @@
     "tv-channel-card": [],
     "biz-service-card": [],
     "biz-service-text": [],
-    "page-404": []
+    "page-404": [],
+    "home-rates-card": [],
+    "home-rates-options": []
   },
   "addCssBefore": [
     "../../node_modules/bootstrap/scss/_functions",
