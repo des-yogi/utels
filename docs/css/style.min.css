@@ -2113,6 +2113,48 @@ a{
 .hero__dot.is-selected{
       width:48px;
       opacity:1; }
+@-webkit-keyframes pulse{
+  0%{
+    -webkit-transform:scale3d(0, 0, 0);
+            transform:scale3d(0, 0, 0);
+    opacity:0; }
+  25%{
+    -webkit-transform:scale3d(0.1, 0.1, 0.1);
+            transform:scale3d(0.1, 0.1, 0.1);
+    opacity:0.1; }
+  50%{
+    -webkit-transform:scale3d(0.3, 0.3, 0.3);
+            transform:scale3d(0.3, 0.3, 0.3);
+    opacity:0.3; }
+  75%{
+    -webkit-transform:scale3d(0.5, 0.5, 0.5);
+            transform:scale3d(0.5, 0.5, 0.5);
+    opacity:0.5; }
+  100%{
+    -webkit-transform:scale3d(1, 1, 1);
+            transform:scale3d(1, 1, 1);
+    opacity:0; } }
+@keyframes pulse{
+  0%{
+    -webkit-transform:scale3d(0, 0, 0);
+            transform:scale3d(0, 0, 0);
+    opacity:0; }
+  25%{
+    -webkit-transform:scale3d(0.1, 0.1, 0.1);
+            transform:scale3d(0.1, 0.1, 0.1);
+    opacity:0.1; }
+  50%{
+    -webkit-transform:scale3d(0.3, 0.3, 0.3);
+            transform:scale3d(0.3, 0.3, 0.3);
+    opacity:0.3; }
+  75%{
+    -webkit-transform:scale3d(0.5, 0.5, 0.5);
+            transform:scale3d(0.5, 0.5, 0.5);
+    opacity:0.5; }
+  100%{
+    -webkit-transform:scale3d(1, 1, 1);
+            transform:scale3d(1, 1, 1);
+    opacity:0; } }
 .contact-widget{
   display:-webkit-inline-box;
   display:-ms-inline-flexbox;
@@ -2152,6 +2194,7 @@ a{
     -webkit-box-pack:center;
         -ms-flex-pack:center;
             justify-content:center;
+    position:relative;
     width:48px;
     height:48px;
     color:white;
@@ -2161,6 +2204,22 @@ a{
     cursor:pointer; }
 .contact-widget__btn:hover, .contact-widget__btn:focus{
       color:#50b82d; }
+.contact-widget__btn::after{
+      display:block;
+      content:"";
+      position:absolute;
+      top:-50%;
+      left:-50%;
+      z-index:-1;
+      width:200%;
+      height:200%;
+      border:24px solid #50b82d;
+      border-radius:16px;
+      will-change:transform;
+      -webkit-animation:pulse 4s ease-in-out;
+              animation:pulse 4s ease-in-out;
+      -webkit-animation-iteration-count:infinite;
+              animation-iteration-count:infinite; }
 .contact-widget__content{
     display:-webkit-box;
     display:-ms-flexbox;
