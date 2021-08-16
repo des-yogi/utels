@@ -52,6 +52,7 @@ if(~navigator.appVersion.indexOf("Linux"))cth('linux');
   //<div style="background-image: url('/images/image.webp')" data-bg="/images/image.jpg" data-bg-webp="/images/image.webp"></div>
 }());
 
+
 (function(){
   let bLazy = new Blazy({
     selector: '.b-lazy'

@@ -76,6 +76,7 @@
     "@popperjs/core": "^2.9.3",
     "blazy": "^1.8.2",
     "bootstrap": "^5.1.0",
+    "drooltip.js": "^1.0.2",
     "flickity": "^2.2.2",
     "focus-visible": "^5.2.0",
     "imask": "^6.1.0",

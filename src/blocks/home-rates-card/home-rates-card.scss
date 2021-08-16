@@ -31,11 +31,11 @@
 
   &__wrapper {
     padding-top: 32px;
-    padding-bottom: 48px;
+    //padding-bottom: 48px;
 
     @media (min-width: $screen-md) {
       padding-top: 48px;
-      padding-bottom: 64px;
+      //padding-bottom: 0;
     }
 
     // .flickity-enabled:focus .flickity-viewport {
@@ -162,6 +162,8 @@
 
     @media (min-width: $screen-xxl) {
       justify-content: initial;
+      padding-left: 24px;
+      padding-right: 24px;
     }
   }
 
@@ -190,6 +192,7 @@
     @media (min-width: $screen-xxl) {
       flex-direction: column;
       top: 12px;
+      right: 24px;
       left: unset;
       max-width: 62px;
     }
@@ -198,9 +201,12 @@
       position: static;
       justify-content: space-evenly;
       padding: 12px 12px 12px;
+      border-bottom: 1px solid $border-color;
 
       @media (min-width: $screen-xxl) {
-        padding-left: 12px 24px 16px;
+        flex-direction: row;
+        max-width: none;
+        padding: 12px 24px 16px;
       }
 
       #{$block-name}__speed {
@@ -237,6 +243,11 @@
     padding: 12px;
     font-size: $font-size-sm;
     background-color: $body-bg;
+
+    @media (min-width: $screen-xxl) {
+      padding-left: 24px;
+      padding-right: 24px;
+    }
 
     &--ip {
       background-color: $white;
@@ -289,6 +300,11 @@
     align-items: center;
     padding: 12px;
 
+    @media (min-width: $screen-xxl) {
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+
     img {
       width: 32px;
       height: 31px;
@@ -321,6 +337,11 @@
     align-items: center;
     justify-content: space-between;
     padding: 12px;
+
+    @media (min-width: $screen-xxl) {
+      padding-left: 24px;
+      padding-right: 24px;
+    }
   }
 
   &__options-text {
@@ -377,7 +398,7 @@
   &__btn {
     display: inline-block;
     vertical-align: baseline;
-    padding: 5px 8px 3px;
+    padding: 5px 5px 3px;
     width: 100%;
     font-size: $font-size-xs;
     font-weight: 500;
@@ -398,6 +419,11 @@
     &--vip {
       color: $color-warning;
       border-color: currentColor;
+
+      @media (min-width: $screen-xxl) {
+        max-width: 50px;
+        margin-left: auto;
+      }
 
       &:hover {
         color: $white;
@@ -429,6 +455,11 @@
     justify-content: space-between;
     padding: 12px 12px 0;
     border-top: 1px solid $border-color;
+
+    @media (min-width: $screen-xxl) {
+      padding-left: 24px;
+      padding-right: 24px;
+    }
   }
 
   &__price-num {
@@ -466,6 +497,10 @@
 
   &__ctrls-group {
     padding: 12px;
+
+    @media (min-width: $screen-xxl) {
+      padding: 12px 24px 24px;
+    }
   }
 
   &__ctrls {
@@ -498,7 +533,7 @@
 
   &__descr-title {
     margin-top: 0;
-    padding-bottom: 8px;
+    padding-bottom: 12px;
     border-bottom: 1px solid $border-color;
   }
 
@@ -508,6 +543,7 @@
       border-top: 1px solid $border-color;
       padding-top: 12px;
       margin-top: 12px;
+      line-height: 1.4;
     }
 
     p:first-child {
@@ -525,5 +561,9 @@
   &__descr-btn {
     padding: 0 12px 12px;
     margin-top: auto;
+
+    @media (min-width: $screen-xxl) {
+      padding: 0 24px 24px;
+    }
   }
 }

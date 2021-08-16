@@ -364,6 +364,19 @@ a {
   }
 }
 
+.col-1-1-2 {
+  @include col(xs, 12);
+  @include col(lg, 6);
+
+  @media (min-width: $screen-md) {
+    margin-bottom: 16px;
+  }
+
+  @media (min-width: $screen-lg) {
+    margin-bottom: 32px;
+  }
+}
+
 .last-on-page {
 
   @media (min-width: $screen-xl) {
