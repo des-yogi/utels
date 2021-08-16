@@ -76,7 +76,7 @@
       //console.log(`Кнопка: ${currentBtn.dataset.filter}`);
 
       for (let i = 0; i < filteredElems.length; i++) {
-        currentItem = filteredElems[i];
+        let currentItem = filteredElems[i];
 
         if (!currentItem.matches(`.${currentBtn.dataset.filter}`)) {
           //currentItem.style = 'display:none;';
