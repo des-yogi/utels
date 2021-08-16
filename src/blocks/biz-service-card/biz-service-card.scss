@@ -87,6 +87,23 @@
 
   &__more {
 
+    button {
+      display: inline-block;
+      vertical-align: baseline;
+      padding: 3px 8px;
+      font-size: $font-size-sm;
+      font-weight: 500;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      user-select: none;
+
+      &:hover,
+      &:focus {
+        color: $main-color;
+      }
+    }
+
     &.hidden {
       display: none;
     }

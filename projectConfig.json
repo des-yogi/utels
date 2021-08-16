@@ -61,7 +61,9 @@
     "biz-service-text": [],
     "page-404": [],
     "home-rates-card": [],
-    "home-rates-options": []
+    "home-rates-options": [],
+    "free-service": [],
+    "drooltip": []
   },
   "addCssBefore": [
     "../../node_modules/bootstrap/scss/_functions",
@@ -73,14 +75,15 @@
     "../../node_modules/flickity/dist/flickity.min.css",
     "../../node_modules/bootstrap/scss/_transitions",
     "../../node_modules/bootstrap/scss/_modal",
-    "../../node_modules/bootstrap/scss/_offcanvas",
-    "../../node_modules/bootstrap/scss/_popover"
+    "../../node_modules/bootstrap/scss/_offcanvas"
   ],
   "addCssAfter": [
     "./src/scss/print.scss"
   ],
   "singleCompiled": [],
   "addJsBefore": [
+    "./node_modules/@popperjs/core/dist/umd/popper.min.js",
+    "./node_modules/drooltip.js/package/js/build/drooltip.js",
     "./node_modules/bootstrap/js/dist/dom/data.js",
     "./node_modules/bootstrap/js/dist/dom/event-handler.js",
     "./node_modules/bootstrap/js/dist/dom/manipulator.js",
@@ -91,8 +94,6 @@
     "./node_modules/bootstrap/js/dist/offcanvas.js",
     "./node_modules/bootstrap/js/dist/tab.js",
     "./node_modules/bootstrap/js/dist/dropdown.js",
-    "./node_modules/bootstrap/js/dist/tooltip.js",
-    "./node_modules/bootstrap/js/dist/popover.js",
     "./node_modules/focus-visible/dist/focus-visible.min.js",
     "./node_modules/blazy/blazy.min.js",
     "./node_modules/imask/dist/imask.min.js",
@@ -106,9 +107,7 @@
     "./src/img/*.{jpg,jpeg,gif,png,svg,ico,webp}"
   ],
   "copiedCss": [],
-  "copiedJs": [
-    "./node_modules/@popperjs/core/dist/umd/popper.min.js"
-  ],
+  "copiedJs": [],
   "dirs": {
     "srcPath": "./src/",
     "buildPath": "./build/",
