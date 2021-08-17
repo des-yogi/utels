@@ -1668,7 +1668,7 @@ a:hover, a:focus{
     text-decoration:none;
     white-space:nowrap;
     color:#252525;
-    background-color:white;
+    background-color:transparent;
     border-radius:8px;
     -webkit-transition:all 0.2s ease-out;
     transition:all 0.2s ease-out; }
