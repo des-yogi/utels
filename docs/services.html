@@ -83,7 +83,20 @@
               <li class="main-nav__item">
                 <a href="#" class="main-nav__link">Про нас</a>
               </li>
-            </ul>            <div class="container contact-widget__wrapper">              <div class="contact-widget">                <button class="contact-widget__btn" type="button" data-bs-toggle="collapse" data-bs-target="#widgetContent" aria-expanded="false" aria-controls="widgetContent" title="Способы связи">                  <svg width="25" height="25" role="img"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#phone"/></svg>                </button>                <div id="widgetContent" class="collapse contact-widget__content">                  <div>1</div>                  <div>2</div>                  <div>3</div>                </div>              </div>            </div>          </nav>
+            </ul>
+            <div class="container contact-widget__wrapper">
+              <div id="contact-widget" class="contact-widget">
+                <button class="contact-widget__btn" type="button" data-bs-toggle="collapse" data-bs-target="#widgetContent" aria-expanded="false" aria-controls="widgetContent" title="Варианты способов для связи">
+                  <svg id="widget-img" width="25" height="25"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#phone"/></svg>
+                </button>
+                <div id="widgetContent" class="collapse contact-widget__content">
+                  <div>1</div>
+                  <div>2</div>
+                  <div>3</div>
+                </div>
+              </div>
+            </div>
+          </nav>
         </div>      </header>      <!--DEV      @ @include('blocks/breadcrumbs/breadcrumbs.html')      aria-current="page" - для ссылки на текущую страницу      -->      <nav class="container breadcrumbs">        <span id="breadcrumbs" class="visually-hidden">Навигация — Хлебные крошки</span>        <ol class="list-nostyled breadcrumbs__list" itemscope itemtype="https://schema.org/BreadcrumbList" aria-labelledby="breadcrumbs">          <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">            <a href="#" itemprop="item" class="breadcrumbs__link">             <span itemprop="name">Главная</span>             <meta itemprop="position" content="1">            </a>          </li>          <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">            <a href="#" itemprop="item" class="breadcrumbs__link">              <span itemprop="name">Страница 1</span>              <meta itemprop="position" content="2">            </a>          </li>          <!-- Для текущей страницы (как вариант — не выводить совсем) -->          <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">            <span class="breadcrumbs__link  breadcrumbs__link--current" aria-current="page">              <span itemprop="name">Страница 2</span>              <meta itemprop="position" content="3">            </span>          </li>        </ol>      </nav>      <div class="page-top-decor" role="presentation"></div>      <main>        <div class="container  service-block__wrapper">          <!-- service-block__wrapper--plus для страниц с другими блоками -->          <h1 class="service-block__pagetitle">Розумний дім (IoT)</h1>          <div class="service-block__container">            <!--DEV
             @ @include('blocks/service-block/service-block.html', {
               "img": "sp-offer-img",
@@ -132,7 +145,9 @@
                       </section>
                     </div>
                     <div class="service-block__controls ">
-                      <button class="btn service-block__order-btn"><span>Замовити</span></button>
+                      <button class="btn service-block__order-btn" data-bs-toggle="modal" data-bs-target="#orderModal" data-bs-whatever="Мобільний ключ">
+                        <span>Замовити</span>
+                      </button>
                       <form action method="post">
                         <button class="btn btn--icon btn--black btn--norotate btn--textless service-block__cart-btn" type="button">
                           <svg width="22" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#cart"/></svg>
@@ -183,7 +198,9 @@
                       </section>
                     </div>
                     <div class="service-block__controls ">
-                      <button class="btn service-block__order-btn"><span>Замовити</span></button>
+                      <button class="btn service-block__order-btn" data-bs-toggle="modal" data-bs-target="#orderModal" data-bs-whatever="Систему захисту від потопу">
+                        <span>Замовити</span>
+                      </button>
                       <form action method="post">
                         <button class="btn btn--icon btn--black btn--norotate btn--textless service-block__cart-btn" type="button">
                           <svg width="22" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#cart"/></svg>
@@ -234,7 +251,9 @@
                       </section>
                     </div>
                     <div class="service-block__controls ">
-                      <button class="btn service-block__order-btn"><span>Замовити</span></button>
+                      <button class="btn service-block__order-btn" data-bs-toggle="modal" data-bs-target="#orderModal" data-bs-whatever="Систему захисту від пожежі">
+                        <span>Замовити</span>
+                      </button>
                       <form action method="post">
                         <button class="btn btn--icon btn--black btn--norotate btn--textless service-block__cart-btn" type="button">
                           <svg width="22" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#cart"/></svg>
@@ -285,7 +304,9 @@
                       </section>
                     </div>
                     <div class="service-block__controls ">
-                      <button class="btn service-block__order-btn"><span>Замовити</span></button>
+                      <button class="btn service-block__order-btn" data-bs-toggle="modal" data-bs-target="#orderModal" data-bs-whatever="Комфортний будинок">
+                        <span>Замовити</span>
+                      </button>
                       <form action method="post">
                         <button class="btn btn--icon btn--black btn--norotate btn--textless service-block__cart-btn" type="button">
                           <svg width="22" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#cart"/></svg>
