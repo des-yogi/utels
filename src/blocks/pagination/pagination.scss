@@ -101,7 +101,7 @@ $border-color:                hsl(0, 0%, 60%) !default;
     text-decoration: none;
     white-space: nowrap;
     color: $text-color;
-    background-color: $white;
+    background-color: transparent;
     border-radius: $border-radius;
     transition: all 0.2s ease-out;
 

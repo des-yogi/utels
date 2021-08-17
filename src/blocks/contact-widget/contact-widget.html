@@ -2,9 +2,9 @@
 @ @include('blocks/contact-widget/contact-widget.html')
 -->
 <div class="container contact-widget__wrapper">
-  <div class="contact-widget">
-    <button class="contact-widget__btn" type="button" data-bs-toggle="collapse" data-bs-target="#widgetContent" aria-expanded="false" aria-controls="widgetContent" title="Способы связи">
-      <svg width="25" height="25" role="img"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#phone"></use></svg>
+  <div id="contact-widget" class="contact-widget">
+    <button class="contact-widget__btn" type="button" data-bs-toggle="collapse" data-bs-target="#widgetContent" aria-expanded="false" aria-controls="widgetContent" title="Варианты способов для связи">
+      <svg id="widget-img" width="25" height="25"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#phone"></use></svg>
     </button>
     <div id="widgetContent" class="collapse contact-widget__content">
       <div>1</div>
