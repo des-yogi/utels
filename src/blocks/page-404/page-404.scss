@@ -5,7 +5,7 @@
   color: $white;
   background-color: $main-color;
 
-  @media (min-width: $screen-xl) {
+  @media (min-width: $screen-lg) {
     padding-top: 48px;
     padding-bottom: 48px;
   }
@@ -16,14 +16,14 @@
     @include col(xs, 12);
     @include col-offset(md, 2);
     @include col(md, 8);
-    @include col-offset(xl, 1);
-    @include col(xl, 5);
+    @include col-offset(lg, 1);
+    @include col(lg, 5);
 
-    @media (max-width: $screen-xl - 1) {
+    @media (max-width: $screen-lg - 1) {
       margin-bottom: 32px;
     }
 
-    @media (min-width: $screen-xl) {
+    @media (min-width: $screen-lg) {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
@@ -39,8 +39,8 @@
     @include col(xs, 12);
     @include col-offset(md, 3);
     @include col(md, 6);
-    @include col-offset(xl, 0);
-    @include col(xl, 5);
+    @include col-offset(lg, 0);
+    @include col(lg, 5);
 
     img {
       object-fit: cover;
@@ -48,21 +48,23 @@
       width: 100%;
       max-width: 318px;
 
-      @media (min-width: $screen-xl) {
+      @media (min-width: $screen-lg) {
         max-width: 440px;
       }
 
-      @media (min-width: $screen-xxl) {
+      @media (min-width: $screen-xl) {
         max-width: 565px;
       }
     }
   }
 
   &__title {
+    width: 100%;
     font-size: 64px;
   }
 
   &__descr {
+    width: 100%;
     margin-top: 12px;
     margin-bottom: 32px;
   }

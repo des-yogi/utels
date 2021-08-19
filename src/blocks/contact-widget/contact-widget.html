@@ -4,12 +4,24 @@
 <div class="container contact-widget__wrapper">
   <div id="contact-widget" class="contact-widget">
     <button class="contact-widget__btn" type="button" data-bs-toggle="collapse" data-bs-target="#widgetContent" aria-expanded="false" aria-controls="widgetContent" title="Варианты способов для связи">
-      <svg id="widget-img" width="25" height="25"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#phone"></use></svg>
+      <picture>
+        <source srcset="img/anim-32px-2s.gif" media="(min-width: 1600px)">
+        <img src="img/anim-25px-2s.gif" alt="Анимированная иконка способов связи" width="25" height="25" loading="lazy">
+      </picture>
     </button>
     <div id="widgetContent" class="collapse contact-widget__content">
-      <div>1</div>
-      <div>2</div>
-      <div>3</div>
+      <a href="#" class="contact-widget__link contact-widget__link--tg">
+        <span class="visually-hidden">Telegram</span>
+      </a>
+      <a href="#" class="contact-widget__link contact-widget__link--vib">
+        <span class="visually-hidden">Viber</span>
+      </a>
+      <a href="#" class="contact-widget__link contact-widget__link--mes">
+        <span class="visually-hidden">Messenger</span>
+      </a>
+      <a href="#" class="contact-widget__link contact-widget__link--whapp">
+        <span class="visually-hidden">WhatsApp</span>
+      </a>
     </div>
   </div>
 </div>

@@ -25,7 +25,7 @@ $color-gh:                    #24292e;
 
 // Семантические цвета
 
-$main-color:                  #50b82d;
+$main-color:                  #19ab01; // старый цвет #50b82d
 $color-main:                  $main-color;
 $secondary-color:             #252525;
 
@@ -47,10 +47,10 @@ $font-size-xl:                18px;
 $font-size-sm:                14px;
 $font-size-xs:                12px;
 
-$font-size--h1:               34px;
-$font-size--h2:               32px;
-$font-size--h3:               28px;
-$font-size--h4:               24px;
+$font-size--h1:               32px;
+$font-size--h2:               26px;
+$font-size--h3:               24px;
+$font-size--h4:               22px;
 $font-size--h5:               20px;
 $font-size--h6:               $font-size;
 
@@ -68,13 +68,13 @@ $font-family--monospace:     SFMono-Regular, Menlo, Monaco, Consolas, Liberation
 $screen-xs:                   0;
 $screen-sm:                   480px;
 $screen-md:                   768px;
-$screen-lg:                   992px;
-$screen-xl:                   1200px;
-$screen-xxl:                  1600px;
+$screen-lg:                   1200px;
+$screen-xl:                   1600px;
+$screen-xxl:                  1920px;
 
 $container-sm:                100%;
 $container-md:                100%;
-$container-lg:                100%;
+$container-lg:                $screen-lg - 20;
 $container-xl:                $screen-xl - 20;
 $container-xxl:               $screen-xxl - 20;
 
@@ -104,8 +104,8 @@ $transition-base:                             all .2s ease-in-out !default;
 $transition-fade:                             opacity .15s linear !default;
 $transition-collapse:                         height .2s ease !default;
 
-$menu-desktop-width:          $screen-xl;
+$menu-desktop-width:          $screen-lg;
 $toggler-part-height:         2.5px;
 $toggler-part-bg-color:       $white;
 
-$z-index-modal:               100;
+$z-index-modal:               1000;

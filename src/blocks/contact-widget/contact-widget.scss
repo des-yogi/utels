@@ -49,13 +49,14 @@
     position: relative;
     width: 48px;
     height: 48px;
+    padding: 0;
     color: $white;
     background-color: $secondary-color;
     border: none;
     border-radius: $border-radius;
     cursor: pointer;
 
-    @media (min-width: $screen-xxl) {
+    @media (min-width: $screen-xl) {
       width: 64px;
       height: 64px;
     }
@@ -63,6 +64,17 @@
     &:hover,
     &:focus {
       color: $main-color;
+    }
+
+    img {
+      display: block;
+      width: 25px;
+      height: 25px;
+
+      @media (min-width: $screen-xl) {
+        width: 30px;
+        height: 30px;
+      }
     }
 
     &::after {
@@ -88,26 +100,54 @@
     display: flex;
     flex-direction: column;
     position: absolute;
-    top: 60px;
+    top: 48px;
 
-    @media (min-width: $screen-xxl) {
-      top: 76px;
+    @media (min-width: $screen-xl) {
+      top: 65px;
     }
 
-    div {
-      flex: 0 0;
-      flex-basis: 32px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 32px;
-      height: 32px;
-      background-color: yellow;
-      border-radius: 50%;
+    // div + div {
+    //   margin-top: 24px;
+    // }
+  }
+
+  &__link {
+    flex: 0 0;
+    flex-basis: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    margin-top: 24px;
+    //color: $white;
+    //background-color: $white;
+    //border-radius: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 32px;
+    filter: drop-shadow(0 0 12px rgba($black, 0.25));
+
+    &:hover,
+    &:focus {
+      filter: drop-shadow(0 0 12px rgba($black, 0.6));
     }
 
-    div + div {
-      margin-top: 12px;
+    &--tg {
+      background-image: svg-load('../blocks/contact-widget/bg-img/telegram-fill.svg');
+    }
+
+    &--vib {
+      background-size: 31px 32px;
+      background-image: svg-load('../blocks/contact-widget/bg-img/viber-fill.svg');
+    }
+
+    &--mes {
+      background-image: svg-load('../blocks/contact-widget/bg-img/messenger-fill.svg');
+    }
+
+    &--whapp {
+      background-image: svg-load('../blocks/contact-widget/bg-img/whatsapp-fill.svg');
     }
   }
 }
