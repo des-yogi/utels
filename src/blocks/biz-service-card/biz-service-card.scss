@@ -1,4 +1,5 @@
 .biz-service-card {
+  height: 100%;
   padding: 16px;
   background-color: $white;
   border-bottom: 1px solid $border-color;
@@ -10,8 +11,12 @@
     border-radius: $border-radius;
   }
 
-  @media (min-width: $screen-xl) {
+  @media (min-width: $screen-lg) {
     padding: 24px;
+  }
+
+  @media (min-width: $screen-xl) {
+    padding: 16px;
   }
 
   $block-name:                &; // #{$block-name}__element
@@ -34,13 +39,14 @@
 
   &__item {
     @include col(md, 12);
-    @include col(xl, 6);
+    @include col(lg, 6);
+    @include col(xl, 4);
 
     @media (min-width: $screen-md) {
       margin-bottom: 16px;
     }
 
-    @media (min-width: $screen-xl) {
+    @media (min-width: $screen-lg) {
       margin-bottom: 32px;
     }
   }
@@ -55,10 +61,15 @@
       margin: 0 16px 0 0;
     }
 
-    @media (min-width: $screen-xl) {
+    @media (min-width: $screen-lg) {
       flex-basis: 128px;
       max-width: 128px;
       margin-right: 24px;
+    }
+
+    @media (min-width: $screen-xl) {
+      flex-basis: 92px;
+      max-width: 92px;
     }
 
     img {
@@ -83,6 +94,7 @@
 
   &__descr {
     font-size: 16px;
+    margin-bottom: 0;
   }
 
   &__more {

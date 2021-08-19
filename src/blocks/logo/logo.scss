@@ -29,15 +29,19 @@
     }
 
     svg {
-      width: 110px;
-      height: 28px;
+      //width: 110px;
+      //height: 28px;
+      width: 97px;
+      height: 36px;
 
       @media (min-width: $screen-md) {
-        width: 125px;
-        height: 32px;
+        //width: 125px;
+        //height: 32px;
+        width: 108px;
+        height: 40px;
       }
 
-      @media (min-width: $screen-xl) {
+      @media (min-width: $screen-lg) {
         width: 141px;
         height: 52px;
       }
@@ -47,12 +51,12 @@
         height: 66px;
       }
 
-      .text {
+      // .text {
 
-        @media (max-width: $screen-xl - 1) {
-          display: none;
-        }
-      }
+      //   @media (max-width: $screen-xl - 1) {
+      //     display: none;
+      //   }
+      // }
     }
   }
 

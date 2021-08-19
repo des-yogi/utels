@@ -22,7 +22,7 @@ $toggler-part-bg-color:       #000 !default;
     background-color: $color-success;
   }
 
-  @media (min-width: $screen-xl) {
+  @media (min-width: $screen-lg) {
     display: none;
   }
 
