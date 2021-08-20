@@ -333,7 +333,7 @@ a {
 .col-1-2-3 {
   @include col(xs, 12);
   @include col(md, 6);
-  @include col(lg, 4);
+  @include col(xl, 4);
   margin-bottom: 24px;
 
   @media (min-width: $screen-md) {
@@ -344,7 +344,7 @@ a {
 .col-1-2-4 {
   @include col(xs, 12);
   @include col(md, 6);
-  @include col(lg, 3);
+  @include col(xl, 3);
   margin-bottom: 24px;
 
   @media (min-width: $screen-md) {
@@ -354,9 +354,9 @@ a {
 
 .col-1-2-3-4 {
   @include col(xs, 12);
-  @include col(sm, 6);
-  @include col(lg, 4);
-  @include col(xl, 3);
+  @include col(md, 6);
+  @include col(xl, 4);
+  @include col(xxl, 3);
   margin-bottom: 24px;
 
   @media (min-width: $screen-md) {
@@ -388,19 +388,19 @@ a {
   }
 }
 
-.col-1-1-2-3 {
-  @include col(xs, 12);
-  @include col(lg, 6);
-  @include col(xl, 4);
+// .col-1-1-2-3 {
+//   @include col(xs, 12);
+//   @include col(lg, 6);
+//   @include col(xl, 4);
 
-  @media (min-width: $screen-md) {
-    margin-bottom: 16px;
-  }
+//   @media (min-width: $screen-md) {
+//     margin-bottom: 16px;
+//   }
 
-  @media (min-width: $screen-lg) {
-    margin-bottom: 32px;
-  }
-}
+//   @media (min-width: $screen-lg) {
+//     margin-bottom: 32px;
+//   }
+// }
 
 .last-on-page {
 

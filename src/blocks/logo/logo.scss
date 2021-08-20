@@ -41,7 +41,7 @@
         height: 40px;
       }
 
-      @media (min-width: $screen-lg) {
+      @media (min-width: $screen-xl) {
         width: 141px;
         height: 52px;
       }
@@ -64,9 +64,9 @@
     margin-bottom: 32px;
     color: $white;
 
-    @media (min-width: $screen-xl) {
-      margin-bottom: 42px;
-    }
+    // @media (min-width: $screen-xl) {
+    //   margin-bottom: 42px;
+    // }
 
     svg {
       width: 130px;

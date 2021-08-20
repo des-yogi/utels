@@ -27,10 +27,6 @@
     border: none;
     //box-shadow: $shadow;
 
-    @media (min-width: $screen-xxl) {
-      font-size: 20px;
-    }
-
     &:hover,
     &:focus {
       color: $main-color;
@@ -50,6 +46,10 @@
     border: none;
     border-radius: 0;
     box-shadow: $shadow;
+
+    // @media (min-width: $screen-xxl) {
+    //   margin-left: -23px !important;
+    // }
   }
 
   &__item {

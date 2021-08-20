@@ -18,8 +18,9 @@
       height: 64px;
     }
 
-    @media (min-width: $screen-lg) {
+    @media (min-width: $screen-xl) {
       height: 84px;
+      box-shadow: $shadow;
     }
 
     @media (min-width: $screen-xxl) {
@@ -46,14 +47,14 @@
     .lang-switcher {
       height: 100%;
 
-      @media (max-width: $screen-lg - 1) {
+      @media (max-width: $screen-xl - 1) {
         display: none;
       }
     }
 
     & > * + * {
 
-      @media (min-width: $screen-lg) {
+      @media (min-width: $screen-xl) {
         margin-left: 8px;
       }
 
@@ -73,7 +74,7 @@
       display: none;
     }
 
-    @media (min-width: $screen-lg) {
+    @media (min-width: $screen-xl) {
       margin-left: 30px;
     }
   }
@@ -90,7 +91,7 @@
     &:first-child {
       margin-right: 7px;
 
-      @media (min-width: $screen-lg) {
+      @media (min-width: $screen-xl) {
         margin-right: 0;
       }
 
@@ -102,7 +103,7 @@
         margin-left: 7px;
         background-color: $white;
 
-        @media (min-width: $screen-lg) {
+        @media (min-width: $screen-xl) {
           margin-left: 0;
         }
       }
@@ -110,7 +111,7 @@
 
     &--queue {
 
-      @media (max-width: $screen-lg - 1) {
+      @media (max-width: $screen-xl - 1) {
         display: none;
       }
     }
@@ -125,17 +126,17 @@
     &:focus {
       text-decoration: none;
 
-      @media (min-width: $screen-lg) {
+      @media (min-width: $screen-xl) {
         background-color: $color-success;
       }
     }
 
-    @media (min-width: $screen-lg) {
+    @media (min-width: $screen-xl) {
       padding: 0 16px;
     }
 
     @media (min-width: $screen-xxl) {
-      font-size: 20px;
+      font-size: 18px;
     }
   }
 
@@ -146,17 +147,19 @@
     font-weight: 500;
     color: $main-color;
 
-    @media (min-width: $screen-lg) {
+    @media (min-width: $screen-xl) {
       margin-left: 0;
     }
 
     @media (min-width: $screen-xxl) {
-      font-size: 20px;
+      font-size: 18px;
     }
   }
 
   &__queue-num,
   &__queue-text {
+    display: inline-flex;
+    align-items: center;
     padding: 2px 9px;
     background-color: $white;
 
@@ -178,8 +181,6 @@
   }
 
   &__queue-text {
-    display: inline-flex;
-    align-items: center;
     height: 26px;
     padding-top: 3px;
     padding-left: 16px;
@@ -245,7 +246,7 @@
     }
 
     @media (min-width: $screen-xxl) {
-      font-size: 20px;
+      font-size: 18px;
     }
   }
 

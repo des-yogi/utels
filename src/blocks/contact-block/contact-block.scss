@@ -15,6 +15,7 @@
     align-items: center;
     padding-bottom: 16px;
     margin-bottom: 16px;
+    font-size: 16px;
 
     &:not(:last-child) {
       border-bottom: 1px solid rgba($white, 0.2);
@@ -100,6 +101,7 @@
   }
 
   &__link {
+    font-size: inherit;
     color: inherit;
 
     & + & {
@@ -109,6 +111,44 @@
 
   &--footer {
     color: $white;
+
+    #{$block-name}__list {
+      margin-bottom: 32px;
+
+      @media (min-width: $screen-md) {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: space-between;
+        margin-bottom: 8px;
+      }
+    }
+
+    #{$block-name}__item {
+      padding-bottom: 0;
+      margin-bottom: 24px;
+      border-bottom: none;
+
+      @media (min-width: $screen-md) {
+        flex: 0 0;
+        flex-basis: calc(33.3333% - 21.3px);
+        flex-wrap: wrap;
+      }
+
+      @media (min-width: $screen-xl) {
+        flex-wrap: nowrap;
+      }
+    }
+
+    #{$block-name}__icon + * {
+      flex-basis: 100%;
+      margin-top: 10px;
+
+      @media (min-width: $screen-xl) {
+        flex-basis: auto;
+        margin-top: 0;
+      }
+    }
   }
 
   &--contacts {
