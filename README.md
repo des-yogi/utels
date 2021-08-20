@@ -1,5 +1,5 @@
 # utels
-ISP Utels
+ISP Utels page-templates
 * https://des-yogi.github.io/utels/
 * https://des-yogi.github.io/utels/category.html
 * https://des-yogi.github.io/utels/home-rates.html
