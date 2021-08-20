@@ -68,13 +68,13 @@ $font-family--monospace:     SFMono-Regular, Menlo, Monaco, Consolas, Liberation
 $screen-xs:                   0;
 $screen-sm:                   480px;
 $screen-md:                   768px;
-$screen-lg:                   1200px;
-$screen-xl:                   1600px;
-$screen-xxl:                  1920px;
+$screen-lg:                   992px;
+$screen-xl:                   1200px;
+$screen-xxl:                  1600px;
 
 $container-sm:                100%;
 $container-md:                100%;
-$container-lg:                $screen-lg - 20;
+$container-lg:                100%;
 $container-xl:                $screen-xl - 20;
 $container-xxl:               $screen-xxl - 20;
 
@@ -104,7 +104,7 @@ $transition-base:                             all .2s ease-in-out !default;
 $transition-fade:                             opacity .15s linear !default;
 $transition-collapse:                         height .2s ease !default;
 
-$menu-desktop-width:          $screen-lg;
+$menu-desktop-width:          $screen-xl;
 $toggler-part-height:         2.5px;
 $toggler-part-bg-color:       $white;
 

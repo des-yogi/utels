@@ -82,6 +82,10 @@
     @media (min-width: $screen-md) {
       padding-top: 24px;
     }
+
+    p {
+      font-size: 14px;
+    }
   }
 
   &__countdown {

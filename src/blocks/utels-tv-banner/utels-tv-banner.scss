@@ -23,7 +23,7 @@
         "link img";
     }
 
-    @media (min-width: $screen-lg) {
+    @media (min-width: $screen-xl) {
       grid-template-columns: 1fr 1fr;
       column-gap: 0;
       grid-template-areas:
@@ -31,7 +31,7 @@
         "link img";
     }
 
-    @media (min-width: $screen-xl) {
+    @media (min-width: $screen-xxl) {
       grid-template-columns: 5fr 7fr;
     }
   }
@@ -44,11 +44,11 @@
       padding: 32px 24px 0;
     }
 
-    @media (min-width: $screen-lg) {
+    @media (min-width: $screen-xl) {
       padding: 64px 0 0 64px;
     }
 
-    @media (min-width: $screen-xl) {
+    @media (min-width: $screen-xxl) {
       padding-left: 120px;
     }
   }
@@ -78,7 +78,7 @@
       grid-template-columns: 1fr 1fr 1fr;
     }
 
-    @media (min-width: $screen-lg) {
+    @media (min-width: $screen-xl) {
       grid-template-columns: 1fr 1fr;
       column-gap: 24px;
       font-size: 16px;
@@ -107,21 +107,21 @@
       margin: 0;
     }
 
-    @media (min-width: $screen-lg) {
+    @media (min-width: $screen-xl) {
       display: flex;
       align-items: center;
       padding-left: 64px;
       padding-bottom: 64px;
     }
 
-    @media (min-width: $screen-xl) {
+    @media (min-width: $screen-xxl) {
       padding-left: 120px;
     }
 
     .btn {
       width: 100%;
 
-      @media (min-width: $screen-lg) {
+      @media (min-width: $screen-xl) {
         max-width: 210px;
         margin-right: 32px;
       }

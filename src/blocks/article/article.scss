@@ -2,7 +2,7 @@
   margin-bottom: 64px;
 
 
-  @media (min-width: $screen-lg) {
+  @media (min-width: $screen-xl) {
     margin-bottom: 92px;
   }
 
@@ -41,11 +41,11 @@
       padding-right: 58px;
     }
 
-    @media (min-width: $screen-lg) {
+    @media (min-width: $screen-xl) {
       padding: 48px 95px;
     }
 
-    @media (min-width: $screen-xl) {
+    @media (min-width: $screen-xxl) {
       padding-left: 119px;
       padding-right: 119px;
     }

@@ -15,11 +15,11 @@
     width: 288px;
     margin-right: 12px;
 
-    @media (min-width: $screen-lg) {
+    @media (min-width: $screen-xl) {
       width: calc(25% - 9px);
     }
 
-    @media (min-width: $screen-xl) {
+    @media (min-width: $screen-xxl) {
       width: calc(25% - 12px);
       margin-right: 16px;
     }
@@ -42,6 +42,14 @@
     //   outline: thin dotted;
     //   outline: 5px auto -webkit-focus-ring-color;
     // }
+    &--middle {
+      margin-bottom: 48px;
+      border-top: 1px solid $border-color;
+
+      @media (min-width: $screen-md) {
+        margin-bottom: 64px;
+      }
+    }
   }
 
   &__section-intro {
@@ -52,21 +60,12 @@
     }
   }
 
-  &__section-descr {
+  &__section-title {
     margin-top: 0;
   }
 
-  &__slider {
-
-    // &::after {
-    //   content: 'flickity';
-    //   display: none;
-
-    //   @media (min-width: $screen-xl) {
-    //     /* disable Flickity for large devices */
-    //     content: '';
-    //   }
-    // }
+  &__section-descr {
+    margin-top: 0;
   }
 
   &__header {
@@ -78,7 +77,7 @@
     color: $white;
     background-color: $secondary-color;
 
-    @media (min-width: $screen-xl) {
+    @media (min-width: $screen-xxl) {
       height: 58px;
       padding: 10px 24px;
     }
@@ -160,7 +159,7 @@
     padding: 12px;
     border-bottom: 1px solid $border-color;
 
-    @media (min-width: $screen-xl) {
+    @media (min-width: $screen-xxl) {
       justify-content: initial;
       padding-left: 24px;
       padding-right: 24px;
@@ -170,9 +169,9 @@
   &__img-main {
     width: 120px;
     height: 120px;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 
-    @media (min-width: $screen-xl) {
+    @media (min-width: $screen-xxl) {
       width: 192px;
       height: 192px;
     }
@@ -189,7 +188,7 @@
     //width: 100%;
     //height: 52px;
 
-    @media (min-width: $screen-xl) {
+    @media (min-width: $screen-xxl) {
       flex-direction: column;
       top: 12px;
       right: 24px;
@@ -203,7 +202,7 @@
       padding: 12px 12px 12px;
       border-bottom: 1px solid $border-color;
 
-      @media (min-width: $screen-xl) {
+      @media (min-width: $screen-xxl) {
         flex-direction: row;
         max-width: none;
         padding: 12px 24px 16px;
@@ -219,7 +218,7 @@
     display: flex;
     flex-direction: column;
 
-    @media (min-width: $screen-xl) {
+    @media (min-width: $screen-xxl) {
       align-items: center;
     }
 
@@ -232,9 +231,9 @@
     display: block;
     font-size: $font-size-xs;
     font-weight: 700;
-    margin-top: 3px;
+    margin-top: 5px;
 
-    @media (min-width: $screen-xl) {
+    @media (min-width: $screen-xxl) {
       text-align: center;
     }
   }
@@ -244,13 +243,39 @@
     font-size: $font-size-sm;
     background-color: $body-bg;
 
-    @media (min-width: $screen-xl) {
+    @media (min-width: $screen-xxl) {
       padding-left: 24px;
       padding-right: 24px;
     }
 
     &--ip {
       background-color: $white;
+    }
+
+    &--table {
+      background-color: $white;
+      //border-bottom: 1px solid $border-color;
+
+      table {
+        font-size: 14px;
+        width: 100%;
+        border-collapse: collapse;
+
+        tr:last-child {
+
+          td {
+            padding-top: 6px;
+          }
+        }
+
+        td {
+
+          &:last-child {
+            font-weight: 500;
+            text-align: right;
+          }
+        }
+      }
     }
   }
 
@@ -300,7 +325,7 @@
     align-items: center;
     padding: 12px;
 
-    @media (min-width: $screen-xl) {
+    @media (min-width: $screen-xxl) {
       padding-left: 24px;
       padding-right: 24px;
     }
@@ -315,7 +340,7 @@
       font-size: 14px;
       font-weight: 500;
 
-      @media (min-width: $screen-xl) {
+      @media (min-width: $screen-xxl) {
         font-size: 16px;
       }
     }
@@ -338,7 +363,7 @@
     justify-content: space-between;
     padding: 12px;
 
-    @media (min-width: $screen-xl) {
+    @media (min-width: $screen-xxl) {
       padding-left: 24px;
       padding-right: 24px;
     }
@@ -351,7 +376,7 @@
     margin-bottom: 8px;
     font-size: $font-size-sm;
 
-    @media (min-width: $screen-xl) {
+    @media (min-width: $screen-xxl) {
       flex: 0 1;
       flex-basis: auto;
       width: auto;
@@ -420,7 +445,7 @@
       color: $color-warning;
       border-color: currentColor;
 
-      @media (min-width: $screen-xl) {
+      @media (min-width: $screen-xxl) {
         max-width: 50px;
         margin-left: auto;
       }
@@ -456,9 +481,13 @@
     padding: 12px 12px 0;
     border-top: 1px solid $border-color;
 
-    @media (min-width: $screen-xl) {
+    @media (min-width: $screen-xxl) {
       padding-left: 24px;
       padding-right: 24px;
+    }
+
+    &--short {
+      align-items: flex-start;
     }
   }
 
@@ -467,6 +496,11 @@
     flex-basis: auto;
     font-size: 36px;
     font-weight: 700;
+
+    &--short {
+      font-size: 42px;
+      line-height: 1.2;
+    }
   }
 
   &__price-inner {
@@ -484,6 +518,10 @@
   &__period {
     font-size: 16px;
     font-weight: 500;
+
+    &--short {
+      font-size: 18px;
+    }
   }
 
   &__old-price {
@@ -498,7 +536,7 @@
   &__ctrls-group {
     padding: 12px;
 
-    @media (min-width: $screen-xl) {
+    @media (min-width: $screen-xxl) {
       padding: 12px 24px 24px;
     }
   }
@@ -526,7 +564,7 @@
   &__connect-descr {
     padding: 12px;
 
-    @media (min-width: $screen-xl) {
+    @media (min-width: $screen-xxl) {
       padding: 16px 24px;
     }
   }
@@ -562,7 +600,7 @@
     padding: 0 12px 12px;
     margin-top: auto;
 
-    @media (min-width: $screen-xl) {
+    @media (min-width: $screen-xxl) {
       padding: 0 24px 24px;
     }
   }

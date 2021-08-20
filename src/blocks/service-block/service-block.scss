@@ -14,7 +14,7 @@
     padding: 24px 58px 32px;
   }
 
-  @media (min-width: $screen-lg) {
+  @media (min-width: $screen-xl) {
     padding: 32px;
   }
 
@@ -28,7 +28,7 @@
 
     #{$block-name}__inner {
 
-      @media (min-width: $screen-lg) {
+      @media (min-width: $screen-xl) {
         flex-direction: row-reverse;
       }
     }
@@ -37,7 +37,7 @@
   &__wrapper {
     margin-bottom: 64px;
 
-    @media (min-width: $screen-lg) {
+    @media (min-width: $screen-xl) {
       margin-bottom: 92px;
     }
 
@@ -53,21 +53,21 @@
   &__pagetitle {
     margin-bottom: 24px;
 
-    @media (min-width: $screen-lg) {
+    @media (min-width: $screen-xl) {
       margin-bottom: 32px;
     }
   }
 
   &__img-col {
     @include col(xs, 12);
-    @include col(lg, 6);
+    @include col(xl, 6);
     margin-bottom: 16px;
 
     @media (min-width: $screen-md) {
       margin-bottom: 32px;
     }
 
-    @media (min-width: $screen-lg) {
+    @media (min-width: $screen-xl) {
       display: flex;
       align-items: center;
       margin-bottom: 0;
@@ -76,9 +76,9 @@
 
   &__text-col {
     @include col(xs, 12);
-    @include col(lg, 6);
+    @include col(xl, 6);
 
-    @media (min-width: $screen-lg) {
+    @media (min-width: $screen-xl) {
       display: flex;
       align-items: center;
     }

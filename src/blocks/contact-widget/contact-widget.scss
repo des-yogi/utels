@@ -50,11 +50,12 @@
     width: 48px;
     height: 48px;
     padding: 0;
-    color: $white;
+    //color: $white;
     background-color: $secondary-color;
     border: none;
     border-radius: $border-radius;
     cursor: pointer;
+    transition: box-shadow $transition-time ease-in-out;
 
     @media (min-width: $screen-xl) {
       width: 64px;
@@ -63,7 +64,8 @@
 
     &:hover,
     &:focus {
-      color: $main-color;
+      //color: $main-color;
+      box-shadow: 0 0 24px rgba($black, 0.4);
     }
 
     img {
@@ -120,17 +122,15 @@
     width: 32px;
     height: 32px;
     margin-top: 24px;
-    //color: $white;
-    //background-color: $white;
-    //border-radius: 50%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: 32px;
-    filter: drop-shadow(0 0 12px rgba($black, 0.25));
+    transition: transform $transition-time ease-in-out;
 
     &:hover,
     &:focus {
-      filter: drop-shadow(0 0 12px rgba($black, 0.6));
+      transform: scale(1.25);
+      filter: drop-shadow(0 0 8px rgba($black, 0.3));
     }
 
     &--tg {
