@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="ru" prefix="og: https://ogp.me/ns#">
+
+<head>
+  <meta charset="utf-8">
+  <title>Покрытие</title>
+  @@include('_include/page_head.html')
+</head>
+
+<body>
+<noscript>У вас отключен JavaScript. Приносим наши извинения, но это делает затруднительным использование данного сайта.</noscript>
+
+  <div class="page__inner">
+
+    <div class="page__content">
+      @@include('blocks/page-header/page-header.html')
+
+      @@include('blocks/breadcrumbs/breadcrumbs.html')
+
+      <main>
+
+        <div class="container  coverage-form__wrapper">
+
+          <h1 class="coverage-form__title">Покриття</h1>
+          <p class="coverage-form__info">Для перевірки технічної можливості підключення введіть адресу, де Ви плануєте користуватися послугою:</p>
+
+          <div class="row">
+
+            <div class="coverage-form__col">
+              <form id="coverage-form" class="coverage-form" action="" method="post">
+                <div class="coverage-form__inner">
+                  <label class="field-select">
+                    <span class="field-select__name">Населений пункт</span>
+                    <span class="field-select__select-wrap">
+                      <select class="field-select__select" name="city">
+                        <option value="м.Київ">м. Київ</option>
+                        <option value="м.Ирпень">м. Ирпень</option>
+                        <option value="м.Бровары">м. Бровары</option>
+                      </select>
+                      <span class="field-select__help-text"></span>
+                    </span>
+                  </label>
+                  <label class="field-text">
+                    <span class="field-text__name">Назва вулиці</span>
+                    <span class="field-text__input-wrap">
+                      <input class="field-text__input" type="text" name="street" value="" required>
+                      <span class="field-text__help-text"></span>
+                    </span>
+                  </label>
+                  <label class="field-text">
+                    <span class="field-text__name">Номер будинку</span>
+                    <span class="field-text__input-wrap">
+                      <input class="field-text__input" type="text" name="house" value="" required>
+                      <span class="field-text__help-text"></span>
+                    </span>
+                  </label>
+                  <div class="field-actions">
+                    <button id="coverage-form-submit" class="btn btn--icon" type="submit">
+                      <span>Перевірити</span>
+                      <svg width="20" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#carret-down-round"></use></svg>
+                    </button>
+                    <div class="loader" aria-label="Индикатор: Идет загрузка…" role="status"><span></span><span></span><span></span><span></span></div>
+                  </div>
+                </div>
+              </form>
+            </div>
+
+            <div class="coverage-form__col">
+              <div id="coverage-result" class="coverage-result">
+                <p id="coverage-address" class="h4  coverage-result__caption">
+                  <span class="coverage-result__city">м. Київ</span>,
+                  <span class="coverage-result__street">вулиця Героїв Севастополя</span>,
+                  <span class="coverage-result__house">5</span>
+                </p>
+                <div class="coverage-result__info">
+                  <p>За вказаною адресою є технічна можливість підключення!</p>
+                  <p>Доступні тарифи для юридичних осіб.</p>
+                </div>
+                <div class="field-actions">
+                  <button class="btn btn--icon btn--norotate" data-bs-toggle="modal" data-bs-target="#orderModal" data-bs-whatever="Підключення за адресою">
+                    <span>Підключити!</span>
+                    <svg width="22" height="21"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#chats"></use></svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </main>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+      @@include('blocks/page-footer/page-footer.html')
+    </div>
+
+  </div>
+
+  @@include('blocks/offcanvas/offcanvas.html')
+  @@include('blocks/order-modal/order-modal.html')
+
+  @@include('_include/page_bottom.html')
+
+</body>
+</html>

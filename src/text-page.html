@@ -19,6 +19,41 @@
 
       @@include('blocks/page-top-decor/page-top-decor.html')
 
+      <aside class="clients-slider  clients-slider--top">
+        <h2 class="container  clients-slider__title">Нам довіряють:</h2>
+
+        <ul class="list-nostyled  clients-slider__carousel">
+          <li class="carousel-cell  clients-slider__slide">
+            <img data-flickity-lazyload="img/uber.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Описание" width="87" height="48" loading="lazy" decoding="async">
+          </li>
+          <li class="carousel-cell  clients-slider__slide">
+            <img data-flickity-lazyload="img/evrasia.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Описание" width="142" height="86" loading="lazy" decoding="async">
+          </li>
+          <li class="carousel-cell  clients-slider__slide">
+            <img data-flickity-lazyload="img/dominos-pizza.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Описание" width="92" height="92" loading="lazy" decoding="async">
+          </li>
+          <li class="carousel-cell  clients-slider__slide">
+            <img data-flickity-lazyload="img/pivbar.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Описание" width="92" height="92" loading="lazy" decoding="async">
+          </li>
+          <li class="carousel-cell  clients-slider__slide">
+            <img data-flickity-lazyload="img/meest.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Описание" width="152" height="48" loading="lazy" decoding="async">
+          </li>
+          <li class="carousel-cell  clients-slider__slide">
+            <img data-flickity-lazyload="img/media5.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Описание" width="170" height="32" loading="lazy" decoding="async">
+          </li>
+          <li class="carousel-cell  clients-slider__slide">
+            <img data-flickity-lazyload="img/louis-vuitton.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Описание" width="76" height="92" loading="lazy" decoding="async">
+          </li>
+          <li class="carousel-cell  clients-slider__slide">
+            <img data-flickity-lazyload="img/dropbox.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Описание" width="160" height="32" loading="lazy" decoding="async">
+          </li>
+          <li class="carousel-cell  clients-slider__slide">
+            <img data-flickity-lazyload="img/amazon.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Описание" width="108" height="33" loading="lazy" decoding="async">
+          </li>
+        </ul>
+
+      </aside>
+
       <main>
 
         <article class="container article">
@@ -92,12 +127,78 @@
                     <p>Директор UTELS</p>
                   </blockquote>
 
-                  <button class="btn btn--icon btn--norotate" data-bs-toggle="modal" data-bs-target="#orderModal" data-bs-whatever="">
-                    <span>Замовити прорахування</span>
-                    <svg width="22" height="21"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#chats"></use></svg>
-                  </button>
-
                 </div>
+
+                <section class="guidance-accordion">
+                  <h4 class="guidance-accordion__title">Рекомендації</h4>
+                  <p class="guidance-accordion__intro">
+                    Система ведення спостереження - дуже складний комплекс, який забезпечує контроль не тільки за динамічними, але | статичними об'єктами.
+                  </p>
+
+                  <div class="guidance-accordion__inner" id="guidance">
+
+                    <div class="guidance-accordion__item">
+
+                      <h5 class="guidance-accordion__header" id="headingOne">
+                        <button class="guidance-accordion__btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                          PC
+                        </button>
+                      </h5>
+
+                      <div id="collapseOne" class="guidance-accordion__collapse  collapse show" aria-labelledby="headingOne" data-bs-parent="#guidance">
+                        <div class="guidance-accordion__body">
+                          <ul class="list-nostyled guidance-accordion__list">
+                            <li>Інструкції для <a href="#" download>iPhone</a></li>
+                            <li>Інструкції для <a href="#" download>Android</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="guidance-accordion__item">
+
+                      <h5 class="guidance-accordion__header" id="headingTwo">
+                        <button class="guidance-accordion__btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                          Smart TV
+                        </button>
+                      </h5>
+
+                      <div id="collapseTwo" class="guidance-accordion__collapse  collapse" aria-labelledby="headingTwo" data-bs-parent="#guidance">
+                        <div class="guidance-accordion__body">
+                          <ul class="list-nostyled guidance-accordion__list">
+                            <li>Інструкції для <a href="#" download>iPhone</a></li>
+                            <li>Інструкції для <a href="#" download>Android</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="guidance-accordion__item">
+
+                      <h5 class="guidance-accordion__header" id="headingThree">
+                        <button class="guidance-accordion__btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                          Tablet / iPhone
+                        </button>
+                      </h5>
+
+                      <div id="collapseThree" class="guidance-accordion__collapse  collapse" aria-labelledby="headingThree" data-bs-parent="#guidance">
+                        <div class="guidance-accordion__body">
+                          <ul class="list-nostyled guidance-accordion__list">
+                            <li>Інструкції для <a href="#" download>iPhone</a></li>
+                            <li>Інструкції для <a href="#" download>Android</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                </section>
+
+                <button class="btn btn--icon btn--norotate" data-bs-toggle="modal" data-bs-target="#orderModal" data-bs-whatever="">
+                  <span>Замовити прорахування</span>
+                  <svg width="22" height="21"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#chats"></use></svg>
+                </button>
               </div>
 
             </div>
@@ -117,6 +218,7 @@
 
   @@include('blocks/offcanvas/offcanvas.html')
   @@include('blocks/order-modal/order-modal.html')
+  @@include('blocks/promo-modal/promo-modal.html')
 
   @@include('_include/page_bottom.html')
 

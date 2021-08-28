@@ -1,0 +1,12 @@
+.promo-modal {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__img {
+    margin: 24px 0;
+  }
+
+  &__title {
+    margin-top: 0;
+  }
+}

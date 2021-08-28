@@ -1,0 +1,72 @@
+<!--DEV
+@ @include('blocks/promo-modal/promo-modal.html', {
+  "showClass": "show",
+  "showStyle": "style='display:block;'"
+})
+-->
+<div class="promo-modal modal fade @@showClass" id="promoModal"  data-timeout="5000" data-expired="4" tabindex="-1" aria-labelledby="promoModalLabel" aria-hidden="true" @@showStyle>
+  <div class="modal-dialog  modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Закрыть">
+          <svg width="18" height="18" role="img"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#close"></use></svg>
+        </button>
+        <div class="embed-responsive embed-responsive--4-3  promo-modal__img">
+          <picture>
+            <source srcset="img/special-offer-3x4.webp" type="image/webp">
+            <img src="img/special-offer-3x4.jpg" alt="Описание" width="420" height="315" loading="lazy" decoding="async">
+          </picture>
+        </div>
+        <h5 class="modal-title  promo-modal__title" id="promoModalLabel">Заголовок</h5>
+        <p class="modal-title__add">Какой-то дополнительный текст</p>
+      </div>
+      <div class="modal-body">
+
+        <form id="promo-form" class="order-form" action="" method="post">
+
+          <!-- <label class="field-text">
+            <span class="field-text__input-wrap">
+              <input class="field-text__input" type="text" name="name" value="" placeholder="Ім’я" required>
+              <span class="field-text__help-text error"></span>
+            </span>
+          </label> -->
+
+          <!-- <label class="field-text">
+            <span class="field-text__input-wrap">
+              <input class="field-text__input" type="email" name="email" value="" placeholder="Email" required>
+              <span class="field-text__help-text error"></span>
+            </span>
+          </label> -->
+
+          <label class="field-text">
+            <span class="field-text__input-wrap">
+              <input class="field-text__input  phone-mask" type="tel" name="tel" value="" placeholder="Тел">
+              <span class="field-text__help-text error"></span>
+            </span>
+          </label>
+
+          <!-- <label class="field-text">
+            <span class="field-text__input-wrap">
+              <textarea class="field-text__input" name="message" placeholder="Ваш коментар" required></textarea>
+              <span class="field-text__help-text error"></span>
+            </span>
+          </label> -->
+
+          <div class="contacts__agreement" style="margin-top:24px;">
+            <button class="btn btn--icon  contacts__submit" type="submit">
+              <span>Заказать</span>
+              <svg width="20" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#carret-down-round"></use></svg>
+            </button>
+            <div class="field-checkbox">
+              <label class="field-checkbox__name">
+                <input class="field-checkbox__input field-checkbox__agreement" type="checkbox" name="agreement" value="" checked>
+                <span class="field-checkbox__name-text">Я згоден на обробку персональних даних відповідно до <a href="#">Політиці конфіденційності</a></span>
+              </label>
+            </div>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
