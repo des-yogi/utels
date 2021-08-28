@@ -57,4 +57,12 @@
       object-position: center;
     }
   }
+
+  &--top {
+    margin-bottom: 32px;
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 48px;
+    }
+  }
 }

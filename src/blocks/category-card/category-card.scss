@@ -27,6 +27,7 @@
 
   &__inner {
     margin-bottom: 16px;
+    text-align: center;
 
     @media (min-width: $screen-xl) {
       margin-bottom: 24px;
@@ -36,8 +37,8 @@
   &__img {
     width: 92px;
     height: 92px;
-    margin-bottom: 16px;
-    //margin: 0 auto 24px auto;
+    //margin-bottom: 16px;
+    margin: 0 auto 16px auto;
 
     @media (min-width: $screen-xl) {
       margin-bottom: 24px;

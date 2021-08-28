@@ -1,0 +1,103 @@
+.guidance-accordion {
+  margin: 32px 0;
+
+  @media (min-width: $screen-md) {
+    margin-top: 48px;
+  }
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__title,
+  &__header {
+    margin-top: 0;
+  }
+
+  &__intro {
+
+  }
+
+  &__inner {
+
+  }
+
+  &__item {
+
+    & + & {
+      border-top: 1px solid $border-color;
+    }
+  }
+
+  &__header {
+    margin: 0;
+  }
+
+  &__btn {
+    position: relative;
+    width: 100%;
+    padding: 12px 32px 12px 0;
+    font-size: inherit;
+    font-weight: inherit;
+    text-align: initial;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    user-select: none;
+
+    @media (min-width: $screen-md) {
+      padding: 16px 32px 16px 0;
+    }
+
+    &:hover,
+    &:focus {
+      color: $main-color;
+    }
+
+    &::after,
+    &::before {
+      display: block;
+      content: "";
+      position: absolute;
+      width: 18px;
+      height: 2px;
+      top: 50%;
+      right: 0;
+      background-color: $main-color;
+    }
+
+    &::after {
+      transform: translateY(-50%);
+    }
+
+    &::before {
+      transform: translateY(-50%) rotate(-90deg);
+      transition: transform $transition-time ease-in-out;
+    }
+
+    &[aria-expanded=true] {
+
+      &::before {
+        transform: translateY(-50%) rotate(-180deg); // -180
+      }
+    }
+  }
+
+  &__collapse {
+
+  }
+
+  &__body {
+    padding-bottom: 12px;
+
+    @media (min-width: $screen-md) {
+      padding-bottom: 16px;
+    }
+  }
+
+  &__list {
+
+    a {
+      font-weight: 500;
+      color: $main-color;
+    }
+  }
+}

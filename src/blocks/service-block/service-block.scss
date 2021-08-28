@@ -11,7 +11,7 @@
   }
 
   @media (min-width: $screen-md) {
-    padding: 24px 58px 32px;
+    padding: 24px 0 32px;
   }
 
   @media (min-width: $screen-xl) {
@@ -60,7 +60,11 @@
 
   &__img-col {
     @include col(xs, 12);
+    @include col-offset(md, 1);
+    @include col(md, 10);
+    @include col-offset(xl, 0);
     @include col(xl, 6);
+    @include col(xxl, 5);
     margin-bottom: 16px;
 
     @media (min-width: $screen-md) {
@@ -76,7 +80,11 @@
 
   &__text-col {
     @include col(xs, 12);
+    @include col-offset(md, 1);
+    @include col(md, 10);
+    @include col-offset(xl, 0);
     @include col(xl, 6);
+    @include col(xxl, 7);
 
     @media (min-width: $screen-xl) {
       display: flex;
@@ -95,8 +103,8 @@
 
   &__text {
 
-    @media (min-width: $screen-xl) {
-      padding: 0 48px;
+    @media (min-width: $screen-xxl) {
+      padding: 0 32px;
     }
   }
 

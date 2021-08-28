@@ -1,16 +1,20 @@
 (function () {
-  const submitBtn = document.querySelector('.contacts__submit');
-  const agreementCheckbox = document.querySelector('input[name=agreement]');
+  const agreementElems = document.querySelectorAll('.contacts__agreement');
 
-  const agreementHandler = function (e) {
-    if (!this.checked) {
-      submitBtn.disabled = true;
-    } else {
-      submitBtn.disabled = false;
+  for (let i = 0; i < agreementElems.length; i++) {
+    let agreementElem = agreementElems[i];
+    const submitBtn = agreementElem.querySelector('.contacts__submit');
+    const agreementCheckbox = agreementElem.querySelector('input[name=agreement]');
+
+    if (agreementCheckbox) {
+      agreementCheckbox.addEventListener('change', function (e) {
+        if (!e.target.checked) {
+          submitBtn.disabled = true;
+        } else {
+          submitBtn.disabled = false;
+        }
+      });
     }
-  };
-
-  if (agreementCheckbox) {
-    agreementCheckbox.addEventListener('change', agreementHandler);
   }
+
 })();
