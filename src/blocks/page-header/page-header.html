@@ -2,150 +2,65 @@
 @ @include('blocks/page-header/page-header.html')
 -->
 
-<header class="page-header">
+<div class="page-header__wrapper">
+  <header class="page-header" id="header">
 
-  <div class="container  page-header__main">
+    <div class="container  page-header__main">
 
-    <div class="page-header__left">
-      @@include('../../blocks/logo/logo.html', {
-        "location": "logo--header"
-      })
-      <ul class="list-nostyled  page-header__phones">
-        <li class="page-header__phone-item">
-          <a href="tel:+380445999952" class="page-header__phone-link">+38 044 599 99 52</a>
-        </li>
-        <li class="page-header__phone-item">
-          <a href="tel:+380445999952" class="page-header__phone-link">+38 044 599 99 52</a>
-        </li>
-        <li class="page-header__phone-item  page-header__phone-item--queue">
-          <div class="page-header__queue">
-            <span class="page-header__queue-num"><span>5</span></span>
-            <span class="page-header__queue-text"><span>У черзі</span></span>
-          </div>
-        </li>
-      </ul>
-    </div>
-
-    <div class="page-header__right">
-
-      <a href="#" class="page-header__btn" title="Способи оплати">
-        <svg width="28" height="20" role="img" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#payment-card"></use></svg>
-        <span class="page-header__btn-text">Способи оплати</span>
-      </a>
-
-      <a href="#" class="page-header__btn" title="Профіль">
-        <svg width="26" height="26" role="img" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#user-profile"></use></svg>
-        <span class="page-header__btn-text">Профіль</span>
-      </a>
-
-      <div class="page-header__mini-cart">
-        <button id="showCartBtn" class="page-header__btn  page-header__btn--cart" type="button" data-bs-toggle="collapse" data-bs-target="#mini-cart" aria-expanded="false" aria-controls="mini-cart" title="Кошик">
-          <svg width="29" height="26" role="img" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#cart"></use></svg>
-          <span class="page-header__btn-text">Кошик</span>
-        </button>
-        <div id="mini-cart" class="mini-cart collapse">
-          <div class="mini-cart__body">
-            <ul class="list-nostyled  mini-cart__list">
-              <li class="mini-cart__item">
-                <a href="#" class="embed-responsive embed-responsive--1-1  mini-cart__item-img" tabindex="-1" aria-hidden="true">
-                  <img src="img/favicon-lg.png" alt="Описание товара" width="72" height="72">
-                </a>
-                <a href="#" class="mini-cart__item-text">
-                  <p class="mini-cart__item-descr">
-                    <span class="mini-cart__item-title">Mercusys AC12G</span>
-                    <span class="mini-cart__item-info">Wi-Fi роутер, 300 Мбіт/с</span>
-                    <span  class="mini-cart__item-price">140 грн.</span>
-                  </p>
-                </a>
-                <button class="mini-cart__item-del" type="button" title="Удалить из корзины">
-                  <span class="visually-hidden">Удалить из корзины</span>
-                  <svg width="20" height="22" role="img"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#trash"></use></svg>
-                </button>
-              </li>
-              <li class="mini-cart__item">
-                <a href="#" class="embed-responsive embed-responsive--1-1  mini-cart__item-img" tabindex="-1" aria-hidden="true">
-                  <img src="img/favicon-lg.png" alt="Описание товара" width="72" height="72">
-                </a>
-                <a href="#" class="mini-cart__item-text">
-                  <p class="mini-cart__item-descr">
-                    <span class="mini-cart__item-title">Mercusys AC12G</span>
-                    <span class="mini-cart__item-info">Wi-Fi роутер, 300 Мбіт/с</span>
-                    <span  class="mini-cart__item-price">140 грн.</span>
-                  </p>
-                </a>
-                <button class="mini-cart__item-del" type="button" title="Удалить из корзины">
-                  <span class="visually-hidden">Удалить из корзины</span>
-                  <svg width="20" height="22" role="img"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#trash"></use></svg>
-                </button>
-              </li>
-              <li class="mini-cart__item">
-                <a href="#" class="embed-responsive embed-responsive--1-1  mini-cart__item-img" tabindex="-1" aria-hidden="true">
-                  <img src="img/favicon-lg.png" alt="Описание товара" width="72" height="72">
-                </a>
-                <a href="#" class="mini-cart__item-text">
-                  <p class="mini-cart__item-descr">
-                    <span class="mini-cart__item-title">Mercusys AC12G</span>
-                    <span class="mini-cart__item-info">Wi-Fi роутер, 300 Мбіт/с</span>
-                    <span  class="mini-cart__item-price">140 грн.</span>
-                  </p>
-                </a>
-                <button class="mini-cart__item-del" type="button" title="Удалить из корзины">
-                  <span class="visually-hidden">Удалить из корзины</span>
-                  <svg width="20" height="22" role="img"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#trash"></use></svg>
-                </button>
-              </li>
-              <li class="mini-cart__item">
-                <a href="#" class="embed-responsive embed-responsive--1-1  mini-cart__item-img" tabindex="-1" aria-hidden="true">
-                  <img src="img/favicon-lg.png" alt="Описание товара" width="72" height="72">
-                </a>
-                <a href="#" class="mini-cart__item-text">
-                  <p class="mini-cart__item-descr">
-                    <span class="mini-cart__item-title">Mercusys AC12G</span>
-                    <span class="mini-cart__item-info">Wi-Fi роутер, 300 Мбіт/с</span>
-                    <span  class="mini-cart__item-price">140 грн.</span>
-                  </p>
-                </a>
-                <button class="mini-cart__item-del" type="button" title="Удалить из корзины">
-                  <span class="visually-hidden">Удалить из корзины</span>
-                  <svg width="20" height="22" role="img"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#trash"></use></svg>
-                </button>
-              </li>
-            </ul>
-
-            <p class="mini-cart__price">
-              <span class="mini-cart__price-lbl">Загальна сума:</span>
-              <span class="mini-cart__price-sum">140 грн</span>
-            </p>
-            <!-- <div><a class="qwert" href="#">Action</a></div>
-            <div><a class="qwert" href="#">Another action</a></div>
-            <div><a class="qwert" href="#">Something else here</a></div> -->
-          </div>
-          <div class="mini-cart__footer">
-            <button class="btn" type="button" title="Замовити">Замовити</button>
-          </div>
-          <span id="miniCartOverlay" class="mini-cart__overlay"></span>
-        </div>
-      </div>
-
-      <div class="dropdown lang-switcher">
-        <button class="page-header__btn dropdown-toggle" type="button" id="lang-switcher" data-bs-toggle="dropdown" aria-expanded="false" data-bs-offset="0,0">
-          <span class="lang-switcher__text">Укр</span>
-        </button>
-        <ul class="dropdown-menu" aria-labelledby="lang-switcher">
-          <li class="lang-switcher__item  active"><a href="#" class="lang-switcher__link">Укр</a></li>
-          <li class="lang-switcher__item"><a href="#" class="lang-switcher__link">Рус</a></li>
-          <li class="lang-switcher__item"><a href="#" class="lang-switcher__link">Анг</a></li>
+      <div class="page-header__left">
+        @@include('../../blocks/logo/logo.html', {
+          "location": "logo--header"
+        })
+        <ul class="list-nostyled  page-header__phones">
+          <li class="page-header__phone-item">
+            <a href="tel:+380445999952" class="page-header__phone-link">+38 044 599 99 52</a>
+          </li>
+          <li class="page-header__phone-item">
+            <a href="tel:+380445999952" class="page-header__phone-link">+38 044 599 99 52</a>
+          </li>
+          <li class="page-header__phone-item  page-header__phone-item--queue">
+            <div class="page-header__queue">
+              <span class="page-header__queue-num"><span>5</span></span>
+              <span class="page-header__queue-text"><span>У черзі</span></span>
+            </div>
+          </li>
         </ul>
       </div>
 
-      <button id="burger" class="burger" type="button" aria-label="Переключатель мобильного меню" data-bs-toggle="offcanvas" data-bs-target="#mobMenu" aria-controls="mobMenu"><span></span></button>
+      <div class="page-header__right">
+
+        <a href="#" class="page-header__btn" title="Способи оплати">
+          <svg width="28" height="20" role="img" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#payment-card"></use></svg>
+          <span class="page-header__btn-text">Способи оплати</span>
+        </a>
+
+        <a href="#" class="page-header__btn" title="Профіль">
+          <svg width="26" height="26" role="img" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#user-profile"></use></svg>
+          <span class="page-header__btn-text">Профіль</span>
+        </a>
+
+        @@include('../../blocks/mini-cart/mini-cart.html')
+
+        <div class="dropdown lang-switcher">
+          <button class="page-header__btn dropdown-toggle" type="button" id="lang-switcher" data-bs-toggle="dropdown" aria-expanded="false" data-bs-offset="0,0">
+            <span class="lang-switcher__text">Укр</span>
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="lang-switcher">
+            <li class="lang-switcher__item  active"><a href="#" class="lang-switcher__link">Укр</a></li>
+            <li class="lang-switcher__item"><a href="#" class="lang-switcher__link">Рус</a></li>
+            <li class="lang-switcher__item"><a href="#" class="lang-switcher__link">Анг</a></li>
+          </ul>
+        </div>
+
+        <button id="burger" class="burger" type="button" aria-label="Переключатель мобильного меню" data-bs-toggle="offcanvas" data-bs-target="#mobMenu" aria-controls="mobMenu"><span></span></button>
+
+      </div>
 
     </div>
 
-  </div>
+    <div class="page-header__menu">
+      @@include('../../blocks/main-nav/main-nav.html')
+    </div>
 
-  <div class="page-header__menu">
-    @@include('../../blocks/main-nav/main-nav.html')
-  </div>
-
-</header>
+  </header>
+</div>

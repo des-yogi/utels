@@ -85,6 +85,7 @@
   ],
   "singleCompiled": [],
   "addJsBefore": [
+    "./node_modules/@popperjs/core/dist/umd/popper.min.js",
     "./node_modules/drooltip.js/package/js/build/drooltip.js",
     "./node_modules/bootstrap/dist/js/bootstrap.min.js",
     "./node_modules/focus-visible/dist/focus-visible.min.js",

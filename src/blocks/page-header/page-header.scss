@@ -1,8 +1,27 @@
 .page-header {
-  position: relative;
+  //position: relative;
+  position: fixed;
+  width: 100%;
   z-index: 1;
+  will-change: transform;
 
   $block-name:                &; // #{$block-name}__element
+
+  &__wrapper {
+    height: 60px;
+
+    @media (min-width: $screen-md) {
+      height: 64px;
+    }
+
+    @media (min-width: $screen-xl) {
+      height: 136px; //84px
+    }
+
+    @media (min-width: $screen-xxl) {
+      height: 150px; //98px
+    }
+  }
 
   &__main {
     position: relative;
@@ -19,12 +38,12 @@
     }
 
     @media (min-width: $screen-xl) {
-      height: 84px;
+      height: 76px; //84px
       box-shadow: $shadow;
     }
 
     @media (min-width: $screen-xxl) {
-      height: 98px;
+      height: 90px; //98px
     }
   }
 
@@ -119,6 +138,7 @@
 
   &__phone-link {
     padding: 0 9px;
+    font-size: 16px;
     font-weight: 500;
     color: $white !important;
 
@@ -135,15 +155,16 @@
       padding: 0 16px;
     }
 
-    @media (min-width: $screen-xxl) {
-      font-size: 18px;
-    }
+    // @media (min-width: $screen-xxl) {
+    //   font-size: 18px;
+    // }
   }
 
   &__queue {
     display: inline-flex;
     align-items: center;
     margin-left: 8px;
+    font-size: 16px;
     font-weight: 500;
     color: $main-color;
 
@@ -151,9 +172,9 @@
       margin-left: 0;
     }
 
-    @media (min-width: $screen-xxl) {
-      font-size: 18px;
-    }
+    // @media (min-width: $screen-xxl) {
+    //   font-size: 18px;
+    // }
   }
 
   &__queue-num,
@@ -226,7 +247,7 @@
           content: "";
           position: absolute;
           z-index: 1;
-          bottom: 0;
+          bottom: 1px;
           left: 50%;
           transform: translateX(-50%) translateY(10px) rotate(45deg);
           width: 20px;
@@ -239,19 +260,34 @@
 
   &__btn-text {
     margin-left: 8px;
+    font-size: 16px;
     font-weight: 500;
 
     @media (max-width: $screen-xxl - 1) {
       display: none;
     }
 
-    @media (min-width: $screen-xxl) {
-      font-size: 18px;
-    }
+    // @media (min-width: $screen-xxl) {
+    //   font-size: 18px;
+    // }
   }
 
   &__mini-cart {
     position: relative;
     height: 100%;
+  }
+
+  &--slideUp {
+    transform: translateY(-76px);
+    transition: transform .5s ease-out;
+
+    @media (min-width: $screen-xxl) {
+      transform: translateY(-90px);
+    }
+  }
+
+  &--slideDown {
+    transform: translateY(0);
+    transition: transform .5s ease-out;
   }
 }
