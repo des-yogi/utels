@@ -6,13 +6,6 @@
 
   if (!miniCartOverlay) { return; }
 
-
-  const clickOverlayHandler = function (e) {
-    miniCart.classList.remove('show');
-    showCartBtn.classList.add('collapsed');
-    showCartBtn.setAttribute('aria-expanded', false);
-  };
-
   const bodyStyleHandler = function (e) {
     if (!body.hasAttribute('style')) {
       body.style = 'overflow:hidden;'
@@ -23,6 +16,13 @@
     }
   };
 
+  const clickOverlayHandler = function (e) {
+    miniCart.classList.remove('show');
+    showCartBtn.classList.add('collapsed');
+    showCartBtn.setAttribute('aria-expanded', false);
+    bodyStyleHandler();
+  };
+
   miniCartOverlay.addEventListener('click', clickOverlayHandler);
   showCartBtn.addEventListener('click', bodyStyleHandler);
 
@@ -30,7 +30,7 @@
     const key = e.key; // const {key} = event; in ES6+
     if (key === 'Escape' || e.keyCode === 27) {
       clickOverlayHandler();
-      bodyStyleHandler();
+      //bodyStyleHandler();
     }
   });
 }());

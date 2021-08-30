@@ -3,14 +3,18 @@
   $block-name:                &; // #{$block-name}__element
 
   position: fixed;
+  //width: 100%;
+  //z-index: 1;
   top: 60px;
   bottom: 0;
   left: 0;
   right: 0;
-  overflow: auto;
+  min-height: calc(100vh - 60px);
+  overflow-y: auto;
 
   @media (min-width: $screen-md) {
     top: 64px;
+    min-height: calc(100vh - 64px);
   }
 
   @media (min-width: $screen-xl) {
@@ -62,14 +66,18 @@
     background-color: $black;
     opacity: 0.5;
 
+    @media (min-width: $screen-md) {
+      top: 64px;
+    }
+
     @media (min-width: $screen-xl) {
       position: fixed;
-      top: 84px;
+      top: 76px; //84
       //width: 100vw;
     }
 
     @media (min-width: $screen-xxl) {
-      top: 98px;
+      top: 90px; //98
     }
   }
 
