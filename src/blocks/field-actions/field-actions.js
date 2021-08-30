@@ -1,9 +1,11 @@
 (function () {
-  const agreementElems = document.querySelectorAll('.contacts__agreement');
+  //const agreementElems = document.querySelectorAll('.contacts__agreement');
+  const agreementElems = document.querySelectorAll('[class$="__agreement"]');
 
   for (let i = 0; i < agreementElems.length; i++) {
     let agreementElem = agreementElems[i];
-    const submitBtn = agreementElem.querySelector('.contacts__submit');
+    //const submitBtn = agreementElem.querySelector('.contacts__submit');
+    const submitBtn = agreementElem.querySelector('button[type=submit]');
     const agreementCheckbox = agreementElem.querySelector('input[name=agreement]');
 
     if (agreementCheckbox) {

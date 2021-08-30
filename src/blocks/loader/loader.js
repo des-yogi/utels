@@ -1,4 +1,4 @@
-(function(){
+/*(function(){
   const coverForm = document.getElementById('coverage-form');
   const coverResult = document.getElementById('coverage-result');
   if (!coverForm) { return; }
@@ -70,3 +70,4 @@
     formSubmitBtn.addEventListener('click', formSubmitBtnHandler);
   }
 }());
+*/
