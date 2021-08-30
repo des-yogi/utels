@@ -7,7 +7,8 @@
 * https://des-yogi.github.io/utels/equipment.html
 * https://des-yogi.github.io/utels/add-service.html
 * https://des-yogi.github.io/utels/contacts.html
-* https://des-yogi.github.io/utels/coverage.html
+* https://des-yogi.github.io/utels/coverage-new.html
+* https://des-yogi.github.io/utels/coverage-new-detail.html
 * https://des-yogi.github.io/utels/special-offers.html
 * https://des-yogi.github.io/utels/special-offer-page.html
 * https://des-yogi.github.io/utels/services.html
