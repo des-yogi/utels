@@ -1,13 +1,15 @@
 .page-header {
   //position: relative;
   position: fixed;
-  width: 100%;
   z-index: 1;
+  width: 100%;
   will-change: transform;
 
   $block-name:                &; // #{$block-name}__element
 
   &__wrapper {
+    position: relative;
+    z-index: 3;
     height: 60px;
 
     @media (min-width: $screen-md) {
