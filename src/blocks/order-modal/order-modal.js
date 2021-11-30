@@ -1,5 +1,6 @@
 (function(){
-  const orderModal = document.getElementById('orderModal')
+  const orderModal = document.getElementById('orderModal');
+  const orderForm = document.getElementById('order-form');
   if (!orderModal) { return; }
   orderModal.addEventListener('show.bs.modal', function (event) {
     // Button that triggered the modal
@@ -11,8 +12,10 @@
     //
     // Update the modal's content.
     let modalAddTitle = orderModal.querySelector('.modal-title__add');
+    let subtitleInput = orderForm.querySelector('[name=subtitle]');
     //var modalBodyInput = orderModal.querySelector('.modal-body input')
     modalAddTitle.textContent = '' + subTitle;
+    subtitleInput.value = subTitle;
     //modalBodyInput.value = recipient;
   })
 }());
