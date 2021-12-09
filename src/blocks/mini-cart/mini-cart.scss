@@ -19,11 +19,17 @@
 
   @media (min-width: $screen-xl) {
     position: absolute;
-    top: auto;
-    bottom: auto;
+    top: 76px;
+    //bottom: auto;
     right: 0;
     left: auto;
+    min-height: calc(100vh - 76px);
     width: 360px;
+  }
+
+  @media (min-width: $screen-xxl) {
+    top: 90px;
+    min-height: calc(100vh - 90px);
   }
 
   &__footer {
