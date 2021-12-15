@@ -240,6 +240,7 @@
     }
 
     &--cart {
+      position: relative;
 
       &[aria-expanded=true] {
         position: relative;
@@ -272,6 +273,25 @@
     // @media (min-width: $screen-xxl) {
     //   font-size: 18px;
     // }
+  }
+
+  &__mini-cart-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: -8px;
+    left: 16px;
+    min-width: 18px;
+    min-height: 18px;
+    font-size: $font-size-xs;
+    white-space: nowrap;
+    border-radius: 50%;
+    background-color: $secondary-color;
+
+    &:empty {
+      display: none;
+    }
   }
 
   &__mini-cart {
