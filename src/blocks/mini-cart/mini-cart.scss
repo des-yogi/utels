@@ -121,7 +121,7 @@
 
   &__item-descr {
 
-    span {
+    & > span {
       display: block;
 
       &:not(.mini-cart__item-info) {
