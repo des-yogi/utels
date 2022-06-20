@@ -47,6 +47,31 @@ body {
   flex-direction: column;  // и прижимаем footer в IE 10-11
   margin: 0;
   min-height: 100%;
+
+  &.modal-open {
+
+    .page-header {
+      //padding-right: 6px;
+      //width: calc(100% + 6px);
+
+      &__wrapper {
+        //left: -6px;
+        //right: -6px;
+        //width: calc(100% + 6px);
+      }
+
+      &__main {
+        //padding-right: 56px;
+        //left: -6px;
+        //width: calc(100% + 6px);
+      }
+
+      &__menu {
+        //left: -6px;
+        //width: calc(100% + 6px);
+      }
+    }
+  }
 }
 
 [tabindex='-1']:focus {
