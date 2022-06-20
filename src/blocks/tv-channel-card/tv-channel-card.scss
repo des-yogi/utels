@@ -37,6 +37,10 @@
         color: $white;
         background-color: $color-info;
       }
+
+      &:empty {
+        background-color: $white;
+      }
     }
   }
 
@@ -70,5 +74,9 @@
     line-height: 1.25;
     text-align: center;
     color: $text-muted;
+
+    @media (max-width: $screen-md - 1) {
+      font-size: 12px;
+    }
   }
 }
