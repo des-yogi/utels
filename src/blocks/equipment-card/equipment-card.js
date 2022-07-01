@@ -55,6 +55,12 @@
 }());*/
 
 (function(){
+  // init Isotope
+  // const iso = new Isotope( '.grid', {
+  //   itemSelector: '.grid-item',
+  //   layoutMode: 'fitRows'
+  // });
+
   // change is-checked class on buttons
   const buttonGroups = document.querySelectorAll('.btn-filter-group');
   const filteredElems = document.querySelectorAll('.grid-item');
