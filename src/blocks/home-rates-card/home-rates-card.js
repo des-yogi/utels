@@ -6,7 +6,9 @@
   const ratesSlider = new Flickity( rates, {
     cellAlign: 'left',
     contain: true,
-    dragThreshold: 5,
+    dragThreshold: 3,
+    selectedAttraction: 0.01,
+    friction: 0.15,
     //watchCSS: true,
     prevNextButtons: false,
     pageDots: false
