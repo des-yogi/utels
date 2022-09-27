@@ -11,11 +11,6 @@ $text-color:                  hsl(0, 0%, 10%) !default;
     padding-bottom: 16px;
   }
 
-  // @media (min-width: $screen-xl) {
-  //   padding-top: 24px;
-  //   padding-bottom: 24px;
-  // }
-
   $block-name:                &;  // #{$block-name}__element
 
   &__list {
@@ -24,6 +19,7 @@ $text-color:                  hsl(0, 0%, 10%) !default;
     padding: 0;
     list-style: none;
     margin: 0;
+    overflow-x: auto;
 
     @media (min-width: $screen-xl) {
       padding-left: 12px;
@@ -31,34 +27,29 @@ $text-color:                  hsl(0, 0%, 10%) !default;
   }
 
   &__item {
-    display: inline-block;
-    vertical-align: baseline;
-    max-width: 100%;
+    display: inline-flex;
+    align-items: center;
     margin-right: 8px;
     margin-bottom: 0.5em;
-    overflow: hidden;
-    text-overflow: ellipsis;
 
     @media (min-width: $screen-md) {
       margin-bottom: 0;
     }
 
     &:not(:last-child)::after {
+      display: block;
       content: "";
-      display: inline-block;
       width: 5px;
       height: 8px;
       margin-left: 10px;
       background-size: 5px 8px;
       background-position: center;
       background-image: svg-load('../blocks/sprite-svg/svg/carret-right.svg', fill=$text-color);
-      transform: translateY(-1px);
+      //transform: translateY(-1px);
     }
   }
 
   &__link {
-    //display: inline-block;
-    //vertical-align: inherit;
     max-width: 100%;
     font-size: $font-size-sm;
     font-weight: 400;
@@ -66,14 +57,9 @@ $text-color:                  hsl(0, 0%, 10%) !default;
     text-decoration: none !important;
     white-space: nowrap;
 
-    // @media (min-width: $screen-xl) {
-    //   font-size: 16px;
-    // }
-
     &:hover,
     &:focus {
       color: $main-color;
-      //text-decoration: none;
     }
 
     &--current {
