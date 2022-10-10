@@ -1,0 +1,23 @@
+<!--DEV
+@ @include('blocks/megogo-select/megogo-select.html')
+-->
+
+<div class="megogo-select">
+
+  <div class="megogo-select__switcher">
+    <span class="megogo-select__name">Megogo</span>
+    @@include('../../blocks/field-toggler/field-toggler.html')
+  </div>
+
+  <label class="field-select">
+    <span class="field-select__name  visually-hidden">Выберите подписку</span>
+    <span class="field-select__select-wrap">
+      <select class="field-select__select" name="megogo-rate" size="1" disabled>
+        <option value="99">Легкая</option>
+        <option value="199">Оптимальная</option>
+        <option value="299">Максимальная</option>
+      </select>
+      <!-- <span class="field-select__help-text"></span> -->
+    </span>
+  </label>
+</div>
