@@ -13,37 +13,6 @@
     prevNextButtons: false,
     pageDots: false
   });
-
-  //const cellsButtonGroup = document.querySelector('.hero__dot-group--cells');
-  //const cellsButtons = utils.makeArray( cellsButtonGroup.children );
-
-  // update buttons on select
-  /*heroSlider.on( 'select', function() {
-    const previousSelectedButton = cellsButtonGroup.querySelector('.is-selected');
-    let selectedButton = cellsButtonGroup.children[ heroSlider.selectedIndex ];
-    previousSelectedButton.classList.remove('is-selected');
-    selectedButton.classList.add('is-selected');
-  });*/
-
-  // cell select
-  /*cellsButtonGroup.addEventListener( 'click', function( event ) {
-    if ( !matchesSelector( event.target, '.hero__dot' ) ) {
-      return;
-    }
-    let index = cellsButtons.indexOf( event.target );
-    heroSlider.select( index );
-  });*/
-  // previous
-  /*const previousButton = document.querySelector('.hero__btn--prev');
-  previousButton.addEventListener( 'click', function() {
-    heroSlider.previous();
-  });*/
-  // next
-  /*const nextButton = document.querySelector('.hero__btn--next');
-  nextButton.addEventListener( 'click', function() {
-    heroSlider.next();
-  });*/
-
 }());
 
 (function(){
@@ -55,15 +24,79 @@
     const moreBtn = card.querySelector('.home-rates-card__btn--info');
     const returnBtn = card.querySelector('.btn--return');
     const flipElem = card.querySelector('.home-rates-card__inner');
-    //console.log(flipElem);
 
-    const moreBtnClickHandler = function (e) {
+    const megogoToggler = card.querySelector('.field-toggler__input');
+    const megogoSelect = card.querySelector('.field-select__select');
+    const megogoPrice = card.querySelector('.home-rates-card__price-num');
+    const megogoPriceContent = megogoPrice.textContent;
+    const megogoRateInput = card.querySelector('.megogo-select__rate');
+
+    const btnModalOpen = card.querySelector('.btn.modal-open');
+    const btnModalOpenDataset = btnModalOpen.dataset.bsWhatever;
+
+    const initSelect = function (select) {
+      const currentPrice = parseInt(megogoPriceContent, 10) + parseInt(select.value, 10);
+      return currentPrice;
+    };
+
+    const resetPriceContent = function () {
+      megogoPrice.textContent = megogoPriceContent;
+    };
+
+    const priceHandler = function (e) {
+      const initPriceContent = megogoPriceContent;
+      megogoPrice.textContent = parseInt(initPriceContent, 10) + parseInt(e.target.value) + '';
+      megogoRateInput.value = megogoSelect.options[megogoSelect.selectedIndex].text;
+
+      if (btnModalOpenDataset) {
+        btnModalOpen.dataset.bsWhatever = `${btnModalOpenDataset} + Megogo: ${megogoRateInput.value}`;
+      }
+    };
+
+    const calcSelectValue = function (select, flag) {
+
+      if (flag === true) {
+        megogoPrice.textContent = initSelect(megogoSelect) + '';
+        megogoRateInput.value = select.options[select.selectedIndex].text;
+
+        if (btnModalOpenDataset) {
+          btnModalOpen.dataset.bsWhatever = `${btnModalOpenDataset} + Megogo: ${megogoRateInput.value}`;
+        }
+        select.addEventListener('change', priceHandler);
+      }
+
+      else {
+        select.removeEventListener('change', priceHandler);
+        resetPriceContent();
+        megogoRateInput.value = '';
+
+        if (btnModalOpenDataset) {
+          btnModalOpen.dataset.bsWhatever = `${btnModalOpenDataset}`;
+        }
+      }
+    };
+
+    if (megogoToggler && megogoSelect) {
+
+      megogoToggler.addEventListener('change', function (e) {
+        if (megogoToggler.checked) {
+          megogoSelect.removeAttribute('disabled');
+          calcSelectValue(megogoSelect, true);
+        }
+        else {
+          megogoSelect.setAttribute('disabled', 'true');
+          calcSelectValue(megogoSelect, false);
+        }
+      });
+    }
+
+    const moreBtnClickpriceHandler = function (e) {
       flipElem.classList.toggle('home-rates-card__inner--backface');
     };
 
     if (moreBtn && returnBtn) {
-      moreBtn.addEventListener('click', moreBtnClickHandler);
-      returnBtn.addEventListener('click', moreBtnClickHandler);
+      moreBtn.addEventListener('click', moreBtnClickpriceHandler);
+      returnBtn.addEventListener('click', moreBtnClickpriceHandler);
     }
   }
 }());

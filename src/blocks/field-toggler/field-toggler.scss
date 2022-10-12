@@ -1,0 +1,104 @@
+.field-toggler {
+
+  $block-name:                &; // #{$block-name}__element
+
+  display: block;
+  height: 100%;
+
+  &__title {
+    @include field-name;
+  }
+
+  &__input-wrap {
+
+    & + & {
+      //margin-top: ($line-height / 2);
+    }
+  }
+
+  &__name {
+    position: relative;
+    display: block;
+    width: 40px;
+    height: 20px;
+    line-height: 1;
+  }
+
+  &__name-text {
+    display: block;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 40px;
+      height: 20px;
+      background-color: #e7e7e7;
+      border-radius: 30px;
+      transition: background-color 0.15s;
+
+      @at-root input:focus ~ & {
+        @include field-focus;
+      }
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      width: 16px;
+      height: 16px;
+      background: #FFFFFF;
+      box-shadow: 0 0 16px rgba(0, 0, 0, 0.1), 0 0 6px rgba(0, 0, 0, 0.06);
+      border-radius: 50%;
+      transition: all 0.2s;
+    }
+
+    @at-root input:checked ~ &::after {
+      transform: translateX(20px);
+    }
+
+    @at-root input:checked ~ &::before {
+      background-color: $main-color;
+    }
+
+    @at-root input:disabled ~ &::after {
+      background: #a1a5b2;
+    }
+
+    @at-root input:checked:disabled ~ &::after {
+      background: $white;
+    }
+
+    @at-root input:checked:disabled ~ &::before {
+      background: #a1a5b2;
+    }
+  }
+
+  &__input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    opacity: 0;
+
+    &:disabled + #{$block-name}__name-text {
+      pointer-events: none;
+      cursor: not-allowed;
+    }
+  }
+
+  &__help-text-wrap {
+    padding-left: 1.5em;
+  }
+
+  &__help-text {
+    @include field-help-text;
+  }
+}
