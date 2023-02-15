@@ -26,9 +26,9 @@ document.addEventListener('DOMContentLoaded', function () {
     const secondsSpan = clock.querySelector('.seconds');
     const countdownContainer = clock.querySelector('.countdown__inner');
     const deadlineMessage = clock.querySelector('.countdown__deadline-message');
+    const timeinterval = setInterval(updateClock, 1000);
 
     function updateClock() {
-      const timeinterval = setInterval(updateClock, 1000);
       let t = getTimeRemaining(endtime);
 
       daysSpan.innerHTML = t.days;
@@ -36,11 +36,7 @@ document.addEventListener('DOMContentLoaded', function () {
       minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
       secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
 
-      /*if (t.total <= 0) {
-        clearInterval(timeinterval);
-      }*/
       if (t.total <= 0) {
-        //document.getElementById("countdown").classList.add('hidden');
         countdownContainer.classList.add('hidden');
         deadlineMessage.classList.add('visible');
         clearInterval(timeinterval);
@@ -61,8 +57,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     initializeClock(currentItem, currentItemDeadline);
   }
-  //initializeClock('countdown', deadline);
-
 
 /**
  * Взято за основу https://denis-creative.com/jstimer/

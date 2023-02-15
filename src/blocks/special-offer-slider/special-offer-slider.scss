@@ -1,0 +1,21 @@
+.special-offer-slider {
+
+  $block-name:                &; // #{$block-name}__element
+
+  .special-offer-card {
+    height: calc(100% - 1px);
+  }
+
+  &__item {
+    width: 288px;
+    margin-right: 32px;
+
+    @media (min-width: $screen-md) {
+      width: 318px;
+    }
+
+    @media (min-width: $screen-xl) {
+      width: calc(25% - 24px);
+    }
+  }
+}

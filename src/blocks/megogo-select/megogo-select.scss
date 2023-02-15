@@ -4,6 +4,11 @@
   font-weight: 500;
   border-bottom: 1px solid $border-color;
 
+  @media (min-width: $screen-xxl) {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
   $block-name:                &; // #{$block-name}__element
 
   .field-select {
