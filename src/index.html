@@ -17,46 +17,48 @@
 
       <main>
 
-        <div class="container  hero__wrapper">@@include('blocks/hero/hero.html')</div>
+        <div class="container  hero__wrapper">
+          @@include('blocks/hero/hero.html')
+        </div>
 
         <section class="container  special-offer-card__wrapper">
           <h2 class="special-offer-card__title">Акції та спецпропозиції</h2>
 
-          <ul class="list-nostyled  row">
+          <div class="special-offer-slider">
 
-            <li class="col-1-2-4">
+            <div class="carousel-cell  special-offer-slider__item">
               @@include('blocks/special-offer-card/special-offer-card.html', {
                 "img": "special-offer-3x4",
                 "title": "50% На інтернет та ТБ",
                 "descr": "Встигни підключити!",
               })
-            </li>
+            </div>
 
-            <li class="col-1-2-4">
+            <div class="carousel-cell  special-offer-slider__item">
               @@include('blocks/special-offer-card/special-offer-card.html', {
                 "img": "special-offer-3x4",
                 "title": "Легкий перехід",
                 "descr": "Переходь до нас від іншого провайдера та отримай інтернет у подарунок!",
               })
-            </li>
+            </div>
 
-            <li class="col-1-2-4">
+            <div class="carousel-cell  special-offer-slider__item">
               @@include('blocks/special-offer-card/special-offer-card.html', {
                 "img": "special-offer-3x4",
                 "title": "10 + 2",
                 "descr": "Клієнт отримує високоякісний сервіс, отримує високоякісний сервіс",
               })
-            </li>
+            </div>
 
-            <li class="col-1-2-4">
+            <div class="carousel-cell  special-offer-slider__item">
               @@include('blocks/special-offer-card/special-offer-card.html', {
                 "img": "special-offer-3x4",
                 "title": "Приведи друга",
                 "descr": "Підключай сусідів та друзів!",
               })
-            </li>
+            </div>
 
-          </ul>
+          </div>
 
         </section>
 

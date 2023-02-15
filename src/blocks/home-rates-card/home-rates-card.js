@@ -32,7 +32,7 @@
     const megogoRateInput = card.querySelector('.megogo-select__rate');
 
     const btnModalOpen = card.querySelector('.btn.modal-open');
-    const btnModalOpenDataset = btnModalOpen.dataset.bsWhatever;
+    const btnModalOpenDataset = card.dataset.bsWhatever;
 
     const initSelect = function (select) {
       const currentPrice = parseInt(megogoPriceContent, 10) + parseInt(select.value, 10);

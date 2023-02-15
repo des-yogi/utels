@@ -68,7 +68,8 @@
     "coverage": [],
     "guidance-accordion": [],
     "field-toggler": [],
-    "megogo-select": []
+    "megogo-select": [],
+    "special-offer-slider": []
   },
   "addCssBefore": [
     "../../node_modules/bootstrap/scss/_functions",

@@ -23,6 +23,18 @@
     @media (min-width: $screen-md) {
       margin-top: 64px;
     }
+
+    @media (min-width: $screen-xl) {
+      padding-top: 64px;
+    }
+
+    &--coverage {
+      margin-bottom: 64px;
+
+      @media (min-width: $screen-xl) {
+        margin-bottom: 92px;
+      }
+    }
   }
 
   &__other-title {

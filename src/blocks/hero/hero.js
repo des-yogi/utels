@@ -7,7 +7,6 @@
   const heroSlider = new Flickity( hero, {
     lazyLoad: true,
     cellAlign: 'center',
-    contain: true,
     wrapAround: true,
     prevNextButtons: false,
     pageDots: false
