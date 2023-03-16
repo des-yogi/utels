@@ -389,6 +389,7 @@
     padding: 12px;
 
     @media (min-width: $screen-xxl) {
+      justify-content: flex-end;
       padding-left: 24px;
       padding-right: 24px;
     }
@@ -411,7 +412,7 @@
   }
 
   &__input-wrapper {
-    flex: 1 0;
+    flex: 1 1;
     flex-basis: auto;
     display: flex;
     align-items: center;
@@ -421,7 +422,7 @@
     }
 
     &:last-child {
-      flex: 1 1;
+      flex: 0 0;
       flex-basis: 22px;
       max-width: 22px;
     }
@@ -470,10 +471,10 @@
       color: $color-warning;
       border-color: currentColor;
 
-      @media (min-width: $screen-xxl) {
-        max-width: 50px;
-        margin-left: auto;
-      }
+      // @media (min-width: $screen-xxl) {
+      //   max-width: 50px;
+      //   margin-left: auto;
+      // }
 
       &:hover {
         color: $white;
