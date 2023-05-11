@@ -7,12 +7,12 @@
 @import '../../node_modules/bootstrap/scss/_functions';
 @import '../../node_modules/bootstrap/scss/_variables';
 @import '../../node_modules/bootstrap/scss/_mixins';
-@import '../../node_modules/bootstrap/scss/_utilities';
 @import './src/scss/variables.scss';
 @import './src/scss/mixins.scss';
 @import '../../node_modules/flickity/dist/flickity.min.css';
 @import '../../node_modules/bootstrap/scss/_transitions';
 @import '../../node_modules/bootstrap/scss/_modal';
+@import '../../node_modules/bootstrap/scss/_popover';
 @import '../../node_modules/bootstrap/scss/_offcanvas';
 @import './src/blocks/breadcrumbs/breadcrumbs.scss';
 @import './src/blocks/btn/btn.scss';
@@ -77,7 +77,6 @@
 @import './src/blocks/home-rates-card/home-rates-card.scss';
 @import './src/blocks/home-rates-options/home-rates-options.scss';
 @import './src/blocks/free-service/free-service.scss';
-@import './src/blocks/drooltip/drooltip.scss';
 @import './src/blocks/promo-modal/promo-modal.scss';
 @import './src/blocks/coverage/coverage.scss';
 @import './src/blocks/guidance-accordion/guidance-accordion.scss';

@@ -432,3 +432,44 @@ a {
     margin-bottom: 92px;
   }
 }
+
+// Popover
+.popover {
+  box-shadow: 0 4px 16px rgba(17, 17, 17, 0.24);
+}
+
+.popover-header,
+.popover-body {
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.popover-header {
+  padding-top: 16px;
+  margin-top: 0;
+  font-size: $font-size;
+  font-weight: 500;
+  background-color: $white;
+}
+
+.popover-body {
+  padding-top: 8px;
+}
+
+.popover-arrow {
+  width: 16px !important;
+  height: 16px !important;
+  top: 50% !important;
+  transform: translateY(-50%) rotate(45deg) !important;
+  background-color: $main-color;
+  border-radius: 2px;
+
+  &::after {
+    display: none !important;
+  }
+
+  &::before {
+    display: none !important;
+  }
+}
+// Popover End
