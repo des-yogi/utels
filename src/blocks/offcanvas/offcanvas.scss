@@ -89,6 +89,15 @@
     }
   }
 
+  &__gpon-btn {
+    width: 100%;
+    text-align: center;
+
+    @media (min-width: $screen-md) {
+      display: none;
+    }
+  }
+
   &__lang-list {
     display: flex;
     align-items: center;

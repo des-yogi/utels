@@ -95,6 +95,10 @@
       display: none;
     }
 
+    @media (min-width: $screen-md) {
+      margin-left: 40px;
+    }
+
     @media (min-width: $screen-xl) {
       margin-left: 30px;
     }
@@ -139,6 +143,8 @@
   }
 
   &__phone-link {
+    justify-content: center;
+    min-width: 40px;
     padding: 0 9px;
     font-size: 16px;
     font-weight: 500;
@@ -228,6 +234,10 @@
     &:hover,
     &:focus {
       background-color: $color-success;
+
+      #{$block-name}__gpon {
+        animation: none;
+      }
     }
 
     &[aria-expanded=true] {
@@ -259,6 +269,13 @@
         }
       }
     }
+
+    &--gpon {
+
+      @media (max-width: 412px - 1) {
+        display: none;
+      }
+    }
   }
 
   &__btn-text {
@@ -270,9 +287,34 @@
       display: none;
     }
 
-    // @media (min-width: $screen-xxl) {
-    //   font-size: 18px;
-    // }
+    &--phone {
+      display: none;
+
+      @media (min-width: $screen-xl) {
+        display: block !important;
+      }
+    }
+  }
+
+  &__gpon {
+
+    @keyframes blink {
+      0% {
+        background-color: $white;
+      }
+      100% {
+        background-color: #ffea01;
+      }
+    }
+
+    padding: 0 6px;
+    font-size: $font-size-sm;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $main-color;
+    background-color: $white; //#ffea01
+    border-radius: $border-radius;
+    animation: blink 1s ease alternate infinite;
   }
 
   &__mini-cart-badge {
