@@ -63,7 +63,6 @@
     "home-rates-card": [],
     "home-rates-options": [],
     "free-service": [],
-    "drooltip": [],
     "promo-modal": [],
     "coverage": [],
     "guidance-accordion": [],
@@ -75,12 +74,12 @@
     "../../node_modules/bootstrap/scss/_functions",
     "../../node_modules/bootstrap/scss/_variables",
     "../../node_modules/bootstrap/scss/_mixins",
-    "../../node_modules/bootstrap/scss/_utilities",
     "./src/scss/variables.scss",
     "./src/scss/mixins.scss",
     "../../node_modules/flickity/dist/flickity.min.css",
     "../../node_modules/bootstrap/scss/_transitions",
     "../../node_modules/bootstrap/scss/_modal",
+    "../../node_modules/bootstrap/scss/_popover",
     "../../node_modules/bootstrap/scss/_offcanvas"
   ],
   "addCssAfter": [
@@ -88,9 +87,7 @@
   ],
   "singleCompiled": [],
   "addJsBefore": [
-    "./node_modules/@popperjs/core/dist/umd/popper.min.js",
-    "./node_modules/drooltip.js/package/js/build/drooltip.js",
-    "./node_modules/bootstrap/dist/js/bootstrap.min.js",
+    "./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
     "./node_modules/focus-visible/dist/focus-visible.min.js",
     "./node_modules/blazy/blazy.min.js",
     "./node_modules/imask/dist/imask.min.js",
