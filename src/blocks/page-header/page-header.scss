@@ -272,7 +272,7 @@
 
     &--gpon {
 
-      @media (max-width: 412px - 1) {
+      @media (max-width: $screen-md - 1) {
         display: none;
       }
     }
