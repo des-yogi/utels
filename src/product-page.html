@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="ru" prefix="og: https://ogp.me/ns#">
+
+<head>
+  <meta charset="utf-8">
+  <title>Страница товара</title>
+  @@include('_include/page_head.html')
+</head>
+
+<body>
+<noscript>У вас отключен JavaScript. Приносим наши извинения, но это делает затруднительным использование данного сайта.</noscript>
+
+  <div class="page__inner">
+
+    <div class="page__content">
+      @@include('blocks/page-header/page-header.html')
+
+      @@include('blocks/breadcrumbs/breadcrumbs.html')
+
+      <main>
+
+        <article class="product-page">
+
+          <div class="container">
+            <h1 class="product-page__title">Mini UPS з АКБ (Вихід: USB5V; DC9V; DC12V)</h1>
+
+            <div class="product-block">
+              <div class="row  product-block__inner">
+
+                <div class="product-block__img-col">
+                  <div class="embed-responsive embed-responsive--4-3  product-block__img">
+                    <picture>
+                      <!-- 650x488 / 1600 -> up -->
+                      <!-- 700x525 / 1200 -> 1600 -->
+                      <!-- 980x735 / 768 -> 1200 -->
+                      <!-- 700x525 / 480 -> 768 -->
+                      <source srcset="img/prod-item-1.webp" type="image/webp">
+                      <img src="img/prod-item-1.jpg" alt="Описание" width="450" height="338" loading="lazy">
+                    </picture>
+                  </div>
+                </div>
+
+                <div class="product-block__text-col">
+                  <div class="product-block__text">
+                    <h2 class="product-block__title">Заголовок</h2>
+                    <div class="product-block__content">
+                      <p>Далеко-далеко за словесными горами в стране гласных и согласных, живут рыбные тексты. Ручеек раз над вскоре большого правилами власти приставка своих подпоясал вершину. Своего приставка парадигматическая большой не оксмокс взобравшись образ вопроса которое lorem то, вскоре. Последний заманивший ее, грамматики коварных встретил не даже жаренные рукописи вдали ipsum, скатился взобравшись предупредила города текстов образ. Использовало вдали пунктуация, не точках текстов страну.</p>
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet ab iste eaque vitae accusamus non quos. Impedit debitis nesciunt amet a laboriosam, aperiam!</p>
+                    </div>
+
+                    <form id="shk-form-##" class="product-block__form" action="[[~[[*id]]]]" method="post">
+                      <input type="hidden" name="item_id" value="[[+id]]">
+                      <input type="hidden" name="category_id" value="[[+parent]]">
+                      <input type="hidden" name="type" value="shop">
+
+                      <div class="row  product-block__form-inner">
+                        <div class="product-block__price-col">
+                          <div class="product-block__price">
+                            <span class="shk-price  product-block__price-num">1 600</span>&nbsp;
+                            <span class="shk-currency  product-block__price-currency">грн.</span>
+                          </div>
+                        </div>
+                        <div class="product-block__btn-col">
+                          <input type="number" class="form-control  visually-hidden" value="1" min="1" step="1" name="count" hidden>
+                          <button class="btn btn--icon btn--black btn--norotate" type="submit" name="submit_button">
+                            <span>У кошик</span>
+                            <svg width="22" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#cart"></use></svg>
+                          </button>
+                        </div>
+                      </div>
+                    </form>
+
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="product-page__container">
+              @@include('blocks/product-block/product-block.html', {
+                "img": "prod-item-2",
+                "title": 'Заголовок',
+                "text": 'Далеко-далеко за словесными горами в стране гласных и согласных, живут рыбные тексты. Ручеек раз над вскоре большого правилами власти приставка своих подпоясал вершину. Своего приставка парадигматическая большой не оксмокс взобравшись образ вопроса которое lorem то, вскоре. Последний заманивший ее, грамматики коварных встретил не даже жаренные рукописи вдали ipsum, скатился взобравшись предупредила города текстов образ. Использовало вдали пунктуация, не точках текстов страну.'
+              })
+
+              @@include('blocks/product-block/product-block.html', {
+                "img": "prod-item-1",
+                "title": 'Заголовок',
+                "text": 'Далеко-далеко за словесными горами в стране гласных и согласных, живут рыбные тексты. Ручеек раз над вскоре большого правилами власти приставка своих подпоясал вершину. Своего приставка парадигматическая большой не оксмокс взобравшись образ вопроса которое lorem то, вскоре. Последний заманивший ее, грамматики коварных встретил не даже жаренные рукописи вдали ipsum, скатился взобравшись предупредила города текстов образ. Использовало вдали пунктуация, не точках текстов страну.'
+              })
+
+              @@include('blocks/product-block/product-block.html', {
+                "img": "prod-item-2",
+                "title": 'Заголовок',
+                "text": 'Далеко-далеко за словесными горами в стране гласных и согласных, живут рыбные тексты. Ручеек раз над вскоре большого правилами власти приставка своих подпоясал вершину. Своего приставка парадигматическая большой не оксмокс взобравшись образ вопроса которое lorem то, вскоре. Последний заманивший ее, грамматики коварных встретил не даже жаренные рукописи вдали ipsum, скатился взобравшись предупредила города текстов образ. Использовало вдали пунктуация, не точках текстов страну.'
+              })
+
+              @@include('blocks/product-block/product-block.html', {
+                "img": "prod-item-1",
+                "title": 'Заголовок',
+                "text": 'Далеко-далеко за словесными горами в стране гласных и согласных, живут рыбные тексты. Ручеек раз над вскоре большого правилами власти приставка своих подпоясал вершину. Своего приставка парадигматическая большой не оксмокс взобравшись образ вопроса которое lorem то, вскоре. Последний заманивший ее, грамматики коварных встретил не даже жаренные рукописи вдали ipsum, скатился взобравшись предупредила города текстов образ. Использовало вдали пунктуация, не точках текстов страну.'
+              })
+            </div>
+
+          </div>
+
+          @@include('blocks/speedtest-widget/speedtest-widget.html')
+
+          <section class="container  product-video">
+            <h2 class="product-video__title">Відео огляд Mini UPS</h2>
+
+            <!-- <div class="embed-responsive  product-video__iframe">
+              <iframe class="b-lazy" data-src="https://www.youtube.com/embed/tgbNymZ7vqY" title="Название" width="668" height="376" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="border:none;"></iframe>
+            </div> -->
+
+            <div class="row">
+
+              <div class="product-video__col">
+                <div class="embed-responsive  product-video__iframe">
+                  <iframe class="b-lazy" data-src="https://www.youtube.com/embed/tgbNymZ7vqY" title="Название" width="668" height="376" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="border:none;"></iframe>
+                </div>
+              </div>
+
+              <div class="product-video__col">
+                <div class="embed-responsive  product-video__iframe">
+                  <iframe class="b-lazy" data-src="https://www.youtube.com/embed/tgbNymZ7vqY" title="Название" width="668" height="376" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="border:none;"></iframe>
+                </div>
+              </div>
+
+              <div class="product-video__col">
+                <div class="embed-responsive  product-video__iframe">
+                  <iframe class="b-lazy" data-src="https://www.youtube.com/embed/tgbNymZ7vqY" title="Название" width="668" height="376" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="border:none;"></iframe>
+                </div>
+              </div>
+
+              <div class="product-video__col">
+                <div class="embed-responsive  product-video__iframe">
+                  <iframe class="b-lazy" data-src="https://www.youtube.com/embed/tgbNymZ7vqY" title="Название" width="668" height="376" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="border:none;"></iframe>
+                </div>
+              </div>
+
+            </div>
+
+          </section>
+
+          <section class="container  faq-block">
+            <div class="guidance-accordion">
+              <h3 class="guidance-accordion__title">FAQ</h3>
+                <p class="guidance-accordion__intro">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt eget orci elit eu et, id. Ut ullamcorper diam ullamcorper lectus at turpis.
+                </p>
+
+                <div class="guidance-accordion__inner" id="guidance">
+
+                  <div class="guidance-accordion__item">
+
+                    <h5 class="guidance-accordion__header" id="headingOne">
+                      <button class="guidance-accordion__btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        PC
+                      </button>
+                    </h5>
+
+                    <div id="collapseOne" class="guidance-accordion__collapse  collapse show" aria-labelledby="headingOne" data-bs-parent="#guidance">
+                      <div class="guidance-accordion__body">
+                        <ul class="list-nostyled guidance-accordion__list">
+                          <li>Інструкції для <a href="#" download>iPhone</a></li>
+                          <li>Інструкції для <a href="#" download>Android</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="guidance-accordion__item">
+
+                    <h5 class="guidance-accordion__header" id="headingTwo">
+                      <button class="guidance-accordion__btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Smart TV
+                      </button>
+                    </h5>
+
+                    <div id="collapseTwo" class="guidance-accordion__collapse  collapse" aria-labelledby="headingTwo" data-bs-parent="#guidance">
+                      <div class="guidance-accordion__body">
+                        <ul class="list-nostyled guidance-accordion__list">
+                          <li>Інструкції для <a href="#" download>iPhone</a></li>
+                          <li>Інструкції для <a href="#" download>Android</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="guidance-accordion__item">
+
+                    <h5 class="guidance-accordion__header" id="headingThree">
+                      <button class="guidance-accordion__btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Tablet / iPhone
+                      </button>
+                    </h5>
+
+                    <div id="collapseThree" class="guidance-accordion__collapse  collapse" aria-labelledby="headingThree" data-bs-parent="#guidance">
+                      <div class="guidance-accordion__body">
+                        <ul class="list-nostyled guidance-accordion__list">
+                          <li>Інструкції для <a href="#" download>iPhone</a></li>
+                          <li>Інструкції для <a href="#" download>Android</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+            </div>
+          </section>
+
+        </article>
+
+      </main>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+      @@include('blocks/page-footer/page-footer.html')
+    </div>
+
+  </div>
+
+  @@include('blocks/offcanvas/offcanvas.html')
+  @@include('blocks/order-modal/order-modal.html')
+
+  @@include('_include/page_bottom.html')
+
+</body>
+</html>

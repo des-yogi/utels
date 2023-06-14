@@ -1,0 +1,110 @@
+@keyframes rotate-arrow {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(140deg);
+  }
+  100% {
+    transform: rotate(280deg);
+  }
+}
+
+@keyframes numbers-slide {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-400px);
+  }
+  100% {
+    transform: translateY(-800px);
+  }
+}
+
+.speedtest-widget {
+  min-height: 200px;
+  padding-top: 48px;
+  padding-bottom: 48px;
+  margin: 64px 0;
+  color: $white;
+  background-color: #141526;
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__text-col {
+    @include col(xs, 12);
+    @include col(md, 6);
+    @include col(xl, 7);
+    @include col(xxl, 8);
+
+    @media (max-width: $screen-md - 1) {
+      margin-bottom: 32px;
+    }
+
+    @media (min-width: $screen-md) {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__img-col {
+     @include col(xs, 12);
+     @include col(md, 6);
+     @include col(xl, 5);
+     @include col(xxl, 4);
+  }
+
+  &__text {
+
+    @media (max-width: $screen-md - 1) {
+      text-align: center;
+    }
+  }
+
+  &__title {
+    margin-top: 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+  &__intro {
+    margin-bottom: 32px;
+  }
+
+  &__img {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+
+    svg {
+
+      .arrow {
+        transform-origin: center;
+        transform: rotate(0deg); // 140deg - 500; 280deg - 1000
+        animation-name: rotate-arrow;
+        @include animation-speedtest;
+      }
+    }
+  }
+
+  &__mask {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90px;
+    height: 40px;
+    background: none;
+    overflow: hidden;
+  }
+
+  &__masked-img {
+    width: 90px;
+    height: 840px;
+    transform: translateY(0);
+    animation-name: numbers-slide;
+    @include animation-speedtest;
+  }
+}

@@ -1,0 +1,37 @@
+.product-video {
+  padding-top: 64px;
+  padding-bottom: calc(64px - 24px);
+  margin: 64px 0;
+  background-color: $white;
+  border-top: 1px solid $border-color;
+  border-bottom: 1px solid $border-color;
+
+  @media (min-width: $screen-xl) {
+    padding-bottom: calc(64px - 32px);
+  }
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 24px;
+
+    @media (min-width: $screen-xl) {
+      margin-bottom: 32px;
+    }
+  }
+
+  &__iframe {
+    border-radius: $border-radius;
+  }
+
+  &__col {
+    @include col(xs, 12);
+    @include col(xl, 6);
+    margin-bottom: 24px;
+
+    @media (min-width: $screen-xl) {
+      margin-bottom: 32px;
+    }
+  }
+}

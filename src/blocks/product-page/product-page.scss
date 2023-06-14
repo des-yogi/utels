@@ -1,0 +1,35 @@
+.product-page {
+  padding-top: 32px;
+  padding-bottom: 64px;
+
+  @media (min-width: $screen-md) {
+    padding-top: 48px;
+  }
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__title {
+    margin-bottom: 24px;
+
+    @media (min-width: $screen-xl) {
+      margin-bottom: 32px;
+    }
+  }
+
+  &__container {
+
+    .product-block {
+
+      &:nth-child(odd) {
+
+        .product-block__img-col {
+
+          @media (min-width: $screen-xl) {
+            order: 1;
+          }
+        }
+      }
+    }
+
+  }
+}

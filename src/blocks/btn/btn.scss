@@ -55,7 +55,7 @@
     justify-content: space-between;
 
     span {
-      margin-right: 32px;
+      margin-right: 16px; //32
     }
 
     svg {
@@ -67,6 +67,13 @@
 
     svg {
       transform: none;
+    }
+  }
+
+  &--reversed {
+
+    svg {
+      transform: rotate(180deg);
     }
   }
 

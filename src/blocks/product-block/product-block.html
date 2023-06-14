@@ -1,0 +1,35 @@
+<!--DEV
+@ @include('blocks/product-block/product-block.html', {
+  "img": "prod-item-1",
+  "title": '',
+  "text": ''
+})
+-->
+
+<div class="product-block">
+  <div class="row  product-block__inner">
+
+    <div class="product-block__img-col">
+      <div class="embed-responsive embed-responsive--4-3  product-block__img">
+        <picture>
+          <!-- 650x488 / 1600 -> up -->
+          <!-- 700x525 / 1200 -> 1600 -->
+          <!-- 980x735 / 768 -> 1200 -->
+          <!-- 700x525 / 480 -> 768 -->
+          <source srcset="img/@@img.webp" type="image/webp">
+          <img src="img/@@img.jpg" alt="Описание" width="450" height="338" loading="lazy">
+        </picture>
+      </div>
+    </div>
+
+    <div class="product-block__text-col">
+      <div class="product-block__text">
+        <h2 class="product-block__title">@@title</h2>
+        <div class="product-block__content">
+          <p>@@text</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
