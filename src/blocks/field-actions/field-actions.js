@@ -20,3 +20,26 @@
   }
 
 })();
+
+// (function () {
+//   const formsArr = document.querySelectorAll('form');
+//   const regex = /\+(\d{2})\s\((\d{3})\)\s(\d{3})\s(\d{2})\s(\d{2})/;
+//   if (!formsArr) return;
+
+//   for (let i = 0; i < formsArr.length; i++) {
+//     let maskedTel = formsArr[i].querySelector('.phone-mask');
+//     let submitBtn = formsArr[i].querySelector('button[type=submit]');
+//     //console.log(maskedTel);
+
+//     maskedTel.addEventListener('input', function (e) {
+//       let str = e.target.value;
+//       //console.log(regex.test(str));
+
+//       if (str.match(regex) === null) {
+//           submitBtn.disabled = true;
+//       } else {
+//           submitBtn.disabled = false;
+//       }
+//     });
+//   }
+// })();

@@ -478,9 +478,10 @@ a {
   position: absolute;
   top: 16px;
   left: 16px;
-  padding: 3px 12px;
-  font-size: 20px;
-  font-weight: 500;
+  padding: 4px 8px;
+  font-size: 14px;
+  //font-weight: 500;
+  line-height: 1.5;
   color: $white;
   border-radius: $border-radius;
 
