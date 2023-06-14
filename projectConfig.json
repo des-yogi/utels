@@ -68,7 +68,11 @@
     "guidance-accordion": [],
     "field-toggler": [],
     "megogo-select": [],
-    "special-offer-slider": []
+    "special-offer-slider": [],
+    "product-page": [],
+    "product-block": [],
+    "product-video": [],
+    "speedtest-widget": []
   },
   "addCssBefore": [
     "../../node_modules/bootstrap/scss/_functions",

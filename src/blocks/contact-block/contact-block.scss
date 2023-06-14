@@ -7,14 +7,14 @@
   &__col {
     @include col(xs, 12);
     @include col(md, 6);
-    @include col(xl, 3);
+    @include col(xl, 4);
   }
 
   &__item {
     display: flex;
     align-items: center;
-    padding-bottom: 16px;
-    margin-bottom: 16px;
+    //padding-bottom: 16px;
+    margin-bottom: 24px;
     font-size: 16px;
 
     &:not(:last-child) {
@@ -22,21 +22,16 @@
     }
 
     @media (min-width: $screen-xl) {
-      padding-bottom: 24px;
-      margin-bottom: 24px;
+      //padding-bottom: 24px;
+      margin-bottom: 44px;
     }
 
     &--socials {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-between;
-
-      @media (min-width: $screen-xxl) {
-        justify-content: flex-end;
-      }
+      display: block;
 
       & > span {
+        display: block;
+        margin-bottom: 8px;
         font-size: inherit;
         font-weight: 500;
 
@@ -62,7 +57,10 @@
 
     &--tel,
     &--pin,
-    &--email {
+    &--email,
+    &--tg-sale,
+    &--tg-support,
+    &--viber-support {
       background-repeat: no-repeat;
       background-position: center;
     }
@@ -91,6 +89,39 @@
 
       @media (min-width: $screen-xl) {
         background-size: 26px 20px;
+      }
+    }
+
+    // &--tg-sale,
+    // &--tg-support,
+    // &--viber-support {
+
+    // }
+
+    &--tg-sale {
+      background-size: 26px;
+      background-image: svg-load('../blocks/sprite-svg/svg/tg-sale.svg', fill=$text-color);
+
+      @media (min-width: $screen-xl) {
+        background-size: 32px;
+      }
+    }
+
+    &--tg-support {
+      background-size: 22px;
+      background-image: svg-load('../blocks/sprite-svg/svg/telegram.svg', fill=$text-color);
+
+      @media (min-width: $screen-xl) {
+        background-size: 28px;
+      }
+    }
+
+    &--viber-support {
+      background-size: 24px;
+      background-image: svg-load('../blocks/sprite-svg/svg/viber.svg', fill=$text-color);
+
+      @media (min-width: $screen-xl) {
+        background-size: 28px;
       }
     }
   }
@@ -151,15 +182,15 @@
     }
   }
 
-  &--contacts {
-    margin-bottom: 16px;
+  // &--contacts {
+  //   margin-bottom: 16px;
 
-    @media (min-width: $screen-xl) {
-      margin-bottom: 0;
-    }
+  //   @media (min-width: $screen-xl) {
+  //     margin-bottom: 0;
+  //   }
 
-    @media (min-width: $screen-xxl) {
-      margin-bottom: 16px;
-    }
-  }
+  //   @media (min-width: $screen-xxl) {
+  //     margin-bottom: 16px;
+  //   }
+  // }
 }

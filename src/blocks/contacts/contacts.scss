@@ -24,6 +24,30 @@
     margin-top: 0;
   }
 
+  &__main-col {
+    @include col(xs, 12);
+    @include col(xl, 9);
+
+    @media (max-width: $screen-xl - 1) {
+      margin-bottom: 8px;
+    }
+  }
+
+  &__social-col {
+    @include col(xs, 12);
+    @include col(xl, 3);
+
+    @media (max-width: $screen-xl - 1) {
+      margin-bottom: 8px;
+    }
+
+    @media (min-width: $screen-xl) {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+  }
+
   &__form-col,
   &__map-col {
     @include col(xs, 12);

@@ -84,6 +84,16 @@
     overflow: hidden;
   }
 
+  &__backface-inner {
+    height: 100%;
+    padding-right: 8px;
+    overflow-y: auto;
+  }
+
+  &__prod-info {
+    position: relative;
+  }
+
   &__img {
     margin-bottom: 16px;
 

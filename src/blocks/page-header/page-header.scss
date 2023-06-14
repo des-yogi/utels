@@ -307,9 +307,10 @@
       }
     }
 
-    padding: 0 6px;
+    padding: 4px 6px 2px;
     font-size: $font-size-sm;
     font-weight: 700;
+    line-height: 1;
     text-transform: uppercase;
     color: $main-color;
     background-color: $white; //#ffea01
