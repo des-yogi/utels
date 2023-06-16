@@ -21,25 +21,41 @@
 
 })();
 
-// (function () {
-//   const formsArr = document.querySelectorAll('form');
-//   const regex = /\+(\d{2})\s\((\d{3})\)\s(\d{3})\s(\d{2})\s(\d{2})/;
-//   if (!formsArr) return;
+/*(function () {
+  const formsArr = document.querySelectorAll('form');
+  const regex = /\+(\d{2})\s\((\d{3})\)\s(\d{3})\s(\d{2})\s(\d{2})/;
+  if (!formsArr) return;
 
-//   for (let i = 0; i < formsArr.length; i++) {
-//     let maskedTel = formsArr[i].querySelector('.phone-mask');
-//     let submitBtn = formsArr[i].querySelector('button[type=submit]');
-//     //console.log(maskedTel);
+  for (let i = 0; i < formsArr.length; i++) {
+    let maskedTel = formsArr[i].querySelector('.phone-mask');
+    let submitBtдобавлюn = formsArr[i].querySelector('button[type=submit]');
+    //console.log(maskedTel);
 
-//     maskedTel.addEventListener('input', function (e) {
-//       let str = e.target.value;
-//       //console.log(regex.test(str));
+    maskedTel.addEventListener('input', function (e) {
+      let str = e.target.value;
+      //console.log(regex.test(str));
 
-//       if (str.match(regex) === null) {
-//           submitBtn.disabled = true;
-//       } else {
-//           submitBtn.disabled = false;
-//       }
-//     });
-//   }
-// })();
+      if (str.match(regex) === null) {
+          submitBtn.disabled = true;
+      } else {
+          submitBtn.disabled = false;
+      }
+    });
+  }
+})();*/
+
+/*(function () {
+  //const phonePattern = /^\+38\s\(\d{3}\)\s\d{3}\s\d{2}\s\d{2}$/;
+  const phonePattern = /\+(\d{2})\s\((\d{3})\)\s(\d{3})\s(\d{2})\s(\d{2})/;
+  document.querySelectorAll('.phone-mask').forEach(phoneInput => {
+    phoneInput.addEventListener('input', () => {
+      const form = phoneInput.closest('form');
+      const submitButton = form.querySelector('button[type="submit"]');
+      if (!phonePattern.test(phoneInput.value)) {
+        submitButton.setAttribute('disabled', 'disabled');
+      } else {
+        submitButton.removeAttribute('disabled');
+      }
+    });
+  });
+})()*/
