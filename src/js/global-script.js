@@ -54,7 +54,7 @@ if(~navigator.appVersion.indexOf("Linux"))cth('linux');
 
 
 (function(){
-  let bLazy = new Blazy({
+  var bLazy = new Blazy({
     selector: '.b-lazy'
   });
 }());

@@ -1,4 +1,7 @@
 (function(){
+  const slideLazy = new Blazy({
+    selector: '.b-lazy'
+  });
   const utils = window.fizzyUIUtils;
   const specialOffers = document.querySelector('.special-offer-slider');
   if (!specialOffers) { return; }
@@ -12,15 +15,16 @@
     friction: 0.15,
     prevNextButtons: false,
     pageDots: false,
-    // on: {
-    //   'ready': function () {
-    //     window.setTimeout(setSliderHeightToMax(this), 1000);
-    //     //setSliderHeightToMax(this);
-    //   },
-    //   'scroll': function () {
-    //     setSliderHeightToMax(this);
-    //   }
-    // }
+    autoPlay: true,
+    on: {
+      // 'ready': function () {
+      //   window.setTimeout(setSliderHeightToMax(this), 1000);
+      //   //setSliderHeightToMax(this);
+      // },
+      'scroll': function () {
+        slideLazy.revalidate();
+      }
+    }
   });
 
   function setSliderHeightToMax(slider) {
