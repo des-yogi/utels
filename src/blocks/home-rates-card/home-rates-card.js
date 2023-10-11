@@ -10,7 +10,7 @@
     selectedAttraction: 0.01,
     friction: 0.15,
     //watchCSS: true,
-    prevNextButtons: false,
+    prevNextButtons: true,
     pageDots: false
   });
 }());
