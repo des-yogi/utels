@@ -29,6 +29,10 @@ $main-color:                  #19ab01; // старый цвет #50b82d
 $color-main:                  $main-color;
 $secondary-color:             #252525;
 
+$ethernet-color:              $main-color;
+$gpon-color:                  $color-warning;
+$mixed-color:                 #9b00ff;
+
 $text-color:                  $secondary-color;
 $title-color:                 $secondary-color;
 $text-muted:                  #9a9a9a;

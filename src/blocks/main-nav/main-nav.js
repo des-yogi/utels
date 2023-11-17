@@ -17,8 +17,7 @@
   let new_scroll_position = 0;
   let last_scroll_position;
   const header = document.getElementById('header');
-
-  window.addEventListener('scroll', function(e) {
+  const scrollHandler = function(e) {
     last_scroll_position = window.scrollY;
 
     // Scrolling down
@@ -35,5 +34,7 @@
     }
 
     new_scroll_position = last_scroll_position;
-  });
+  };
+
+  window.addEventListener('scroll', scrollHandler, { passive: true });
 })()
