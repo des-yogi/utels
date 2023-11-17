@@ -15,6 +15,7 @@
 
   &__header {
     margin-bottom: 24px;
+    gap: 24px 0;
 
     @media (min-width: $screen-xl) {
       margin-bottom: 32px;
@@ -24,6 +25,13 @@
   &__header-col {
     @include col(xs, 12);
     @include col(xl, 6);
+  }
+
+  &__connection-col {
+    @include col(xs, 12);
+    @include col(md, 7);
+    @include col-offset(xl, 2);
+    @include col(xl, 4);
   }
 
   &__map-wrapper {
@@ -151,6 +159,165 @@
 
     a {
       color: inherit;
+    }
+  }
+
+  &__connection {
+    padding: 16px;
+    border: 2px solid $main-color;
+    border-radius: 12px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 41.15%, rgba(25, 171, 1, 0.19) 100%), $white;
+
+    @media (min-width: $screen-md) {
+      padding: 22px 24px 18px;
+    }
+
+    &.ethernet-gpon {
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0) 41.15%, rgba(136, 21, 252, 0.19) 100%), $white;
+      border-color: $mixed-color;
+    }
+
+    &.gpon {
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0) 41.15%, rgba(255, 92, 0, 0.19) 100%), $white;
+      border-color: $gpon-color;
+    }
+  }
+
+  &__type {
+    display: inline-flex;
+    padding: 0 8px;
+    font-size: $font-size-sm;
+    font-weight: 700;
+    text-align: center;
+    color: $white;
+    border-radius: $border-radius;
+    background-color: $main-color;
+
+    &.gpon {
+      background-color: $gpon-color;
+    }
+
+    &.ethernet-gpon {
+      background-color: $mixed-color;
+    }
+  }
+
+  &__battery {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 32px;
+    font-size: $font-size-sm;
+    font-weight: 700;
+    white-space: nowrap;
+    background-color: $white;
+    background-size: 40px 32px;
+    background-position: center;
+    background-image: svg-load('../blocks/sprite-svg/svg/battery.svg');
+
+    & > span {
+      transform: translateY(2px);
+    }
+  }
+
+  &__table {
+    margin: 0;
+    border: none;
+
+    tr {
+
+      &:first-child {
+
+        th,
+        td {
+          padding-top: 0;
+          padding-bottom: 8px;
+        }
+      }
+
+      &:last-child {
+
+        th,
+        td {
+          padding-top: 8px;
+          padding-bottom: 0;
+        }
+      }
+    }
+
+    th,
+    td {
+      padding-right: 0;
+      padding-left: 0;
+      vertical-align: middle;
+      border: none !important;
+    }
+
+    th {
+      font-weight: 500;
+      text-align: initial;
+    }
+
+    td {
+      text-align: right;
+    }
+
+    &--form {
+
+      tr {
+
+        th,
+        td {
+          font-size: $font-size-sm;
+        }
+
+        &:first-child {
+
+          th,
+          td {
+            padding-top: 0;
+            padding-bottom: 4px;
+          }
+        }
+
+        &:last-child {
+
+          th,
+          td {
+            padding-top: 4px;
+            padding-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+
+  &__legend {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 8px;
+    padding: 10px 0;
+    font-size: $font-size-sm;
+    font-weight: 500;
+
+    #{$block-name}__type:not(:first-child) {
+      display: inline-block;
+      vertical-align: baseline;
+      position: relative;
+      margin-left: 13px;
+
+      &::before {
+        display: inline-block;
+        vertical-align: baseline;
+        content: "/";
+        position: absolute;
+        left: -13px;
+        top: 0;
+        font-weight: 700;
+        color: $text-color;
+      }
     }
   }
 }
