@@ -172,7 +172,8 @@
       padding: 22px 24px 18px;
     }
 
-    &.ethernet-gpon {
+    &.ethernet-gpon,
+    &.gpon-ethernet {
       background: linear-gradient(180deg, rgba(255, 255, 255, 0) 41.15%, rgba(136, 21, 252, 0.19) 100%), $white;
       border-color: $mixed-color;
     }
@@ -197,7 +198,8 @@
       background-color: $gpon-color;
     }
 
-    &.ethernet-gpon {
+    &.ethernet-gpon,
+    &.gpon-ethernet {
       background-color: $mixed-color;
     }
   }
