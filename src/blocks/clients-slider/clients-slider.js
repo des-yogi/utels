@@ -3,11 +3,11 @@
   const clients = document.querySelector('.clients-slider__carousel');
   if (!clients) { return; }
 
-  const heroSlider = new Flickity( clients, {
-    lazyLoad: 3,
-    autoPlay: 3500,
+  const clientsSlider = new Flickity( clients, {
+    lazyLoad: 6,
+    autoPlay: 4000,
     cellAlign: 'center',
-    percentPosition: false,
+    //percentPosition: false,
     //freeScroll: true,
     wrapAround: true,
     prevNextButtons: false,

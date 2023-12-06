@@ -55,8 +55,10 @@
 }());*/
 
 (function(){
-  // init Isotope
-  // const iso = new Isotope( '.grid', {
+  // const grid = document.querySelector('.grid');
+  // if (!grid) { return }
+
+  // const iso = new Isotope( grid, {
   //   itemSelector: '.grid-item',
   //   layoutMode: 'fitRows'
   // });
