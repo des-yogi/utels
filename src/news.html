@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="ru" prefix="og: https://ogp.me/ns#">
+
+<head>
+  <meta charset="utf-8">
+  <title>Новини</title>
+  @@include('_include/page_head.html')
+</head>
+
+<body>
+<noscript>У вас отключен JavaScript. Приносим наши извинения, но это делает затруднительным использование данного сайта.</noscript>
+
+  <div class="page__inner">
+
+    <div class="page__content">
+      @@include('blocks/page-header/page-header.html')
+
+      @@include('blocks/breadcrumbs/breadcrumbs.html')
+
+      <main>
+
+        <div class="container  news-card__wrapper  contacts">
+
+          <h1 class="news-card__wrapper-title">Новини</h1>
+
+          <div class="row">
+
+            <div class="col-1-2-3-4">
+              @@include('blocks/news-card/news-card.html', {
+                "title": "Нова послуга",
+                "text": "Відтепер абоненти Мережі Ланет мають змогу посилити власну безпеку в мережі Інтернет, захистити приватність..."
+              })
+            </div>
+
+            <div class="col-1-2-3-4">
+              @@include('blocks/news-card/news-card.html', {
+                "title": "Нова послуга",
+                "text": "Відтепер абоненти Мережі Ланет мають..."
+              })
+            </div>
+
+            <div class="col-1-2-3-4">
+              @@include('blocks/news-card/news-card.html', {
+                "title": "Повертаємось до звичайного режиму надання послуг",
+                "text": "Відтепер абоненти Мережі Ланет мають змогу посилити власну безпеку в мережі Інтернет, захистити приватність..."
+              })
+            </div>
+
+            <div class="col-1-2-3-4">
+              @@include('blocks/news-card/news-card.html', {
+                "title": "Нова послуга",
+                "text": "Відтепер абоненти Мережі Ланет мають змогу посилити власну безпеку в мережі Інтернет, захистити приватність..."
+              })
+            </div>
+
+            <div class="col-1-2-3-4">
+              @@include('blocks/news-card/news-card.html', {
+                "title": "Нова послуга",
+                "text": "Відтепер абоненти Мережі Ланет мають..."
+              })
+            </div>
+
+            <div class="col-1-2-3-4">
+              @@include('blocks/news-card/news-card.html', {
+                "title": "Повертаємось до звичайного режиму надання послуг",
+                "text": "Відтепер абоненти Мережі Ланет мають змогу посилити власну безпеку в мережі Інтернет, захистити приватність..."
+              })
+            </div>
+
+          </div>
+
+          @@include('blocks/pagination/pagination.html')
+
+        </div>
+
+      </main>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+      @@include('blocks/page-footer/page-footer.html')
+    </div>
+
+  </div>
+
+  @@include('blocks/offcanvas/offcanvas.html')
+  @@include('blocks/order-modal/order-modal.html')
+
+  @@include('_include/page_bottom.html')
+
+</body>
+</html>

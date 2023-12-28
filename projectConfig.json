@@ -72,7 +72,10 @@
     "product-page": [],
     "product-block": [],
     "product-video": [],
-    "speedtest-widget": []
+    "speedtest-widget": [],
+    "news-card": [],
+    "news-article": [],
+    "news-aside": []
   },
   "addCssBefore": [
     "../../node_modules/bootstrap/scss/_functions",

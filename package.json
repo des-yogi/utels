@@ -63,7 +63,7 @@
     "imagemin-pngquant": "^9.0.1",
     "lint-staged": "^13.1.0",
     "merge-stream": "^2.0.0",
-    "mkdirp": "^3.0.0",
+    "mkdirp": "^3.0.1",
     "node-sass": "^9.0.0",
     "postcss": "^8.4.23",
     "postcss-discard-comments": "^6.0.0",
