@@ -1,6 +1,8 @@
 # ISP Utels
 ### Page templates
 * https://des-yogi.github.io/utels/
+* https://des-yogi.github.io/utels/news
+* https://des-yogi.github.io/utels/news-article
 * https://des-yogi.github.io/utels/category.html
 * https://des-yogi.github.io/utels/home-rates.html
 * https://des-yogi.github.io/utels/text-page.html
