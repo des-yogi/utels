@@ -48,30 +48,30 @@ body {
   margin: 0;
   min-height: 100%;
 
-  &.modal-open {
+  //&.modal-open {
 
-    .page-header {
+    //.page-header {
       //padding-right: 6px;
       //width: calc(100% + 6px);
 
-      &__wrapper {
+      //&__wrapper {
         //left: -6px;
         //right: -6px;
         //width: calc(100% + 6px);
-      }
+      //}
 
-      &__main {
+      //&__main {
         //padding-right: 56px;
         //left: -6px;
         //width: calc(100% + 6px);
-      }
+      //}
 
-      &__menu {
+      //&__menu {
         //left: -6px;
         //width: calc(100% + 6px);
-      }
-    }
-  }
+      //}
+    //}
+  //}
 }
 
 [tabindex='-1']:focus {
@@ -560,3 +560,7 @@ a {
   }
 }
 
+.publishedon {
+  font-size: $font-size-sm;
+  color: $text-muted;
+}

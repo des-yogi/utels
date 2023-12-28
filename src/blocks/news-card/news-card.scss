@@ -1,0 +1,66 @@
+.news-card {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 100%;
+  background-color: $white;
+  border: 1px solid $border-color;
+  border-radius: $border-radius;
+  overflow: hidden;
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__wrapper-title {
+    margin-bottom: 32px;
+  }
+
+  &__img {
+    flex: 0 0 auto;
+
+    img {
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  &__text {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    padding: 24px 24px 15px;
+    text-align: center;
+  }
+
+  &__title {
+    margin-top: 0;
+  }
+
+  &__descr {
+    margin-top: 0;
+    font-size: $font-size-sm;
+  }
+
+  &__bottom {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-top: auto;
+  }
+
+  &__btn {
+
+    &::after {
+      display: block;
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    }
+
+    span + svg {
+      margin-left: 18px;
+    }
+  }
+}
