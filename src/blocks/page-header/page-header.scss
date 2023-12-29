@@ -272,6 +272,14 @@
 
     &--gpon {
 
+      &:hover,
+      &:focus {
+
+        #{$block-name}__gpon {
+          animation-play-state: paused;
+        }
+      }
+
       @media (max-width: $screen-md - 1) {
         display: none;
       }
@@ -298,24 +306,40 @@
 
   &__gpon {
 
-    @keyframes blink {
+    // @keyframes blink {
+    //   0% {
+    //     background-color: $white;
+    //   }
+    //   100% {
+    //     background-color: #ffea01;
+    //   }
+    // }
+
+    @keyframes gpon {
       0% {
-        background-color: $white;
+        box-shadow: 0 0 0 0 rgba(255, 255, 153, 0.8);
       }
       100% {
-        background-color: #ffea01;
+        box-shadow: 0 0 0 20px rgba(255, 255, 153, 0);
       }
     }
 
-    padding: 4px 6px 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 60px;
+    height: 26px;
     font-size: $font-size-sm;
     font-weight: 700;
     line-height: 1;
     text-transform: uppercase;
+    letter-spacing: 0.5px;
     color: $main-color;
     background-color: $white; //#ffea01
     border-radius: $border-radius;
-    animation: blink 1s ease alternate infinite;
+    //animation: blink 1s ease alternate infinite;
+    animation: gpon 1s ease infinite;
   }
 
   &__mini-cart-badge {
