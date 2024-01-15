@@ -533,8 +533,9 @@ a {
   }
 
   @media (max-width: 1366px - 1) {
-    visibility: hidden;
-    pointer-events: none;
+    //visibility: hidden;
+    //pointer-events: none;
+    display: none;
   }
 
   &.previous {
