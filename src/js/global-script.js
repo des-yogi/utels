@@ -80,3 +80,57 @@ if(~navigator.appVersion.indexOf("Linux"))cth('linux');
 //   }
 //   return false;
 // });
+
+(function () {
+
+  const setType = (lbl) => {
+    setTimeout(function () {
+      const orderForm = document.getElementById('order-form');
+      //console.log(orderForm);
+      if (orderForm) {
+        const connectionTypeEl = orderForm.querySelector('input[name="connecType"]');
+        connectionTypeEl.removeAttribute('value');
+        connectionTypeEl.setAttribute('value', lbl);
+      }
+    }, 100);
+  };
+
+  document.addEventListener('click', function (event) {
+      // Check if the clicked element is a button
+
+      if (event.target.classList.contains('modal-open')) {
+        // Find the closest form element
+        const closestForm = event.target.closest('form');
+
+        if (closestForm) {
+          // Find radio buttons with one attribute "name" in the selected form
+          //const radioButtons = closestForm.querySelectorAll('input[type="radio"]:checked');
+          const radioButtons = closestForm.querySelectorAll('input[type="radio"]');
+          console.log(radioButtons);
+
+          if (!radioButtons) { return; }
+
+          for (let i = 0; i < radioButtons.length; i++) {
+            if (radioButtons[i].checked === true) {
+              //const labelText = closestForm.querySelector('radioButtons[i]' + 'label');
+              //console.log(labelText.textContent);
+            }
+          }
+
+
+          /*if (radioButtons.length > 0) {
+            // Get the label text of the selected radio button
+            const labelText = closestForm.querySelector('label[for="' + radioButtons[0].id + '"]').textContent;
+
+            // Set the label text to the hidden input field
+            //document.getElementById('hiddenInput').value = labelText;
+
+            setType(labelText);
+
+            // Log the result (you can replace this with your desired action)
+            console.log('Label Text of Selected Radio Button:', labelText);
+          }*/
+        }
+      }
+    });
+})()

@@ -1,0 +1,60 @@
+.tarif-switcher {
+
+  $block-name:                &; // #{$block-name}__element
+
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 8px 12px;
+  padding: 4px;
+  margin-bottom: 24px;
+  background-color: $white;
+  border-radius: 12px;
+  border: 1px solid #19AB01; //main-color
+
+  &__item {
+    flex: 0 1 auto;
+
+    @media (max-width: 520px) {
+      flex: 1 1 auto;
+    }
+  }
+
+  &__btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0 12px;
+    width: 100%;
+    white-space: nowrap;
+    background-color: $white;
+    color: $text-color;
+    //cursor: default;
+    //pointer-events: none;
+
+    &:hover,
+    &:focus,
+    &.active {
+      color: $white;
+      background-color: $main-color;
+
+      svg {
+        fill: $white; //main-color
+      }
+    }
+
+    svg {
+      fill: $main-color; //main-color
+      transition: fill $transition-time;
+    }
+
+    /* &.active {
+      color: $white;
+      background-color: $main-color;
+      //cursor: pointer;
+      //pointer-events: auto;
+
+      svg {
+        fill: currentColor; //main-color
+      }
+    } */
+  }
+}

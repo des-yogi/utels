@@ -75,7 +75,8 @@
     "speedtest-widget": [],
     "news-card": [],
     "news-article": [],
-    "news-aside": []
+    "news-aside": [],
+    "tarif-switcher": []
   },
   "addCssBefore": [
     "../../node_modules/bootstrap/scss/_functions",
@@ -86,6 +87,7 @@
     "../../node_modules/flickity/dist/flickity.min.css",
     "../../node_modules/drooltip.js/package/css/drooltip.css",
     "../../node_modules/bootstrap/scss/_transitions",
+    "../../node_modules/bootstrap/scss/_nav",
     "../../node_modules/bootstrap/scss/_modal",
     "../../node_modules/bootstrap/scss/_popover",
     "../../node_modules/bootstrap/scss/_offcanvas"

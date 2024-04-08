@@ -3,7 +3,7 @@
   const rates = document.querySelector('.home-rates-card__slider');
   if (!rates) { return; }
 
-  const ratesSlider = new Flickity( rates, {
+  const options = {
     cellAlign: 'left',
     contain: true,
     dragThreshold: 3,
@@ -12,8 +12,34 @@
     //watchCSS: true,
     prevNextButtons: true,
     pageDots: false
+  }
+
+  const ratesSlider = new Flickity(rates, options);
+
+  const tabElems = document.querySelectorAll('button[data-bs-toggle="tab"]');
+  var isActive = false;
+
+  tabElems.forEach(function (item) {
+    if(!item) return;
+
+    item.addEventListener('shown.bs.tab', event => {
+      //event.target; // newly activated tab
+
+      //console.info('Elem: ' + event.target.id);
+
+      if (isActive === false) {
+        const tabSliderEl = document.querySelector('.tab-pane.active>.home-rates-card__slider');
+        const sliderActiveTab = new Flickity(tabSliderEl, options);
+        isActive = true;
+        //console.log(isActive);
+      }
+      //console.log(options);
+      //tabSlider.resize();
+    })
   });
+
 }());
+
 
 (function(){
   const cardsAll = document.querySelectorAll('.home-rates-card');
@@ -53,9 +79,9 @@
       }
     };
 
-    const calcSelectValue = function (select, flag) {
+    const calcSelectValue = function (select, isActive) {
 
-      if (flag === true) {
+      if (isActive === true) {
         megogoPrice.textContent = initSelect(megogoSelect) + '';
         megogoRateInput.value = select.options[select.selectedIndex].text;
 
