@@ -64,10 +64,1486 @@
 
       <aside class="container  home-rates-card__wrapper  home-rates-card__wrapper--aside">
 
+
         <div class="home-rates-card__section-intro">
-        <h2 class="home-rates-card__section-title">Тарифи для дому</h2>
+          <h2 class="home-rates-card__section-title">Тарифи</h2>
           <p class="h5 home-rates-card__section-descr">Безлімітний інтернет та інтерактивне телебачення</p>
         </div>
+
+        @@include('blocks/tarif-switcher/tarif-switcher.html')
+
+        <!-- <ul class="nav nav-tabs" id="myTab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Home</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Profile</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">Contact</button>
+          </li>
+        </ul>
+        <div class="tab-content" id="myTabContent">
+          <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">111...</div>
+          <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">222...</div>
+          <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">333...</div>
+        </div> -->
+
+
+
+        <div class="tab-content">
+          <div class="tab-pane fade show active" id="apartment-pane" role="tabpanel" aria-labelledby="apartment" tabindex="0">
+
+            <!-- <h3>Тарифи для дому</h3> -->
+            <div class="home-rates-card__slider">
+
+              <article class="carousel-cell  home-rates-card">
+                <header class="home-rates-card__header">
+                  <h2 class="h3  home-rates-card__title">
+                    <span class="visually-hidden">Тариф</span>
+                    Економ
+                  </h2>
+                  <!-- <span class="home-rates-card__tag home-rates-card__tag--star">
+                    <svg width="19" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#star"></use></svg>
+                  </span> -->
+                  <!-- <span class="home-rates-card__tag home-rates-card__tag--sp-offer">Акція!</span> -->
+                </header>
+                <div class="home-rates-card__inner">
+
+                  <div class="home-rates-card__face  home-rates-card__face--front">
+                    <div class="home-rates-card__img-wrapper">
+                      <img src="img/skateboard.svg" class="home-rates-card__img-main" alt="Парень на скейте" width="120" height="120">
+                      <div class="home-rates-card__img-speed">
+                        <div class="home-rates-card__speed  home-rates-card__speed--world">
+                          <img src="img/50mb.svg" alt="Циферблат: 50Мбит скорость интернет" width="52" height="52">
+                          <span class="home-rates-card__speed-caption">Світовий трафік</span>
+                        </div>
+                        <div class="home-rates-card__speed  home-rates-card__speed--ua">
+                          <img src="img/100mb.svg" alt="Циферблат: 100Мбит скорость интернет" width="52" height="52">
+                          <span class="home-rates-card__speed-caption">Швидкість UA-IX</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <ul class="list-nostyled  home-rates-card__option  home-rates-card__option--ip">
+                      <li class="home-rates-card__option-item home-rates-card__option-item--empty" aria-label="Статичний IP отсутствует">
+                        <span aria-hidden="true">Статичний IP</span>
+                      </li>
+                      <li class="home-rates-card__option-item home-rates-card__option-item--empty" aria-label="Back Resolving IP-адреси отсутствует">
+                        <span aria-hidden="true">Back Resolving IP-адреси</span>
+                      </li>
+                    </ul>
+
+                    <section class="home-rates-card__tv-options">
+                      <h3 class="visually-hidden">Состав [название пакета] интерактивного телевидения</h3>
+
+                      <div class="home-rates-card__tv-title" role="presentation">
+                        <img src="img/tv-1.svg" alt="Иконка ТВ-приемника" width="32" height="31">
+                        <span>Інтерактивне телебачення</span>
+                      </div>
+
+                      <ul class="list-nostyled  home-rates-card__option">
+                        <li class="home-rates-card__option-item home-rates-card__option-item--empty">
+                          <span aria-hidden="true">Пакет «Standart»</span>
+                        </li>
+                        <li class="home-rates-card__option-item home-rates-card__option-item--empty" aria-label="В составе отсутствует">
+                          <span aria-hidden="true">Пакет «Premium + HD»</span>
+                        </li>
+                        <li class="home-rates-card__option-item home-rates-card__option-item--empty" aria-label="В составе отсутствует">
+                          <span aria-hidden="true">Пауза ефіру</span>
+                        </li>
+                        <li class="home-rates-card__option-item home-rates-card__option-item--empty" aria-label="В составе отсутствует">
+                          <span aria-hidden="true">Запис ефіру</span>
+                        </li>
+                      </ul>
+                    </section>
+
+                    <div class="home-rates-card__order">
+                      <form class="home-rates-card__order-form" action="" method="post">
+
+                        <fieldset>
+                          <legend class="visually-hidden">Медиа-сервис Megogo</legend>
+                          @@include('blocks/megogo-select/megogo-select.html')
+                        </fieldset>
+
+                        <fieldset>
+                          <legend class="visually-hidden">Варианты подключения</legend>
+                          <div class="home-rates-card__connect-options">
+                            <span class="home-rates-card__options-text">Підключення:</span>
+                            <div class="home-rates-card__input-wrapper">
+                              <input id="eco-base" class="visually-hidden home-rates-card__input" type="radio" name="eco-option" value="" checked>
+                              <label for="eco-base" class="home-rates-card__btn">Base</label>
+                            </div>
+                            <div class="home-rates-card__input-wrapper">
+                              <input id="eco-comfort" class="visually-hidden home-rates-card__input" type="radio" name="eco-option" value="">
+                              <label for="eco-comfort" class="home-rates-card__btn">Comfort</label>
+                            </div>
+                            <div class="home-rates-card__input-wrapper">
+                              <input id="eco-vip" class="visually-hidden home-rates-card__input" type="radio" name="eco-option" value="">
+                              <label for="eco-vip" class="home-rates-card__btn  home-rates-card__btn--vip">VIP</label>
+                            </div>
+                            <div class="home-rates-card__input-wrapper">
+                              <button class="home-rates-card__btn  home-rates-card__btn--info" type="button">
+                                <span class="visually-hidden">Узнать подробности о вариантах подключения</span>
+                                <svg width="20" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#question-outline"></use></svg>
+                              </button>
+                            </div>
+                          </div>
+
+                          <div class="home-rates-card__price-wrapper">
+                            <span class="home-rates-card__price-num">149</span>
+                            <span class="home-rates-card__price-inner">
+                              <span class="home-rates-card__add-price">+&thinsp;99 грн за підключення</span>
+                              <span class="home-rates-card__period">
+                                <span class="home-rates-card__old-price"></span>
+                                грн&thinsp;/&thinsp;місяць
+                              </span>
+                            </span>
+                          </div>
+
+                        </fieldset>
+
+                        <fieldset>
+                          <legend class="visually-hidden">Управление заказом</legend>
+                          <div class="home-rates-card__ctrls-group">
+                            <div class="home-rates-card__ctrls">
+                              <button class="btn  modal-open" type="button" data-bs-toggle="modal" data-bs-target="#orderModal" data-bs-whatever="Тариф «Економ»">
+                                <span>Замовити</span>
+                              </button>
+                              <button class="btn btn--icon btn--black btn--norotate btn--textless" type="submit">
+                                <svg width="22" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#cart"></use></svg>
+                                <span class="visually-hidden">Положить в корзину</span>
+                              </button>
+                            </div>
+                          </div>
+                        </fieldset>
+                      </form>
+                    </div>
+
+                  </div>
+
+                  <div class="home-rates-card__face  home-rates-card__face--back">
+
+                    <div class="home-rates-card__img-speed  home-rates-card__img-speed--back">
+                      <div class="home-rates-card__speed  home-rates-card__speed--world">
+                        <img src="img/50mb.svg" alt="Циферблат: 50Мбит скорость интернет" width="52" height="52">
+                        <span class="home-rates-card__speed-caption">Світовий трафік</span>
+                      </div>
+                      <div class="home-rates-card__speed  home-rates-card__speed--ua">
+                        <img src="img/100mb.svg" alt="Циферблат: 100Мбит скорость интернет" width="52" height="52">
+                        <span class="home-rates-card__speed-caption">Швидкість UA-IX</span>
+                      </div>
+                    </div>
+
+                    <section class="home-rates-card__connect-descr">
+                      <h3 class="h5 home-rates-card__descr-title">
+                        <span class="visually-hidden">Стоимость</span>
+                        Підключення
+                      </h3>
+                      <ul class="list-nostyled  home-rates-card__descr-list">
+                        <li class="home-rates-card__descr-item">
+                          <p>Підключення <span style="font-weight:500; color:#ff5c00;">«VIP»</span>. Мідний кабель більш стійкий до заломів та загибів, період експлуатації значно більший, ніж у біметалу.</p>
+                          <p>
+                            <span>Вартість:&nbsp;</span>
+                            <!-- #158e30 грин -->
+                            <span style="color:#ff5c00;">349 грн</span>
+                          </p>
+                        </li>
+                        <li class="home-rates-card__descr-item">
+                          <p>Підключення <span style="font-weight:500; color:#158e30;">«Premium»</span>. Мідний кабель більш стійкий до заломів та загибів, період експлуатації значно більший, ніж у біметалу.</p>
+                          <p>
+                            <span>Вартість:&nbsp;</span>
+                            <!-- #158e30 грин -->
+                            <span style="color:#158e30;">99 грн</span>
+                          </p>
+                        </li>
+                        <li class="home-rates-card__descr-item">
+                          <p>Підключення <span style="font-weight: 500;">«Standart»</span>. Мідний кабель більш стійкий до заломів та загибів, період експлуатації значно більший, ніж у біметалу.</p>
+                          <p>
+                            <span>Вартість:&nbsp;</span>
+                            <!-- #158e30 грин -->
+                            <span style="color:#158e30;">1 грн</span>
+                          </p>
+                        </li>
+                      </ul>
+                    </section>
+
+                    <div class="home-rates-card__descr-btn">
+                      <button class="btn btn--return" type="button" style="width:100%;">Назад</button>
+                    </div>
+                  </div>
+
+                </div>
+              </article>
+
+              <article class="carousel-cell  home-rates-card">
+                <header class="home-rates-card__header">
+                  <h2 class="h3  home-rates-card__title">
+                    <span class="visually-hidden">Тариф</span>
+                    Стандарт
+                  </h2>
+                  <!-- <span class="home-rates-card__tag home-rates-card__tag--star">
+                    <svg width="19" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#star"></use></svg>
+                  </span> -->
+                  <!-- <span class="home-rates-card__tag home-rates-card__tag--sp-offer">Акція!</span> -->
+                </header>
+                <div class="home-rates-card__inner">
+
+                  <div class="home-rates-card__face  home-rates-card__face--front">
+                    <div class="home-rates-card__img-wrapper">
+                      <img src="img/bike.svg" class="home-rates-card__img-main" alt="Парень на скейте" width="120" height="120">
+                      <div class="home-rates-card__img-speed">
+                        <div class="home-rates-card__speed  home-rates-card__speed--world">
+                          <img src="img/100mb.svg" alt="Циферблат: 50Мбит скорость интернет" width="52" height="52">
+                          <span class="home-rates-card__speed-caption">Світовий трафік</span>
+                        </div>
+                        <div class="home-rates-card__speed  home-rates-card__speed--ua">
+                          <img src="img/100mb.svg" alt="Циферблат: 100Мбит скорость интернет" width="52" height="52">
+                          <span class="home-rates-card__speed-caption">Швидкість UA-IX</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <ul class="list-nostyled  home-rates-card__option  home-rates-card__option--ip">
+                      <li class="home-rates-card__option-item home-rates-card__option-item--empty" aria-label="Статичний IP отсутствует">
+                        <span aria-hidden="true">Статичний IP</span>
+                      </li>
+                      <li class="home-rates-card__option-item home-rates-card__option-item--empty" aria-label="Back Resolving IP-адреси отсутствует">
+                        <span aria-hidden="true">Back Resolving IP-адреси</span>
+                      </li>
+                    </ul>
+
+                    <section class="home-rates-card__tv-options">
+                      <h3 class="visually-hidden">Состав [название пакета] интерактивного телевидения</h3>
+
+                      <div class="home-rates-card__tv-title" role="presentation">
+                        <img src="img/tv-2.svg" alt="Иконка ТВ-приемника" width="32" height="31">
+                        <span>Інтерактивне телебачення</span>
+                      </div>
+
+                      <ul class="list-nostyled  home-rates-card__option">
+                        <li class="home-rates-card__option-item home-rates-card__option-item--available">
+                          <span aria-hidden="true">Пакет «Standart»</span>
+                        </li>
+                        <li class="home-rates-card__option-item home-rates-card__option-item--empty" aria-label="В составе отсутствует">
+                          <span aria-hidden="true">Пакет «Premium + HD»</span>
+                        </li>
+                        <li class="home-rates-card__option-item home-rates-card__option-item--empty" aria-label="В составе отсутствует">
+                          <span aria-hidden="true">Пауза ефіру</span>
+                        </li>
+                        <li class="home-rates-card__option-item home-rates-card__option-item--empty" aria-label="В составе отсутствует">
+                          <span aria-hidden="true">Запис ефіру</span>
+                        </li>
+                      </ul>
+                    </section>
+
+                    <div class="home-rates-card__order">
+                      <form class="home-rates-card__order-form" action="" method="post">
+
+                        <fieldset>
+                          <legend class="visually-hidden">Медиа-сервис Megogo</legend>
+                          @@include('blocks/megogo-select/megogo-select.html')
+                        </fieldset>
+
+                        <fieldset>
+                          <legend class="visually-hidden">Варианты подключения</legend>
+                          <div class="home-rates-card__connect-options">
+                            <span class="home-rates-card__options-text">Підключення:</span>
+                            <div class="home-rates-card__input-wrapper">
+                              <input id="std-base" class="visually-hidden home-rates-card__input" type="radio" name="std-option" value="" checked>
+                              <label for="std-base" class="home-rates-card__btn">Base</label>
+                            </div>
+                            <div class="home-rates-card__input-wrapper">
+                              <input id="std-comfort" class="visually-hidden home-rates-card__input" type="radio" name="std-option" value="">
+                              <label for="std-comfort" class="home-rates-card__btn">Comfort</label>
+                            </div>
+                            <div class="home-rates-card__input-wrapper">
+                              <input id="std-vip" class="visually-hidden home-rates-card__input" type="radio" name="std-option" value="">
+                              <label for="std-vip" class="home-rates-card__btn home-rates-card__btn--vip">VIP</label>
+                            </div>
+                            <div class="home-rates-card__input-wrapper">
+                              <button class="home-rates-card__btn  home-rates-card__btn--info" type="button">
+                                <span class="visually-hidden">Узнать подробности о вариантах подключения</span>
+                                <svg width="20" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#question-outline"></use></svg>
+                              </button>
+                            </div>
+                          </div>
+
+                          <div class="home-rates-card__price-wrapper">
+                            <span class="home-rates-card__price-num">179</span>
+                            <span class="home-rates-card__price-inner">
+                              <span class="home-rates-card__add-price">+&thinsp;99 грн за підключення</span>
+                              <span class="home-rates-card__period">
+                                <span class="home-rates-card__old-price"></span>
+                                грн&thinsp;/&thinsp;місяць
+                              </span>
+                            </span>
+                          </div>
+
+                        </fieldset>
+
+                        <fieldset>
+                          <legend class="visually-hidden">Управление заказом</legend>
+                          <div class="home-rates-card__ctrls-group">
+                            <div class="home-rates-card__ctrls">
+                              <button class="btn  modal-open" type="button" data-bs-toggle="modal" data-bs-target="#orderModal" data-bs-whatever="Тариф «Стандарт»">
+                                <span>Замовити</span>
+                              </button>
+                              <button class="btn btn--icon btn--black btn--norotate btn--textless" type="submit">
+                                <svg width="22" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#cart"></use></svg>
+                                <span class="visually-hidden">Положить в корзину</span>
+                              </button>
+                            </div>
+                          </div>
+                        </fieldset>
+                      </form>
+                    </div>
+
+                  </div>
+
+                  <div class="home-rates-card__face  home-rates-card__face--back">
+
+                    <div class="home-rates-card__img-speed  home-rates-card__img-speed--back">
+                      <div class="home-rates-card__speed  home-rates-card__speed--world">
+                        <img src="img/100mb.svg" alt="Циферблат: 50Мбит скорость интернет" width="52" height="52">
+                        <span class="home-rates-card__speed-caption">Світовий трафік</span>
+                      </div>
+                      <div class="home-rates-card__speed  home-rates-card__speed--ua">
+                        <img src="img/100mb.svg" alt="Циферблат: 100Мбит скорость интернет" width="52" height="52">
+                        <span class="home-rates-card__speed-caption">Швидкість UA-IX</span>
+                      </div>
+                    </div>
+
+                    <section class="home-rates-card__connect-descr">
+                      <h3 class="h5 home-rates-card__descr-title">
+                        <span class="visually-hidden">Стоимость</span>
+                        Підключення
+                      </h3>
+                      <ul class="list-nostyled  home-rates-card__descr-list">
+                        <li class="home-rates-card__descr-item">
+                          <p>Підключення <span style="font-weight:500; color:#ff5c00;">«VIP»</span>. Мідний кабель більш стійкий до заломів та загибів, період експлуатації значно більший, ніж у біметалу.</p>
+                          <p>
+                            <span>Вартість:&nbsp;</span>
+                            <!-- #158e30 грин -->
+                            <span style="color:#ff5c00;">349 грн</span>
+                          </p>
+                        </li>
+                        <li class="home-rates-card__descr-item">
+                          <p>Підключення <span style="font-weight:500; color:#158e30;">«Premium»</span>. Мідний кабель більш стійкий до заломів та загибів, період експлуатації значно більший, ніж у біметалу.</p>
+                          <p>
+                            <span>Вартість:&nbsp;</span>
+                            <!-- #158e30 грин -->
+                            <span style="color:#158e30;">99 грн</span>
+                          </p>
+                        </li>
+                        <li class="home-rates-card__descr-item">
+                          <p>Підключення <span style="font-weight: 500;">«Standart»</span>. Мідний кабель більш стійкий до заломів та загибів, період експлуатації значно більший, ніж у біметалу.</p>
+                          <p>
+                            <span>Вартість:&nbsp;</span>
+                            <!-- #158e30 грин -->
+                            <span style="color:#158e30;">1 грн</span>
+                          </p>
+                        </li>
+                      </ul>
+                    </section>
+
+                    <div class="home-rates-card__descr-btn">
+                      <button class="btn btn--return" type="button" style="width:100%;">Назад</button>
+                    </div>
+                  </div>
+
+                </div>
+              </article>
+
+              <article class="carousel-cell  home-rates-card">
+                <header class="home-rates-card__header">
+                  <h2 class="h3  home-rates-card__title">
+                    <span class="visually-hidden">Тариф</span>
+                    Преміум
+                  </h2>
+                  <span class="home-rates-card__tag home-rates-card__tag--star">
+                    <svg width="19" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#star"></use></svg>
+                  </span>
+                  <!-- <span class="home-rates-card__tag home-rates-card__tag--sp-offer">Акція!</span> -->
+                </header>
+                <div class="home-rates-card__inner">
+
+                  <div class="home-rates-card__face  home-rates-card__face--front">
+                    <div class="home-rates-card__img-wrapper">
+                      <img src="img/car.svg" class="home-rates-card__img-main" alt="Парень на скейте" width="120" height="120">
+                      <div class="home-rates-card__img-speed">
+                        <div class="home-rates-card__speed  home-rates-card__speed--world">
+                          <img src="img/100mb.svg" alt="Циферблат: 100Мбит скорость интернет" width="52" height="52">
+                          <span class="home-rates-card__speed-caption">Світовий трафік</span>
+                        </div>
+                        <div class="home-rates-card__speed  home-rates-card__speed--ua">
+                          <img src="img/100mb.svg" alt="Циферблат: 100Мбит скорость интернет" width="52" height="52">
+                          <span class="home-rates-card__speed-caption">Швидкість UA-IX</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <ul class="list-nostyled  home-rates-card__option  home-rates-card__option--ip">
+                      <li class="home-rates-card__option-item home-rates-card__option-item--available" aria-label="Статичний IP отсутствует">
+                        <span aria-hidden="true">Статичний IP</span>
+                      </li>
+                      <li class="home-rates-card__option-item home-rates-card__option-item--available" aria-label="Back Resolving IP-адреси отсутствует">
+                        <span aria-hidden="true">Back Resolving IP-адреси</span>
+                      </li>
+                    </ul>
+
+                    <section class="home-rates-card__tv-options">
+                      <h3 class="visually-hidden">Состав [название пакета] интерактивного телевидения</h3>
+
+                      <div class="home-rates-card__tv-title" role="presentation">
+                        <img src="img/tv-3.svg" alt="Иконка ТВ-приемника" width="32" height="31">
+                        <span>Інтерактивне телебачення</span>
+                      </div>
+
+                      <ul class="list-nostyled  home-rates-card__option">
+                        <li class="home-rates-card__option-item home-rates-card__option-item--available">
+                          <span aria-hidden="true">Пакет «Standart»</span>
+                        </li>
+                        <li class="home-rates-card__option-item home-rates-card__option-item--available" aria-label="В составе отсутствует">
+                          <span aria-hidden="true">Пакет «Premium + HD»</span>
+                        </li>
+                        <li class="home-rates-card__option-item home-rates-card__option-item--available" aria-label="В составе отсутствует">
+                          <span aria-hidden="true">Пауза ефіру</span>
+                        </li>
+                        <li class="home-rates-card__option-item home-rates-card__option-item--available" aria-label="В составе отсутствует">
+                          <span aria-hidden="true">Запис ефіру</span>
+                        </li>
+                      </ul>
+                    </section>
+
+                    <div class="home-rates-card__order">
+                      <form class="home-rates-card__order-form" action="" method="post">
+
+                        <fieldset>
+                          <legend class="visually-hidden">Медиа-сервис Megogo</legend>
+                          @@include('blocks/megogo-select/megogo-select.html')
+                        </fieldset>
+
+                        <fieldset>
+                          <legend class="visually-hidden">Варианты подключения</legend>
+                          <div class="home-rates-card__connect-options">
+                            <span class="home-rates-card__options-text">Підключення:</span>
+                            <div class="home-rates-card__input-wrapper">
+                              <input id="prem-base" class="visually-hidden home-rates-card__input" type="radio" name="prem-option" value="" checked>
+                              <label for="prem-base" class="home-rates-card__btn">Base</label>
+                            </div>
+                            <div class="home-rates-card__input-wrapper">
+                              <input id="prem-comfort" class="visually-hidden home-rates-card__input" type="radio" name="prem-option" value="">
+                              <label for="prem-comfort" class="home-rates-card__btn">Comfort</label>
+                            </div>
+                            <div class="home-rates-card__input-wrapper">
+                              <input id="prem-vip" class="visually-hidden home-rates-card__input" type="radio" name="prem-option" value="">
+                              <label for="prem-vip" class="home-rates-card__btn home-rates-card__btn--vip">VIP</label>
+                            </div>
+                            <div class="home-rates-card__input-wrapper">
+                              <button class="home-rates-card__btn  home-rates-card__btn--info" type="button">
+                                <span class="visually-hidden">Узнать подробности о вариантах подключения</span>
+                                <svg width="20" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#question-outline"></use></svg>
+                              </button>
+                            </div>
+                          </div>
+
+                          <div class="home-rates-card__price-wrapper">
+                            <span class="home-rates-card__price-num" style="color:#ff5c00;">119</span>
+                            <span class="home-rates-card__price-inner">
+                              <span class="home-rates-card__add-price">+&thinsp;99 грн за підключення</span>
+                              <span class="home-rates-card__period">
+                                <span class="home-rates-card__old-price">210</span>
+                                грн&thinsp;/&thinsp;місяць
+                              </span>
+                            </span>
+                          </div>
+
+                        </fieldset>
+
+                        <fieldset>
+                          <legend class="visually-hidden">Управление заказом</legend>
+                          <div class="home-rates-card__ctrls-group">
+                            <div class="home-rates-card__ctrls">
+                              <button class="btn  modal-open" type="button" data-bs-toggle="modal" data-bs-target="#orderModal" data-bs-whatever="Тариф «Преміум»">
+                                <span>Замовити</span>
+                              </button>
+                              <button class="btn btn--icon btn--black btn--norotate btn--textless" type="submit">
+                                <svg width="22" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#cart"></use></svg>
+                                <span class="visually-hidden">Положить в корзину</span>
+                              </button>
+                            </div>
+                          </div>
+                        </fieldset>
+                      </form>
+                    </div>
+
+                  </div>
+
+                  <div class="home-rates-card__face  home-rates-card__face--back">
+
+                    <div class="home-rates-card__img-speed  home-rates-card__img-speed--back">
+                      <div class="home-rates-card__speed  home-rates-card__speed--world">
+                        <img src="img/100mb.svg" alt="Циферблат: 50Мбит скорость интернет" width="52" height="52">
+                        <span class="home-rates-card__speed-caption">Світовий трафік</span>
+                      </div>
+                      <div class="home-rates-card__speed  home-rates-card__speed--ua">
+                        <img src="img/100mb.svg" alt="Циферблат: 100Мбит скорость интернет" width="52" height="52">
+                        <span class="home-rates-card__speed-caption">Швидкість UA-IX</span>
+                      </div>
+                    </div>
+
+                    <section class="home-rates-card__connect-descr">
+                      <h3 class="h5 home-rates-card__descr-title">
+                        <span class="visually-hidden">Стоимость</span>
+                        Підключення
+                      </h3>
+                      <ul class="list-nostyled  home-rates-card__descr-list">
+                        <li class="home-rates-card__descr-item">
+                          <p>Підключення <span style="font-weight:500; color:#ff5c00;">«VIP»</span>. Мідний кабель більш стійкий до заломів та загибів, період експлуатації значно більший, ніж у біметалу.</p>
+                          <p>
+                            <span>Вартість:&nbsp;</span>
+                            <!-- #158e30 грин -->
+                            <span style="color:#ff5c00;">349 грн</span>
+                          </p>
+                        </li>
+                        <li class="home-rates-card__descr-item">
+                          <p>Підключення <span style="font-weight:500; color:#158e30;">«Premium»</span>. Мідний кабель більш стійкий до заломів та загибів, період експлуатації значно більший, ніж у біметалу.</p>
+                          <p>
+                            <span>Вартість:&nbsp;</span>
+                            <!-- #158e30 грин -->
+                            <span style="color:#158e30;">99 грн</span>
+                          </p>
+                        </li>
+                        <li class="home-rates-card__descr-item">
+                          <p>Підключення <span style="font-weight: 500;">«Standart»</span>. Мідний кабель більш стійкий до заломів та загибів, період експлуатації значно більший, ніж у біметалу.</p>
+                          <p>
+                            <span>Вартість:&nbsp;</span>
+                            <!-- #158e30 грин -->
+                            <span style="color:#158e30;">1 грн</span>
+                          </p>
+                        </li>
+                      </ul>
+                    </section>
+
+                    <div class="home-rates-card__descr-btn">
+                      <button class="btn btn--return" type="button" style="width:100%;">Назад</button>
+                    </div>
+                  </div>
+
+                </div>
+              </article>
+
+              <article class="carousel-cell  home-rates-card">
+                <header class="home-rates-card__header">
+                  <h2 class="h3  home-rates-card__title">
+                    <span class="visually-hidden">Тариф</span>
+                    Гігабіт
+                  </h2>
+                  <!-- <span class="home-rates-card__tag home-rates-card__tag--star">
+                    <svg width="19" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#star"></use></svg>
+                  </span> -->
+                  <span class="home-rates-card__tag home-rates-card__tag--sp-offer">
+                    Акція!
+                  </span>
+                </header>
+                <div class="home-rates-card__inner">
+
+                  <div class="home-rates-card__face  home-rates-card__face--front">
+                    <div class="home-rates-card__img-wrapper">
+                      <img src="img/helicopter.svg" class="home-rates-card__img-main" alt="Парень на скейте" width="120" height="120">
+                      <div class="home-rates-card__img-speed">
+                        <div class="home-rates-card__speed  home-rates-card__speed--world">
+                          <img src="img/1000mb.svg" alt="Циферблат: 50Мбит скорость интернет" width="52" height="52">
+                          <span class="home-rates-card__speed-caption">Світовий трафік</span>
+                        </div>
+                        <div class="home-rates-card__speed  home-rates-card__speed--ua">
+                          <img src="img/1000mb.svg" alt="Циферблат: 100Мбит скорость интернет" width="52" height="52">
+                          <span class="home-rates-card__speed-caption">Швидкість UA-IX</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <ul class="list-nostyled  home-rates-card__option  home-rates-card__option--ip">
+                      <li class="home-rates-card__option-item home-rates-card__option-item--available" aria-label="Статичний IP отсутствует">
+                        <span aria-hidden="true">Статичний IP</span>
+                      </li>
+                      <li class="home-rates-card__option-item home-rates-card__option-item--available" aria-label="Back Resolving IP-адреси отсутствует">
+                        <span aria-hidden="true">Back Resolving IP-адреси</span>
+                      </li>
+                    </ul>
+
+                    <section class="home-rates-card__tv-options">
+                      <h3 class="visually-hidden">Состав [название пакета] интерактивного телевидения</h3>
+
+                      <div class="home-rates-card__tv-title" role="presentation">
+                        <img src="img/tv-4.svg" alt="Иконка ТВ-приемника" width="32" height="31">
+                        <span>Інтерактивне телебачення</span>
+                      </div>
+
+                      <ul class="list-nostyled  home-rates-card__option">
+                        <li class="home-rates-card__option-item home-rates-card__option-item--available">
+                          <span aria-hidden="true">Пакет «Standart»</span>
+                        </li>
+                        <li class="home-rates-card__option-item home-rates-card__option-item--available" aria-label="В составе отсутствует">
+                          <span aria-hidden="true">Пакет «Premium + HD»</span>
+                        </li>
+                        <li class="home-rates-card__option-item home-rates-card__option-item--available" aria-label="В составе отсутствует">
+                          <span aria-hidden="true">Пауза ефіру</span>
+                        </li>
+                        <li class="home-rates-card__option-item home-rates-card__option-item--available" aria-label="В составе отсутствует">
+                          <span aria-hidden="true">Запис ефіру</span>
+                        </li>
+                      </ul>
+                    </section>
+
+                    <div class="home-rates-card__order">
+                      <form class="home-rates-card__order-form" action="" method="post">
+
+                        <fieldset>
+                          <legend class="visually-hidden">Медиа-сервис Megogo</legend>
+                          @@include('blocks/megogo-select/megogo-select.html')
+                        </fieldset>
+
+                        <fieldset>
+                          <legend class="visually-hidden">Варианты подключения</legend>
+                          <div class="home-rates-card__connect-options">
+                            <span class="home-rates-card__options-text">Підключення:</span>
+                            <!-- <div class="home-rates-card__input-wrapper">
+                              <input id="giga-base" class="visually-hidden home-rates-card__input" type="radio" name="giga-option" value="" checked>
+                              <label for="giga-base" class="home-rates-card__btn">Base</label>
+                            </div> -->
+                            <!-- <div class="home-rates-card__input-wrapper">
+                              <input id="giga-comfort" class="visually-hidden home-rates-card__input" type="radio" name="giga-option" value="">
+                              <label for="giga-comfort" class="home-rates-card__btn">Comfort</label>
+                            </div> -->
+                            <div class="home-rates-card__input-wrapper">
+                              <input id="giga-vip" class="visually-hidden home-rates-card__input" type="radio" name="giga-option" value="" checked>
+                              <label for="giga-vip" class="home-rates-card__btn home-rates-card__btn--vip">VIP</label>
+                            </div>
+                            <div class="home-rates-card__input-wrapper">
+                              <button class="home-rates-card__btn  home-rates-card__btn--info" type="button">
+                                <span class="visually-hidden">Узнать подробности о вариантах подключения</span>
+                                <svg width="20" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#question-outline"></use></svg>
+                              </button>
+                            </div>
+                          </div>
+
+                          <div class="home-rates-card__price-wrapper">
+                            <span class="home-rates-card__price-num" style="color:#ff5c00;">159</span>
+                            <span class="home-rates-card__price-inner">
+                              <span class="home-rates-card__add-price">+&thinsp;99 грн за підключення</span>
+                              <span class="home-rates-card__period">
+                                <span class="home-rates-card__old-price">200</span>
+                                грн&thinsp;/&thinsp;місяць
+                              </span>
+                            </span>
+                          </div>
+
+                        </fieldset>
+
+                        <fieldset>
+                          <legend class="visually-hidden">Управление заказом</legend>
+                          <div class="home-rates-card__ctrls-group">
+                            <div class="home-rates-card__ctrls">
+                              <button class="btn  modal-open" type="button" data-bs-toggle="modal" data-bs-target="#orderModal" data-bs-whatever="Тариф «Гігабіт»">
+                                <span>Замовити</span>
+                              </button>
+                              <button class="btn btn--icon btn--black btn--norotate btn--textless" type="submit">
+                                <svg width="22" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#cart"></use></svg>
+                                <span class="visually-hidden">Положить в корзину</span>
+                              </button>
+                            </div>
+                          </div>
+                        </fieldset>
+                      </form>
+                    </div>
+
+                  </div>
+
+                  <div class="home-rates-card__face  home-rates-card__face--back">
+
+                    <div class="home-rates-card__img-speed  home-rates-card__img-speed--back">
+                      <div class="home-rates-card__speed  home-rates-card__speed--world">
+                        <img src="img/1000mb.svg" alt="Циферблат: 50Мбит скорость интернет" width="52" height="52">
+                        <span class="home-rates-card__speed-caption">Світовий трафік</span>
+                      </div>
+                      <div class="home-rates-card__speed  home-rates-card__speed--ua">
+                        <img src="img/1000mb.svg" alt="Циферблат: 100Мбит скорость интернет" width="52" height="52">
+                        <span class="home-rates-card__speed-caption">Швидкість UA-IX</span>
+                      </div>
+                    </div>
+
+                    <section class="home-rates-card__connect-descr">
+                      <h3 class="h5 home-rates-card__descr-title">
+                        <span class="visually-hidden">Стоимость</span>
+                        Підключення
+                      </h3>
+                      <ul class="list-nostyled  home-rates-card__descr-list">
+                        <li class="home-rates-card__descr-item">
+                          <p>Підключення <span style="font-weight:500; color:#ff5c00;">«VIP»</span>. Мідний кабель більш стійкий до заломів та загибів, період експлуатації значно більший, ніж у біметалу.</p>
+                          <p>
+                            <span>Вартість:&nbsp;</span>
+                            <!-- #158e30 грин -->
+                            <span style="color:#ff5c00;">349 грн</span>
+                          </p>
+                        </li>
+                        <li class="home-rates-card__descr-item">
+                          <p>Підключення <span style="font-weight:500; color:#158e30;">«Premium»</span>. Мідний кабель більш стійкий до заломів та загибів, період експлуатації значно більший, ніж у біметалу.</p>
+                          <p>
+                            <span>Вартість:&nbsp;</span>
+                            <!-- #158e30 грин -->
+                            <span style="color:#158e30;">99 грн</span>
+                          </p>
+                        </li>
+                        <li class="home-rates-card__descr-item">
+                          <p>Підключення <span style="font-weight: 500;">«Standart»</span>. Мідний кабель більш стійкий до заломів та загибів, період експлуатації значно більший, ніж у біметалу.</p>
+                          <p>
+                            <span>Вартість:&nbsp;</span>
+                            <!-- #158e30 грин -->
+                            <span style="color:#158e30;">1 грн</span>
+                          </p>
+                        </li>
+                      </ul>
+                    </section>
+
+                    <div class="home-rates-card__descr-btn">
+                      <button class="btn btn--return" type="button" style="width:100%;">Назад</button>
+                    </div>
+                  </div>
+
+                </div>
+              </article>
+
+            </div>
+          </div>
+
+          <div class="tab-pane fade" id="privat-pane" role="tabpanel" aria-labelledby="privat" tabindex="0">
+            <div class="home-rates-card__slider">
+
+              <article class="carousel-cell  home-rates-card">
+                <header class="home-rates-card__header">
+                  <h2 class="h3  home-rates-card__title">
+                    <span class="visually-hidden">Тариф</span>
+                    Економ
+                  </h2>
+                  <!-- <span class="home-rates-card__tag home-rates-card__tag--star">
+                    <svg width="19" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#star"></use></svg>
+                  </span> -->
+                  <!-- <span class="home-rates-card__tag home-rates-card__tag--sp-offer">Акція!</span> -->
+                </header>
+                <div class="home-rates-card__inner">
+
+                  <div class="home-rates-card__face  home-rates-card__face--front">
+                    <div class="home-rates-card__img-wrapper">
+                      <img src="img/skateboard.svg" class="home-rates-card__img-main" alt="Парень на скейте" width="120" height="120">
+                      <div class="home-rates-card__img-speed">
+                        <div class="home-rates-card__speed  home-rates-card__speed--world">
+                          <img src="img/50mb.svg" alt="Циферблат: 50Мбит скорость интернет" width="52" height="52">
+                          <span class="home-rates-card__speed-caption">Світовий трафік</span>
+                        </div>
+                        <div class="home-rates-card__speed  home-rates-card__speed--ua">
+                          <img src="img/100mb.svg" alt="Циферблат: 100Мбит скорость интернет" width="52" height="52">
+                          <span class="home-rates-card__speed-caption">Швидкість UA-IX</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <ul class="list-nostyled  home-rates-card__option  home-rates-card__option--ip">
+                      <li class="home-rates-card__option-item home-rates-card__option-item--empty" aria-label="Статичний IP отсутствует">
+                        <span aria-hidden="true">Статичний IP</span>
+                      </li>
+                      <li class="home-rates-card__option-item home-rates-card__option-item--empty" aria-label="Back Resolving IP-адреси отсутствует">
+                        <span aria-hidden="true">Back Resolving IP-адреси</span>
+                      </li>
+                    </ul>
+
+                    <section class="home-rates-card__tv-options">
+                      <h3 class="visually-hidden">Состав [название пакета] интерактивного телевидения</h3>
+
+                      <div class="home-rates-card__tv-title" role="presentation">
+                        <img src="img/tv-1.svg" alt="Иконка ТВ-приемника" width="32" height="31">
+                        <span>Інтерактивне телебачення</span>
+                      </div>
+
+                      <ul class="list-nostyled  home-rates-card__option">
+                        <li class="home-rates-card__option-item home-rates-card__option-item--empty">
+                          <span aria-hidden="true">Пакет «Standart»</span>
+                        </li>
+                        <li class="home-rates-card__option-item home-rates-card__option-item--empty" aria-label="В составе отсутствует">
+                          <span aria-hidden="true">Пакет «Premium + HD»</span>
+                        </li>
+                        <li class="home-rates-card__option-item home-rates-card__option-item--empty" aria-label="В составе отсутствует">
+                          <span aria-hidden="true">Пауза ефіру</span>
+                        </li>
+                        <li class="home-rates-card__option-item home-rates-card__option-item--empty" aria-label="В составе отсутствует">
+                          <span aria-hidden="true">Запис ефіру</span>
+                        </li>
+                      </ul>
+                    </section>
+
+                    <div class="home-rates-card__order">
+                      <form class="home-rates-card__order-form" action="" method="post">
+
+                        <fieldset>
+                          <legend class="visually-hidden">Медиа-сервис Megogo</legend>
+                          @@include('blocks/megogo-select/megogo-select.html')
+                        </fieldset>
+
+                        <fieldset>
+                          <legend class="visually-hidden">Варианты подключения</legend>
+                          <div class="home-rates-card__connect-options">
+                            <span class="home-rates-card__options-text">Підключення:</span>
+                            <div class="home-rates-card__input-wrapper">
+                              <input id="eco-base" class="visually-hidden home-rates-card__input" type="radio" name="eco-option" value="" checked>
+                              <label for="eco-base" class="home-rates-card__btn">Base</label>
+                            </div>
+                            <div class="home-rates-card__input-wrapper">
+                              <input id="eco-comfort" class="visually-hidden home-rates-card__input" type="radio" name="eco-option" value="">
+                              <label for="eco-comfort" class="home-rates-card__btn">Comfort</label>
+                            </div>
+                            <div class="home-rates-card__input-wrapper">
+                              <input id="eco-vip" class="visually-hidden home-rates-card__input" type="radio" name="eco-option" value="">
+                              <label for="eco-vip" class="home-rates-card__btn  home-rates-card__btn--vip">VIP</label>
+                            </div>
+                            <div class="home-rates-card__input-wrapper">
+                              <button class="home-rates-card__btn  home-rates-card__btn--info" type="button">
+                                <span class="visually-hidden">Узнать подробности о вариантах подключения</span>
+                                <svg width="20" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#question-outline"></use></svg>
+                              </button>
+                            </div>
+                          </div>
+
+                          <div class="home-rates-card__price-wrapper">
+                            <span class="home-rates-card__price-num">149</span>
+                            <span class="home-rates-card__price-inner">
+                              <span class="home-rates-card__add-price">+&thinsp;99 грн за підключення</span>
+                              <span class="home-rates-card__period">
+                                <span class="home-rates-card__old-price"></span>
+                                грн&thinsp;/&thinsp;місяць
+                              </span>
+                            </span>
+                          </div>
+
+                        </fieldset>
+
+                        <fieldset>
+                          <legend class="visually-hidden">Управление заказом</legend>
+                          <div class="home-rates-card__ctrls-group">
+                            <div class="home-rates-card__ctrls">
+                              <button class="btn  modal-open" type="button" data-bs-toggle="modal" data-bs-target="#orderModal" data-bs-whatever="Тариф «Економ»">
+                                <span>Замовити</span>
+                              </button>
+                              <button class="btn btn--icon btn--black btn--norotate btn--textless" type="submit">
+                                <svg width="22" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#cart"></use></svg>
+                                <span class="visually-hidden">Положить в корзину</span>
+                              </button>
+                            </div>
+                          </div>
+                        </fieldset>
+                      </form>
+                    </div>
+
+                  </div>
+
+                  <div class="home-rates-card__face  home-rates-card__face--back">
+
+                    <div class="home-rates-card__img-speed  home-rates-card__img-speed--back">
+                      <div class="home-rates-card__speed  home-rates-card__speed--world">
+                        <img src="img/50mb.svg" alt="Циферблат: 50Мбит скорость интернет" width="52" height="52">
+                        <span class="home-rates-card__speed-caption">Світовий трафік</span>
+                      </div>
+                      <div class="home-rates-card__speed  home-rates-card__speed--ua">
+                        <img src="img/100mb.svg" alt="Циферблат: 100Мбит скорость интернет" width="52" height="52">
+                        <span class="home-rates-card__speed-caption">Швидкість UA-IX</span>
+                      </div>
+                    </div>
+
+                    <section class="home-rates-card__connect-descr">
+                      <h3 class="h5 home-rates-card__descr-title">
+                        <span class="visually-hidden">Стоимость</span>
+                        Підключення
+                      </h3>
+                      <ul class="list-nostyled  home-rates-card__descr-list">
+                        <li class="home-rates-card__descr-item">
+                          <p>Підключення <span style="font-weight:500; color:#ff5c00;">«VIP»</span>. Мідний кабель більш стійкий до заломів та загибів, період експлуатації значно більший, ніж у біметалу.</p>
+                          <p>
+                            <span>Вартість:&nbsp;</span>
+                            <!-- #158e30 грин -->
+                            <span style="color:#ff5c00;">349 грн</span>
+                          </p>
+                        </li>
+                        <li class="home-rates-card__descr-item">
+                          <p>Підключення <span style="font-weight:500; color:#158e30;">«Premium»</span>. Мідний кабель більш стійкий до заломів та загибів, період експлуатації значно більший, ніж у біметалу.</p>
+                          <p>
+                            <span>Вартість:&nbsp;</span>
+                            <!-- #158e30 грин -->
+                            <span style="color:#158e30;">99 грн</span>
+                          </p>
+                        </li>
+                        <li class="home-rates-card__descr-item">
+                          <p>Підключення <span style="font-weight: 500;">«Standart»</span>. Мідний кабель більш стійкий до заломів та загибів, період експлуатації значно більший, ніж у біметалу.</p>
+                          <p>
+                            <span>Вартість:&nbsp;</span>
+                            <!-- #158e30 грин -->
+                            <span style="color:#158e30;">1 грн</span>
+                          </p>
+                        </li>
+                      </ul>
+                    </section>
+
+                    <div class="home-rates-card__descr-btn">
+                      <button class="btn btn--return" type="button" style="width:100%;">Назад</button>
+                    </div>
+                  </div>
+
+                </div>
+              </article>
+
+              <article class="carousel-cell  home-rates-card">
+                <header class="home-rates-card__header">
+                  <h2 class="h3  home-rates-card__title">
+                    <span class="visually-hidden">Тариф</span>
+                    Стандарт
+                  </h2>
+                  <!-- <span class="home-rates-card__tag home-rates-card__tag--star">
+                    <svg width="19" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#star"></use></svg>
+                  </span> -->
+                  <!-- <span class="home-rates-card__tag home-rates-card__tag--sp-offer">Акція!</span> -->
+                </header>
+                <div class="home-rates-card__inner">
+
+                  <div class="home-rates-card__face  home-rates-card__face--front">
+                    <div class="home-rates-card__img-wrapper">
+                      <img src="img/bike.svg" class="home-rates-card__img-main" alt="Парень на скейте" width="120" height="120">
+                      <div class="home-rates-card__img-speed">
+                        <div class="home-rates-card__speed  home-rates-card__speed--world">
+                          <img src="img/100mb.svg" alt="Циферблат: 50Мбит скорость интернет" width="52" height="52">
+                          <span class="home-rates-card__speed-caption">Світовий трафік</span>
+                        </div>
+                        <div class="home-rates-card__speed  home-rates-card__speed--ua">
+                          <img src="img/100mb.svg" alt="Циферблат: 100Мбит скорость интернет" width="52" height="52">
+                          <span class="home-rates-card__speed-caption">Швидкість UA-IX</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <ul class="list-nostyled  home-rates-card__option  home-rates-card__option--ip">
+                      <li class="home-rates-card__option-item home-rates-card__option-item--empty" aria-label="Статичний IP отсутствует">
+                        <span aria-hidden="true">Статичний IP</span>
+                      </li>
+                      <li class="home-rates-card__option-item home-rates-card__option-item--empty" aria-label="Back Resolving IP-адреси отсутствует">
+                        <span aria-hidden="true">Back Resolving IP-адреси</span>
+                      </li>
+                    </ul>
+
+                    <section class="home-rates-card__tv-options">
+                      <h3 class="visually-hidden">Состав [название пакета] интерактивного телевидения</h3>
+
+                      <div class="home-rates-card__tv-title" role="presentation">
+                        <img src="img/tv-2.svg" alt="Иконка ТВ-приемника" width="32" height="31">
+                        <span>Інтерактивне телебачення</span>
+                      </div>
+
+                      <ul class="list-nostyled  home-rates-card__option">
+                        <li class="home-rates-card__option-item home-rates-card__option-item--available">
+                          <span aria-hidden="true">Пакет «Standart»</span>
+                        </li>
+                        <li class="home-rates-card__option-item home-rates-card__option-item--empty" aria-label="В составе отсутствует">
+                          <span aria-hidden="true">Пакет «Premium + HD»</span>
+                        </li>
+                        <li class="home-rates-card__option-item home-rates-card__option-item--empty" aria-label="В составе отсутствует">
+                          <span aria-hidden="true">Пауза ефіру</span>
+                        </li>
+                        <li class="home-rates-card__option-item home-rates-card__option-item--empty" aria-label="В составе отсутствует">
+                          <span aria-hidden="true">Запис ефіру</span>
+                        </li>
+                      </ul>
+                    </section>
+
+                    <div class="home-rates-card__order">
+                      <form class="home-rates-card__order-form" action="" method="post">
+
+                        <fieldset>
+                          <legend class="visually-hidden">Медиа-сервис Megogo</legend>
+                          @@include('blocks/megogo-select/megogo-select.html')
+                        </fieldset>
+
+                        <fieldset>
+                          <legend class="visually-hidden">Варианты подключения</legend>
+                          <div class="home-rates-card__connect-options">
+                            <span class="home-rates-card__options-text">Підключення:</span>
+                            <div class="home-rates-card__input-wrapper">
+                              <input id="std-base" class="visually-hidden home-rates-card__input" type="radio" name="std-option" value="" checked>
+                              <label for="std-base" class="home-rates-card__btn">Base</label>
+                            </div>
+                            <div class="home-rates-card__input-wrapper">
+                              <input id="std-comfort" class="visually-hidden home-rates-card__input" type="radio" name="std-option" value="">
+                              <label for="std-comfort" class="home-rates-card__btn">Comfort</label>
+                            </div>
+                            <div class="home-rates-card__input-wrapper">
+                              <input id="std-vip" class="visually-hidden home-rates-card__input" type="radio" name="std-option" value="">
+                              <label for="std-vip" class="home-rates-card__btn home-rates-card__btn--vip">VIP</label>
+                            </div>
+                            <div class="home-rates-card__input-wrapper">
+                              <button class="home-rates-card__btn  home-rates-card__btn--info" type="button">
+                                <span class="visually-hidden">Узнать подробности о вариантах подключения</span>
+                                <svg width="20" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#question-outline"></use></svg>
+                              </button>
+                            </div>
+                          </div>
+
+                          <div class="home-rates-card__price-wrapper">
+                            <span class="home-rates-card__price-num">179</span>
+                            <span class="home-rates-card__price-inner">
+                              <span class="home-rates-card__add-price">+&thinsp;99 грн за підключення</span>
+                              <span class="home-rates-card__period">
+                                <span class="home-rates-card__old-price"></span>
+                                грн&thinsp;/&thinsp;місяць
+                              </span>
+                            </span>
+                          </div>
+
+                        </fieldset>
+
+                        <fieldset>
+                          <legend class="visually-hidden">Управление заказом</legend>
+                          <div class="home-rates-card__ctrls-group">
+                            <div class="home-rates-card__ctrls">
+                              <button class="btn  modal-open" type="button" data-bs-toggle="modal" data-bs-target="#orderModal" data-bs-whatever="Тариф «Стандарт»">
+                                <span>Замовити</span>
+                              </button>
+                              <button class="btn btn--icon btn--black btn--norotate btn--textless" type="submit">
+                                <svg width="22" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#cart"></use></svg>
+                                <span class="visually-hidden">Положить в корзину</span>
+                              </button>
+                            </div>
+                          </div>
+                        </fieldset>
+                      </form>
+                    </div>
+
+                  </div>
+
+                  <div class="home-rates-card__face  home-rates-card__face--back">
+
+                    <div class="home-rates-card__img-speed  home-rates-card__img-speed--back">
+                      <div class="home-rates-card__speed  home-rates-card__speed--world">
+                        <img src="img/100mb.svg" alt="Циферблат: 50Мбит скорость интернет" width="52" height="52">
+                        <span class="home-rates-card__speed-caption">Світовий трафік</span>
+                      </div>
+                      <div class="home-rates-card__speed  home-rates-card__speed--ua">
+                        <img src="img/100mb.svg" alt="Циферблат: 100Мбит скорость интернет" width="52" height="52">
+                        <span class="home-rates-card__speed-caption">Швидкість UA-IX</span>
+                      </div>
+                    </div>
+
+                    <section class="home-rates-card__connect-descr">
+                      <h3 class="h5 home-rates-card__descr-title">
+                        <span class="visually-hidden">Стоимость</span>
+                        Підключення
+                      </h3>
+                      <ul class="list-nostyled  home-rates-card__descr-list">
+                        <li class="home-rates-card__descr-item">
+                          <p>Підключення <span style="font-weight:500; color:#ff5c00;">«VIP»</span>. Мідний кабель більш стійкий до заломів та загибів, період експлуатації значно більший, ніж у біметалу.</p>
+                          <p>
+                            <span>Вартість:&nbsp;</span>
+                            <!-- #158e30 грин -->
+                            <span style="color:#ff5c00;">349 грн</span>
+                          </p>
+                        </li>
+                        <li class="home-rates-card__descr-item">
+                          <p>Підключення <span style="font-weight:500; color:#158e30;">«Premium»</span>. Мідний кабель більш стійкий до заломів та загибів, період експлуатації значно більший, ніж у біметалу.</p>
+                          <p>
+                            <span>Вартість:&nbsp;</span>
+                            <!-- #158e30 грин -->
+                            <span style="color:#158e30;">99 грн</span>
+                          </p>
+                        </li>
+                        <li class="home-rates-card__descr-item">
+                          <p>Підключення <span style="font-weight: 500;">«Standart»</span>. Мідний кабель більш стійкий до заломів та загибів, період експлуатації значно більший, ніж у біметалу.</p>
+                          <p>
+                            <span>Вартість:&nbsp;</span>
+                            <!-- #158e30 грин -->
+                            <span style="color:#158e30;">1 грн</span>
+                          </p>
+                        </li>
+                      </ul>
+                    </section>
+
+                    <div class="home-rates-card__descr-btn">
+                      <button class="btn btn--return" type="button" style="width:100%;">Назад</button>
+                    </div>
+                  </div>
+
+                </div>
+              </article>
+
+              <article class="carousel-cell  home-rates-card">
+                <header class="home-rates-card__header">
+                  <h2 class="h3  home-rates-card__title">
+                    <span class="visually-hidden">Тариф</span>
+                    Преміум
+                  </h2>
+                  <span class="home-rates-card__tag home-rates-card__tag--star">
+                    <svg width="19" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#star"></use></svg>
+                  </span>
+                  <!-- <span class="home-rates-card__tag home-rates-card__tag--sp-offer">Акція!</span> -->
+                </header>
+                <div class="home-rates-card__inner">
+
+                  <div class="home-rates-card__face  home-rates-card__face--front">
+                    <div class="home-rates-card__img-wrapper">
+                      <img src="img/car.svg" class="home-rates-card__img-main" alt="Парень на скейте" width="120" height="120">
+                      <div class="home-rates-card__img-speed">
+                        <div class="home-rates-card__speed  home-rates-card__speed--world">
+                          <img src="img/100mb.svg" alt="Циферблат: 100Мбит скорость интернет" width="52" height="52">
+                          <span class="home-rates-card__speed-caption">Світовий трафік</span>
+                        </div>
+                        <div class="home-rates-card__speed  home-rates-card__speed--ua">
+                          <img src="img/100mb.svg" alt="Циферблат: 100Мбит скорость интернет" width="52" height="52">
+                          <span class="home-rates-card__speed-caption">Швидкість UA-IX</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <ul class="list-nostyled  home-rates-card__option  home-rates-card__option--ip">
+                      <li class="home-rates-card__option-item home-rates-card__option-item--available" aria-label="Статичний IP отсутствует">
+                        <span aria-hidden="true">Статичний IP</span>
+                      </li>
+                      <li class="home-rates-card__option-item home-rates-card__option-item--available" aria-label="Back Resolving IP-адреси отсутствует">
+                        <span aria-hidden="true">Back Resolving IP-адреси</span>
+                      </li>
+                    </ul>
+
+                    <section class="home-rates-card__tv-options">
+                      <h3 class="visually-hidden">Состав [название пакета] интерактивного телевидения</h3>
+
+                      <div class="home-rates-card__tv-title" role="presentation">
+                        <img src="img/tv-3.svg" alt="Иконка ТВ-приемника" width="32" height="31">
+                        <span>Інтерактивне телебачення</span>
+                      </div>
+
+                      <ul class="list-nostyled  home-rates-card__option">
+                        <li class="home-rates-card__option-item home-rates-card__option-item--available">
+                          <span aria-hidden="true">Пакет «Standart»</span>
+                        </li>
+                        <li class="home-rates-card__option-item home-rates-card__option-item--available" aria-label="В составе отсутствует">
+                          <span aria-hidden="true">Пакет «Premium + HD»</span>
+                        </li>
+                        <li class="home-rates-card__option-item home-rates-card__option-item--available" aria-label="В составе отсутствует">
+                          <span aria-hidden="true">Пауза ефіру</span>
+                        </li>
+                        <li class="home-rates-card__option-item home-rates-card__option-item--available" aria-label="В составе отсутствует">
+                          <span aria-hidden="true">Запис ефіру</span>
+                        </li>
+                      </ul>
+                    </section>
+
+                    <div class="home-rates-card__order">
+                      <form class="home-rates-card__order-form" action="" method="post">
+
+                        <fieldset>
+                          <legend class="visually-hidden">Медиа-сервис Megogo</legend>
+                          @@include('blocks/megogo-select/megogo-select.html')
+                        </fieldset>
+
+                        <fieldset>
+                          <legend class="visually-hidden">Варианты подключения</legend>
+                          <div class="home-rates-card__connect-options">
+                            <span class="home-rates-card__options-text">Підключення:</span>
+                            <div class="home-rates-card__input-wrapper">
+                              <input id="prem-base" class="visually-hidden home-rates-card__input" type="radio" name="prem-option" value="" checked>
+                              <label for="prem-base" class="home-rates-card__btn">Base</label>
+                            </div>
+                            <div class="home-rates-card__input-wrapper">
+                              <input id="prem-comfort" class="visually-hidden home-rates-card__input" type="radio" name="prem-option" value="">
+                              <label for="prem-comfort" class="home-rates-card__btn">Comfort</label>
+                            </div>
+                            <div class="home-rates-card__input-wrapper">
+                              <input id="prem-vip" class="visually-hidden home-rates-card__input" type="radio" name="prem-option" value="">
+                              <label for="prem-vip" class="home-rates-card__btn home-rates-card__btn--vip">VIP</label>
+                            </div>
+                            <div class="home-rates-card__input-wrapper">
+                              <button class="home-rates-card__btn  home-rates-card__btn--info" type="button">
+                                <span class="visually-hidden">Узнать подробности о вариантах подключения</span>
+                                <svg width="20" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#question-outline"></use></svg>
+                              </button>
+                            </div>
+                          </div>
+
+                          <div class="home-rates-card__price-wrapper">
+                            <span class="home-rates-card__price-num" style="color:#ff5c00;">119</span>
+                            <span class="home-rates-card__price-inner">
+                              <span class="home-rates-card__add-price">+&thinsp;99 грн за підключення</span>
+                              <span class="home-rates-card__period">
+                                <span class="home-rates-card__old-price">210</span>
+                                грн&thinsp;/&thinsp;місяць
+                              </span>
+                            </span>
+                          </div>
+
+                        </fieldset>
+
+                        <fieldset>
+                          <legend class="visually-hidden">Управление заказом</legend>
+                          <div class="home-rates-card__ctrls-group">
+                            <div class="home-rates-card__ctrls">
+                              <button class="btn  modal-open" type="button" data-bs-toggle="modal" data-bs-target="#orderModal" data-bs-whatever="Тариф «Преміум»">
+                                <span>Замовити</span>
+                              </button>
+                              <button class="btn btn--icon btn--black btn--norotate btn--textless" type="submit">
+                                <svg width="22" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#cart"></use></svg>
+                                <span class="visually-hidden">Положить в корзину</span>
+                              </button>
+                            </div>
+                          </div>
+                        </fieldset>
+                      </form>
+                    </div>
+
+                  </div>
+
+                  <div class="home-rates-card__face  home-rates-card__face--back">
+
+                    <div class="home-rates-card__img-speed  home-rates-card__img-speed--back">
+                      <div class="home-rates-card__speed  home-rates-card__speed--world">
+                        <img src="img/100mb.svg" alt="Циферблат: 50Мбит скорость интернет" width="52" height="52">
+                        <span class="home-rates-card__speed-caption">Світовий трафік</span>
+                      </div>
+                      <div class="home-rates-card__speed  home-rates-card__speed--ua">
+                        <img src="img/100mb.svg" alt="Циферблат: 100Мбит скорость интернет" width="52" height="52">
+                        <span class="home-rates-card__speed-caption">Швидкість UA-IX</span>
+                      </div>
+                    </div>
+
+                    <section class="home-rates-card__connect-descr">
+                      <h3 class="h5 home-rates-card__descr-title">
+                        <span class="visually-hidden">Стоимость</span>
+                        Підключення
+                      </h3>
+                      <ul class="list-nostyled  home-rates-card__descr-list">
+                        <li class="home-rates-card__descr-item">
+                          <p>Підключення <span style="font-weight:500; color:#ff5c00;">«VIP»</span>. Мідний кабель більш стійкий до заломів та загибів, період експлуатації значно більший, ніж у біметалу.</p>
+                          <p>
+                            <span>Вартість:&nbsp;</span>
+                            <!-- #158e30 грин -->
+                            <span style="color:#ff5c00;">349 грн</span>
+                          </p>
+                        </li>
+                        <li class="home-rates-card__descr-item">
+                          <p>Підключення <span style="font-weight:500; color:#158e30;">«Premium»</span>. Мідний кабель більш стійкий до заломів та загибів, період експлуатації значно більший, ніж у біметалу.</p>
+                          <p>
+                            <span>Вартість:&nbsp;</span>
+                            <!-- #158e30 грин -->
+                            <span style="color:#158e30;">99 грн</span>
+                          </p>
+                        </li>
+                        <li class="home-rates-card__descr-item">
+                          <p>Підключення <span style="font-weight: 500;">«Standart»</span>. Мідний кабель більш стійкий до заломів та загибів, період експлуатації значно більший, ніж у біметалу.</p>
+                          <p>
+                            <span>Вартість:&nbsp;</span>
+                            <!-- #158e30 грин -->
+                            <span style="color:#158e30;">1 грн</span>
+                          </p>
+                        </li>
+                      </ul>
+                    </section>
+
+                    <div class="home-rates-card__descr-btn">
+                      <button class="btn btn--return" type="button" style="width:100%;">Назад</button>
+                    </div>
+                  </div>
+
+                </div>
+              </article>
+
+              <article class="carousel-cell  home-rates-card">
+                <header class="home-rates-card__header">
+                  <h2 class="h3  home-rates-card__title">
+                    <span class="visually-hidden">Тариф</span>
+                    Гігабіт
+                  </h2>
+                  <!-- <span class="home-rates-card__tag home-rates-card__tag--star">
+                    <svg width="19" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#star"></use></svg>
+                  </span> -->
+                  <span class="home-rates-card__tag home-rates-card__tag--sp-offer">
+                    Акція!
+                  </span>
+                </header>
+                <div class="home-rates-card__inner">
+
+                  <div class="home-rates-card__face  home-rates-card__face--front">
+                    <div class="home-rates-card__img-wrapper">
+                      <img src="img/helicopter.svg" class="home-rates-card__img-main" alt="Парень на скейте" width="120" height="120">
+                      <div class="home-rates-card__img-speed">
+                        <div class="home-rates-card__speed  home-rates-card__speed--world">
+                          <img src="img/1000mb.svg" alt="Циферблат: 50Мбит скорость интернет" width="52" height="52">
+                          <span class="home-rates-card__speed-caption">Світовий трафік</span>
+                        </div>
+                        <div class="home-rates-card__speed  home-rates-card__speed--ua">
+                          <img src="img/1000mb.svg" alt="Циферблат: 100Мбит скорость интернет" width="52" height="52">
+                          <span class="home-rates-card__speed-caption">Швидкість UA-IX</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <ul class="list-nostyled  home-rates-card__option  home-rates-card__option--ip">
+                      <li class="home-rates-card__option-item home-rates-card__option-item--available" aria-label="Статичний IP отсутствует">
+                        <span aria-hidden="true">Статичний IP</span>
+                      </li>
+                      <li class="home-rates-card__option-item home-rates-card__option-item--available" aria-label="Back Resolving IP-адреси отсутствует">
+                        <span aria-hidden="true">Back Resolving IP-адреси</span>
+                      </li>
+                    </ul>
+
+                    <section class="home-rates-card__tv-options">
+                      <h3 class="visually-hidden">Состав [название пакета] интерактивного телевидения</h3>
+
+                      <div class="home-rates-card__tv-title" role="presentation">
+                        <img src="img/tv-4.svg" alt="Иконка ТВ-приемника" width="32" height="31">
+                        <span>Інтерактивне телебачення</span>
+                      </div>
+
+                      <ul class="list-nostyled  home-rates-card__option">
+                        <li class="home-rates-card__option-item home-rates-card__option-item--available">
+                          <span aria-hidden="true">Пакет «Standart»</span>
+                        </li>
+                        <li class="home-rates-card__option-item home-rates-card__option-item--available" aria-label="В составе отсутствует">
+                          <span aria-hidden="true">Пакет «Premium + HD»</span>
+                        </li>
+                        <li class="home-rates-card__option-item home-rates-card__option-item--available" aria-label="В составе отсутствует">
+                          <span aria-hidden="true">Пауза ефіру</span>
+                        </li>
+                        <li class="home-rates-card__option-item home-rates-card__option-item--available" aria-label="В составе отсутствует">
+                          <span aria-hidden="true">Запис ефіру</span>
+                        </li>
+                      </ul>
+                    </section>
+
+                    <div class="home-rates-card__order">
+                      <form class="home-rates-card__order-form" action="" method="post">
+
+                        <fieldset>
+                          <legend class="visually-hidden">Медиа-сервис Megogo</legend>
+                          @@include('blocks/megogo-select/megogo-select.html')
+                        </fieldset>
+
+                        <fieldset>
+                          <legend class="visually-hidden">Варианты подключения</legend>
+                          <div class="home-rates-card__connect-options">
+                            <span class="home-rates-card__options-text">Підключення:</span>
+                            <!-- <div class="home-rates-card__input-wrapper">
+                              <input id="giga-base" class="visually-hidden home-rates-card__input" type="radio" name="giga-option" value="" checked>
+                              <label for="giga-base" class="home-rates-card__btn">Base</label>
+                            </div> -->
+                            <!-- <div class="home-rates-card__input-wrapper">
+                              <input id="giga-comfort" class="visually-hidden home-rates-card__input" type="radio" name="giga-option" value="">
+                              <label for="giga-comfort" class="home-rates-card__btn">Comfort</label>
+                            </div> -->
+                            <div class="home-rates-card__input-wrapper">
+                              <input id="giga-vip" class="visually-hidden home-rates-card__input" type="radio" name="giga-option" value="" checked>
+                              <label for="giga-vip" class="home-rates-card__btn home-rates-card__btn--vip">VIP</label>
+                            </div>
+                            <div class="home-rates-card__input-wrapper">
+                              <button class="home-rates-card__btn  home-rates-card__btn--info" type="button">
+                                <span class="visually-hidden">Узнать подробности о вариантах подключения</span>
+                                <svg width="20" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#question-outline"></use></svg>
+                              </button>
+                            </div>
+                          </div>
+
+                          <div class="home-rates-card__price-wrapper">
+                            <span class="home-rates-card__price-num" style="color:#ff5c00;">159</span>
+                            <span class="home-rates-card__price-inner">
+                              <span class="home-rates-card__add-price">+&thinsp;99 грн за підключення</span>
+                              <span class="home-rates-card__period">
+                                <span class="home-rates-card__old-price">200</span>
+                                грн&thinsp;/&thinsp;місяць
+                              </span>
+                            </span>
+                          </div>
+
+                        </fieldset>
+
+                        <fieldset>
+                          <legend class="visually-hidden">Управление заказом</legend>
+                          <div class="home-rates-card__ctrls-group">
+                            <div class="home-rates-card__ctrls">
+                              <button class="btn  modal-open" type="button" data-bs-toggle="modal" data-bs-target="#orderModal" data-bs-whatever="Тариф «Гігабіт»">
+                                <span>Замовити</span>
+                              </button>
+                              <button class="btn btn--icon btn--black btn--norotate btn--textless" type="submit">
+                                <svg width="22" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#cart"></use></svg>
+                                <span class="visually-hidden">Положить в корзину</span>
+                              </button>
+                            </div>
+                          </div>
+                        </fieldset>
+                      </form>
+                    </div>
+
+                  </div>
+
+                  <div class="home-rates-card__face  home-rates-card__face--back">
+
+                    <div class="home-rates-card__img-speed  home-rates-card__img-speed--back">
+                      <div class="home-rates-card__speed  home-rates-card__speed--world">
+                        <img src="img/1000mb.svg" alt="Циферблат: 50Мбит скорость интернет" width="52" height="52">
+                        <span class="home-rates-card__speed-caption">Світовий трафік</span>
+                      </div>
+                      <div class="home-rates-card__speed  home-rates-card__speed--ua">
+                        <img src="img/1000mb.svg" alt="Циферблат: 100Мбит скорость интернет" width="52" height="52">
+                        <span class="home-rates-card__speed-caption">Швидкість UA-IX</span>
+                      </div>
+                    </div>
+
+                    <section class="home-rates-card__connect-descr">
+                      <h3 class="h5 home-rates-card__descr-title">
+                        <span class="visually-hidden">Стоимость</span>
+                        Підключення
+                      </h3>
+                      <ul class="list-nostyled  home-rates-card__descr-list">
+                        <li class="home-rates-card__descr-item">
+                          <p>Підключення <span style="font-weight:500; color:#ff5c00;">«VIP»</span>. Мідний кабель більш стійкий до заломів та загибів, період експлуатації значно більший, ніж у біметалу.</p>
+                          <p>
+                            <span>Вартість:&nbsp;</span>
+                            <!-- #158e30 грин -->
+                            <span style="color:#ff5c00;">349 грн</span>
+                          </p>
+                        </li>
+                        <li class="home-rates-card__descr-item">
+                          <p>Підключення <span style="font-weight:500; color:#158e30;">«Premium»</span>. Мідний кабель більш стійкий до заломів та загибів, період експлуатації значно більший, ніж у біметалу.</p>
+                          <p>
+                            <span>Вартість:&nbsp;</span>
+                            <!-- #158e30 грин -->
+                            <span style="color:#158e30;">99 грн</span>
+                          </p>
+                        </li>
+                        <li class="home-rates-card__descr-item">
+                          <p>Підключення <span style="font-weight: 500;">«Standart»</span>. Мідний кабель більш стійкий до заломів та загибів, період експлуатації значно більший, ніж у біметалу.</p>
+                          <p>
+                            <span>Вартість:&nbsp;</span>
+                            <!-- #158e30 грин -->
+                            <span style="color:#158e30;">1 грн</span>
+                          </p>
+                        </li>
+                      </ul>
+                    </section>
+
+                    <div class="home-rates-card__descr-btn">
+                      <button class="btn btn--return" type="button" style="width:100%;">Назад</button>
+                    </div>
+                  </div>
+
+                </div>
+              </article>
+
+            </div>
+          </div>
+        </div>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur explicabo velit nam adipisci eveniet veniam inventore dicta voluptates nemo architecto porro suscipit quas quis quo, quos libero eaque laborum illo aut quasi incidunt. Aperiam, dolores!</p>
 
         <div class="home-rates-card__slider">
 
