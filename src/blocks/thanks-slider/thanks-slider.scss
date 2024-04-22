@@ -1,0 +1,22 @@
+.thanks-slider {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__row {
+    margin-bottom: 40px;
+  }
+
+  &__slide {
+    width: 156px;
+    margin-right: 16px;
+
+    @media (min-width: $screen-md) {
+      width: 250px;
+      margin-right: 32px;
+    }
+
+    @media (min-width: $screen-xxl) {
+      width: 326px;
+    }
+  }
+}

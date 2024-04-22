@@ -1,0 +1,26 @@
+.charity {
+
+  $block-name:                &; // #{$block-name}__element
+
+  //padding-top: 32px;
+  padding-bottom: 64px;
+
+  @media (min-width: $screen-md) {
+    //padding-top: 48px;
+  }
+
+  & > * + * {
+    margin-bottom: 48px;
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 64px;
+    }
+  }
+
+  & > * {
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

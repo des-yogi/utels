@@ -1,0 +1,14 @@
+.text-block {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__col {
+    @include col(xs, 12);
+    @include col(md, 10);
+    @include col(xl, 8);
+  }
+
+  &__title {
+    margin-top: 0;
+  }
+}
