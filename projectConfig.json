@@ -76,7 +76,13 @@
     "news-card": [],
     "news-article": [],
     "news-aside": [],
-    "tarif-switcher": []
+    "tarif-switcher": [],
+    "text-block": [],
+    "photo-slider-popup": [],
+    "thanks-slider": [],
+    "charity": [],
+    "achievements": [],
+    "support-program": []
   },
   "addCssBefore": [
     "../../node_modules/bootstrap/scss/_functions",

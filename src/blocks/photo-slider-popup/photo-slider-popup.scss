@@ -1,0 +1,19 @@
+.photo-slider-popup {
+
+  $block-name:                &; // #{$block-name}__element
+
+
+  &__slide {
+    width: 214px;
+    margin-right: 16px;
+
+    @media (min-width: $screen-md) {
+      width: 318px;
+      margin-right: 32px;
+    }
+
+    @media (min-width: $screen-xxl) {
+      width: 565px;
+    }
+  }
+}
