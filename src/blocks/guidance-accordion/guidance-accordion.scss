@@ -13,11 +13,11 @@
   }
 
   &__intro {
-
+    margin: 16px 0 0;
   }
 
   &__inner {
-
+    margin-top: 32px;
   }
 
   &__item {
@@ -80,10 +80,6 @@
         transform: translateY(-50%) rotate(-180deg); // -180
       }
     }
-  }
-
-  &__collapse {
-
   }
 
   &__body {
