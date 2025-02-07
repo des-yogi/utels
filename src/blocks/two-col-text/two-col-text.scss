@@ -1,0 +1,23 @@
+.two-col-text {
+
+  $block-name:                &; // #{$block-name}__element
+
+  height: 100%;
+  padding: 16px;
+  background-color: $white;
+  border: 1px solid $border-color;
+  border-radius: $border-radius;
+
+  @media (min-width: $screen-md) {
+    padding: 24px;
+  }
+
+  @media (min-width: $screen-xl) {
+    padding: 32px;
+  }
+
+  &__title {
+    margin-top: 0;
+  }
+}
+

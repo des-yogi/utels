@@ -1,0 +1,61 @@
+<!--DEV
+@ @include('blocks/power-card/power-card.html')
+-->
+
+<article class="carousel-cell  power-card">
+  <header class="power-card__header">
+    <h2 class="power-card__title">Set title</h2>
+  </header>
+
+  <div class="power-card__img-wrapper">
+    <div class="embed-responsive  embed-responsive--1-1 power-card__img">
+      <img src="img/skateboard.svg" alt="" width="128" height="128" loading="lazy">
+    </div>
+  </div>
+
+  <div class="power-card__main-option">
+    <p class="h4  power-card__kw">10 кВт-год</p>
+    <p class="power-card__max-time">до 18 год автономності<sup>*</sup></p>
+  </div>
+
+  <ul class="list-nostyled  power-card__options">
+    <li class="power-card__option">
+      <span>Інвертор гібридний 10 кВА/8 кВт, 1 фаза</span>
+    </li>
+    <li class="power-card__option">
+      <span>2 акумуляторні батареї LiFePO4 5,12 кВт*год / 48 В</span>
+    </li>
+    <li class="power-card__option">
+      <span>Щит</span>
+    </li>
+    <li class="power-card__option">
+      <span>Панель керування</span>
+    </li>
+    <li class="power-card__option">
+      <span>Розхідні матеріали</span>
+    </li>
+    <li class="power-card__option">
+      <span>Монтаж</span>
+    </li>
+  </ul>
+
+  <div class="power-card__checkout">
+    <p class="power-card__price">
+      <span>149</span>&ensp;грн
+    </p>
+
+    <div class="power-card__but-wrapper">
+      <button class="btn" type="button" data-bs-toggle="modal" data-bs-target="#orderModal" data-bs-whatever="Set title">
+        <span>Замовити</span>
+      </button>
+
+      <button class="btn btn--icon btn--black btn--norotate btn--textless" type="submit" name="submit_button">
+        <svg width="22" height="20">
+          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#cart"></use>
+        </svg>
+        <span class="visually-hidden">Покласти до кошика</span>
+      </button>
+    </div>
+  </div>
+
+</article>

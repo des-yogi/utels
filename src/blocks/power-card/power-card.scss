@@ -1,0 +1,158 @@
+.power-card {
+
+  $block-name:                &; // #{$block-name}__element
+
+  min-width: 290px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  background-color: $white;
+  border-radius: 8px;
+  border: 1px solid $border-color;
+  overflow: hidden;
+
+  // &__wrapper {
+
+  // }
+
+  &.carousel-cell {
+    width: 290px;
+    margin-right: 12px;
+
+    @media (min-width: $screen-md) {
+      margin-right: 16px;
+    }
+
+    @media (min-width: $screen-xl) {
+      width: calc(25% - 12px);
+    }
+
+    @media (min-width: $screen-xxl) {
+      width: calc(25% - 24px);
+      margin-right: 32px;
+    }
+  }
+
+  &.carousel-cell.is-selected {
+    box-shadow: 0 0 5px rgba($secondary-color, 0.25);
+    //border-color: rgba($secondary-color, 0.3);
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 7px 16px;
+    height: 50px;
+    color: $white;
+    background-color: $secondary-color;
+  }
+
+  &__title {
+    margin: 0;
+  }
+
+  &__img-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+  }
+
+  &__img {
+    width: 128px;
+    height: 128px;
+
+    img {
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  &__main-option {
+    padding: 16px;
+    text-align: center;
+    border-top: 1px solid $border-color;
+
+    p {
+      margin: 0;
+    }
+  }
+
+  &__kw {
+    margin: 0;
+  }
+
+  &__max-time {
+    color: $main-color;
+
+    sup {
+      display: inline-flex;
+      font-weight: 700;
+      font-size: $font-size;
+      transform: translate(4px, 3px);
+    }
+  }
+
+  &__options {
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px 0;
+    background-color: $body-bg;
+  }
+
+  &__option {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+    font-size: $font-size-sm;
+
+    &::after {
+      flex: 0 0;
+      flex-basis: 17px;
+      content: "";
+      width: 17px;
+      height: 17px;
+      //margin-left: 12px;
+      border-radius: 50%;
+      //background-color: $main-color;
+      background-size: 17px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-image: svg-load('../blocks/sprite-svg/svg/check-round.svg', fill=$main-color);
+    }
+  }
+
+  &__price {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    min-height: 60px;
+    padding: 8px 12px 0;
+    margin: 0;
+    font-size: $font-size;
+    font-weight: 500;
+
+    span {
+      font-size: 36px;
+      font-weight: 700;
+    }
+  }
+
+  &__but-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 12px 16px;
+    gap: 16px;
+
+    .btn {
+      flex: 1 1 auto;
+    }
+
+    .btn--icon {
+      flex: 0 0 22px;
+    }
+  }
+}

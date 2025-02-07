@@ -82,7 +82,11 @@
     "thanks-slider": [],
     "charity": [],
     "achievements": [],
-    "support-program": []
+    "support-program": [],
+    "two-col-text": [],
+    "power-card": [],
+    "power-order": [],
+    "backup-power": []
   },
   "addCssBefore": [
     "../../node_modules/bootstrap/scss/_functions",

@@ -1,0 +1,70 @@
+.backup-power {
+
+  $block-name:                &; // #{$block-name}__element
+
+  .tv-info-text {
+    padding: 0;
+    margin-bottom: 32px;
+  }
+
+  .guidance-accordion {
+    margin: 0;
+  }
+
+  .contacts__main {
+    padding: 24px 16px;
+
+    @media (min-width: $screen-md) {
+      padding: 24px;
+    }
+
+    @media (min-width: $screen-lg) {
+      padding: 32px;
+    }
+  }
+
+  &__sections {
+    margin: 48px 0;
+
+    @media (min-width: $screen-md) {
+      margin-top: 64px;
+      margin-bottom: 64px;
+    }
+
+    .row {
+      gap: 24px 0;
+
+      @media (min-width: $screen-xl) {
+        gap: 32px 0;
+      }
+    }
+  }
+
+  &__section-title {
+    margin-top: 0;
+  }
+
+  &__col-3 {
+    @include col(xs, 12);
+    @include col(md, 6);
+    @include col(xl, 4);
+  }
+
+  &__col-2 {
+    @include col(xs, 12);
+    @include col(md, 6);
+    //@include col(xl, 4);
+  }
+
+  &__form-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+
+    h2,
+    p {
+      margin-top: 0;
+    }
+  }
+}
