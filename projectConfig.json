@@ -86,7 +86,8 @@
     "two-col-text": [],
     "power-card": [],
     "power-order": [],
-    "backup-power": []
+    "backup-power": [],
+    "uplinks": []
   },
   "addCssBefore": [
     "../../node_modules/bootstrap/scss/_functions",
