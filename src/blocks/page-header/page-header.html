@@ -13,9 +13,32 @@
         })
         <ul class="list-nostyled  page-header__phones">
           <li class="page-header__phone-item">
-            <a href="#orderModal" class="page-header__phone-link" data-bs-toggle="modal" role="button" title="Замовити дзвінок">
-              <svg width="19" height="19" role="img" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#phone"></use></svg>
+            <a href="#orderModal" class="page-header__phone-link  page-header__phone-link--animated" data-bs-toggle="modal" role="button" title="Замовити дзвінок">
+              <!-- <svg width="19" height="19" role="img" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#phone"></use></svg> -->
+              <svg class="phone-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 25 25"  role="img" aria-hidden="true"><path id="phone" d="m24.73,17.63c-.21-.37-.54-.67-.94-.84l-5.87-2.51c-.31-.14-.66-.2-1-.16-.33.03-.65.15-.93.33l-3.13,2.09c-1.92-.93-3.47-2.47-4.41-4.39h0l2.11-3.15c.37-.56.43-1.27.17-1.89l-2.52-5.9c-.17-.4-.47-.73-.84-.94-.37-.22-.81-.32-1.24-.27C2.61.44-.03,3.45,0,7c.03,9.93,8.07,17.97,18,18,3.55.03,6.56-2.61,7-6.13.05-.43-.05-.87-.27-1.24Z"/><path id="line2" d="m15.7,2.93h0c3.11.83,5.54,3.27,6.37,6.38.07.25.24.47.47.6.23.13.5.17.76.1.25-.07.47-.23.6-.46.13-.23.17-.5.1-.76-1.03-3.8-3.99-6.76-7.79-7.79-.26-.07-.53-.03-.76.11-.23.13-.39.35-.46.6-.15.53.17,1.08.7,1.23,0,0,0,0,0,0h0Z"/><path id="line1" d="m14.66,6.8c1.73.46,3.08,1.81,3.54,3.54.14.54.69.86,1.23.72s.86-.69.72-1.23c-.64-2.45-2.55-4.36-5-5-.26-.07-.53-.03-.76.1-.23.13-.4.35-.47.61-.07.25-.03.52.1.75.13.26.37.44.65.51Z"/></svg>
                <span class="page-header__btn-text  page-header__btn-text--phone">Замовити дзвінок</span>
+              <script>
+                const phoneIcon = document.querySelector('.phone-icon');
+
+                function animateLines() {
+                  setTimeout(() => {
+                    phoneIcon.classList.add('line1-visible');
+                    setTimeout(() => {
+                      phoneIcon.classList.add('line2-visible');
+                      setTimeout(() => {
+                        phoneIcon.classList.remove('line1-visible', 'line2-visible');
+                      }, 1500); // Время видимости обеих линий
+                    }, 300); // Задержка перед появлением второй линии
+                  }, 1800); // Задержка перед появлением первой линии (2000 + 200 мс)
+                }
+
+                function startAnimation() {
+                  animateLines();
+                  setInterval(animateLines, 4200); // Повтор анимации каждые 4.2 секунды (4 секунды анимации + 0.2 секунды паузы)
+                }
+
+                startAnimation();
+              </script>
             </a>
           </li>
           <li class="page-header__phone-item">

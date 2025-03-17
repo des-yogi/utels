@@ -166,6 +166,11 @@
     // @media (min-width: $screen-xxl) {
     //   font-size: 18px;
     // }
+
+    &--animated {
+
+
+    }
   }
 
   &__queue {
@@ -380,3 +385,289 @@
     transition: transform .5s ease-out;
   }
 }
+
+// &--animated {
+
+//   @keyframes swing {
+//     0%, 100% { transform: rotate(0deg); }
+//     25% { transform: rotate(15deg); }
+//     50% { transform: rotate(-15deg); }
+//     75% { transform: rotate(10deg); }
+//   }
+
+//   @keyframes fadeIn {
+//     0% { opacity: 0; }
+//     100% { opacity: 1; }
+//   }
+
+//   @keyframes fadeOut {
+//     0% { opacity: 1; }
+//     100% { opacity: 0; }
+//   }
+
+//   #phone {
+//     transform-origin: center;
+//     animation: swing 2.5s ease-in-out;
+//   }
+
+//   #line1, #line2 {
+//     opacity: 0;
+//   }
+
+//   #line1 {
+//     animation: fadeIn 0.35s ease-in-out 2.8s forwards,
+//                fadeOut 0.35s ease-in-out 3.8s forwards,
+//                fadeIn 0.35s ease-in-out 5.2s forwards,
+//                fadeOut 0.35s ease-in-out 6.2s forwards;
+//   }
+
+//   #line2 {
+//     animation: fadeIn 0.35s ease-in-out 3.15s forwards,
+//                fadeOut 0.35s ease-in-out 3.8s forwards,
+//                fadeIn 0.35s ease-in-out 5.55s forwards,
+//                fadeOut 0.35s ease-in-out 6.2s forwards;
+//   }
+
+//   @keyframes fullCycle {
+//     0%, 31% { opacity: 1; }
+//     100% { opacity: 1; }
+//   }
+
+//   svg {
+//     animation: fullCycle 8.2s steps(1) infinite;
+//   }
+// }
+
+// .phone-icon {
+//   width: 20px;
+//   height: 20px;
+// }
+
+// .phone-icon #phone {
+//   transform-origin: 50% 50%;
+//   animation: swing 5s infinite ease-in-out;
+// }
+
+// .phone-icon #line1,
+// .phone-icon #line2 {
+//   opacity: 0;
+//   animation: lines 5s infinite steps(1, end);
+// }
+
+// .phone-icon #line1 {
+//   animation-delay: 2.5s;
+// }
+
+// .phone-icon #line2 {
+//   animation-delay: 3s;
+// }
+
+// @keyframes swing {
+//   0%, 100% {
+//     transform: rotate(0deg);
+//   }
+//   12.5% {
+//     transform: rotate(15deg);
+//   }
+//   23% {
+//     transform: rotate(-15deg);
+//   }
+//   37.5% {
+//     transform: rotate(15deg);
+//   }
+//   48% {
+//     transform: rotate(0deg);
+//   }
+// }
+
+// @keyframes lines {
+//   0%, 50%, 100% {
+//     opacity: 0;
+//   }
+//   25%, 37.5%, 75%, 87.5% {
+//     opacity: 1;
+//   }
+// }
+
+// .phone-icon {
+//   width: 20px;
+//   height: 20px;
+// }
+
+// .phone-icon #phone {
+//   transform-origin: 50% 50%;
+//   animation: swing 5s infinite ease-in-out;
+// }
+
+// .phone-icon #line1 {
+//   opacity: 0;
+//   animation: line1-appear 5s infinite ease-in-out;
+// }
+
+// .phone-icon #line2 {
+//   opacity: 0;
+//   animation: line2-appear 5s infinite ease-in-out;
+// }
+
+// @keyframes swing {
+//   0%, 100% {
+//     transform: rotate(0deg);
+//   }
+//   12.5% {
+//     transform: rotate(15deg);
+//   }
+//   25% {
+//     transform: rotate(-15deg);
+//   }
+//   37.5% {
+//     transform: rotate(15deg);
+//   }
+//   50% {
+//     transform: rotate(0deg);
+//   }
+// }
+
+// @keyframes line1-appear {
+//   0%, 50%, 75% {
+//     opacity: 0;
+//   }
+//   25%, 62.5% {
+//     opacity: 1;
+//   }
+//   100% {
+//     opacity: 0;
+//   }
+// }
+
+// @keyframes line2-appear {
+//   0%, 50%, 87.5% {
+//     opacity: 0;
+//   }
+//   37.5%, 75% {
+//     opacity: 1;
+//   }
+//   100% {
+//     opacity: 0;
+//   }
+// }
+
+// .phone-icon #line1 {
+//   animation-delay: 2.5s;
+// }
+
+// .phone-icon #line2 {
+//   animation-delay: 2.5s;
+// }
+
+// .phone-icon {
+//   width: 20px;
+//   height: 20px;
+// }
+
+// .phone-icon #phone {
+//   transform-origin: 50% 50%;
+//   animation: swing 5s infinite ease-in-out;
+// }
+
+// .phone-icon #line1 {
+//   opacity: 0;
+//   animation: line1-appear 5s infinite steps(1, end);
+// }
+
+// .phone-icon #line2 {
+//   opacity: 0;
+//   animation: line2-appear 5s infinite steps(1, end);
+// }
+
+// @keyframes swing {
+//   0%, 100% {
+//     transform: rotate(0deg);
+//   }
+//   12.5% {
+//     transform: rotate(15deg);
+//   }
+//   25% {
+//     transform: rotate(-15deg);
+//   }
+//   37.5% {
+//     transform: rotate(15deg);
+//   }
+//   50% {
+//     transform: rotate(0deg);
+//   }
+// }
+
+// @keyframes line1-appear {
+//   0%, 50%, 75% {
+//     opacity: 0;
+//   }
+//   25%, 62.5% {
+//     opacity: 1;
+//   }
+//   100% {
+//     opacity: 0;
+//   }
+// }
+
+// @keyframes line2-appear {
+//   0%, 50%, 87.5% {
+//     opacity: 0;
+//   }
+//   37.5%, 75% {
+//     opacity: 1;
+//   }
+//   100% {
+//     opacity: 0;
+//   }
+// }
+
+// .phone-icon #line1 {
+//   animation-delay: 2.5s;
+// }
+
+// .phone-icon #line2 {
+//   animation-delay: 2.5s;
+// }
+
+.phone-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.phone-icon #phone {
+  transform-origin: 50% 50%;
+  animation: swing 4s infinite ease-in-out;
+}
+
+.phone-icon #line1,
+.phone-icon #line2 {
+  opacity: 0;
+  transition: opacity 0.3s ease-in; /* Плавный переход */
+}
+
+@keyframes swing {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  10.5% {
+    transform: rotate(15deg);
+  }
+  23% {
+    transform: rotate(-15deg);
+  }
+  35.5% {
+    transform: rotate(15deg);
+  }
+  48% {
+    transform: rotate(0deg);
+  }
+}
+
+.phone-icon.line1-visible #line1 {
+  opacity: 1;
+}
+
+.phone-icon.line2-visible #line2 {
+  opacity: 1;
+}
+
