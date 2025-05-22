@@ -1,20 +1,23 @@
 (function(){
   const utils = window.fizzyUIUtils;
-  const rates = document.querySelector('.home-rates-card__slider');
-  if (!rates) { return; }
 
-  const options = {
-    cellAlign: 'left',
-    contain: true,
-    dragThreshold: 3,
-    selectedAttraction: 0.01,
-    friction: 0.15,
-    //watchCSS: true,
-    prevNextButtons: true,
-    pageDots: false
+  const sliders = document.querySelectorAll('.home-rates-card__slider');
+
+  if (sliders.length) {
+    const options = {
+      cellAlign: 'left',
+      contain: true,
+      dragThreshold: 3,
+      selectedAttraction: 0.01,
+      friction: 0.15,
+      prevNextButtons: true,
+      pageDots: false
+    };
+
+    sliders.forEach(slider => {
+      new Flickity(slider, options);
+    });
   }
-
-  const ratesSlider = new Flickity(rates, options);
 
   const tabElems = document.querySelectorAll('button[data-bs-toggle="tab"]');
   var isActive = false;
